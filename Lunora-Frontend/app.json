@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Lunora-Frontend",
-    "slug": "Lunora-Frontend",
+    "slug": "lunora",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/Lunora_logo.png",
@@ -37,6 +37,13 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "33830275-faa6-4290-84ad-b748170da181"
+      }
+    },
+    "owner": "slimslam00"
   }
 }

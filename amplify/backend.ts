@@ -1,7 +1,7 @@
 import { defineBackend } from '@aws-amplify/backend';
 import { auth } from './auth/resource';
 import { data } from './data/resource';
-import { functions } from './functions/resource';
+import { sayHello } from './functions/hello/resource';
 
 /**
  * @see https://docs.amplify.aws/react/build-a-backend/ to add storage, functions, and more
@@ -9,5 +9,5 @@ import { functions } from './functions/resource';
 defineBackend({
   auth,
   data,
-  functions
+  sayHello
 });

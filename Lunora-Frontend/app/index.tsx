@@ -1,0 +1,95 @@
+import { Link } from 'expo-router';
+import React from 'react';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
+
+export default function WelcomeScreen({ navigation }: any) {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ImageBackground
+        source={require('../assets/images/Lunora_background.png')} // Replace with your image
+        style={styles.background}
+        resizeMode="cover"
+      >
+        <View style={styles.overlay}>
+          <View style={styles.buttonContainer}>
+            <TouchableOpacity style={styles.getStartedBtn}>
+              <Text style={styles.getStartedText}>Get started</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.loginBtn}>
+              <Link href={'./(tabs)/home'} style={styles.loginText}>I already have an account</Link>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ImageBackground>
+    </SafeAreaView>
+  );
+}
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    background: {
+        flex: 1,
+        justifyContent: 'center', // Center content vertically
+    },
+    overlay: {
+        flex: 1,
+        justifyContent: 'flex-end', // Center content vertically
+        alignItems: 'center',     // Center content horizontally
+        paddingHorizontal: 24,
+    },
+    logoContainer: {
+        marginTop: 100,
+        alignItems: 'center',
+    },
+    iconBox: {
+        backgroundColor: '#1a1a2e',
+        padding: 16,
+        borderRadius: 12,
+        marginBottom: 12,
+    },
+    icon: {
+        fontSize: 28,
+        color: 'white',
+    },
+    title: {
+        fontSize: 32,
+        color: 'white',
+        fontWeight: 'bold',
+    },
+    subtitle: {
+        fontSize: 14,
+        color: 'white',
+        marginTop: 6,
+        opacity: 0.8,
+    },
+    buttonContainer: {
+        marginBottom: 20,
+        width: '100%',
+    },
+    getStartedBtn: {
+        backgroundColor: '#bf7d7d',
+        paddingVertical: 16,
+        borderRadius: 14,
+        alignItems: 'center',
+        marginBottom: 12,
+    },
+    getStartedText: {
+        color: '#fff',
+        fontWeight: '600',
+        fontSize: 16,
+    },
+    loginBtn: {
+        borderColor: '#f5e6e6',
+        borderWidth: 2,
+        paddingVertical: 14,
+        borderRadius: 14,
+        alignItems: 'center',
+    },
+    loginText: {
+        color: '#fff',
+        fontWeight: '600',
+        fontSize: 16,
+    },
+});

@@ -5,7 +5,7 @@ import { Amplify } from 'aws-amplify';
 import { generateClient } from 'aws-amplify/api/server';
 import type { Schema } from "../../../amplify/data/resource"
 
-export default function LunariaApp() {
+export default function Home() {
   const [activeTab, setActiveTab] = useState('home');
 
   const scheduledWorkouts = [

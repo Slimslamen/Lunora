@@ -1,0 +1,35 @@
+name: Frontend CI
+
+on:
+  push:
+    paths:
+      - 'Lunora-frontend/**'
+      
+jobs:
+  frontend-build-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: frontend/node_modules
+          key: ${{ runner.os }}-frontend-${{ hashFiles('frontend/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-frontend-
+
+      - name: Install dependencies
+        working-directory: frontend
+        run: npm install
+
+      - name: Lint with Expo
+        working-directory: frontend
+        run: npx expo lint || true

@@ -1,139 +1,299 @@
-import React, { useState } from 'react';
-import { View, Text, StyleSheet, Switch, TouchableOpacity, ScrollView, Alert, Platform } from 'react-native';
+// SettingsDetailedScreen.tsx
+import React, { useState } from 'react'
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+  Switch,
+  StatusBar,
+  SafeAreaView,
+  useColorScheme,
+} from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
+import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 
-export default function SettingsScreen() {
-  const [darkMode, setDarkMode] = useState(false);
-  const [notifications, setNotifications] = useState(true);
-  const [autoPlay, setAutoPlay] = useState(true);
 
-  const confirmReset = () => {
-    Alert.alert(
-      'Reset App',
-      'Are you sure you want to reset all data?',
-      [
-        { text: 'Cancel', style: 'cancel' },
-        { text: 'Reset', onPress: () => console.log('Reset triggered') },
-      ],
-      { cancelable: true }
-    );
-  };
+export default function SettingsDetailedScreen() {
+  const scheme = useColorScheme()
+  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS 
+
+  const [notifications, setNotifications] = useState(true)
+  const [darkMode, setDarkMode] = useState(scheme === 'dark')
 
   return (
-    <ScrollView style={Platform.OS !== "ios" ? styles.container : styles.IOScontainer}>
-      {/* Header */}
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Settings</Text>
-      </View>
+    <SafeAreaView style={styles.safe}>
+      <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
+      <LinearGradient
+        colors={[colors.gradientStart, colors.gradientEnd]}
+        style={styles.gradient}
+      >
+        <ScrollView contentContainerStyle={styles.container}>
+          {/* Profile Header */}
+          <TouchableOpacity
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+            activeOpacity={0.8}
+          >
+            <View style={styles.profileRow}>
+              <View
+                style={[
+                  styles.avatar,
+                  { backgroundColor: colors.cardBorder + '40' },
+                ]}
+              >
+                <Ionicons name="person" size={24} color={colors.textSecondary} />
+              </View>
+              <View style={styles.profileText}>
+                <Text style={[styles.profileName, { color: colors.textPrimary }]}>
+                  Alex Johnson
+                </Text>
+                <Text
+                  style={[styles.profileSubtitle, { color: colors.textSecondary }]}
+                >
+                  Premium Member
+                </Text>
+              </View>
+              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            </View>
+          </TouchableOpacity>
 
-      {/* Preferences */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Preferences</Text>
-        <View style={styles.settingRow}>
-          <Text style={styles.label}>Enable Notifications</Text>
-          <Switch
-            value={notifications}
-            onValueChange={setNotifications}
-            trackColor={{ false: '#ddd', true: '#D2A5A5' }}
-            thumbColor={notifications ? '#784B4B' : '#aaa'}
-          />
-        </View>
-        <View style={styles.settingRow}>
-          <Text style={styles.label}>Auto-Play Workouts</Text>
-          <Switch
-            value={autoPlay}
-            onValueChange={setAutoPlay}
-            trackColor={{ false: '#ddd', true: '#D2A5A5' }}
-            thumbColor={autoPlay ? '#784B4B' : '#aaa'}
-          />
-        </View>
-        <View style={styles.settingRow}>
-          <Text style={styles.label}>Dark Mode</Text>
-          <Switch
-            value={darkMode}
-            onValueChange={setDarkMode}
-            trackColor={{ false: '#ddd', true: '#D2A5A5' }}
-            thumbColor={darkMode ? '#784B4B' : '#aaa'}
-          />
-        </View>
-      </View>
+          {/* Account Section */}
+          <View
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
+              Account
+            </Text>
+            {[
+              { icon: 'person-outline', label: 'Personal Information' },
+              { icon: 'bullseye', label: 'Fitness Goals' },
+              { icon: 'shield-outline', label: 'Privacy & Security' },
+            ].map((item, i) => (
+              <TouchableOpacity key={i} style={styles.rowItem} activeOpacity={0.7}>
+                <View style={styles.iconWrapper}>
+                  {item.icon === 'bullseye' ? (
+                    <FontAwesome5
+                      name="bullseye"
+                      size={18}
+                      color={colors.textSecondary}
+                    />
+                  ) : (
+                    <Ionicons
+                      name={item.icon as any}
+                      size={18}
+                      color={colors.textSecondary}
+                    />
+                  )}
+                </View>
+                <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                  {item.label}
+                </Text>
+                <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+              </TouchableOpacity>
+            ))}
+          </View>
 
-      {/* Account */}
-      <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Account</Text>
-        <TouchableOpacity style={styles.actionButton}>
-          <Text style={styles.actionText}>Change Password</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton}>
-          <Text style={styles.actionText}>Manage Subscription</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.actionButton} onPress={confirmReset}>
-          <Text style={[styles.actionText, { color: '#bf2626' }]}>Reset App</Text>
-        </TouchableOpacity>
-      </View>
+          {/* Preferences Section */}
+          <View
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
+              Preferences
+            </Text>
+            <View style={styles.rowItem}>
+              <Ionicons
+                name="notifications-outline"
+                size={18}
+                color={colors.textSecondary}
+              />
+              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                Notifications
+              </Text>
+              <Switch
+                value={notifications}
+                onValueChange={setNotifications}
+                trackColor={{
+                  false: colors.textSecondary + '50',
+                  true: colors.textSecondary + '80',
+                }}
+                thumbColor={notifications ? colors.accent : colors.textPrimary}
+              />
+            </View>
+            <View style={styles.rowItem}>
+              <Ionicons name="moon-outline" size={18} color={colors.textSecondary} />
+              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                Dark Mode
+              </Text>
+              <Switch
+                value={darkMode}
+                onValueChange={setDarkMode}
+                trackColor={{
+                  false: colors.textSecondary + '50',
+                  true: colors.textSecondary + '80',
+                }}
+                thumbColor={darkMode ? colors.accent : colors.textPrimary}
+              />
+            </View>
+            <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
+              <Ionicons name="language-outline" size={18} color={colors.textSecondary} />
+              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                Language
+              </Text>
+              <Text style={[styles.rowValue, { color: colors.textSecondary }]}>
+                English
+              </Text>
+              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
+              <Ionicons name="options-outline" size={18} color={colors.textSecondary} />
+              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                App Preferences
+              </Text>
+              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            </TouchableOpacity>
+          </View>
 
-      {/* Footer */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>Lunora v1.0.0</Text>
-      </View>
-    </ScrollView>
-  );
+          {/* Support Section */}
+          <View
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
+              Support
+            </Text>
+            {[
+              { icon: 'help-circle-outline', label: 'Help & FAQ' },
+              { icon: 'document-text-outline', label: 'Privacy Policy' },
+              { icon: 'chatbubble-ellipses-outline', label: 'Contact Support' },
+            ].map((item, i) => (
+              <TouchableOpacity key={i} style={styles.rowItem} activeOpacity={0.7}>
+                <Ionicons name={item.icon as any} size={18} color={colors.textSecondary} />
+                <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                  {item.label}
+                </Text>
+                <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+              </TouchableOpacity>
+            ))}
+          </View>
+
+          {/* About Section */}
+          <View
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+          >
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
+              About
+            </Text>
+            <View style={styles.aboutBlock}>
+              <Text style={[styles.aboutTitle, { color: colors.textPrimary }]}>
+                Training App
+              </Text>
+              <Text style={[styles.aboutVersion, { color: colors.textSecondary }]}>
+                Version 1.0.0
+              </Text>
+              <Text style={[styles.aboutText, { color: colors.textSecondary }]}>
+                Your personal fitness companion designed to help you achieve your
+                goals and stay motivated on your fitness journey.
+              </Text>
+            </View>
+          </View>
+
+          {/* Sign Out */}
+          <TouchableOpacity
+            style={[
+              styles.card,
+              {
+                backgroundColor: colors.cardBg,
+                borderColor: colors.cardBorder,
+              },
+            ]}
+            activeOpacity={0.7}
+          >
+            <View style={styles.rowItem}>
+              <Ionicons name="exit-outline" size={18} color={colors.accent} />
+              <Text style={[styles.rowLabel, { color: colors.accent }]}>
+                Sign Out
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>
+      </LinearGradient>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#F5E6E6',
-    flex: 1,
+  safe: { flex: 1, },
+  gradient: { flex: 1 },
+  container: { padding: 16, paddingTop: 40, paddingBottom: 20 },
+  card: {
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 16,
+    borderWidth: 1,
   },
-  IOScontainer: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
-    marginBottom: 80
+  shadow: {
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 8,
+    elevation: 3,
   },
-  header: {
-    backgroundColor: '#BF7D7D',
-    paddingTop: 60,
-    paddingBottom: 20,
-    paddingHorizontal: 20,
-  },
-  headerTitle: {
-    fontSize: 24,
-    color: '#fff',
-    fontWeight: 'bold',
-  },
-  section: {
-    padding: 20,
-    borderBottomColor: '#EED6D6',
-    borderBottomWidth: 1,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#784B4B',
-    marginBottom: 12,
-  },
-  settingRow: {
+  profileRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 12,
   },
-  label: {
-    fontSize: 15,
-    color: '#784B4B',
-  },
-  actionButton: {
-    paddingVertical: 12,
-  },
-  actionText: {
-    color: '#784B4B',
-    fontWeight: '600',
-  },
-  footer: {
+  avatar: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
     alignItems: 'center',
-    paddingVertical: 20,
+    justifyContent: 'center',
   },
-  footerText: {
-    fontSize: 12,
-    color: '#A47C7C',
+  profileText: { flex: 1, marginLeft: 12 },
+  profileName: { fontSize: 16, fontWeight: '600' },
+  profileSubtitle: { fontSize: 12, marginTop: 2 },
+  sectionHeader: { fontSize: 14, fontWeight: '600', marginBottom: 12 },
+  rowItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 10,
   },
-});
+  iconWrapper: { width: 24, alignItems: 'center' },
+  rowLabel: { flex: 1, marginLeft: 12, fontSize: 15 },
+  rowValue: { fontSize: 13, marginRight: 6 },
+  aboutBlock: { alignItems: 'center', marginVertical: 12 },
+  aboutTitle: { fontSize: 16, fontWeight: '600' },
+  aboutVersion: { fontSize: 12, marginVertical: 4 },
+  aboutText: { fontSize: 12, textAlign: 'center', lineHeight: 18 },
+})

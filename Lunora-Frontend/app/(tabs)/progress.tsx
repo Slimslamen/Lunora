@@ -1,152 +1,250 @@
-import React from 'react';
-import { ScrollView, StyleSheet, FlatList, Platform } from 'react-native';
-import { ProgressChart } from 'react-native-chart-kit';
-import { Dimensions } from 'react-native';
-import { ThemedView } from '@/components/ThemedView';
-import { ThemedText } from '@/components/ThemedText';
+import React from 'react'
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  StatusBar,
+  useColorScheme,
+} from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import { Ionicons } from '@expo/vector-icons'
+import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 
-const screenWidth = Dimensions.get('window').width;
 
-export default function ProgressScreen() {
-  const progressData = {
-    labels: ['Strength', 'Mobility', 'Cardio'],
-    data: [0.7, 0.5, 0.85], // Progress as percentage
-  };
+const days = [
+  { day: 'Mon', date: 8, title: 'Upper Body Strength', duration: '45 min', done: true },
+  { day: 'Tue', date: 9, title: 'Cardio & HIIT', duration: '30 min', done: true },
+  { day: 'Wed', date: 10, title: 'Lower Body Power', duration: '50 min', done: true },
+  { day: 'Thu', date: 11, title: 'Rest Day', subtitle: 'Active recovery', done: false },
+  { day: 'Fri', date: 12, title: 'Full Body Circuit', duration: '40 min', done: false },
+  { day: 'Sat', date: 13, title: 'Yoga & Mobility', duration: '30 min', done: false },
+  { day: 'Sun', date: 14, title: 'Outdoor Activity', duration: '60 min', done: false },
+]
 
-  const recentSessions = [
-    { day: 'Saturday', type: 'Leg Day', duration: '48 min' },
-    { day: 'Thursday', type: 'Core Blast', duration: '32 min' },
-    { day: 'Tuesday', type: 'Mobility Flow', duration: '40 min' },
-  ];
+export default function Progress() {
+  const scheme = useColorScheme()
+  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
 
   return (
-    <ScrollView style={Platform.OS !== "ios" ? styles.container : styles.IOScontainer}>
-      {/* Header */}
-      <ThemedView style={styles.header}>
-        <ThemedText style={styles.headerTitle}>Your Progress</ThemedText>
-      </ThemedView>
+    <View style={{ flex: 1 }}>
+      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
+      <LinearGradient
+        colors={[colors.gradientStart, colors.gradientEnd]}
+        style={styles.safe}
+      >
+        <ScrollView style={{ marginBottom: 60}} contentContainerStyle={styles.container}>
+          {/* Week Overview */}
+          <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+            <View style={styles.overviewHeader}>
+              <Ionicons name="chevron-back" size={20} color={colors.textSecondary} />
+              <Text style={[styles.overviewTitle, { color: colors.textPrimary }]}>
+                This Week
+              </Text>
+              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+            </View>
+            <View style={styles.overviewStats}>
+              <View style={styles.overviewStat}>
+                <Text style={[styles.statValue, { color: colors.textPrimary }]}>3</Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Completed</Text>
+              </View>
+              <View style={styles.overviewStat}>
+                <Text style={[styles.statValue, { color: colors.textPrimary }]}>4</Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Remaining</Text>
+              </View>
+              <View style={styles.overviewStat}>
+                <Text style={[styles.statValue, { color: colors.textPrimary }]}>43%</Text>
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Progress</Text>
+              </View>
+            </View>
+          </View>
 
-      {/* Chart Section */}
-      <ThemedView style={styles.chartSection}>
-        <ThemedText style={styles.sectionTitle}>Workout Focus</ThemedText>
-        <ProgressChart
-          data={progressData}
-          width={screenWidth - 40}
-          height={200}
-          strokeWidth={20}
-          radius={25}
-          chartConfig={chartConfig}
-          hideLegend={false}
-        />
-      </ThemedView>
+          {/* Daily Plan */}
+          {days.map((item, i) => (
+            <View
+              key={i}
+              style={[
+                styles.dayRow,
+                {
+                  backgroundColor: colors.cardBg,
+                  borderColor: colors.cardBorder,
+                },
+                styles.shadow,
+              ]}
+            >
+              <View style={styles.dayLabel}>
+                <Text style={[styles.dayName, { color: colors.textSecondary }]}>
+                  {item.day}
+                </Text>
+                <Text style={[styles.dayDate, { color: colors.textPrimary }]}>
+                  {item.date}
+                </Text>
+              </View>
+              <View style={styles.dayContent}>
+                <Text style={[styles.dayTitle, { color: colors.textPrimary }]}>
+                  {item.title}
+                </Text>
+                {item.subtitle ? (
+                  <Text style={[styles.daySubtitle, { color: colors.textSecondary }]}>
+                    {item.subtitle}
+                  </Text>
+                ) : (
+                  <Text style={[styles.dayDuration, { color: colors.textSecondary }]}>
+                    {item.duration}
+                  </Text>
+                )}
+              </View>
+              <Ionicons
+                name={item.done ? 'checkmark-circle' : 'play-circle-outline'}
+                size={24}
+                color={item.done ? colors.checks : colors.textSecondary}
+              />
+            </View>
+          ))}
 
-      {/* Stats Summary */}
-      <ThemedView style={styles.statsContainer}>
-        <ThemedView style={styles.statBlock}>
-          <ThemedText style={styles.statValue}>11</ThemedText>
-          <ThemedText style={styles.statLabel}>Workouts this month</ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.statBlock}>
-          <ThemedText style={styles.statValue}>430</ThemedText>
-          <ThemedText style={styles.statLabel}>Total minutes</ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.statBlock}>
-          <ThemedText style={styles.statValue}>High</ThemedText>
-          <ThemedText style={styles.statLabel}>Avg. Intensity</ThemedText>
-        </ThemedView>
-      </ThemedView>
-
-      {/* Recent Workouts */}
-      <ThemedView style={styles.recentSection}>
-        <ThemedText style={styles.sectionTitleDark}>Recent Workouts</ThemedText>
-        {recentSessions.map((item, index) => (
-          <ThemedView key={index} style={styles.sessionCard}>
-            <ThemedText style={styles.sessionText}>
-              {item.day} • {item.type} • {item.duration}
-            </ThemedText>
-          </ThemedView>
-        ))}
-      </ThemedView>
-    </ScrollView>
-  );
+          {/* This Week’s Focus */}
+          <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+            <Text style={[styles.cardTitleSmall, { color: colors.textPrimary }]}>
+              This Week’s Focus
+            </Text>
+            <View style={styles.row}>
+              <View
+                style={[
+                  styles.focusCard,
+                  {
+                    backgroundColor: colors.cardBg,
+                    borderColor: colors.cardBorder,
+                  },
+                  styles.shadow,
+                ]}
+              >
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
+                  Strength
+                </Text>
+                <Text style={[styles.statValue, { color: colors.textPrimary }]}>
+                  2 days
+                </Text>
+              </View>
+              <View
+                style={[
+                  styles.focusCard,
+                  {
+                    backgroundColor: colors.cardBg,
+                    borderColor: colors.cardBorder,
+                  },
+                  styles.shadow,
+                ]}
+              >
+                <Text style={[styles.statLabel, { color: colors.textSecondary }]}>
+                  Cardio
+                </Text>
+                <Text style={[styles.statValue, { color: colors.textPrimary }]}>
+                  2 days
+                </Text>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+      </LinearGradient>
+    </View>
+  )
 }
 
-const chartConfig = {
-  backgroundGradientFrom: '#F5E6E6',
-  backgroundGradientTo: '#F5E6E6',
-  color: (opacity = 1) => `rgba(139, 75, 75, ${opacity})`,
-  labelColor: () => '#784B4B',
-  propsForLabels: {
-    fontWeight: 'bold',
-  },
-};
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
+  safe: { flex: 1 },
+  container: { padding: 16, paddingTop: 40, paddingBottom: 20, marginBottom: 180 },
+
+  // Cards & Shadows
+  card: {
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 16,
+    borderWidth: 1,
   },
-  IOScontainer: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
-    marginBottom: 80
+  shadow: {
+    shadowColor: '#000',
+    shadowOpacity: 0.08,
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 8,
+    elevation: 3,
   },
-  header: {
-    padding: 20,
-    backgroundColor: '#BF7D7D',
-    paddingTop: 60,
-  },
-  headerTitle: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-  chartSection: {
-    paddingHorizontal: 0,
-    paddingVertical: 5,
-    backgroundColor: '#f5e6e6'
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#784B4B',
-    marginBottom: 10,
-  },
-  statsContainer: {
+
+  // Week Overview
+  overviewHeader: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    backgroundColor: '#BF7D7D',
-    paddingVertical: 20,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 12,
   },
-  statBlock: {
+  overviewTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  overviewStats: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  overviewStat: {
     alignItems: 'center',
   },
   statValue: {
     fontSize: 20,
-    color: '#fff',
-    fontWeight: 'bold',
+    fontWeight: '700',
   },
   statLabel: {
     fontSize: 12,
-    color: '#f3f3f3',
   },
-  recentSection: {
-    padding: 20,
-  },
-  sectionTitleDark: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#784B4B',
-    marginBottom: 10,
-  },
-  sessionCard: {
-    backgroundColor: '#FDECEC',
-    padding: 15,
+
+  // Day Row
+  dayRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
     borderRadius: 12,
-    marginBottom: 10,
+    padding: 12,
+    marginBottom: 12,
+    borderWidth: 1,
   },
-  sessionText: {
-    color: '#784B4B',
-    fontWeight: '500',
+  dayLabel: {
+    width: 50,
+    alignItems: 'center',
+    marginRight: 12,
   },
-});
+  dayName: {
+    fontSize: 12,
+  },
+  dayDate: {
+    fontSize: 16,
+    fontWeight: '600',
+  },
+  dayContent: { flex: 1 },
+  dayTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    marginBottom: 2,
+  },
+  daySubtitle: {
+    fontSize: 12,
+  },
+  dayDuration: {
+    fontSize: 12,
+  },
+
+  // Focus
+  cardTitleSmall: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginBottom: 12,
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  focusCard: {
+    flex: 1,
+    marginRight: 8,
+    paddingVertical: 16,
+    alignItems: 'center',
+    borderWidth: 1,
+    borderRadius: 12,
+  },
+})

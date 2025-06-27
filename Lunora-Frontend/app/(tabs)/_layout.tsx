@@ -2,11 +2,10 @@
 import React from 'react'
 import { Tabs } from 'expo-router'
 import { Platform } from 'react-native'
-import { HapticTab } from '@/components/HapticTab'
 import { IconSymbol } from '@/components/ui/IconSymbol'
-import TabBarBackground from '@/components/ui/TabBarBackground'
 import { useColorScheme } from '@/hooks/useColorScheme'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { BlurView } from 'expo-blur'
 
 export default function TabLayout() {
   const colorScheme = useColorScheme()
@@ -18,26 +17,22 @@ export default function TabLayout() {
         headerShown: false,
         tabBarActiveTintColor: colors.textPrimary,
         tabBarInactiveTintColor: colors.textSecondary,
-        tabBarButton: HapticTab,
-        tabBarBackground: TabBarBackground,
-        tabBarLabelStyle: { fontSize: 12, marginBottom: 4 },
+        tabBarLabelStyle: { fontSize: 12, marginBottom: 0 },
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',
-            backgroundColor: colors.cardBg,
-            borderTopColor: colors.cardBorder,
-            borderTopWidth: 1,
-            height: 64,
-            paddingTop: 4,
+            height: 70,
           },
           default: {
-            backgroundColor: colors.cardBg,
-            borderTopColor: colors.cardBorder,
-            borderTopWidth: 1,
             height: 64,
-            paddingTop: 4,
           },
         }),
+           tabBarBackground: () => (
+        <BlurView
+          intensity={0}
+          style={{ flex: 1 }}
+        />
+      ),
       }}
     >
       <Tabs.Screen

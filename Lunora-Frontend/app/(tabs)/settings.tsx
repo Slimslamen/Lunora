@@ -24,7 +24,7 @@ export default function SettingsDetailedScreen() {
   const [darkMode, setDarkMode] = useState(scheme === 'dark')
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <View style={styles.safe}>
       <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
@@ -248,14 +248,14 @@ export default function SettingsDetailedScreen() {
           </TouchableOpacity>
         </ScrollView>
       </LinearGradient>
-    </SafeAreaView>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, },
+  safe: { flex: 1 },
   gradient: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 20 },
+  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
   card: {
     borderRadius: 12,
     padding: 12,

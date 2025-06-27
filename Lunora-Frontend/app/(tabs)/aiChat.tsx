@@ -1,171 +1,138 @@
-import React, { useState, useRef } from 'react';
+// AIChatScreen.tsx
+import React, { useState, useRef, useEffect } from 'react'
 import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
   FlatList,
-  StyleSheet,
+  TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
-  SafeAreaView
-} from 'react-native';
+  StyleSheet,
+  StatusBar,
+  useColorScheme,
+} from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
+import { IconSymbol } from '@/components/ui/IconSymbol'
+import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
 
-type Message = {
-  id: string;
-  sender: 'user' | 'ai';
-  text: string;
-};
+export default function AIChatScreen() {
+  const scheme = useColorScheme()
+  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
 
-export default function AIScreen() {
-  const [messages, setMessages] = useState<Message[]>([
-    { id: '1', sender: 'ai', text: 'Hi! What kind of workout help do you need today?' },
-  ]);
-  const [input, setInput] = useState('');
-  const flatListRef = useRef<FlatList>(null);
+  const [messages, setMessages] = useState<Array<{ id: string; text: string; sender: 'user' | 'ai' }>>([])
+  const [input, setInput] = useState('')
+  const flatRef = useRef<FlatList>(null)
+
+  // Scroll to bottom when new message arrives
+  useEffect(() => {
+    if (flatRef.current) {
+      flatRef.current.scrollToEnd({ animated: true })
+    }
+  }, [messages])
 
   const sendMessage = () => {
-    if (!input.trim()) return;
+    if (!input.trim()) return
+    const userMsg = { id: `u${Date.now()}`, text: input.trim(), sender: 'user' as const }
+    setMessages(prev => [...prev, userMsg])
+    setInput('')
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      sender: 'user',
-      text: input.trim(),
-    };
-
-    const aiReply: Message = {
-      id: (Date.now() + 1).toString(),
-      sender: 'ai',
-      text: 'Got it! I’ll generate a plan for you shortly.',
-    };
-
-    setMessages((prev) => [...prev, userMessage, aiReply]);
-    setInput('');
-
-    // Scroll to end after sending
+    // Simulate AI response (replace with real API call)
     setTimeout(() => {
-      flatListRef.current?.scrollToEnd({ animated: true });
-    }, 100);
-  };
+      const aiMsg = {
+        id: `a${Date.now()}`,
+        text: `AI: You said "${userMsg.text}"`,
+        sender: 'ai' as const,
+      }
+      setMessages(prev => [...prev, aiMsg])
+    }, 800)
+  }
 
-  const renderItem = ({ item }: { item: Message }) => (
-    <View style={[styles.messageBubble, item.sender === 'user' ? styles.userBubble : styles.aiBubble]}>
-      <Text style={styles.messageText}>{item.text}</Text>
-    </View>
-  );
+  const renderItem = ({ item }: { item: { id: string; text: string; sender: string } }) => {
+    const isUser = item.sender === 'user'
+    return (
+      <View
+        style={[
+          styles.bubble,
+          {
+            alignSelf: isUser ? 'flex-end' : 'flex-start',
+            backgroundColor: isUser ? colors.accent : colors.cardBg,
+            borderColor: colors.cardBorder,
+          },
+        ]}
+      >
+        <Text style={{ color: isUser ? '#fff' : colors.textPrimary }}>{item.text}</Text>
+      </View>
+    )
+  }
 
   return (
-    <SafeAreaView style={Platform.OS !== "ios" ? styles.safe : styles.IOSsafe}>
-        {/* Header */}
-        <View style={styles.header}>
-          <Text style={styles.headerTitle}>AI Assistant</Text>
-        </View>
+    <View style={{ flex: 1 }}>
+      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
+      <LinearGradient
+        colors={[colors.gradientStart, colors.gradientEnd]}
+        style={styles.container}
+      >
+        <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Chat with AI</Text>
+        <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Ask anything about your workouts</Text>
 
-      <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        {/* Chat Messages */}
         <FlatList
-          ref={flatListRef}
+          ref={flatRef}
           data={messages}
-          keyExtractor={(item) => item.id}
+          keyExtractor={item => item.id}
           renderItem={renderItem}
-          contentContainerStyle={styles.chatContainer}
-          onContentSizeChange={() => flatListRef.current?.scrollToEnd({ animated: true })}
+          contentContainerStyle={styles.messagesContainer}
         />
 
-        {/* Input Bar */}
-        <View style={styles.inputBar}>
-          <TextInput
-            value={input}
-            onChangeText={setInput}
-            placeholder="Ask something..."
-            placeholderTextColor="#a47c7c"
-            style={styles.input}
-          />
-          <TouchableOpacity onPress={sendMessage} style={styles.sendButton}>
-            <Text style={styles.sendText}>➤</Text>
-          </TouchableOpacity>
-        </View>
-      </KeyboardAvoidingView>
-    </SafeAreaView>
-  );
+        <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+          <View style={[styles.inputContainer, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>  
+            <TextInput
+              style={[styles.input, { color: colors.textPrimary }]}
+              placeholder="Type a message..."
+              placeholderTextColor={colors.textSecondary}
+              value={input}
+              onChangeText={setInput}
+              onSubmitEditing={sendMessage}
+              returnKeyType="send"
+            />
+            <TouchableOpacity onPress={sendMessage} style={styles.sendButton}>
+              <IconSymbol name="send" size={20} color={colors.textPrimary} />
+            </TouchableOpacity>
+          </View>
+        </KeyboardAvoidingView>
+      </LinearGradient>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
-  safe: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
-  },
-  IOSsafe: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
-    marginBottom: 80
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#F5E6E6',
-  },
-  header: {
-    backgroundColor: '#BF7D7D',
-    paddingTop: 60,
-    paddingBottom: 20,
-    paddingHorizontal: 20,
-  },
-  headerTitle: {
-    fontSize: 24,
-    color: '#fff',
-    fontWeight: 'bold',
-  },
-  chatContainer: {
-    padding: 20,
-    paddingBottom: 10, // space for input
-  },
-  messageBubble: {
-    maxWidth: '75%',
-    borderRadius: 16,
-    padding: 12,
-    marginBottom: 12,
-  },
-  aiBubble: {
-    backgroundColor: '#D2A5A5',
-    alignSelf: 'flex-start',
-  },
-  userBubble: {
-    backgroundColor: '#784B4B',
-    alignSelf: 'flex-end',
-  },
-  messageText: {
-    color: '#fff',
-    fontSize: 14,
-  },
-  inputBar: {
-    flexDirection: 'row',
-    backgroundColor: '#fff',
+  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16 },
+  headerTitle: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
+  headerSubtitle: { fontSize: 14, textAlign: 'center', marginBottom: 12 },
+
+  messagesContainer: { flexGrow: 1, paddingVertical: 8 },
+  bubble: {
+    maxWidth: '80%',
     padding: 10,
-    paddingBottom: Platform.OS === 'ios' ? 30 : 20,
-    paddingHorizontal: 16,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderRadius: 16,
+    borderWidth: 1,
+    marginVertical: 4,
+  },
+
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderTopWidth: 1,
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+    marginBottom: 64.5,
   },
   input: {
     flex: 1,
-    backgroundColor: '#FDECEC',
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    borderRadius: 12,
-    fontSize: 15,
-    color: '#333',
+    fontSize: 16,
+    paddingVertical: 8,
   },
   sendButton: {
-    backgroundColor: '#784B4B',
-    paddingHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 12,
-    marginLeft: 10,
+    marginLeft: 12,
   },
-  sendText: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});
+})

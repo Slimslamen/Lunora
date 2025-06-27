@@ -113,7 +113,7 @@ export default function ProfileDetailedScreen() {
   const colors = scheme === 'light' ? DARK_COLORS : LIGHT_COLORS
 
   return (
-    <SafeAreaView style={styles.safe}>
+    <View style={styles.safe}>
       <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
@@ -212,14 +212,14 @@ export default function ProfileDetailedScreen() {
           </View>
         </ScrollView>
       </LinearGradient>
-    </SafeAreaView>
+    </View>
   )
 }
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 20 },
+  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
 
   card: {
     borderRadius: 12,

@@ -93,11 +93,11 @@ export default function ChallengesScreen() {
   const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
 
   return (
-    <View style={[Platform.OS === "ios" ? styles.IOS : "", { flex: 1 }]}>
+    <View style={{ flex: 1 }}>
       <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
+        style={styles.gradient}
       >
         <ScrollView style={{marginBottom: 60}} contentContainerStyle={styles.container}>
           {/* Title */}
@@ -247,26 +247,21 @@ export default function ChallengesScreen() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  IOS: { marginBottom: 10 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 20 },
-
+  gradient: { flex: 1 },
+  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
   title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 24 },
-
   card: {
     borderRadius: 12,
     padding: 16,
     marginBottom: 16,
     borderWidth: 1,
   },
-
   statsRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
   statItem: { alignItems: 'center', flex: 1 },
   statNumber: { fontSize: 20, fontWeight: '700' },
   statLabel: { fontSize: 12 },
-
   sectionHeader: { fontSize: 16, fontWeight: '600', marginVertical: 8 },
-
   row: { flexDirection: 'row', alignItems: 'center' },
   iconWrapper: { width: 24, alignItems: 'center', marginRight: 12 },
   challengeContent: { flex: 1 },

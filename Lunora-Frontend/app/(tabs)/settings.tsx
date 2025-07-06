@@ -255,7 +255,7 @@ export default function SettingsDetailedScreen() {
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
+  container: { padding: 16, paddingTop: 60, paddingBottom: 80 },
   card: {
     borderRadius: 12,
     padding: 12,

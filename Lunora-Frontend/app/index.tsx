@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, SafeAreaView
 
 export default function WelcomeScreen({ navigation }: any) {
   return (
-    <SafeAreaView style={styles.container}>
+    <View  style={styles.container}>
       <ImageBackground
         source={require('../assets/images/Lunora_background.png')}
         style={styles.background}
@@ -13,17 +13,21 @@ export default function WelcomeScreen({ navigation }: any) {
       >
         <View style={styles.overlay}>
           <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.getStartedBtn}>
-              <Text style={styles.getStartedText}>Get started</Text>
-            </TouchableOpacity>
+             <Link href={'./(tabs)/home'} asChild>
+              <TouchableOpacity style={styles.getStartedBtn}>
+                <Text style={styles.getStartedText}>Get started</Text>
+              </TouchableOpacity>
+            </Link>
 
-            <TouchableOpacity style={styles.loginBtn}>
-              <Link href={'./(tabs)/home'} style={styles.loginText}>I already have an account</Link>
-            </TouchableOpacity>
+            <Link href={'./(tabs)/home'} asChild>
+              <TouchableOpacity style={styles.loginBtn}>
+              <Text style={styles.loginText}>I already have an account</Text>
+              </TouchableOpacity>
+            </Link>
           </View>
         </View>
       </ImageBackground>
-    </SafeAreaView>
+    </View>
   );
 }
 const styles = StyleSheet.create({

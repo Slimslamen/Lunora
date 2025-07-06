@@ -40,8 +40,9 @@ export default function WorkoutsScreen() {
       <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.container}
+        style={styles.gradient}
       >
+        <ScrollView contentContainerStyle={styles.container}>
         {/* Header */}
         <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Workouts</Text>
         <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Choose your perfect workout</Text>
@@ -114,16 +115,17 @@ export default function WorkoutsScreen() {
             )
           })}
         </ScrollView>
+        </ScrollView>
       </LinearGradient>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, paddingTop: 40, paddingHorizontal: 16 },
+  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16, paddingBottom: 20 },
+  gradient: { flex: 1 },
   headerTitle: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   headerSubtitle: { fontSize: 14, textAlign: 'center', marginBottom: 16 },
-
   searchBox: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -172,7 +174,6 @@ const styles = StyleSheet.create({
     marginTop: 10
   },
   tagLabelText: { fontSize: 12 },
-
   startButton: {
     backgroundColor: '#fff',
     paddingVertical: 6,

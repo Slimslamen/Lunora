@@ -22,6 +22,9 @@ export default function TabLayout() {
           ios: {
             position: 'absolute',
             height: 70,
+            backgroundColor: 'transparent',
+            elevation: 0,
+            shadowOpacity: 0,
           },
           default: {
             height: 64,
@@ -29,7 +32,7 @@ export default function TabLayout() {
         }),
            tabBarBackground: () => (
         <BlurView
-          intensity={0}
+          intensity={10}
           style={{ flex: 1 }}
         />
       ),

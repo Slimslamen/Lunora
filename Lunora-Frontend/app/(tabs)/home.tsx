@@ -242,11 +242,9 @@ export default function ProgressOverviewScreen() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 20, marginBottom: 60 },
-
+  container: { padding: 16, paddingTop: 60 },
   title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 20 },
-
   card: {
     borderRadius: 12,
     padding: 16,
@@ -269,11 +267,8 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   progressBarFill: { height: '100%', width: '60%' },
-
   row: { flexDirection: 'row', justifyContent: 'space-between' },
-
   subtext: { fontSize: 12 },
-
   metricRow: { marginBottom: 16 },
   metricCard: {
     flex: 1,
@@ -296,7 +291,6 @@ const styles = StyleSheet.create({
   activityName: { fontSize: 15, fontWeight: '600' },
   activityWhen: { fontSize: 12, marginTop: 2 },
   activityDuration: { fontSize: 13, fontWeight: '600' },
-
   quickRow: { marginTop: 12 },
   quickButton: {
     flex: 1,

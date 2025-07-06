@@ -85,11 +85,11 @@ export default function AIChatScreen() {
         />
 
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <View style={[styles.inputContainer, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>  
+          <View style={[styles.inputContainer, {backgroundColor: colors.textPrimary}]}>  
             <TextInput
-              style={[styles.input, { color: colors.textPrimary }]}
+              style={[styles.input]}
               placeholder="Type a message..."
-              placeholderTextColor={colors.textSecondary}
+              placeholderTextColor={'black'}
               value={input}
               onChangeText={setInput}
               onSubmitEditing={sendMessage}
@@ -106,10 +106,9 @@ export default function AIChatScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16 },
+  container: { flex: 1, paddingTop: 60, paddingHorizontal: 16, paddingBottom: 70 },
   headerTitle: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   headerSubtitle: { fontSize: 14, textAlign: 'center', marginBottom: 12 },
-
   messagesContainer: { flexGrow: 1, paddingVertical: 8 },
   bubble: {
     maxWidth: '80%',
@@ -118,14 +117,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginVertical: 4,
   },
-
   inputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderTopWidth: 1,
+    color: 'black',
     paddingVertical: 8,
     paddingHorizontal: 12,
-    marginBottom: 64.5,
+    borderRadius: 15,
+    borderBottomLeftRadius: '15px',
+    borderBottomRightRadius: '15px',
   },
   input: {
     flex: 1,

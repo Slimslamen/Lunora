@@ -99,7 +99,7 @@ export default function ChallengesScreen() {
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}
       >
-        <ScrollView style={{marginBottom: 60}} contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
           {/* Title */}
           <Text style={[styles.title, { color: colors.textPrimary }]}>
             Challenges
@@ -247,8 +247,8 @@ export default function ChallengesScreen() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  gradient: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
+
+  container: { padding: 16, paddingTop: 60, paddingBottom: 90 },
   title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
   subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 24 },
   card: {
@@ -267,9 +267,7 @@ const styles = StyleSheet.create({
   challengeContent: { flex: 1 },
   challengeTitle: { fontSize: 15, fontWeight: '600' },
   challengeSubtitle: { fontSize: 12, marginTop: 2 },
-
   daysLeft: { fontSize: 12, marginLeft: 8 },
-
   progressBarBg: {
     backgroundColor: 'rgba(255,255,255,0.3)',
     height: 6,
@@ -278,7 +276,6 @@ const styles = StyleSheet.create({
     marginVertical: 8,
   },
   progressFill: { height: '100%' },
-
   rowFooter: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   progressText: { fontSize: 12 },
   reward: { flexDirection: 'row', alignItems: 'center' },

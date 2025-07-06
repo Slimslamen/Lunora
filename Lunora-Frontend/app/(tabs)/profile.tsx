@@ -219,8 +219,7 @@ export default function ProfileDetailedScreen() {
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 60 },
-
+  container: { padding: 16, paddingTop: 60, paddingBottom: 60 },
   card: {
     borderRadius: 12,
     borderWidth: 1,
@@ -228,7 +227,6 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   center: { alignItems: 'center' },
-
   avatar: {
     width: 80,
     height: 80,
@@ -246,10 +244,8 @@ const styles = StyleSheet.create({
     padding: 4,
     borderRadius: 12,
   },
-
   name: { fontSize: 20, fontWeight: '600' },
   subtitle: { fontSize: 14, marginBottom: 12 },
-
   buttonRow: { flexDirection: 'row', gap: 12 },
   button: {
     borderWidth: 1,
@@ -258,9 +254,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
   buttonText: { fontSize: 14, fontWeight: '500' },
-
   row: { flexDirection: 'row', alignItems: 'center' },
-
   metricsRow: { justifyContent: 'space-between', marginBottom: 16 },
   metricCard: {
     flex: 1,
@@ -274,9 +268,7 @@ const styles = StyleSheet.create({
   },
   metricValue: { fontSize: 20, fontWeight: '700', marginTop: 6 },
   metricLabel: { fontSize: 12, marginTop: 2, textAlign: 'center' },
-
   sectionHeader: { fontSize: 16, fontWeight: '600', marginBottom: 12 },
-
   achCol: { width: '33%', alignItems: 'center', marginBottom: 16 },
   achCircle: {
     width: 56,
@@ -287,7 +279,6 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
   achText: { fontSize: 12, textAlign: 'center' },
-
   recordRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -298,7 +289,6 @@ const styles = StyleSheet.create({
   recordTitle: { fontSize: 14, fontWeight: '600' },
   recordSubtitle: { fontSize: 12, marginTop: 2 },
   recordValue: { fontSize: 14, fontWeight: '600' },
-
   keepGoing: { textAlign: 'center', fontSize: 12, marginBottom: 12 },
   dayLabel: { fontSize: 14 },
 })

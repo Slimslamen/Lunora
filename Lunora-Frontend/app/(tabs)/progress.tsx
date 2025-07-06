@@ -33,7 +33,7 @@ export default function Progress() {
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}
       >
-        <ScrollView style={{ marginBottom: 60}} contentContainerStyle={styles.container}>
+        <ScrollView contentContainerStyle={styles.container}>
           {/* Week Overview */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
             <View style={styles.overviewHeader}>
@@ -152,9 +152,7 @@ export default function Progress() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  container: { padding: 16, paddingTop: 40, paddingBottom: 20, marginBottom: 180 },
-
-  // Cards & Shadows
+  container: { paddingHorizontal: 16, paddingTop: 60, paddingBottom: 80},
   card: {
     borderRadius: 12,
     padding: 12,
@@ -168,8 +166,6 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 3,
   },
-
-  // Week Overview
   overviewHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -194,8 +190,6 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
   },
-
-  // Day Row
   dayRow: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -228,8 +222,6 @@ const styles = StyleSheet.create({
   dayDuration: {
     fontSize: 12,
   },
-
-  // Focus
   cardTitleSmall: {
     fontSize: 16,
     fontWeight: '600',

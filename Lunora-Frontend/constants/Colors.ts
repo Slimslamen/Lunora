@@ -32,8 +32,6 @@ export const Colors = {
 
 // theme.ts
 
-// theme.ts
-
 export const LIGHT_COLORS = {
   gradientStart: '#BF7D7D',      // rich brick-brown (from coat/clothing)
   gradientEnd:   '#e6c8c8',      // deep espresso brown (from equipment/shadows)

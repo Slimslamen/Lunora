@@ -1,5 +1,5 @@
 // SettingsDetailedScreen.tsx
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   View,
   Text,
@@ -14,14 +14,17 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 
 export default function SettingsDetailedScreen() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode, toggleTheme } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS 
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   const [notifications, setNotifications] = useState(true)
-  const [darkMode, setDarkMode] = useState(scheme === 'dark')
 
   return (
     <View style={styles.safe}>
@@ -146,7 +149,7 @@ export default function SettingsDetailedScreen() {
               </Text>
               <Switch
                 value={darkMode}
-                onValueChange={setDarkMode}
+                onValueChange={toggleTheme}
                 trackColor={{
                   false: colors.textSecondary + '50',
                   true: colors.textSecondary + '80',

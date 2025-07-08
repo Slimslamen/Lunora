@@ -1,5 +1,5 @@
 // ProfileDetailedScreen.tsx
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   View,
   Text,
@@ -17,6 +17,7 @@ import {
   MaterialCommunityIcons,
 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 
 const metrics = [
@@ -109,8 +110,11 @@ const records = [
 const daysOfWeek = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
 
 export default function ProfileDetailedScreen() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'light' ? DARK_COLORS : LIGHT_COLORS
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <View style={styles.safe}>

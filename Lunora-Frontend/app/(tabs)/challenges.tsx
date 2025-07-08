@@ -1,5 +1,5 @@
 // ChallengesScreen.tsx
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   View,
   Text,
@@ -12,6 +12,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 
 const activeChallenges = [
@@ -89,15 +90,18 @@ const comingSoon = [
 ]
 
 export default function ChallengesScreen() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.gradient}
+        // style={styles.gradient}
       >
         <ScrollView contentContainerStyle={styles.container}>
           {/* Title */}

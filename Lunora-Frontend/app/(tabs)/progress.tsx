@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   View,
   Text,
@@ -10,6 +10,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 
 const days = [
@@ -23,8 +24,11 @@ const days = [
 ]
 
 export default function Progress() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <View style={{ flex: 1 }}>

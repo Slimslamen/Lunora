@@ -1,5 +1,5 @@
 // AIChatScreen.tsx
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useContext } from 'react'
 import {
   View,
   Text,
@@ -15,10 +15,14 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { IconSymbol } from '@/components/ui/IconSymbol'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 export default function AIChatScreen() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   const [messages, setMessages] = useState<Array<{ id: string; text: string; sender: 'user' | 'ai' }>>([])
   const [input, setInput] = useState('')

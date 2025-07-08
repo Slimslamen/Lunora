@@ -1,22 +1,24 @@
 // AppNavigator.tsx
-import React from 'react'
+import React, { useContext } from 'react'
 import { Tabs } from 'expo-router'
 import { Platform } from 'react-native'
 import { IconSymbol } from '@/components/ui/IconSymbol'
-import { useColorScheme } from '@/hooks/useColorScheme'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { BlurView } from 'expo-blur'
+import { ThemeContext } from '@/Context/ThemeContext'
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme()
-  const colors = colorScheme === 'dark' ? DARK_COLORS : LIGHT_COLORS
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: colors.textPrimary,
-        tabBarInactiveTintColor: colors.textSecondary,
+        tabBarActiveTintColor: colors.accent,
+        tabBarInactiveTintColor: colors.textPrimary,
         tabBarLabelStyle: { fontSize: 12, marginBottom: 0 },
         tabBarStyle: Platform.select({
           ios: {
@@ -42,7 +44,7 @@ export default function TabLayout() {
         name="home"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="bar-chart" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
 

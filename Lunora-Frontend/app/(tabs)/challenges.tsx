@@ -21,7 +21,7 @@ const activeChallenges = [
     icon: <FontAwesome5 name="fire" size={18} />,
     title: '7-Day Streak Master',
     subtitle: 'Complete 7 workouts in a row',
-    progress: 3 / 7,
+    progress: 3 / 10,
     progressText: '3/7 completed',
     daysLeft: '4d left',
     reward: 'Streak Badge',
@@ -43,7 +43,7 @@ const activeChallenges = [
     icon: <MaterialCommunityIcons name="sunrise" size={18} />,
     title: 'Early Bird',
     subtitle: 'Complete 5 morning workouts',
-    progress: 2 / 5,
+    progress: 2 / 10,
     progressText: '2/5 completed',
     daysLeft: '10d left',
     reward: 'Morning Badge',
@@ -148,33 +148,33 @@ export default function ChallengesScreen() {
             }]}>
               <View style={styles.row}>
                 <View style={styles.iconWrapper}>
-                  {React.cloneElement(ch.icon, { color: colors.accent })}
+                  {React.cloneElement(ch.icon, { color: colors.textPrimary })}
                 </View>
                 <View style={styles.challengeContent}>
                   <Text style={[styles.challengeTitle, { color: colors.textPrimary }]}>
                     {ch.title}
                   </Text>
-                  <Text style={[styles.challengeSubtitle, { color: colors.textSecondary }]}>
+                  <Text style={[styles.challengeSubtitle, { color: colors.textPrimary }]}>
                     {ch.subtitle}
                   </Text>
                 </View>
-                <Text style={[styles.daysLeft, { color: colors.textSecondary }]}>
+                <Text style={[styles.daysLeft, { color: colors.textPrimary }]}>
                   {ch.daysLeft}
                 </Text>
               </View>
               <View style={styles.progressBarBg}>
                 <View style={[styles.progressFill, {
                   width: `${ch.progress * 100}%`,
-                  backgroundColor: colors.accent
+                  backgroundColor: colors.textPrimary
                 }]} />
               </View>
               <View style={styles.rowFooter}>
-                <Text style={[styles.progressText, { color: colors.textSecondary }]}>
+                <Text style={[styles.progressText, { color: colors.textPrimary }]}>
                   {ch.progressText}
                 </Text>
                 <View style={styles.reward}>
-                  {React.cloneElement(ch.rewardIcon, { color: colors.accent })}
-                  <Text style={[styles.rewardText, { color: colors.accent }]}>
+                  {React.cloneElement(ch.rewardIcon, { color: colors.textSecondary })}
+                  <Text style={[styles.rewardText, { color: colors.textSecondary }]}>
                     {ch.reward}
                   </Text>
                 </View>
@@ -193,17 +193,17 @@ export default function ChallengesScreen() {
             }]}>
               <View style={styles.row}>
                 <View style={styles.iconWrapper}>
-                  {React.cloneElement(c.icon, { color: colors.textSecondary })}
+                  {React.cloneElement(c.icon, { color: colors.textPrimary })}
                 </View>
                 <View style={styles.challengeContent}>
-                  <Text style={[styles.challengeTitle, { color: colors.textSecondary }]}>
+                  <Text style={[styles.challengeTitle, { color: colors.textPrimary }]}>
                     {c.title}
                   </Text>
-                  <Text style={[styles.challengeSubtitle, { color: colors.textSecondary, opacity: 0.8 }]}>
+                  <Text style={[styles.challengeSubtitle, { color: colors.textPrimary }]}>
                     {c.subtitle}
                   </Text>
                 </View>
-                <Text style={[styles.daysLeft, { color: colors.textSecondary }]}>
+                <Text style={[styles.daysLeft, { color: colors.textPrimary }]}>
                   {c.timeAgo}
                 </Text>
                 <View style={styles.iconWrapper}>

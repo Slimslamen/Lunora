@@ -108,7 +108,7 @@ export default function WorkoutsScreen() {
                     </View>
                     <View style={styles.tagContainer}>
                       <View style={[styles.tagLabel, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>  
-                        <Text style={[styles.tagLabelText, { color: colors.textSecondary }]}>{w.tag}</Text>
+                        <Text style={[styles.tagLabelText, { color: colors.textPrimary }]}>{w.tag}</Text>
                       </View>
                       <TouchableOpacity style={styles.startButton}>
                         <Text style={styles.startText}>Start Workout</Text>

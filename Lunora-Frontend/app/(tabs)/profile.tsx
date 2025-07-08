@@ -129,9 +129,6 @@ export default function ProfileDetailedScreen() {
             <View style={styles.center}>
               <View style={[styles.avatar, { backgroundColor: colors.cardBorder + '50' }]}>
                 <Ionicons name="person" size={40} color={colors.textPrimary} />
-                <TouchableOpacity style={styles.editIcon}>
-                  <Ionicons name="pencil" size={16} color={colors.textPrimary} />
-                </TouchableOpacity>
               </View>
               <Text style={[styles.name, { color: colors.textPrimary }]}>Alex Johnson</Text>
               <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
@@ -167,9 +164,9 @@ export default function ProfileDetailedScreen() {
                 <View key={a.key} style={styles.achCol}>
                   <View style={[
                       styles.achCircle,
-                      { backgroundColor: a.unlocked ? colors.accent : colors.cardBorder }
+                      { backgroundColor: a.unlocked ? colors.accent : colors.textSecondary }
                     ]}>
-                    {React.cloneElement(a.icon, { color: a.unlocked ? '#fff' : colors.textSecondary })}
+                    {React.cloneElement(a.icon, { color: a.unlocked ? '#fff' : colors.textPrimary })}
                   </View>
                   <Text
                     style={[

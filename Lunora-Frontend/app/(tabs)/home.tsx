@@ -1,5 +1,5 @@
 // ProgressOverviewScreen.tsx
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   View,
   Text,
@@ -7,15 +7,21 @@ import {
   ScrollView,
   StatusBar,
   useColorScheme,
+  TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import { ThemeContext } from '@/Context/ThemeContext'
+import { Link } from 'expo-router'
 
 
 export default function ProgressOverviewScreen() {
+  const TContext = useContext(ThemeContext)
+  const { darkMode } = TContext
+  
   const scheme = useColorScheme()
-  const colors = scheme === 'light' ? DARK_COLORS : LIGHT_COLORS
+  const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <View style={{ flex: 1 }}>
@@ -202,36 +208,40 @@ export default function ProgressOverviewScreen() {
               Quick Start
             </Text>
             <View style={[styles.row, styles.quickRow]}>
-              <View
-                style={[
-                  styles.quickButton,
-                  {
-                    backgroundColor: colors.cardBg,
-                    borderColor: colors.cardBorder,
-                  },
-                ]}
-              >
-                <Text
-                  style={[styles.quickText, { color: colors.textPrimary }]}
+              <Link href={'./workouts'} asChild>
+                <TouchableOpacity
+                  style={[
+                    styles.quickButton,
+                    {
+                      backgroundColor: colors.cardBg,
+                      borderColor: colors.cardBorder,
+                    },
+                  ]}
                 >
-                  Start Todays Workout
-                </Text>
-              </View>
-              <View
-                style={[
-                  styles.quickButton,
-                  {
-                    backgroundColor: colors.cardBg,
-                    borderColor: colors.cardBorder,
-                  },
-                ]}
-              >
-                <Text
-                  style={[styles.quickText, { color: colors.textPrimary }]}
+                  <Text
+                    style={[styles.quickText, { color: colors.textPrimary }]}
+                  >
+                    Start Todays Workout
+                  </Text>
+                </TouchableOpacity>
+              </Link>
+              <Link href={'./workouts'} asChild>
+                <TouchableOpacity
+                  style={[
+                    styles.quickButton,
+                    {
+                      backgroundColor: colors.cardBg,
+                      borderColor: colors.cardBorder,
+                    },
+                  ]}
                 >
-                  Browse Exercises
-                </Text>
-              </View>
+                  <Text
+                    style={[styles.quickText, { color: colors.textPrimary }]}
+                  >
+                    Browse Workouts
+                  </Text>
+                </TouchableOpacity>
+              </Link>
             </View>
           </View>
         </ScrollView>
@@ -293,11 +303,11 @@ const styles = StyleSheet.create({
   activityDuration: { fontSize: 13, fontWeight: '600' },
   quickRow: { marginTop: 12 },
   quickButton: {
-    flex: 1,
-    padding: 12,
-    borderRadius: 10,
-    borderWidth: 1,
-    marginRight: 8,
+    borderColor: '#f5e6e6',
+    borderWidth: 2,
+    paddingVertical: 14,
+    borderRadius: 14,
+    alignItems: 'center',
   },
   quickText: { fontSize: 14, fontWeight: '600' },
 })

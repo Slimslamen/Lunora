@@ -139,7 +139,7 @@ export default function SettingsDetailedScreen() {
                   false: colors.textSecondary + '50',
                   true: colors.textSecondary + '80',
                 }}
-                thumbColor={notifications ? colors.accent : colors.textPrimary}
+                thumbColor={colors.textPrimary}
               />
             </View>
             <View style={styles.rowItem}>

@@ -44,7 +44,7 @@ export default function MenstrualFactScreen() {
       }),
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 2200,
+        duration: 4200,
         useNativeDriver: true,
       }),
     ]).start()
@@ -130,7 +130,7 @@ export default function MenstrualFactScreen() {
                         { color: colors.textPrimary },
                     ]}
                     >
-                    Sounds good, let’s go!
+                    Good to know! What’s next?
                     </Text>
                 </TouchableOpacity>
           </TouchableWithoutFeedback>

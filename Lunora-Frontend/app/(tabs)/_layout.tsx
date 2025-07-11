@@ -13,24 +13,27 @@ export default function TabLayout() {
   const TContext = useContext(ThemeContext)
   const { darkMode } = TContext
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
-  const router = useRouter()
+  const router = useRouter();
+  
+  const ToSettings = () => {
+    router.push('./settings')
+  }
+  const ToProfile = () => {
+    router.push('./profile')
+  }
 
   return (
     <View style={{ flex: 1 }}>
       {/* Overlay button visible on all tab screens */}
       <View style={[styles.overlay, {backgroundColor: colors.textPrimary}]}>
-        <Link href={'./settings'} asChild>
-          <TouchableOpacity style={[{alignItems: 'center', justifyContent: 'center', display: 'flex',}]}>
+          <TouchableOpacity onPress={ToSettings} style={[{alignItems: 'center', justifyContent: 'center', display: 'flex',}]}>
             <Ionicons name="settings-outline" size={24} color={colors.accent} />
           </TouchableOpacity>
-        </Link>
       </View>
        <View style={[styles.Secondoverlay, {backgroundColor: colors.textPrimary}]}>
-        <Link href={'./profile'} asChild>
-          <TouchableOpacity style={[{alignItems: 'center', justifyContent: 'center', display: 'flex',}]}>
+          <TouchableOpacity onPress={ToProfile} style={[{alignItems: 'center', justifyContent: 'center', display: 'flex',}]}>
             <AntDesign name="user" size={24} color={colors.accent} />
           </TouchableOpacity>
-        </Link>
       </View>
 
       {/* Tab navigator */}

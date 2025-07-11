@@ -13,7 +13,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 import Feather from '@expo/vector-icons/Feather';
 
 
@@ -24,6 +24,15 @@ export default function ProgressOverviewScreen() {
   const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
+      const router = useRouter();
+
+      const navigateToWorkout = () => {
+      router.push('./workouts')
+    }
+
+      const navigateToWorkouts = () => {
+      router.push('./workouts')
+    }
   return (
     <View style={{ flex: 1 }}>
       <StatusBar
@@ -206,40 +215,26 @@ export default function ProgressOverviewScreen() {
             </Text>
             <View> 
               <View style={[styles.row, styles.quickRow, { paddingVertical: 10}]}>
-                <Link href={'./workouts'} asChild>
                   <TouchableOpacity
-                    style={[
-                      styles.quickButton,
-                      {
-                        backgroundColor: colors.cardBg,
-                        borderColor: colors.cardBorder,
-                      },
-                    ]}
+                   onPress={navigateToWorkout}
+                    style={styles.quickButton}
                   >
                     <Text
-                      style={[styles.quickText, { color: colors.accent }]}
+                      style={[styles.quickText, { color: colors.textPrimary }]}
                     >
                       Start Todays Workout
                     </Text>
                   </TouchableOpacity>
-                </Link>
-                <Link href={'./workouts'} asChild>
                   <TouchableOpacity
-                    style={[
-                      styles.quickButton,
-                      {
-                        backgroundColor: colors.cardBg,
-                        borderColor: colors.cardBorder,
-                      },
-                    ]}
+                   onPress={navigateToWorkouts}
+                    style={styles.quickButton}
                   >
                     <Text
-                      style={[styles.quickText, { color: colors.accent }]}
+                      style={[styles.quickText, { color: colors.textPrimary }]}
                     >
                       Browse Workouts
                     </Text>
                   </TouchableOpacity>
-                </Link>
               </View>
             </View>
           </View>
@@ -305,6 +300,7 @@ const styles = StyleSheet.create({
     borderColor: '#f5e6e6',
     borderWidth: 2,
     paddingVertical: 14,
+    paddingHorizontal: 10,
     borderRadius: 14,
     alignItems: 'center',
   },

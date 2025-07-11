@@ -12,6 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons'
+import { useRouter } from 'expo-router'
 
 const goals = [
   {
@@ -43,8 +44,10 @@ export default function GoalSelectionScreen() {
 
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null)
 
+  const router = useRouter();
+
   const handleContinue = () => {
-    // TODO: persist selectedGoal and navigate
+    router.push('../Facts/Fact2')
   }
 
   return (

@@ -15,7 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
-import { Link } from 'expo-router'
+import { Link, useRouter } from 'expo-router'
 
 
 export default function SettingsDetailedScreen() {
@@ -26,6 +26,12 @@ export default function SettingsDetailedScreen() {
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   const [notifications, setNotifications] = useState(true)
+
+  const router = useRouter();
+    
+  const Logout = () => {
+    router.replace('/')
+  }
 
   return (
     <View style={styles.safe}>
@@ -243,6 +249,7 @@ export default function SettingsDetailedScreen() {
 
           {/* Sign Out */}
           <TouchableOpacity
+            onPress={Logout}
             style={[
               styles.card,
               {

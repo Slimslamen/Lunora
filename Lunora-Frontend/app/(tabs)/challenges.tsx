@@ -11,6 +11,7 @@ import {
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
+import Feather from '@expo/vector-icons/Feather';
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
 
@@ -40,7 +41,7 @@ const activeChallenges = [
   },
   {
     id: 'early',
-    icon: <MaterialCommunityIcons name="sunrise" size={18} />,
+    icon: <Feather name="sunrise" size={18} />,
     title: 'Early Bird',
     subtitle: 'Complete 5 morning workouts',
     progress: 2 / 10,
@@ -267,7 +268,7 @@ const styles = StyleSheet.create({
   statLabel: { fontSize: 12 },
   sectionHeader: { fontSize: 16, fontWeight: '600', marginVertical: 8 },
   row: { flexDirection: 'row', alignItems: 'center' },
-  iconWrapper: { width: 24, alignItems: 'center', marginRight: 12 },
+  iconWrapper: { width: 24, alignItems: 'center', marginRight: 12, marginLeft: 12 },
   challengeContent: { flex: 1 },
   challengeTitle: { fontSize: 15, fontWeight: '600' },
   challengeSubtitle: { fontSize: 12, marginTop: 2 },

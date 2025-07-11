@@ -115,15 +115,29 @@ export default function TabLayout() {
           }}
         />
 
-          <Tabs.Screen
+        <Tabs.Screen
           name="FAQ"
           options={{
             href: null
           }}
         />
 
-          <Tabs.Screen
+        <Tabs.Screen
           name="TermsOfService"
+          options={{
+            href: null
+          }}
+        />
+
+        <Tabs.Screen
+          name="PersonalInfo"
+          options={{
+            href: null
+          }}
+        />
+
+        <Tabs.Screen
+          name="FitnessGoals"
           options={{
             href: null
           }}

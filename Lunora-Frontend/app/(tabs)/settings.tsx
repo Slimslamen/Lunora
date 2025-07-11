@@ -92,7 +92,7 @@ export default function SettingsDetailedScreen() {
               { icon: 'person-outline', label: 'Personal Information' },
               { icon: 'bullseye', label: 'Fitness Goals' },
             ].map((item, i) => (
-              <Link href={i === 0 ? './home' : './home'} key={i} asChild>
+              <Link href={i === 0 ? './PersonalInfo' : './FitnessGoals'} key={i} asChild>
               <TouchableOpacity  style={styles.rowItem} activeOpacity={0.7}>
                 <View style={styles.iconWrapper}>
                   {item.icon === 'bullseye' ? (
@@ -165,7 +165,7 @@ export default function SettingsDetailedScreen() {
                 thumbColor={darkMode ? colors.accent : colors.textPrimary}
               />
             </View>
-            <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
+            {/* <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
               <Ionicons name="language-outline" size={18} color={colors.textSecondary} />
               <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
                 Language
@@ -174,14 +174,14 @@ export default function SettingsDetailedScreen() {
                 English
               </Text>
               <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
+            </TouchableOpacity> */}
+            {/* <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
               <Ionicons name="options-outline" size={18} color={colors.textSecondary} />
               <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
                 App Preferences
               </Text>
               <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
 
           {/* Support Section */}

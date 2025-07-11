@@ -1,0 +1,187 @@
+[
+  {
+    "id": "squats",
+    "name": "Squats",
+    "description": "Stand with feet shoulder-width apart and lower your hips down and back, as if sitting in a chair."
+  },
+  {
+    "id": "push_ups",
+    "name": "Push Ups",
+    "description": "Keep your body in a straight line while lowering and pushing up using your arms and chest."
+  },
+  {
+    "id": "lunges",
+    "name": "Lunges",
+    "description": "Step forward with one foot and lower your hips until both knees are bent at 90 degrees."
+  },
+  {
+    "id": "deadlifts",
+    "name": "Deadlifts",
+    "description": "Lift a weight from the ground to hip level while keeping your back straight and core engaged."
+  },
+  {
+    "id": "plank_rows",
+    "name": "Plank Rows",
+    "description": "Hold a plank and row dumbbells alternately, engaging your back and core."
+  },
+  {
+    "id": "overhead_press",
+    "name": "Overhead Press",
+    "description": "Press weights upward from shoulder height until arms are fully extended."
+  },
+  {
+    "id": "bent_over_rows",
+    "name": "Bent Over Rows",
+    "description": "Bend at the waist and pull weights toward your torso while keeping your back straight."
+  },
+  {
+    "id": "glute_bridges",
+    "name": "Glute Bridges",
+    "description": "Lie on your back, bend knees, and lift hips to form a straight line from shoulders to knees."
+  },
+  {
+    "id": "jump_squats",
+    "name": "Jump Squats",
+    "description": "Perform a squat and jump up explosively, landing softly and repeating."
+  },
+  {
+    "id": "burpees",
+    "name": "Burpees",
+    "description": "Full body movement involving a squat, jump, plank, and push-up in one fluid motion."
+  },
+  {
+    "id": "mountain_climbers",
+    "name": "Mountain Climbers",
+    "description": "Start in plank position and run knees toward your chest quickly, one at a time."
+  },
+  {
+    "id": "high_knees",
+    "name": "High Knees",
+    "description": "Run in place bringing your knees as high as possible each step."
+  },
+  {
+    "id": "skaters",
+    "name": "Skaters",
+    "description": "Hop sideways from one foot to the other, mimicking a speed skater motion."
+  },
+  {
+    "id": "jumping_lunges",
+    "name": "Jumping Lunges",
+    "description": "Alternate lunges with a jump between each switch of legs."
+  },
+  {
+    "id": "plank_jacks",
+    "name": "Plank Jacks",
+    "description": "Jump feet in and out while maintaining a plank position."
+  },
+  {
+    "id": "tuck_jumps",
+    "name": "Tuck Jumps",
+    "description": "Jump high and bring your knees to your chest in the air."
+  },
+  {
+    "id": "downward_dog",
+    "name": "Downward Dog",
+    "description": "Yoga pose where hands and feet are on the mat and hips pushed upward to form an inverted V."
+  },
+  {
+    "id": "warrior_ii",
+    "name": "Warrior Ii",
+    "description": "Lunge pose with arms extended out to the sides, engaging legs and core."
+  },
+  {
+    "id": "cat_cow",
+    "name": "Cat Cow",
+    "description": "Alternate arching and rounding the spine while on hands and knees for spinal flexibility."
+  },
+  {
+    "id": "childs_pose",
+    "name": "Childs Pose",
+    "description": "Kneel and fold your body forward to rest between your thighs and stretch the back."
+  },
+  {
+    "id": "cobra",
+    "name": "Cobra",
+    "description": "Lie on your stomach and lift your chest with hands under your shoulders."
+  },
+  {
+    "id": "tree_pose",
+    "name": "Tree Pose",
+    "description": "Balance on one leg while placing the other foot on the inner thigh and hands at chest or overhead."
+  },
+  {
+    "id": "bridge_pose",
+    "name": "Bridge Pose",
+    "description": "Lie on back and lift hips while keeping feet and shoulders grounded."
+  },
+  {
+    "id": "seated_twist",
+    "name": "Seated Twist",
+    "description": "Sit with legs extended or crossed and twist your torso to one side for spinal flexibility."
+  },
+  {
+    "id": "jump_rope",
+    "name": "Jump Rope",
+    "description": "Use a rope to jump continuously, engaging the whole body."
+  },
+  {
+    "id": "jogging_in_place",
+    "name": "Jogging In Place",
+    "description": "Run in place lifting your knees slightly and swinging your arms."
+  },
+  {
+    "id": "butt_kicks",
+    "name": "Butt Kicks",
+    "description": "Run in place kicking your heels up toward your glutes."
+  },
+  {
+    "id": "step_touch",
+    "name": "Step Touch",
+    "description": "Step side-to-side while touching one foot next to the other and moving arms rhythmically."
+  },
+  {
+    "id": "jumping_jacks",
+    "name": "Jumping Jacks",
+    "description": "Jump while spreading your legs and raising your arms overhead, then return to start."
+  },
+  {
+    "id": "stair_climbers",
+    "name": "Stair Climbers",
+    "description": "Step quickly up and down on stairs or an elevated platform for cardio."
+  },
+  {
+    "id": "fast_feet",
+    "name": "Fast Feet",
+    "description": "Run quickly in place with rapid, short steps."
+  },
+  {
+    "id": "neck_rolls",
+    "name": "Neck Rolls",
+    "description": "Slowly roll your neck in a circular motion to release tension."
+  },
+  {
+    "id": "seated_forward_fold",
+    "name": "Seated Forward Fold",
+    "description": "Sit with legs extended and fold forward to stretch hamstrings and back."
+  },
+  {
+    "id": "supine_twist",
+    "name": "Supine Twist",
+    "description": "Lie on your back and twist your legs to one side to stretch the spine."
+  },
+  {
+    "id": "hamstring_stretch",
+    "name": "Hamstring Stretch",
+    "description": "Bend at the waist while keeping legs straight to stretch the back of the thighs."
+  },
+  {
+    "id": "shoulder_rolls",
+    "name": "Shoulder Rolls",
+    "description": "Roll shoulders forward and backward to release tension."
+  },
+  {
+    "id": "legs_up_wall",
+    "name": "Legs Up Wall",
+    "description": "Lie on your back with legs extended up a wall for relaxation and circulation."
+  }
+]

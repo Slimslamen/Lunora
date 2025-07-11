@@ -13,7 +13,7 @@ export default function WelcomeScreen({ navigation }: any) {
       >
         <View style={styles.overlay}>
           <View style={styles.buttonContainer}>
-             <Link href={'./(tabs)/home'} asChild>
+             <Link href={'./StarterScreens/UserFacts/NameScreen'} asChild>
               <TouchableOpacity style={styles.getStartedBtn}>
                 <Text style={styles.getStartedText}>Get started</Text>
               </TouchableOpacity>
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   getStartedBtn: {
-    backgroundColor: '#bf7d7d',
+    backgroundColor: '#d67f5a',
     paddingVertical: 16,
     borderRadius: 14,
     alignItems: 'center',

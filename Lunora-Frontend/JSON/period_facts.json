@@ -1,0 +1,202 @@
+[
+  {
+    "id": "fact_1",
+    "fact": "Iron-rich foods like spinach and lentils can help replenish lost iron during your period.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_2",
+    "fact": "Rest and sleep are especially important during menstruation to support hormone balance.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_3",
+    "fact": "Gentle yoga or stretching can relieve menstrual cramps.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_4",
+    "fact": "Avoid high-caffeine drinks during menstruation as they may worsen cramps.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_5",
+    "fact": "Drinking warm fluids like herbal teas can ease bloating and cramping.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_6",
+    "fact": "Magnesium-rich foods like bananas and avocados can ease muscle tension.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_7",
+    "fact": "Walking or light cardio can boost your mood and reduce period fatigue.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_8",
+    "fact": "Hydration is crucial during menstruation to reduce bloating and support circulation.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_9",
+    "fact": "Avoid overly intense workouts; your energy may be lower during menstruation.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_10",
+    "fact": "Use this time for self-care and emotional grounding.",
+    "phase": "Menstrual"
+  },
+  {
+    "id": "fact_11",
+    "fact": "Energy typically rises during the follicular phase, making it ideal for intense workouts.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_12",
+    "fact": "Try strength training or cardio as your endurance improves post-period.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_13",
+    "fact": "Creativity and problem-solving skills peak in this phase.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_14",
+    "fact": "Focus on high-protein meals to support muscle development.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_15",
+    "fact": "Hormones start to rise, so mood and motivation often improve.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_16",
+    "fact": "Add cruciferous vegetables like broccoli to support estrogen detox.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_17",
+    "fact": "Increase fiber intake to help with digestion and hormonal balance.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_18",
+    "fact": "Social interaction and collaboration tend to feel easier in this phase.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_19",
+    "fact": "This is a good time to start new habits or fitness goals.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_20",
+    "fact": "Your body recovers faster post-exercise in this phase.",
+    "phase": "Follicular"
+  },
+  {
+    "id": "fact_21",
+    "fact": "Ovulation brings a spike in strength and energy\u2014ideal for high-performance workouts.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_22",
+    "fact": "Confidence and libido are naturally higher during ovulation.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_23",
+    "fact": "Add zinc-rich foods like pumpkin seeds to support hormone function.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_24",
+    "fact": "Your body temperature rises slightly\u2014hydrate well, especially during workouts.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_25",
+    "fact": "Best time for social events and communication-heavy tasks.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_26",
+    "fact": "Try interval training or a fitness class during this high-energy phase.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_27",
+    "fact": "Skin may glow more due to peak estrogen levels.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_28",
+    "fact": "Be cautious of injury\u2014ligaments are more relaxed during ovulation.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_29",
+    "fact": "Ovulation is a great time to aim for personal bests in strength or endurance.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_30",
+    "fact": "Egg-white cervical mucus increases\u2014this is your most fertile time.",
+    "phase": "Ovulation"
+  },
+  {
+    "id": "fact_31",
+    "fact": "During the luteal phase, energy gradually declines\u2014switch to moderate workouts.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_32",
+    "fact": "Include complex carbs like oats and sweet potatoes to stabilize mood.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_33",
+    "fact": "Cravings are common\u2014prepare healthy snacks in advance.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_34",
+    "fact": "Progesterone rises, which may cause bloating or breast tenderness.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_35",
+    "fact": "Focus on recovery, yoga, or Pilates to support lower energy levels.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_36",
+    "fact": "Magnesium and B6 can reduce PMS symptoms.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_37",
+    "fact": "Prioritize sleep and wind-down routines.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_38",
+    "fact": "Mood may fluctuate\u2014journaling or light meditation can help.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_39",
+    "fact": "Stay hydrated to ease water retention.",
+    "phase": "Luteal"
+  },
+  {
+    "id": "fact_40",
+    "fact": "Listen to your body\u2014this phase is for slowing down.",
+    "phase": "Luteal"
+  }
+]

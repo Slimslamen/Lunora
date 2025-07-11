@@ -39,7 +39,7 @@ export const LIGHT_COLORS = {
   cardBorder:    '#d19494',      // reinforce that brick-brown border
   textPrimary:   '#FFFFFF',      // crisp white for headlines
   textSecondary: 'rgba(255,255,255,0.8)',   // soft white for subtext
-  accent:        '#bf643d',      // warm clay highlight (20% lighter than #8C3D27)
+  accent:        '#d67f5a',      // warm clay highlight (20% lighter than #8C3D27)
   checks:        '#82f075'
 }
 
@@ -50,6 +50,6 @@ export const DARK_COLORS = {
   cardBorder:    '#4B3B3B',      // near-black charcoal border
   textPrimary:   '#F2E1DA',      // warm off-white for dark background
   textSecondary: 'rgba(242,225,218,0.7)',   // lighter off-white for subtext
-  accent:        '#A08070',      // a bit brighter than light-mode accent
+  accent:        '#deaa90',      // a bit brighter than light-mode accent
   checks:        '#62a65a'
 }

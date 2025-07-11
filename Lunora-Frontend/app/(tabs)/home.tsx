@@ -14,6 +14,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
 import { Link } from 'expo-router'
+import Feather from '@expo/vector-icons/Feather';
 
 
 export default function ProgressOverviewScreen() {
@@ -55,11 +56,7 @@ export default function ProgressOverviewScreen() {
               <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>
                 Weekly Progress
               </Text>
-              <Ionicons
-                name="target"
-                size={20}
-                color={colors.textSecondary}
-              />
+             <Feather name="target" size={24} color={colors.textSecondary} />
             </View>
 
             <View style={styles.progressBarBg}>
@@ -207,41 +204,43 @@ export default function ProgressOverviewScreen() {
             <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>
               Quick Start
             </Text>
-            <View style={[styles.row, styles.quickRow]}>
-              <Link href={'./workouts'} asChild>
-                <TouchableOpacity
-                  style={[
-                    styles.quickButton,
-                    {
-                      backgroundColor: colors.cardBg,
-                      borderColor: colors.cardBorder,
-                    },
-                  ]}
-                >
-                  <Text
-                    style={[styles.quickText, { color: colors.textPrimary }]}
+            <View> 
+              <View style={[styles.row, styles.quickRow, { paddingVertical: 10}]}>
+                <Link href={'./workouts'} asChild>
+                  <TouchableOpacity
+                    style={[
+                      styles.quickButton,
+                      {
+                        backgroundColor: colors.cardBg,
+                        borderColor: colors.cardBorder,
+                      },
+                    ]}
                   >
-                    Start Todays Workout
-                  </Text>
-                </TouchableOpacity>
-              </Link>
-              <Link href={'./workouts'} asChild>
-                <TouchableOpacity
-                  style={[
-                    styles.quickButton,
-                    {
-                      backgroundColor: colors.cardBg,
-                      borderColor: colors.cardBorder,
-                    },
-                  ]}
-                >
-                  <Text
-                    style={[styles.quickText, { color: colors.textPrimary }]}
+                    <Text
+                      style={[styles.quickText, { color: colors.accent }]}
+                    >
+                      Start Todays Workout
+                    </Text>
+                  </TouchableOpacity>
+                </Link>
+                <Link href={'./workouts'} asChild>
+                  <TouchableOpacity
+                    style={[
+                      styles.quickButton,
+                      {
+                        backgroundColor: colors.cardBg,
+                        borderColor: colors.cardBorder,
+                      },
+                    ]}
                   >
-                    Browse Workouts
-                  </Text>
-                </TouchableOpacity>
-              </Link>
+                    <Text
+                      style={[styles.quickText, { color: colors.accent }]}
+                    >
+                      Browse Workouts
+                    </Text>
+                  </TouchableOpacity>
+                </Link>
+              </View>
             </View>
           </View>
         </ScrollView>

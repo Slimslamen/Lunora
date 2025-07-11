@@ -89,11 +89,11 @@ export default function AIChatScreen() {
         />
 
         <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-          <View style={[styles.inputContainer, {backgroundColor: colors.textPrimary}]}>  
+          <View style={[styles.inputContainer, {backgroundColor: colors.textSecondary}]}>  
             <TextInput
               style={[styles.input]}
               placeholder="Type a message..."
-              placeholderTextColor={'black'}
+              placeholderTextColor={colors.accent}
               value={input}
               onChangeText={setInput}
               onSubmitEditing={sendMessage}

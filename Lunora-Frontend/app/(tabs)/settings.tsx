@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
+import { Link } from 'expo-router'
 
 
 export default function SettingsDetailedScreen() {
@@ -34,6 +35,13 @@ export default function SettingsDetailedScreen() {
         style={styles.gradient}
       >
         <ScrollView contentContainerStyle={styles.container}>
+          {/* Header */}
+            <Text style={[styles.title, { color: colors.textPrimary }]}>
+              Settings
+            </Text>
+            <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+              Control your settings
+            </Text>
           {/* Profile Header */}
           <TouchableOpacity
             style={[
@@ -64,7 +72,6 @@ export default function SettingsDetailedScreen() {
                   Premium Member
                 </Text>
               </View>
-              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
             </View>
           </TouchableOpacity>
 
@@ -84,9 +91,9 @@ export default function SettingsDetailedScreen() {
             {[
               { icon: 'person-outline', label: 'Personal Information' },
               { icon: 'bullseye', label: 'Fitness Goals' },
-              { icon: 'shield-outline', label: 'Privacy & Security' },
             ].map((item, i) => (
-              <TouchableOpacity key={i} style={styles.rowItem} activeOpacity={0.7}>
+              <Link href={i === 0 ? './home' : './home'} key={i} asChild>
+              <TouchableOpacity  style={styles.rowItem} activeOpacity={0.7}>
                 <View style={styles.iconWrapper}>
                   {item.icon === 'bullseye' ? (
                     <FontAwesome5
@@ -107,6 +114,7 @@ export default function SettingsDetailedScreen() {
                 </Text>
                 <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
               </TouchableOpacity>
+              </Link>
             ))}
           </View>
 
@@ -139,7 +147,7 @@ export default function SettingsDetailedScreen() {
                   false: colors.textSecondary + '50',
                   true: colors.textSecondary + '80',
                 }}
-                thumbColor={colors.textPrimary}
+                thumbColor={darkMode ? colors.accent : colors.textPrimary}
               />
             </View>
             <View style={styles.rowItem}>
@@ -194,13 +202,15 @@ export default function SettingsDetailedScreen() {
               { icon: 'document-text-outline', label: 'Privacy Policy' },
               { icon: 'chatbubble-ellipses-outline', label: 'Contact Support' },
             ].map((item, i) => (
-              <TouchableOpacity key={i} style={styles.rowItem} activeOpacity={0.7}>
-                <Ionicons name={item.icon as any} size={18} color={colors.textSecondary} />
-                <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
-                  {item.label}
-                </Text>
-                <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-              </TouchableOpacity>
+              <Link href={i === 1 ? './PrivacyPolicy' : i === 2 ? './Contact' : i === 0 ? './FAQ' : './home'} key={i} asChild>
+                <TouchableOpacity  style={styles.rowItem} activeOpacity={0.7}>
+                  <Ionicons name={item.icon as any} size={18} color={colors.textSecondary} />
+                  <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
+                    {item.label}
+                  </Text>
+                  <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+                </TouchableOpacity>
+              </Link>
             ))}
           </View>
 
@@ -259,6 +269,8 @@ const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
   container: { padding: 16, paddingTop: 60, paddingBottom: 80 },
+  title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
+  subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 20 },
   card: {
     borderRadius: 12,
     padding: 12,

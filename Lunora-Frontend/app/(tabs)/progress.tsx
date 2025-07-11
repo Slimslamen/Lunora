@@ -38,6 +38,13 @@ export default function Progress() {
         style={styles.safe}
       >
         <ScrollView contentContainerStyle={styles.container}>
+        {/* Header */}
+        <Text style={[styles.title, { color: colors.textPrimary }]}>
+          Progress
+        </Text>
+        <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
+          Track your progress
+        </Text>
           {/* Week Overview */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
             <View style={styles.overviewHeader}>
@@ -157,6 +164,8 @@ export default function Progress() {
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   container: { paddingHorizontal: 16, paddingTop: 60, paddingBottom: 80},
+  title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
+  subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 20 },
   card: {
     borderRadius: 12,
     padding: 12,

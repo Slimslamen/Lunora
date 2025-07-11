@@ -4,7 +4,7 @@
     "slug": "lunora",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/Lunora_logo.png",
+    "icon": "/assets/images/Lunora_logo",
     "scheme": "lunorafrontend",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/Lunora_logo.png",
+        "foregroundImage": "/assets/images/Lunora_logo",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true

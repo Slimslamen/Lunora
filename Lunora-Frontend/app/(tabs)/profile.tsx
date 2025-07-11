@@ -125,6 +125,12 @@ export default function ProfileDetailedScreen() {
       >
         <ScrollView style={{marginBottom: 20 }} contentContainerStyle={styles.container}>
           {/* Header */}
+          <Text style={[styles.title, { color: colors.textPrimary }]}>
+            Profile
+          </Text>
+          <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>
+            Edit your profile
+          </Text>
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
             <View style={styles.center}>
               <View style={[styles.avatar, { backgroundColor: colors.cardBorder + '50' }]}>
@@ -221,6 +227,8 @@ const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
   container: { padding: 16, paddingTop: 60, paddingBottom: 60 },
+  title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
+  headerSubtitle: { fontSize: 14, textAlign: 'center', marginBottom: 20 },
   card: {
     borderRadius: 12,
     borderWidth: 1,

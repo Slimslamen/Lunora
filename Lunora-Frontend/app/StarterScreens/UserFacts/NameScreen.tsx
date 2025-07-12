@@ -8,6 +8,8 @@ import {
   StyleSheet,
   StatusBar,
   useColorScheme,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/ThemeContext'
@@ -34,6 +36,11 @@ export default function AskNameScreen() {
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}
+      >
+      <KeyboardAvoidingView
+        style={{ flex: 1 }}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={20}
       >
         <View style={styles.container}>
           {/* Prompt */}
@@ -83,6 +90,7 @@ export default function AskNameScreen() {
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>
+      </KeyboardAvoidingView>
       </LinearGradient>
     </View>
   )

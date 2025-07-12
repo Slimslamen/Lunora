@@ -47,7 +47,7 @@ export default function GoalSelectionScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    router.push('../Facts/Fact2')
+    router.push('../Energy')
   }
 
   return (

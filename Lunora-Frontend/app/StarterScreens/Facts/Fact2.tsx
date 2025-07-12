@@ -32,7 +32,7 @@ export default function Fact2Screen() {
   const router = useRouter();
     
     const handleContinue = () => {
-    router.push('./Fact3')
+    router.push('../WorkoutFrequency')
     }
 
   // Text pop-in animation
@@ -161,7 +161,7 @@ export default function Fact2Screen() {
               ]}
             >
               <TouchableOpacity onPress={handleContinue}>
-                <Text style={styles.buttonText}>Next Fun Fact</Text>
+                <Text style={styles.buttonText}>Let’s keep going!</Text>
               </TouchableOpacity>
             </View>
           </TouchableOpacity>

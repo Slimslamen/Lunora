@@ -28,7 +28,7 @@ export default function MenstrualFactScreen() {
     const router = useRouter();
   
     const handleContinue = () => {
-      router.push('../UserFacts/Goal')
+      router.push('../UserFacts/Obstacles')
     }
 
   const slideAnim = useRef(new Animated.Value(-width)).current
@@ -39,12 +39,12 @@ export default function MenstrualFactScreen() {
     Animated.parallel([
       Animated.timing(slideAnim, {
         toValue: 0,
-        duration: 1800,
+        duration: 1200,
         useNativeDriver: true,
       }),
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 4200,
+        duration: 1200,
         useNativeDriver: true,
       }),
     ]).start()

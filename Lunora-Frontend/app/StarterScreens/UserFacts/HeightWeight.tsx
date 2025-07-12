@@ -28,7 +28,7 @@ export default function AskBodyMetricsScreen() {
   const [weight, setWeight] = useState<number>(70)
 
   const handleContinue = () => {
-    router.push('./Obstacles')
+    router.push('../Facts/Fact1')
   }
 
   return (

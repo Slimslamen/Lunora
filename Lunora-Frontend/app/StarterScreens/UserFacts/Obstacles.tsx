@@ -47,7 +47,7 @@ export default function GoalBarrierScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    router.push('../Facts/Fact1')
+    router.push('./Goal')
   }
 
   return (

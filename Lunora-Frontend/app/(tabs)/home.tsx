@@ -45,10 +45,10 @@ export default function ProgressOverviewScreen() {
         <ScrollView contentContainerStyle={styles.container}>
           {/* Header */}
           <Text style={[styles.title, { color: colors.textPrimary }]}>
-            Welcome back!
+            Welcome USER!
           </Text>
           <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Keep pushing towards your goals
+            Push towards your goals
           </Text>
 
           {/* Weekly Progress */}

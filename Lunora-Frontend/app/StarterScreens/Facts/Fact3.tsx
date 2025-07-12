@@ -27,7 +27,7 @@ export default function Fact3Screen() {
   const router = useRouter();
       
     const handleContinue = () => {
-    router.push('./Fact3')
+    router.push('../ProgramDescription')
     }
 
   // Ripple animation circles

@@ -1,5 +1,4 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
-import { sayHello } from '../functions/hello/resource';
 
 /*== STEP 1 ===============================================================
 The section below creates a Todo database table with a "content" field. Try
@@ -8,20 +7,58 @@ specifies that any unauthenticated user can "create", "read", "update",
 and "delete" any "Todo" records.
 =========================================================================*/
 const schema = a.schema({
-  Todo: a
+  User: a
     .model({
-      content: a.string(),
+      name: a.string(),
+      birth: a.string(),
+      height: a.float(),
+      weight: a.float(),
+      obstacle: a.string(),
+      goal: a.string(),
+      period: a.string(),
+      birthControl: a.string(),
+      energy: a.string(),
+      workoutFrequency: a.string(),
+      referral: a.string(),
+      howFound: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
-      
-  sayHello: a
-    .query()
-    .arguments({
+
+  Challenge: a
+    .model({
       name: a.string(),
+      description: a.string(),
+      duration: a.string(),
     })
-    .returns(a.string())
-    .authorization(allow => [allow.guest()])
-    .handler(a.handler.function(sayHello)),
+    .authorization((allow) => [allow.guest()]),
+
+  Exercise: a
+    .model({
+      name: a.string(),
+      description: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  PeriodFact: a
+    .model({
+      fact: a.string(),
+      phase: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  Workout: a
+     .model({
+      name: a.string(),
+      goal: a.string(),
+      phase: a.string(),
+      duration: a.integer(),
+      calories: a.string(),
+      intensity: a.string(),
+      type: a.string(),
+      muscles: a.string().array(),
+      exercises: a.string().array(),
+    })
+    .authorization((allow) => [allow.guest()]),
 });
 
 export type Schema = ClientSchema<typeof schema>;

@@ -1,0 +1,10 @@
+type Exercise {
+  id: ID!
+  name: String!
+  description: String!
+}
+
+type Query {
+  exercises: [Exercise!]!
+  exercise(id: ID!): Exercise
+}

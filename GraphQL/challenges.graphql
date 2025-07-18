@@ -1,0 +1,11 @@
+type Challenge {
+  id: ID!
+  name: String!
+  description: String!
+  duration: String!
+}
+
+type Query {
+  challenges: [Challenge!]!
+  challenge(id: ID!): Challenge
+}

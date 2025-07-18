@@ -1,0 +1,102 @@
+[
+  {
+    "exercise_id": "goblet_squat",
+    "name": "Goblet Squat",
+    "description": "Hold a dumbbell at your chest, squat down keeping your chest up and core tight, then stand up."
+  },
+  {
+    "exercise_id": "trx_row",
+    "name": "TRX Row",
+    "description": "Hold TRX handles, lean back, pull chest toward hands while keeping your body in a straight line."
+  },
+  {
+    "exercise_id": "db_chest_press",
+    "name": "Dumbbell Chest Press",
+    "description": "Lie on a bench with dumbbells, lower to chest, press back up until arms are extended."
+  },
+  {
+    "exercise_id": "barbell_back_squat",
+    "name": "Barbell Back Squat",
+    "description": "Barbell on upper back, squat down keeping chest up and knees out, drive through heels to stand."
+  },
+  {
+    "exercise_id": "lat_pulldown",
+    "name": "Lat Pulldown",
+    "description": "Sit at pulldown station, grip bar wide, pull it to your chest keeping your torso upright."
+  },
+  {
+    "exercise_id": "plank",
+    "name": "Plank",
+    "description": "Rest on forearms and toes, keep body straight and abs tight. Hold position for time."
+  },
+  {
+    "exercise_id": "seated_leg_curl",
+    "name": "Seated Leg Curl",
+    "description": "Sit in machine, bend your knees to pull pad toward glutes, then return to start."
+  },
+  {
+    "exercise_id": "hip_thrust",
+    "name": "Hip Thrust",
+    "description": "Upper back on bench, barbell over hips, thrust hips up by squeezing glutes, lower back down."
+  },
+  {
+    "exercise_id": "leg_press",
+    "name": "Leg Press",
+    "description": "Sit in leg press machine, feet hip-width on platform, lower and press back up."
+  },
+  {
+    "exercise_id": "seated_calf_raise",
+    "name": "Seated Calf Raise",
+    "description": "Sit, feet on platform, push through toes to lift heels as high as possible."
+  },
+  {
+    "exercise_id": "adductor_machine",
+    "name": "Adductor Machine",
+    "description": "Sit, legs against pads, squeeze legs together and return with control."
+  },
+  {
+    "exercise_id": "incline_db_press",
+    "name": "Incline Dumbbell Press",
+    "description": "Lie on incline bench, press dumbbells overhead, lower under control."
+  },
+  {
+    "exercise_id": "pullup",
+    "name": "Pull-Up/Assisted",
+    "description": "Hang from bar, pull chin over bar, lower with control. Use assistance if needed."
+  },
+  {
+    "exercise_id": "db_lateral_raise",
+    "name": "Dumbbell Lateral Raise",
+    "description": "Dumbbells at sides, raise arms to shoulder height, lower under control."
+  },
+  {
+    "exercise_id": "cable_bicep_curl",
+    "name": "Cable Bicep Curl",
+    "description": "Grip cable bar, curl bar toward shoulders keeping elbows at your sides."
+  },
+  {
+    "exercise_id": "face_pull",
+    "name": "Face Pull",
+    "description": "Cable at upper chest, pull rope handles toward face, leading with elbows."
+  },
+  {
+    "exercise_id": "glute_bridge",
+    "name": "Glute Bridge",
+    "description": "Lie on your back, feet flat, drive through heels, lift hips and squeeze glutes."
+  },
+  {
+    "exercise_id": "machine_row",
+    "name": "Machine Row",
+    "description": "Sit with chest against pad, grip handles, row back by pulling elbows to sides."
+  },
+  {
+    "exercise_id": "db_bench_press",
+    "name": "Dumbbell Bench Press",
+    "description": "Lie on bench, dumbbells in hand, lower to chest and press up until arms are straight."
+  },
+  {
+    "exercise_id": "hiit_row_sprint",
+    "name": "HIIT Row Sprint",
+    "description": "Row at all-out effort for set time, rest, repeat for intervals."
+  }
+]

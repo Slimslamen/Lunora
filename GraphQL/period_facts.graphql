@@ -1,0 +1,10 @@
+type PeriodFact {
+  id: ID!
+  fact: String!
+  phase: String!
+}
+
+type Query {
+  periodFacts: [PeriodFact!]!
+  periodFact(id: ID!): PeriodFact
+}

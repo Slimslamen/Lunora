@@ -1,0 +1,15 @@
+type Workout {
+  id: ID!
+  name: String!
+  tag: String
+  duration: String
+  calories: String
+  level: String
+  phase: String
+  exercise_ids: [String!]
+}
+
+type Query {
+  workouts: [Workout!]!
+  workout(id: ID!): Workout
+}

@@ -4,6 +4,11 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
 import { ThemeProvider } from '@/Context/ThemeProvider';
+import { Amplify } from 'aws-amplify';
+import outputs from '../assets/amplify_outputs.json';
+
+
+Amplify.configure(outputs);
 
 export default function RootLayout() {
   

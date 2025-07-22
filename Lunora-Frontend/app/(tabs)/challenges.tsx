@@ -1,5 +1,5 @@
 // ChallengesScreen.tsx
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   View,
   Text,
@@ -8,13 +8,17 @@ import {
   StatusBar,
   useColorScheme,
   Platform,
+  TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from '@expo/vector-icons'
 import Feather from '@expo/vector-icons/Feather';
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/ThemeContext'
+import { generateClient } from 'aws-amplify/data';
+import { Schema } from '../../../amplify/data/resource'; // Adjust the relative path as needed
 
+const client = generateClient<Schema>();
 
 const activeChallenges = [
   {
@@ -96,6 +100,37 @@ export default function ChallengesScreen() {
   
   const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
+  interface Challenge {
+    id: string;
+    name: string;
+    description: string;
+    duration: string;
+    createdAt: string;
+    updatedAt: string;
+  }
+
+  const [fetchedChallenge, setfetchedChallenge] = useState<Challenge[]>()
+
+  const test: Challenge[] = []
+
+useEffect(() => {
+   const fetchTodos = async () => {
+  const { data: challenges, errors } = await client.models.Challenge.list({});
+  if (errors) {
+    console.error(errors);
+    return;
+  }
+  if (Array.isArray(challenges)) {
+   setfetchedChallenge(challenges as Challenge[]);
+  }
+  // You can set this data to state and render it in your component
+  
+};
+fetchTodos();
+}, [])
+
+
+
 
   return (
     <View style={{ flex: 1 }}>
@@ -244,6 +279,16 @@ export default function ChallengesScreen() {
               </View>
             </View>
           ))}
+          <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
+            Fetched
+          </Text>
+            {fetchedChallenge != null && fetchedChallenge.map((x, idx) => (
+              <View key={idx}>
+                <Text style={{color:colors.textPrimary}}>{x.name}</Text>
+                <Text style={{color:colors.textPrimary}}>{x.description}</Text>
+              </View>
+            ))}
+            
         </ScrollView>
       </LinearGradient>
     </View>

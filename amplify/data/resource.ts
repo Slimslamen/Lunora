@@ -1,11 +1,5 @@
 import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
 
-/*== STEP 1 ===============================================================
-The section below creates a Todo database table with a "content" field. Try
-adding a new "isDone" field as a boolean. The authorization rule below
-specifies that any unauthenticated user can "create", "read", "update", 
-and "delete" any "Todo" records.
-=========================================================================*/
 const schema = a.schema({
   User: a
     .model({
@@ -21,6 +15,8 @@ const schema = a.schema({
       workoutFrequency: a.string(),
       referral: a.string(),
       howFound: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string()
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -29,6 +25,8 @@ const schema = a.schema({
       name: a.string(),
       description: a.string(),
       duration: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string()
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -36,6 +34,8 @@ const schema = a.schema({
     .model({
       name: a.string(),
       description: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string()
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -43,6 +43,8 @@ const schema = a.schema({
     .model({
       fact: a.string(),
       phase: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string()
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -57,6 +59,8 @@ const schema = a.schema({
       type: a.string(),
       muscles: a.string().array(),
       exercises: a.string().array(),
+      createdAt: a.string(),
+      updatedAt: a.string()
     })
     .authorization((allow) => [allow.guest()]),
 });

@@ -7,7 +7,7 @@ import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { BlurView } from 'expo-blur'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
 export default function TabLayout() {
   const TContext = useContext(ThemeContext)

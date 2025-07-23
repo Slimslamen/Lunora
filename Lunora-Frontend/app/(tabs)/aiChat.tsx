@@ -15,7 +15,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { IconSymbol } from '@/components/ui/IconSymbol'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
 export default function AIChatScreen() {
   const TContext = useContext(ThemeContext)

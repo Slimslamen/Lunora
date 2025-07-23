@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { Link, useRouter } from 'expo-router'
 import { MaterialCommunityIcons } from '@expo/vector-icons'

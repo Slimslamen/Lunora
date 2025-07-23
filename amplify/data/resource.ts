@@ -1,4 +1,4 @@
-import { type ClientSchema, a, defineData } from '@aws-amplify/backend';
+import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
 const schema = a.schema({
   User: a
@@ -12,11 +12,12 @@ const schema = a.schema({
       period: a.string(),
       birthControl: a.string(),
       energy: a.string(),
-      workoutFrequency: a.string(),
+      workoutFrequency: a.integer(),
       referral: a.string(),
       howFound: a.string(),
+      firstTime: a.boolean(),
       createdAt: a.string(),
-      updatedAt: a.string()
+      updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -24,9 +25,44 @@ const schema = a.schema({
     .model({
       name: a.string(),
       description: a.string(),
-      duration: a.string(),
+      icon: a.string(),
+      iconSet: a.string(),
+      progress: a.integer(),
+      rewardIcon: a.string(),
+      rewardSet: a.string(),
       createdAt: a.string(),
-      updatedAt: a.string()
+      updatedAt: a.string(),
+      active: a.boolean()
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  CompletedChallenge: a
+    .model({
+      name: a.string(),
+      description: a.string(),
+      icon: a.string(),
+      iconSet: a.string(),
+      progress: a.integer(),
+      rewardIcon: a.string(),
+      rewardSet: a.string(),
+      completed: a.boolean(),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  ComingChallenges: a
+    .model({
+      name: a.string(),
+      description: a.string(),
+      icon: a.string(),
+      iconSet: a.string(),
+      progress: a.integer(),
+      rewardIcon: a.string(),
+      rewardSet: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+      active: a.boolean()
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -35,7 +71,7 @@ const schema = a.schema({
       name: a.string(),
       description: a.string(),
       createdAt: a.string(),
-      updatedAt: a.string()
+      updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
@@ -44,12 +80,12 @@ const schema = a.schema({
       fact: a.string(),
       phase: a.string(),
       createdAt: a.string(),
-      updatedAt: a.string()
+      updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
   Workout: a
-     .model({
+    .model({
       name: a.string(),
       goal: a.string(),
       phase: a.string(),
@@ -60,7 +96,7 @@ const schema = a.schema({
       muscles: a.string().array(),
       exercises: a.string().array(),
       createdAt: a.string(),
-      updatedAt: a.string()
+      updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 });
@@ -70,7 +106,7 @@ export type Schema = ClientSchema<typeof schema>;
 export const data = defineData({
   schema,
   authorizationModes: {
-    defaultAuthorizationMode: 'identityPool',
+    defaultAuthorizationMode: "identityPool",
   },
 });
 

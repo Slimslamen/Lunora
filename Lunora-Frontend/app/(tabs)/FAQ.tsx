@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { Ionicons } from '@expo/vector-icons'
 
 const FAQS = [

@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { View, Text, ScrollView, StyleSheet, useColorScheme, StatusBar } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
 export default function TermsOfServiceScreen() {
   const { darkMode } = useContext(ThemeContext)

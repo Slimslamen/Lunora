@@ -11,7 +11,7 @@ import {
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Picker } from '@react-native-picker/picker'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { useRouter } from 'expo-router'
 

@@ -12,7 +12,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import Feather from '@expo/vector-icons/Feather';
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
 // Define goals (could be fetched from API in real app)
 const goals = [

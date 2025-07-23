@@ -9,7 +9,7 @@ import {
   useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from '@expo/vector-icons'
 import { useRouter } from 'expo-router'

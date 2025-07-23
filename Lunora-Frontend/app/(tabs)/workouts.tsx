@@ -1,5 +1,5 @@
 // WorkoutsScreen.tsx
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import {
   View,
   Text,
@@ -13,7 +13,12 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { IconSymbol } from '@/components/ui/IconSymbol'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
+import { Schema } from '../../../amplify/data/resource'
+import { generateClient } from 'aws-amplify/api'
+import { IWorkout } from '@/General-Interfaces/IWorkout'
+
+const client = generateClient<Schema>();
 
 const TAGS = ['All', 'Strength', 'Cardio', 'Yoga', 'HIIT', 'Recovery']
 const WORKOUTS = [
@@ -35,10 +40,27 @@ export default function WorkoutsScreen() {
   const [search, setSearch] = useState('')
   const [activeTag, setActiveTag] = useState('All')
 
+  const [workouts, setworkouts] = useState<IWorkout[]>()
+
   const filtered = WORKOUTS.filter(w =>
     (activeTag === 'All' || w.tag === activeTag) &&
     w.name.toLowerCase().includes(search.toLowerCase())
   )
+
+  useEffect(() => {
+      const fetchWorkout = async () => {
+        const { data: workout, errors } = await client.models.Workout.list({});
+        if (errors) {
+          console.error(errors);
+          return;
+        }
+        if (Array.isArray(workout)) {
+          setworkouts(workout as IWorkout[]);
+        }
+      };
+      fetchWorkout();
+      alert("test: " + JSON.stringify(workouts))
+    }, []);
 
   return (
     <View style={{ flex: 1 }}>
@@ -119,6 +141,11 @@ export default function WorkoutsScreen() {
               </View>
             )
           })}
+          {workouts != null && workouts.map((w,idx) => (
+            <View key={idx}>
+              <Text>{w.name}</Text>
+            </View>
+          ))}
         </ScrollView>
         </ScrollView>
       </LinearGradient>

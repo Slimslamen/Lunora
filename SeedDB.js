@@ -10,7 +10,7 @@ const client = new DynamoDBClient({ region: "eu-north-1" }); // adjust region
 const docClient = DynamoDBDocumentClient.from(client);
 
 // 2️⃣ Load your JSON file
-const TABLE_NAME = "Challenge-pqf5etqdrbf3fkf4amtkvdgcvy-NONE";
+const TABLE_NAME = "Challenge-cp4byjbyjfannj5c7exticnz2m-NONE";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
 const filePath = join(__dirname, "JSON/challenges.json");

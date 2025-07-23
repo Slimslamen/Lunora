@@ -1,8 +1,12 @@
+import { UserContext } from '@/Context/User/UserContext';
 import { Link } from 'expo-router';
-import React from 'react';
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
+import React, { useContext } from 'react';
+import { View, Text, StyleSheet, ImageBackground, TouchableOpacity } from 'react-native';
 
-export default function WelcomeScreen({ navigation }: any) {
+export default function WelcomeScreen() {
+    const UContext = useContext(UserContext);
+    const { loadedUser } = UContext;
+  
   return (
     <View  style={styles.container}>
       <ImageBackground
@@ -19,7 +23,7 @@ export default function WelcomeScreen({ navigation }: any) {
               </TouchableOpacity>
             </Link>
 
-            <Link href={'./(tabs)/home'} asChild>
+            <Link href={loadedUser ?'./(tabs)/home' : '/../components/loadingScreen'} asChild>
               <TouchableOpacity style={styles.loginBtn}>
               <Text style={styles.loginText}>I already have an account</Text>
               </TouchableOpacity>

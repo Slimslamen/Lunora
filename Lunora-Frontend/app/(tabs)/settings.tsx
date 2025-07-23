@@ -14,7 +14,7 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { Link, useRouter } from 'expo-router'
 
 

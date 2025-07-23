@@ -2,301 +2,551 @@
   {
     "id": "challenge_1",
     "name": "7-Day Core Burn",
-    "description": "A focused challenge to build core strength over 7 days.",
-    "duration": "4"
+    "description": "A focused challenge to build core strength over a month.",
+    "icon": "fire",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_2",
     "name": "Morning Yoga Challenge",
     "description": "Start every day with 15 minutes of yoga to energize and align.",
-    "duration": "2"
+    "icon": "sunrise",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_3",
     "name": "Legs of Steel",
     "description": "Target and strengthen your legs with daily lower body workouts.",
-    "duration": "4"
+    "icon": "dumbbell",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_4",
     "name": "HIIT Week Blitz",
-    "description": "A high-intensity challenge to push your limits each day.",
-    "duration": "4"
+    "description": "A high-intensity challenge to push your limits once a week.",
+    "icon": "bolt",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_5",
     "name": "Full Body Reset",
     "description": "Gentle, whole-body movement to reset your routine.",
-    "duration": "12"
+    "icon": "refresh",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_6",
     "name": "10k Steps a Day",
     "description": "Hit 10,000 steps daily to improve cardiovascular health and energy.",
-    "duration": "4"
+    "icon": "walk",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_7",
     "name": "21-Day Tone Up",
-    "description": "21 days of toning workouts to sculpt and strengthen.",
-    "duration": "8"
+    "description": "8 weeks of toning workouts to sculpt and strengthen.",
+    "icon": "barbell",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_8",
     "name": "Flexibility Boost",
     "description": "Stretch deeper and improve your range of motion every day.",
-    "duration": "4"
+    "icon": "yoga",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_9",
     "name": "Mindful Movement",
     "description": "Connect body and mind through daily mindful movement.",
-    "duration": "4"
+    "icon": "brain",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_10",
     "name": "Upper Body Shred",
     "description": "Sculpt your arms, chest, and back with targeted routines.",
-    "duration": "4"
+    "icon": "arm-flex",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_11",
     "name": "Cardio Kickstart",
     "description": "Jumpstart your cardio routine with fast-paced daily workouts.",
-    "duration": "4"
+    "icon": "heart",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_12",
     "name": "Mobility Mastery",
     "description": "Mobilize your joints and improve athletic performance.",
-    "duration": "8"
+    "icon": "run",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_13",
     "name": "Strength Starter",
     "description": "Foundational strength-building for beginners.",
-    "duration": "4"
+    "icon": "dumbbell",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_14",
     "name": "Lunchtime Sweat",
     "description": "Short but effective workouts you can do on your lunch break.",
-    "duration": "4"
+    "icon": "clock",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_15",
     "name": "Sunrise Power Flow",
     "description": "Rise early and build strength and flexibility with power yoga.",
-    "duration": "4"
+    "icon": "sunrise",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_16",
     "name": "Bedtime Stretch",
     "description": "Wind down and stretch before bed for better sleep.",
-    "duration": "1"
+    "icon": "moon",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_17",
     "name": "Total Body Tone",
     "description": "Target every muscle group in this total body challenge.",
-    "duration": "4"
+    "icon": "body",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_18",
     "name": "Endurance Explosion",
-    "description": "Increase stamina with long-format workouts each day.",
-    "duration": "4"
+    "description": "Increase stamina with long-format workouts once a week.",
+    "icon": "battery-charging",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_19",
     "name": "Back to Fit",
     "description": "Get back into fitness with this motivational restart.",
-    "duration": "4"
+    "icon": "repeat",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_20",
     "name": "Beginner Bootcamp",
     "description": "Perfect for newcomers looking to build a routine.",
-    "duration": "4"
+    "icon": "flag",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_21",
     "name": "Power Push Week",
     "description": "Push your limits with power-based workouts all week.",
-    "duration": "4"
+    "icon": "bolt",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_22",
     "name": "Low Impact Burn",
     "description": "Low-impact yet effective workouts to keep you moving.",
-    "duration": "4"
+    "icon": "leaf",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_23",
     "name": "Mini Band Madness",
     "description": "Mini band workouts for activation and toning.",
-    "duration": "4"
+    "icon": "bandcamp",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_24",
     "name": "Daily Stretch Goal",
     "description": "Commit to daily stretching to enhance flexibility.",
-    "duration": "3"
+    "icon": "arrow-up",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_25",
     "name": "Glute Activation Week",
     "description": "Boost your glute strength and posture with daily glute workouts.",
-    "duration": "4"
+    "icon": "weight-lifter",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_26",
     "name": "Balance & Core",
     "description": "Stability, coordination, and core in one powerful week.",
-    "duration": "4"
+    "icon": "balance-scale",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_27",
     "name": "Bodyweight Beast",
     "description": "Crush your bodyweight-only training goals.",
-    "duration": "4"
+    "icon": "user",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_28",
     "name": "Calm & Energize",
     "description": "Recharge your nervous system and mental clarity through movement.",
-    "duration": "3"
+    "icon": "wind",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_29",
     "name": "Arms & Abs Focus",
     "description": "Arms and abs-focused split for lean muscle gains.",
-    "duration": "4"
+    "icon": "six-pack",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_30",
     "name": "Power of Plank",
-    "description": "Master the plank with different variations each day.",
-    "duration": "1"
+    "description": "Master the plank with different variations once a week.",
+    "icon": "align-horizontal-center",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_31",
     "name": "HIIT Hero",
     "description": "HIIT-focused challenge for experienced users.",
-    "duration": "4"
+    "icon": "flash",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_32",
     "name": "Run Streak 5k",
-    "description": "Run at least 5k every day for a full week.",
-    "duration": "1"
+    "description": "Run at least 5km every day for a full week.",
+    "icon": "run",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_33",
     "name": "Dance Fit Challenge",
     "description": "Fun and dynamic dance workouts for fitness and rhythm.",
-    "duration": "4"
+    "icon": "music",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_34",
     "name": "No Equipment Burn",
     "description": "No gear needed, just pure sweat and determination.",
-    "duration": "8"
+    "icon": "fire",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_35",
     "name": "Quick Burn 10",
     "description": "Fast 10-minute workouts you can always fit in.",
-    "duration": "1"
+    "icon": "clock",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_36",
     "name": "Full Split Tracker",
     "description": "Track your progress toward doing the full front split.",
-    "duration": "12"
+    "icon": "arrow-split-horizontal",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_37",
     "name": "Cardio Ladder",
-    "description": "Step up cardio intensity each day like a ladder.",
-    "duration": "4"
+    "description": "Step up cardio intensity once a week like a ladder.",
+    "icon": "stairs",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_38",
     "name": "Mobility Every Day",
     "description": "Reclaim mobility and movement with daily drills.",
-    "duration": "12"
+    "icon": "run",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_39",
     "name": "Daily Yoga Fix",
     "description": "Quick yoga routines for consistency and mental clarity.",
-    "duration": "1"
+    "icon": "yoga",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_40",
     "name": "Tone in 10",
     "description": "Tone specific muscle groups with intense 10-minute hits.",
-    "duration": "4"
+    "icon": "timer",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_41",
     "name": "Total Reset Week",
     "description": "Reset with light movement, nutrition tips, and stretching.",
-    "duration": "12"
+    "icon": "refresh",
+    "iconSet": "Ionicons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_42",
     "name": "Strength & Stretch",
     "description": "Blend strength workouts with flexibility sessions.",
-    "duration": "1"
+    "icon": "dumbbell",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_43",
     "name": "Sweat & Flow",
     "description": "Alternate power moves with calming flows.",
-    "duration": "4"
+    "icon": "water",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_44",
     "name": "Full Body Balance",
     "description": "Balance-focused strength and yoga routines.",
-    "duration": "4"
+    "icon": "balance-scale",
+    "iconSet": "FontAwesome5",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_45",
     "name": "Functional Fitness",
     "description": "Train for real-life movements and strength application.",
-    "duration": "12"
+    "icon": "activity",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_46",
     "name": "Power Hour 30",
     "description": "Squeeze in 30 minutes of powerful movement daily.",
-    "duration": "4"
+    "icon": "clock",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_47",
     "name": "Posture Perfection",
     "description": "Correct posture with back and shoulder-focused drills.",
-    "duration": "12"
+    "icon": "human-male-height",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_48",
     "name": "Wall Sit Streak",
-    "description": "Hold wall sits longer each day\u2014test your grit!",
-    "duration": "1"
+    "description": "Hold wall sits longer each day—test your grit!",
+    "icon": "wall",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_49",
     "name": "Plank Every Day",
     "description": "Increase core stability with a daily plank streak.",
-    "duration": "3"
+    "icon": "align-horizontal-center",
+    "iconSet": "MaterialCommunityIcons",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   },
   {
     "id": "challenge_50",
     "name": "Daily Movement Streak",
-    "description": "Never miss a day of movement\u2014track your streak!",
-    "duration": "2"
+    "description": "Never miss a day of movement—track your streak!",
+    "icon": "repeat",
+    "iconSet": "Feather",
+    "progress": 0,
+    "rewardIcon": "star",
+    "rewardSet": "Ionicons",
+    "active": false
   }
 ]

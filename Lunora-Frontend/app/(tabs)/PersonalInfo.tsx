@@ -11,7 +11,7 @@ import {
   useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/ThemeContext'
+import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 
 export default function PersonalInfoScreen() {

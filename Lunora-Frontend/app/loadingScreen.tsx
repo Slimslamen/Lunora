@@ -11,14 +11,20 @@ import {
 import { LinearGradient } from 'expo-linear-gradient'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/Theme/ThemeContext';
+import { UserContext } from '@/Context/User/UserContext';
+import { useRouter } from 'expo-router';
 
 export default function LoadingScreen() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
 
+  const UContext = useContext(UserContext);
+  const { loadedUser } = UContext;
+
   const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
+  const router = useRouter();
 
   // Create three animated values for the bouncing dots
   const dot1 = useRef(new Animated.Value(0))
@@ -48,6 +54,13 @@ export default function LoadingScreen() {
     })
   }, [])
 
+
+  useEffect(() => {
+    if(loadedUser){
+      router.push('./(tabs)/home')
+    }
+  }, [loadedUser])
+  
   return (
     <View style={styles.safe}>
       <StatusBar
@@ -58,6 +71,9 @@ export default function LoadingScreen() {
         style={styles.safe}
       >
         <View style={styles.container}>
+          <Text style={[styles.label, { color: colors.textPrimary }]}>
+            Loading
+          </Text>
           <View style={styles.dotsRow}>
             {dots.map((anim, i) => (
               <Animated.View
@@ -72,9 +88,6 @@ export default function LoadingScreen() {
               />
             ))}
           </View>
-          <Text style={[styles.label, { color: colors.textSecondary }]}>
-            Loading…
-          </Text>
         </View>
       </LinearGradient>
     </View>
@@ -87,6 +100,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: 24,
@@ -94,17 +108,17 @@ const styles = StyleSheet.create({
   dotsRow: {
     flexDirection: 'row',
     alignItems: 'flex-end',
-    height: 24,
-    marginBottom: 16,
+    marginLeft: 6,
+    marginTop: 20,
   },
   dot: {
-    width: 16,
-    height: 16,
+    width: 7,
+    height: 7,
     borderRadius: 8,
-    marginHorizontal: 8,
+    marginHorizontal: 2,
   },
   label: {
-    fontSize: 14,
+    fontSize: 30,
     fontWeight: '500',
   },
 })

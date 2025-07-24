@@ -1,57 +1,42 @@
 // LastPeriodScreen.tsx
-import React, { useState, useContext } from 'react'
-import {
-  View,
-  Text,
-  StyleSheet,
-  StatusBar,
-  Platform,
-  TouchableOpacity,
-  useColorScheme,
-} from 'react-native'
-import DateTimePicker, {
-  DateTimePickerEvent,
-} from '@react-native-community/datetimepicker'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Link, useRouter } from 'expo-router'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+import React, { useState, useContext } from "react";
+import { View, Text, StyleSheet, StatusBar, Platform, TouchableOpacity, useColorScheme } from "react-native";
+import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
+import { LinearGradient } from "expo-linear-gradient";
+import { Link, useRouter } from "expo-router";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { ReturnButton } from '../../components/Return'
 
 export default function LastPeriodScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [date, setDate] = useState(new Date())
-  const [showPicker, setShowPicker] = useState(Platform.OS === 'ios')
+  const [date, setDate] = useState(new Date());
+  const [showPicker, setShowPicker] = useState(Platform.OS === "ios");
 
   const onChange = (event: DateTimePickerEvent, selected?: Date) => {
-    if (selected) setDate(selected)
-    if (Platform.OS !== 'ios') setShowPicker(false)
-  }
+    if (selected) setDate(selected);
+    if (Platform.OS !== "ios") setShowPicker(false);
+  };
 
-    const router = useRouter();
+  const router = useRouter();
 
-        const handleContinue = () => {
-            router.push('./Facts/Fact2')
-        }
+  const handleContinue = () => {
+    router.push("./Facts/Fact2");
+  };
 
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <View>
+          <ReturnButton />
+        </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>
-            When was your last period?
-          </Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Select the date of your last cycle
-          </Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>When was your last period?</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select the date of your last cycle</Text>
 
           {showPicker && (
             <View
@@ -75,32 +60,21 @@ export default function LastPeriodScreen() {
             </View>
           )}
 
-          {Platform.OS !== 'ios' && !showPicker && (
+          {Platform.OS !== "ios" && !showPicker && (
             <TouchableOpacity
-              style={[
-                styles.showButton,
-                { borderColor: colors.cardBorder },
-              ]}
+              style={[styles.showButton, { borderColor: colors.cardBorder }]}
               onPress={() => setShowPicker(true)}
             >
-              <Text style={[styles.showText, { color: colors.accent }]}>
-                Choose Date
-              </Text>
+              <Text style={[styles.showText, { color: colors.accent }]}>Choose Date</Text>
             </TouchableOpacity>
           )}
-            <TouchableOpacity
-              onPress={handleContinue}
-              style={[
-                styles.button,
-                { backgroundColor: colors.accent },
-              ]}
-            >
-              <Text style={styles.buttonText}>Continue</Text>
-            </TouchableOpacity>
+          <TouchableOpacity onPress={handleContinue} style={[styles.button, { backgroundColor: colors.accent }]}>
+            <Text style={styles.buttonText}>Continue</Text>
+          </TouchableOpacity>
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -108,30 +82,30 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingBottom: 80, // space for tab bar
   },
   title: {
     fontSize: 22,
-    fontWeight: '700',
-    textAlign: 'center',
+    fontWeight: "700",
+    textAlign: "center",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 24,
   },
   pickerCard: {
-    width: '100%',
+    width: "100%",
     borderRadius: 12,
     borderWidth: 1,
     marginBottom: 24,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   picker: {
-    width: '100%',
+    width: "100%",
   },
   showButton: {
     borderWidth: 1,
@@ -142,17 +116,17 @@ const styles = StyleSheet.create({
   },
   showText: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   button: {
-    width: '100%',
+    width: "100%",
     borderRadius: 14,
     paddingVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
-})
+});

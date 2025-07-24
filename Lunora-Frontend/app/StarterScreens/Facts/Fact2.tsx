@@ -1,5 +1,5 @@
 // Fact2Screen.tsx
-import React, { useEffect, useRef, useContext } from 'react'
+import React, { useEffect, useRef, useContext } from "react";
 import {
   View,
   Text,
@@ -10,35 +10,36 @@ import {
   Easing,
   useColorScheme,
   TouchableOpacity,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { Link, useRouter } from 'expo-router'
-import { MaterialCommunityIcons } from '@expo/vector-icons'
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { Link, useRouter } from "expo-router";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { ReturnButton } from "../../../components/Return";
 
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get("window");
 const fact =
-  '📊 Fun Fact: Estrogen peaks pre-ovulation and can boost strength by ~5%—perfect time for a power session!'
-const ICON_COUNT = 6
-const ORBIT_SIZE = width * 0.7
-const ORBIT_RADIUS = ORBIT_SIZE / 2 - 20  // leave room for icon
+  "📊 Fun Fact: Estrogen peaks pre-ovulation and can boost strength by ~5%—perfect time for a power session!";
+const ICON_COUNT = 6;
+const ORBIT_SIZE = width * 0.7;
+const ORBIT_RADIUS = ORBIT_SIZE / 2 - 20; // leave room for icon
 
 export default function Fact2Screen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
-    
-    const handleContinue = () => {
-    router.push('../WorkoutFrequency')
-    }
+
+  const handleContinue = () => {
+    router.push("../WorkoutFrequency");
+  };
 
   // Text pop-in animation
-  const scaleAnim = useRef(new Animated.Value(0.5)).current
+  const scaleAnim = useRef(new Animated.Value(0.5)).current;
   // Orbit rotation animation
-  const rotateAnim = useRef(new Animated.Value(0)).current
+  const rotateAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
     // scale the text into view
@@ -46,7 +47,7 @@ export default function Fact2Screen() {
       toValue: 1,
       friction: 50,
       useNativeDriver: true,
-    }).start()
+    }).start();
 
     // continuous rotation
     Animated.loop(
@@ -56,31 +57,29 @@ export default function Fact2Screen() {
         easing: Easing.linear,
         useNativeDriver: true,
       })
-    ).start()
-  }, [])
+    ).start();
+  }, []);
 
   // interpolate to degrees
   const rotation = rotateAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: ['0deg', '360deg'],
-  })
-   const Minusrotation = rotateAnim.interpolate({
+    outputRange: ["0deg", "360deg"],
+  });
+  const Minusrotation = rotateAnim.interpolate({
     inputRange: [0, 1],
-    outputRange: ['-0deg', '-360deg'],
-  })
+    outputRange: ["-0deg", "-360deg"],
+  });
 
   // precalc icon angles
-  const angles = Array.from({ length: ICON_COUNT }, (_, i) => (2 * Math.PI * i) / ICON_COUNT)
+  const angles = Array.from({ length: ICON_COUNT }, (_, i) => (2 * Math.PI * i) / ICON_COUNT);
 
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <TouchableOpacity style={{ top: -255, left: -155 }}>
+          <ReturnButton />
+        </TouchableOpacity>
         {/* Orbiting dumbbells */}
         <Animated.View
           style={[
@@ -93,23 +92,16 @@ export default function Fact2Screen() {
           ]}
         >
           {angles.map((angle, i) => {
-            const x = ORBIT_RADIUS + ORBIT_RADIUS * Math.cos(angle)
-            const y = ORBIT_RADIUS + ORBIT_RADIUS * Math.sin(angle)
+            const x = ORBIT_RADIUS + ORBIT_RADIUS * Math.cos(angle);
+            const y = ORBIT_RADIUS + ORBIT_RADIUS * Math.sin(angle);
             return (
-              <View
-                key={i}
-                style={[styles.icon, { top: y, left: x }]}
-              >
-                <MaterialCommunityIcons
-                  name="dumbbell"
-                  size={24}
-                  color={colors.accent}
-                />
+              <View key={i} style={[styles.icon, { top: y, left: x }]}>
+                <MaterialCommunityIcons name="dumbbell" size={24} color={colors.accent} />
               </View>
-            )
+            );
           })}
         </Animated.View>
-         <Animated.View
+        <Animated.View
           style={[
             styles.secondOrbit,
             {
@@ -120,20 +112,13 @@ export default function Fact2Screen() {
           ]}
         >
           {angles.map((angle, i) => {
-            const x = ORBIT_RADIUS + ORBIT_RADIUS * Math.cos(angle)
-            const y = ORBIT_RADIUS + ORBIT_RADIUS * Math.sin(angle)
+            const x = ORBIT_RADIUS + ORBIT_RADIUS * Math.cos(angle);
+            const y = ORBIT_RADIUS + ORBIT_RADIUS * Math.sin(angle);
             return (
-              <View
-                key={i}
-                style={[styles.icon, { top: y, left: x }]}
-              >
-                <MaterialCommunityIcons
-                  name="dumbbell"
-                  size={24}
-                  color={colors.accent}
-                />
+              <View key={i} style={[styles.icon, { top: y, left: x }]}>
+                <MaterialCommunityIcons name="dumbbell" size={24} color={colors.accent} />
               </View>
-            )
+            );
           })}
         </Animated.View>
         {/* Content */}
@@ -168,55 +153,55 @@ export default function Fact2Screen() {
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden',
+    justifyContent: "center",
+    alignItems: "center",
+    overflow: "hidden",
   },
   firstOrbit: {
-    position: 'absolute',
+    position: "absolute",
     top: (height - ORBIT_SIZE) / 2,
     left: (width - ORBIT_SIZE) / 2,
   },
   secondOrbit: {
-    position: 'absolute',
+    position: "absolute",
     top: (height - ORBIT_SIZE) / 3,
     left: (width - ORBIT_SIZE) / 3,
   },
   icon: {
-    position: 'absolute',
-    marginLeft: -12,  // center the icon (half its width)
-    marginTop: -12,   // center the icon (half its height)
+    position: "absolute",
+    marginLeft: -12, // center the icon (half its width)
+    marginTop: -12, // center the icon (half its height)
   },
   container: {
     paddingHorizontal: 24,
     zIndex: 1,
-    alignItems: 'center',
+    alignItems: "center",
   },
   factText: {
     fontSize: 20,
     lineHeight: 28,
-    fontWeight: '500',
-    textAlign: 'center',
+    fontWeight: "500",
+    textAlign: "center",
     marginBottom: 40,
   },
   button: {
-    width: '100%',
+    width: "100%",
     marginTop: 24,
     borderRadius: 14,
     borderWidth: 1,
     paddingVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: '600',
-    paddingHorizontal: 14
+    fontWeight: "600",
+    paddingHorizontal: 14,
   },
-})
+});

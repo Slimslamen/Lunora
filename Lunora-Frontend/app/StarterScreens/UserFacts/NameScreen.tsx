@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { useRouter } from 'expo-router'
+import { ReturnButton } from '../../../components/Return'
 
 export default function AskNameScreen() {
   const { darkMode } = useContext(ThemeContext)
@@ -37,6 +38,9 @@ export default function AskNameScreen() {
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}
       >
+      <View>
+        <ReturnButton />
+      </View>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

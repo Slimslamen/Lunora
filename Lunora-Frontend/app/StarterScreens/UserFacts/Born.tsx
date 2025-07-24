@@ -1,58 +1,43 @@
 // AskBirthdayScreen.tsx
-import React, { useState, useContext } from 'react'
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  StatusBar,
-  useColorScheme,
-  Platform,
-} from 'react-native'
-import DateTimePicker, {
-  DateTimePickerEvent,
-} from '@react-native-community/datetimepicker'
-import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { useRouter } from 'expo-router'
+import React, { useState, useContext } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme, Platform } from "react-native";
+import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
+import { LinearGradient } from "expo-linear-gradient";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { useRouter } from "expo-router";
+import { ReturnButton } from '../../../components/Return'
 
 export default function AskBirthdayScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
 
-  const [date, setDate] = useState(new Date())
-  const [showPicker, setShowPicker] = useState(true)
+  const [date, setDate] = useState(new Date());
+  const [showPicker, setShowPicker] = useState(true);
 
   const onChange = (event: DateTimePickerEvent, selected?: Date) => {
-    if (selected) setDate(selected)
+    if (selected) setDate(selected);
     // On Android dismiss picker after selection
-    if (Platform.OS !== 'ios') setShowPicker(false)
-  }
+    if (Platform.OS !== "ios") setShowPicker(false);
+  };
 
   const handleContinue = () => {
-    router.push('./HeightWeight')
-  }
+    router.push("./HeightWeight");
+  };
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <View>
+          <ReturnButton />
+        </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>
-            When were you born?
-          </Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Please select your date of birth
-          </Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>When were you born?</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Please select your date of birth</Text>
 
           {showPicker && (
             <View
@@ -75,33 +60,22 @@ export default function AskBirthdayScreen() {
             </View>
           )}
 
-          {Platform.OS !== 'ios' && !showPicker && (
+          {Platform.OS !== "ios" && !showPicker && (
             <TouchableOpacity
-              style={[
-                styles.showButton,
-                { borderColor: colors.cardBorder },
-              ]}
+              style={[styles.showButton, { borderColor: colors.cardBorder }]}
               onPress={() => setShowPicker(true)}
             >
-              <Text style={[styles.showText, { color: colors.accent }]}>
-                Choose Date
-              </Text>
+              <Text style={[styles.showText, { color: colors.accent }]}>Choose Date</Text>
             </TouchableOpacity>
           )}
 
-          <TouchableOpacity
-            style={[
-              styles.button,
-              { backgroundColor: colors.accent },
-            ]}
-            onPress={handleContinue}
-          >
+          <TouchableOpacity style={[styles.button, { backgroundColor: colors.accent }]} onPress={handleContinue}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -109,29 +83,29 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 22,
-    fontWeight: '700',
-    textAlign: 'center',
+    fontWeight: "700",
+    textAlign: "center",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 24,
   },
   pickerCard: {
-    width: '100%',
+    width: "100%",
     borderRadius: 12,
     borderWidth: 1,
     marginBottom: 24,
-    overflow: 'hidden',
+    overflow: "hidden",
   },
   picker: {
-    width: '100%',
+    width: "100%",
   },
   showButton: {
     borderWidth: 1,
@@ -142,17 +116,17 @@ const styles = StyleSheet.create({
   },
   showText: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   button: {
-    width: '100%',
+    width: "100%",
     paddingVertical: 14,
     borderRadius: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
-})
+});

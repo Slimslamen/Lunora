@@ -1,52 +1,39 @@
 // AskBodyMetricsScreen.tsx
-import React, { useState, useContext } from 'react'
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  StatusBar,
-  useColorScheme,
-  Platform,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Picker } from '@react-native-picker/picker'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { useRouter } from 'expo-router'
+import React, { useState, useContext } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme, Platform } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Picker } from "@react-native-picker/picker";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { useRouter } from "expo-router";
+import { ReturnButton } from '../../../components/Return'
 
 export default function AskBodyMetricsScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-   const router = useRouter();
+  const router = useRouter();
 
   // Height in cm (100–220)
-  const [height, setHeight] = useState<number>(170)
+  const [height, setHeight] = useState<number>(170);
   // Weight in kg (30–150)
-  const [weight, setWeight] = useState<number>(70)
+  const [weight, setWeight] = useState<number>(70);
 
   const handleContinue = () => {
-    router.push('../Facts/Fact1')
-  }
+    router.push("../Facts/Fact1");
+  };
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <View>
+          <ReturnButton />
+        </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>
-            Tell us about you
-          </Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Select your height and weight
-          </Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>Tell us about you</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select your height and weight</Text>
 
           {/* Height Picker */}
           <View
@@ -58,9 +45,7 @@ export default function AskBodyMetricsScreen() {
               },
             ]}
           >
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Height (cm)
-            </Text>
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Height (cm)</Text>
             <Picker
               selectedValue={height}
               onValueChange={(v) => setHeight(v)}
@@ -83,9 +68,7 @@ export default function AskBodyMetricsScreen() {
               },
             ]}
           >
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Weight (kg)
-            </Text>
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Weight (kg)</Text>
             <Picker
               selectedValue={weight}
               onValueChange={(v) => setWeight(v)}
@@ -99,19 +82,13 @@ export default function AskBodyMetricsScreen() {
           </View>
 
           {/* Continue Button */}
-          <TouchableOpacity
-            style={[
-              styles.button,
-              { backgroundColor: colors.accent },
-            ]}
-            onPress={handleContinue}
-          >
+          <TouchableOpacity style={[styles.button, { backgroundColor: colors.accent }]} onPress={handleContinue}>
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -119,50 +96,50 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     paddingBottom: 80, // space for tab bar
   },
   title: {
     fontSize: 22,
-    fontWeight: '700',
-    textAlign: 'center',
+    fontWeight: "700",
+    textAlign: "center",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 24,
   },
   card: {
-    width: '100%',
+    width: "100%",
     borderRadius: 12,
     borderWidth: 1,
     marginBottom: 24,
-    overflow: Platform.OS === 'ios' ? 'hidden' : undefined,
+    overflow: Platform.OS === "ios" ? "hidden" : undefined,
   },
   sectionHeader: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     padding: 12,
   },
   picker: {
-    width: '100%',
-    height: Platform.OS === 'ios' ? 150 : 50,
+    width: "100%",
+    height: Platform.OS === "ios" ? 150 : 50,
   },
   pickerItem: {
     fontSize: 16,
     height: 150,
   },
   button: {
-    width: '100%',
+    width: "100%",
     paddingVertical: 14,
     borderRadius: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonText: {
-    color: '#fff',
+    color: "#fff",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
-})
+});

@@ -1,69 +1,56 @@
 // EnergyLevelScreen.tsx
-import React, { useState, useContext } from 'react'
-import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
-  StatusBar,
-  useColorScheme,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Link, useRouter } from 'expo-router'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { Ionicons } from '@expo/vector-icons'
+import React, { useState, useContext } from "react";
+import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Link, useRouter } from "expo-router";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
+import { ReturnButton } from '../../components/Return'
 
 const levels = [
   {
-    key: 'low',
-    label: 'Low',
+    key: "low",
+    label: "Low",
     icon: (props: any) => <Ionicons name="battery-dead" {...props} />,
   },
   {
-    key: 'moderate',
-    label: 'Moderate',
+    key: "moderate",
+    label: "Moderate",
     icon: (props: any) => <Ionicons name="battery-half" {...props} />,
   },
   {
-    key: 'high',
-    label: 'High',
+    key: "high",
+    label: "High",
     icon: (props: any) => <Ionicons name="battery-full" {...props} />,
   },
-]
+];
 
 export default function EnergyLevelScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [selected, setSelected] = useState<string | null>(null)
-
+  const [selected, setSelected] = useState<string | null>(null);
 
   const router = useRouter();
-  
-    const handleContinue = () => {
-        router.push('./Period')
-    }
+
+  const handleContinue = () => {
+    router.push("./Period");
+  };
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <View>
+          <ReturnButton />
+        </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>
-            How is your daily energy?
-          </Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Select the level that fits you best
-          </Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>How is your daily energy?</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select the level that fits you best</Text>
 
           {levels.map(({ key, label, icon: Icon }) => {
-            const isActive = selected === key
+            const isActive = selected === key;
             return (
               <TouchableOpacity
                 key={key}
@@ -78,10 +65,7 @@ export default function EnergyLevelScreen() {
                 activeOpacity={0.8}
               >
                 <View style={styles.iconWrapper}>
-                  <Icon
-                    size={24}
-                    color={isActive ? colors.textPrimary : colors.textSecondary}
-                  />
+                  <Icon size={24} color={isActive ? colors.textPrimary : colors.textSecondary} />
                 </View>
                 <Text
                   style={[
@@ -94,59 +78,54 @@ export default function EnergyLevelScreen() {
                   {label}
                 </Text>
               </TouchableOpacity>
-            )
+            );
           })}
-            <TouchableOpacity
-              onPress={handleContinue}
-              style={[
-                styles.button,
-                {
-                  backgroundColor: selected ? colors.accent : colors.cardBg,
-                  borderColor: selected ? colors.accent : colors.cardBorder,
-                },
-                !selected && styles.buttonDisabled,
-              ]}
-              disabled={!selected}
-            >
-              <Text
-                style={[
-                  styles.buttonText,
-                  { color: selected ? colors.textPrimary : colors.textSecondary },
-                ]}
-              >
-                Continue
-              </Text>
-            </TouchableOpacity>
+          <TouchableOpacity
+            onPress={handleContinue}
+            style={[
+              styles.button,
+              {
+                backgroundColor: selected ? colors.accent : colors.cardBg,
+                borderColor: selected ? colors.accent : colors.cardBorder,
+              },
+              !selected && styles.buttonDisabled,
+            ]}
+            disabled={!selected}
+          >
+            <Text style={[styles.buttonText, { color: selected ? colors.textPrimary : colors.textSecondary }]}>
+              Continue
+            </Text>
+          </TouchableOpacity>
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   container: {
     flex: 1,
-    width: '100%',
+    width: "100%",
     paddingHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 22,
-    fontWeight: '700',
-    textAlign: 'center',
+    fontWeight: "700",
+    textAlign: "center",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 24,
   },
   card: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
     borderRadius: 12,
     borderWidth: 1,
     paddingVertical: 16,
@@ -155,26 +134,26 @@ const styles = StyleSheet.create({
   },
   iconWrapper: {
     width: 32,
-    alignItems: 'center',
+    alignItems: "center",
     marginRight: 12,
   },
   cardText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   button: {
-    width: '100%',
+    width: "100%",
     marginTop: 24,
     borderRadius: 14,
     borderWidth: 1,
     paddingVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   buttonDisabled: {
     opacity: 0.6,
   },
-})
+});

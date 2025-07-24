@@ -71,6 +71,7 @@ const schema = a.schema({
       exercise_id: a.string(),
       name: a.string(),
       description: a.string(),
+      weight: a.integer(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })

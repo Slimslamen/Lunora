@@ -9,35 +9,40 @@
     "intensity": "Low",
     "type": "ActiveRest",
     "exercises": [
-      { 
+      {
         "exercise_id": "cat_cow_stretch",
         "name": "Cat-Cow Stretch",
         "sets": 2,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": null
       },
       {
         "exercise_id": "childs_pose",
         "name": "Child's Pose",
         "sets": 2,
-        "time": "60s"
+        "time": "60s",
+        "weight": null
       },
-      { 
+      {
         "exercise_id": "gentssle_spinal_twists",
         "name": "Gentle Spinal Twists",
         "sets": 2,
-        "reps": "8 per side"
+        "reps": "8 per side",
+        "weight": null
       },
       {
         "exercise_id": "hip_circles",
         "name": "Hip Circles",
         "sets": 2,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": null
       },
       {
         "exercise_id": "deep_diaphragmatic_breathing",
         "name": "Deep Diaphragmatic Breathing",
         "sets": 1,
-        "time": "5min"
+        "time": "5min",
+        "weight": null
       }
     ]
   },
@@ -55,31 +60,36 @@
         "exercise_id": "foam_roll_glutes",
         "name": "Foam Roll Glutes",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "foam_roll_quads",
         "name": "Foam Roll Quads",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "pigeon_pose",
         "name": "Pigeon Pose",
         "sets": 2,
-        "time": "45s per side"
+        "time": "45s per side",
+        "weight": null
       },
       {
         "exercise_id": "worlds_greatest_stretch",
         "name": "World's Greatest Stretch",
         "sets": 2,
-        "reps": "6 per side"
+        "reps": "6 per side",
+        "weight": null
       },
       {
         "exercise_id": "standing_quad_stretch",
         "name": "Standing Quad Stretch",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       }
     ]
   },
@@ -97,31 +107,36 @@
         "exercise_id": "sun_salutation_a",
         "name": "Sun Salutation A",
         "sets": 3,
-        "reps": "3 flows"
+        "reps": "3 flows",
+        "weight": null
       },
       {
         "exercise_id": "downward_dog",
         "name": "Downward Dog",
         "sets": 2,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "warrior_ii",
         "name": "Warrior II",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       },
       {
         "exercise_id": "triangle_pose",
         "name": "Triangle Pose",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       },
       {
         "exercise_id": "savasana",
         "name": "Savasana",
         "sets": 1,
-        "time": "5min"
+        "time": "5min",
+        "weight": null
       }
     ]
   },
@@ -139,31 +154,36 @@
         "exercise_id": "jumping_jacks",
         "name": "Jumping Jacks",
         "sets": 1,
-        "time": "60s"
+        "time": "60s",
+        "weight": null
       },
       {
         "exercise_id": "high_knees",
         "name": "High Knees",
         "sets": 1,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "butt_kicks",
         "name": "Butt Kicks",
         "sets": 1,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "arm_circles",
         "name": "Arm Circles",
         "sets": 2,
-        "reps": "15 forward, 15 back"
+        "reps": "15 forward, 15 back",
+        "weight": null
       },
       {
         "exercise_id": "leg_swings",
         "name": "Leg Swings",
         "sets": 2,
-        "reps": "15 per leg"
+        "reps": "15 per leg",
+        "weight": null
       }
     ]
   },
@@ -181,25 +201,29 @@
         "exercise_id": "incline_walking",
         "name": "Incline Walking",
         "sets": 1,
-        "time": "15min"
+        "time": "15min",
+        "weight": null
       },
       {
         "exercise_id": "bird_dog",
         "name": "Bird-Dog",
         "sets": 3,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": null
       },
       {
         "exercise_id": "dead_bug",
         "name": "Dead Bug",
         "sets": 3,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": null
       },
       {
         "exercise_id": "pelvic_tilts",
         "name": "Pelvic Tilts",
         "sets": 3,
-        "reps": "15"
+        "reps": "15",
+        "weight": null
       }
     ]
   },
@@ -217,31 +241,36 @@
         "exercise_id": "foam_roll_calves",
         "name": "Foam Roll Calves",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "foam_roll_hamstrings",
         "name": "Foam Roll Hamstrings",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "foam_roll_it_band",
         "name": "Foam Roll IT Band",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "foam_roll_lats",
         "name": "Foam Roll Lats",
         "sets": 1,
-        "time": "60s per side"
+        "time": "60s per side",
+        "weight": null
       },
       {
         "exercise_id": "foam_roll_thoracic_spine",
         "name": "Foam Roll Thoracic Spine",
         "sets": 1,
-        "time": "90s"
+        "time": "90s",
+        "weight": null
       }
     ]
   },
@@ -259,7 +288,8 @@
         "exercise_id": "brisk_walking",
         "name": "Brisk Walking",
         "sets": 1,
-        "time": "25min"
+        "time": "25min",
+        "weight": null
       }
     ]
   },
@@ -277,31 +307,36 @@
         "exercise_id": "hamstring_stretch",
         "name": "Hamstring Stretch",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       },
       {
         "exercise_id": "quad_stretch",
         "name": "Quad Stretch",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       },
       {
         "exercise_id": "glute_stretch_figure_four",
         "name": "Glute Stretch (Figure-four)",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       },
       {
         "exercise_id": "chest_stretch_in_doorway",
         "name": "Chest Stretch in Doorway",
         "sets": 2,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       },
       {
         "exercise_id": "triceps_stretch",
         "name": "Triceps Stretch",
         "sets": 2,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       }
     ]
   },
@@ -319,19 +354,22 @@
         "exercise_id": "tai_chi_basic_stepping",
         "name": "Tai Chi Basic Stepping",
         "sets": 1,
-        "time": "10min"
+        "time": "10min",
+        "weight": null
       },
       {
         "exercise_id": "box_breathing",
         "name": "Box Breathing",
         "sets": 1,
-        "time": "5min"
+        "time": "5min",
+        "weight": null
       },
       {
         "exercise_id": "body_scan_meditation",
         "name": "Body Scan Meditation",
         "sets": 1,
-        "time": "5min"
+        "time": "5min",
+        "weight": null
       }
     ]
   },
@@ -349,31 +387,36 @@
         "exercise_id": "neck_half_circles",
         "name": "Neck Half-Circles",
         "sets": 2,
-        "reps": "8 per side"
+        "reps": "8 per side",
+        "weight": null
       },
       {
         "exercise_id": "shoulder_rolls",
         "name": "Shoulder Rolls",
         "sets": 2,
-        "reps": "10 forward, 10 back"
+        "reps": "10 forward, 10 back",
+        "weight": null
       },
       {
         "exercise_id": "seated_forward_bend",
         "name": "Seated Forward Bend",
         "sets": 2,
-        "time": "60s"
+        "time": "60s",
+        "weight": null
       },
       {
         "exercise_id": "happy_baby_pose",
         "name": "Happy Baby Pose",
         "sets": 2,
-        "time": "60s"
+        "time": "60s",
+        "weight": null
       },
       {
         "exercise_id": "legs_up_the_wall",
         "name": "Legs Up The Wall",
         "sets": 1,
-        "time": "5min"
+        "time": "5min",
+        "weight": null
       }
     ]
   },
@@ -391,31 +434,36 @@
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": null
       },
       {
         "exercise_id": "incline_push_ups",
         "name": "Incline Push-Ups",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_rows",
         "name": "Dumbbell Rows",
         "sets": 3,
-        "reps": "12-15 per side"
+        "reps": "12-15 per side",
+        "weight": 0
       },
       {
         "exercise_id": "glute_bridges",
         "name": "Glute Bridges",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "plank",
         "name": "Plank",
         "sets": 3,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       }
     ]
   },
@@ -433,37 +481,43 @@
         "exercise_id": "goblet_squats",
         "name": "Goblet Squats",
         "sets": 4,
-        "reps": "8-12 reps"
+        "reps": "8-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "8-12 reps"
+        "reps": "8-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lunges",
         "name": "Dumbbell Lunges",
         "sets": 3,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": 0
       },
       {
         "exercise_id": "seated_dumbbell_shoulder_press",
         "name": "Seated Dumbbell Shoulder Press",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hanging_knee_raises",
         "name": "Hanging Knee Raises",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": null
       }
     ]
   },
@@ -481,37 +535,43 @@
         "exercise_id": "barbell_back_squats",
         "name": "Barbell Back Squats",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
-        {
+      {
         "exercise_id": "pull_ups_assisted_or_bodyweight",
         "name": "Pull-Ups (Assisted or Bodyweight)",
         "sets": 4,
-        "reps": "As many as possible"
+        "reps": "As many as possible",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_overhead_press",
         "name": "Dumbbell Overhead Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "romanian_deadlifts",
         "name": "Romanian Deadlifts",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": null
       },
       {
         "exercise_id": "russian_twists",
         "name": "Russian Twists",
         "sets": 3,
-        "reps": "15 per side"
+        "reps": "15 per side",
+        "weight": null
       }
     ]
   },
@@ -529,31 +589,36 @@
         "exercise_id": "kettlebell_swings",
         "name": "Kettlebell Swings",
         "sets": 4,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_thrusters",
         "name": "Dumbbell Thrusters",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bent_over_rows",
         "name": "Bent-Over Rows",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "stationary_bike_sprints",
         "name": "Stationary Bike Sprints",
         "sets": 5,
-        "time": "30s sprint, 60s rest"
+        "time": "30s sprint, 60s rest",
+        "weight": null
       },
       {
         "exercise_id": "mountain_climbers",
         "name": "Mountain Climbers",
         "sets": 3,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       }
     ]
   },
@@ -571,31 +636,36 @@
         "exercise_id": "burpees",
         "name": "Burpees",
         "sets": 4,
-        "time": "40s on, 20s off"
+        "time": "40s on, 20s off",
+        "weight": null
       },
       {
         "exercise_id": "jump_squats",
         "name": "Jump Squats",
         "sets": 4,
-        "time": "40s on, 20s off"
+        "time": "40s on, 20s off",
+        "weight": null
       },
       {
         "exercise_id": "high_knees",
         "name": "High Knees",
         "sets": 4,
-        "time": "40s on, 20s off"
+        "time": "40s on, 20s off",
+        "weight": null
       },
       {
         "exercise_id": "push_up_to_renegade_row",
         "name": "Push-Up to Renegade Row",
         "sets": 4,
-        "time": "40s on, 20s off"
+        "time": "40s on, 20s off",
+        "weight": null
       },
       {
         "exercise_id": "plank_jacks",
         "name": "Plank Jacks",
         "sets": 4,
-        "time": "40s on, 20s off"
+        "time": "40s on, 20s off",
+        "weight": null
       }
     ]
   },
@@ -613,31 +683,36 @@
         "exercise_id": "incline_walking",
         "name": "Incline Walking",
         "sets": 1,
-        "time": "25min"
+        "time": "25min",
+        "weight": null
       },
       {
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Row",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "crunches",
         "name": "Crunches",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       }
     ]
   },
@@ -655,37 +730,43 @@
         "exercise_id": "glute_bridges",
         "name": "Glute Bridges",
         "sets": 4,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "resistance_band_pull_aparts",
         "name": "Resistance Band Pull-Aparts",
         "sets": 4,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "wall_sit",
         "name": "Wall Sit",
         "sets": 3,
-        "time": "45-60s"
+        "time": "45-60s",
+        "weight": null
       },
       {
         "exercise_id": "bird_dog",
         "name": "Bird-Dog",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_bicep_curls",
         "name": "Dumbbell Bicep Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bodyweight_calf_raises",
         "name": "Bodyweight Calf Raises",
         "sets": 3,
-        "reps": "20-25 reps"
+        "reps": "20-25 reps",
+        "weight": null
       }
     ]
   },
@@ -703,31 +784,36 @@
         "exercise_id": "kettlebell_goblet_squats",
         "name": "Kettlebell Goblet Squats",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "battle_ropes",
         "name": "Battle Ropes",
         "sets": 3,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       },
       {
         "exercise_id": "box_jumps",
         "name": "Box Jumps",
         "sets": 3,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       },
       {
         "exercise_id": "medicine_ball_slams",
         "name": "Medicine Ball Slams",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "rowing_machine_sprints",
         "name": "Rowing Machine Sprints",
         "sets": 3,
-        "time": "250m"
+        "time": "250m",
+        "weight": 0
       }
     ]
   },
@@ -745,31 +831,36 @@
         "exercise_id": "dumbbell_step_ups",
         "name": "Dumbbell Step-Ups",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_dumbbell_row",
         "name": "Single-Arm Dumbbell Row",
         "sets": 3,
-        "reps": "12 per arm"
+        "reps": "12 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "cable_tricep_pushdowns",
         "name": "Cable Tricep Pushdowns",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_raises",
         "name": "Leg Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -787,31 +878,36 @@
         "exercise_id": "dumbbell_romanian_deadlifts",
         "name": "Dumbbell Romanian Deadlifts",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_floor_press",
         "name": "Dumbbell Floor Press",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "renegade_rows",
         "name": "Renegade Rows",
         "sets": 4,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_front_squats",
         "name": "Dumbbell Front Squats",
         "sets": 4,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "jumping_jacks",
         "name": "Jumping Jacks",
         "sets": 3,
-        "time": "60s"
+        "time": "60s",
+        "weight": null
       }
     ]
   },
@@ -829,31 +925,36 @@
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "push_ups_on_knees",
         "name": "Push-Ups (on knees)",
         "sets": 3,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       },
       {
         "exercise_id": "resistance_band_rows",
         "name": "Resistance Band Rows",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "walking_lunges",
         "name": "Walking Lunges",
         "sets": 3,
-        "reps": "10 per leg"
+        "reps": "10 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "plank",
         "name": "Plank",
         "sets": 3,
-        "time": "30-45s"
+        "time": "30-45s",
+        "weight": null
       }
     ]
   },
@@ -871,37 +972,43 @@
         "exercise_id": "hex_bar_deadlifts",
         "name": "Hex Bar Deadlifts",
         "sets": 5,
-        "reps": "5 reps"
+        "reps": "5 reps",
+        "weight": 0
       },
       {
         "exercise_id": "overhead_press",
         "name": "Overhead Press",
         "sets": 4,
-        "reps": "8 reps"
+        "reps": "8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "weighted_pull_ups",
         "name": "Weighted Pull-Ups",
         "sets": 4,
-        "reps": "5-8 reps"
+        "reps": "5-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hip_thrusts",
         "name": "Hip Thrusts",
         "sets": 3,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
-        "exercise_id": "toes_to_bar",
-        "name": "Toes-to-Bar",
+        "exercise_id": "hanging_leg_raise",
+        "name": "Hanging Leg Raises",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": null
       }
     ]
   },
@@ -919,31 +1026,36 @@
         "exercise_id": "stationary_bike",
         "name": "Stationary Bike",
         "sets": 1,
-        "time": "10min warm-up"
+        "time": "10min warm-up",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_lunges",
         "name": "Dumbbell Lunges",
         "sets": 3,
-        "reps": "15 per leg"
+        "reps": "15 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "kettlebell_swings",
         "name": "Kettlebell Swings",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "plank_with_shoulder_taps",
         "name": "Plank with Shoulder Taps",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       }
     ]
   },
@@ -961,37 +1073,43 @@
         "exercise_id": "bulgarian_split_squats",
         "name": "Bulgarian Split Squats",
         "sets": 4,
-        "reps": "10-12 per leg"
+        "reps": "10-12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_dumbbell_bench_press",
         "name": "Single-Arm Dumbbell Bench Press",
         "sets": 4,
-        "reps": "10-12 per arm"
+        "reps": "10-12 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_dumbbell_row",
         "name": "Single-Arm Dumbbell Row",
         "sets": 4,
-        "reps": "10-12 per arm"
+        "reps": "10-12 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "single_leg_rdls",
         "name": "Single-Leg RDLs",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "side_plank",
         "name": "Side Plank",
         "sets": 3,
-        "time": "30s per side"
+        "time": "30s per side",
+        "weight": null
       }
     ]
   },
@@ -1009,31 +1127,36 @@
         "exercise_id": "glute_bridges",
         "name": "Glute Bridges",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "banded_clamshells",
         "name": "Banded Clamshells",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": null
       },
       {
         "exercise_id": "incline_push_ups",
         "name": "Incline Push-Ups",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": null
       },
       {
         "exercise_id": "dead_bug",
         "name": "Dead Bug",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       },
       {
         "exercise_id": "wall_sit",
         "name": "Wall Sit",
         "sets": 3,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       }
     ]
   },
@@ -1051,25 +1174,29 @@
         "exercise_id": "dumbbell_thrusters",
         "name": "Dumbbell Thrusters",
         "sets": 5,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "burpee_box_jump_overs",
         "name": "Burpee Box Jump Overs",
         "sets": 5,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       },
       {
         "exercise_id": "assault_bike_sprints",
         "name": "Assault Bike Sprints",
         "sets": 5,
-        "time": "20s on, 40s off"
+        "time": "20s on, 40s off",
+        "weight": null
       },
       {
-        "exercise_id": "toes_to_bar",
-        "name": "Toes-to-Bar",
+        "exercise_id": "hanging_leg_raise",
+        "name": "Hanging Leg Raises",
         "sets": 5,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": null
       }
     ]
   },
@@ -1087,37 +1214,43 @@
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Row",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "walking_lunges",
         "name": "Walking Lunges",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raise",
         "name": "Dumbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_crunches",
         "name": "Cable Crunches",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -1131,35 +1264,40 @@
     "intensity": "Moderate",
     "type": "FullBody",
     "exercises": [
-     {
+      {
         "exercise_id": "rowing_machine_sprints",
         "name": "Rowing Machine Sprints",
         "sets": 3,
-        "time": "250m"
+        "time": "250m",
+        "weight": null
       },
       {
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "plank_to_push_up",
         "name": "Plank to Push-Up",
         "sets": 3,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       },
       {
         "exercise_id": "alternating_step_ups",
         "name": "Alternating Step-Ups",
         "sets": 3,
-        "reps": "15 per leg"
+        "reps": "15 per leg",
+        "weight": null
       },
       {
         "exercise_id": "bicycle_crunches",
         "name": "Bicycle Crunches",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": null
       }
     ]
   },
@@ -1177,25 +1315,29 @@
         "exercise_id": "jump_squats",
         "name": "Jump Squats",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "mountain_climbers",
         "name": "Mountain Climbers",
         "sets": 3,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "renegade_rows",
         "name": "Renegade Rows",
         "sets": 3,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": 0
       },
       {
         "exercise_id": "burpees",
         "name": "Burpees",
         "sets": 3,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       }
     ]
   },
@@ -1213,31 +1355,36 @@
         "exercise_id": "glute_bridge",
         "name": "Glute Bridge",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups_on_knees",
         "name": "Push-Ups (on knees)",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": null
       },
       {
         "exercise_id": "superman",
         "name": "Superman",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "reverse_lunges",
         "name": "Reverse Lunges",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "plank",
         "name": "Plank",
         "sets": 3,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       }
     ]
   },
@@ -1259,37 +1406,43 @@
         "exercise_id": "goblet_squats",
         "name": "Goblet Squats",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_extensions",
         "name": "Leg Extensions",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_calf_raises",
         "name": "Seated Calf Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_dumbbell_shoulder_press",
         "name": "Seated Dumbbell Shoulder Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -1311,37 +1464,43 @@
         "exercise_id": "barbell_hip_thrusts",
         "name": "Barbell Hip Thrusts",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "romanian_deadlifts",
         "name": "Romanian Deadlifts",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_kickbacks",
         "name": "Cable Kickbacks",
         "sets": 3,
-        "reps": "12-15 per leg"
+        "reps": "12-15 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "pull_ups_assisted_or_bodyweight",
         "name": "Pull-Ups (Assisted or Bodyweight)",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": null
       },
       {
         "exercise_id": "bent_over_barbell_rows",
         "name": "Bent-Over Barbell Rows",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   },
@@ -1363,31 +1522,36 @@
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "walking_lunges",
         "name": "Walking Lunges",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_cable_flys",
         "name": "Incline Cable Flys",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "treadmill_jog",
         "name": "Treadmill Jog",
         "sets": 1,
-        "time": "15min"
+        "time": "15min",
+        "weight": null
       }
     ]
   },
@@ -1409,31 +1573,36 @@
         "exercise_id": "banded_glute_bridges",
         "name": "Banded Glute Bridges",
         "sets": 4,
-        "reps": "20-25 reps"
+        "reps": "20-25 reps",
+        "weight": 0
       },
       {
         "exercise_id": "banded_clamshells",
         "name": "Banded Clamshells",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": null
       },
       {
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": null
       },
       {
         "exercise_id": "plank",
         "name": "Plank",
         "sets": 4,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "bird_dog",
         "name": "Bird-Dog",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       }
     ]
   },
@@ -1455,37 +1624,43 @@
         "exercise_id": "barbell_back_squats",
         "name": "Barbell Back Squats",
         "sets": 4,
-        "reps": "8-12 reps"
+        "reps": "8-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lying_leg_curls",
         "name": "Lying Leg Curls",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Rows",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_dumbbell_rows",
         "name": "Single-Arm Dumbbell Rows",
         "sets": 3,
-        "reps": "10-12 per arm"
+        "reps": "10-12 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hyperextensions",
         "name": "Hyperextensions",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       }
     ]
   },
@@ -1508,37 +1683,43 @@
         "exercise_id": "bulgarian_split_squats",
         "name": "Bulgarian Split Squats",
         "sets": 4,
-        "reps": "8-10 per leg"
+        "reps": "8-10 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "leg_extensions",
         "name": "Leg Extensions",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": 0
       }
     ]
   },
@@ -1560,31 +1741,36 @@
         "exercise_id": "cable_pull_throughs",
         "name": "Cable Pull Throughs",
         "sets": 4,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_step_ups",
         "name": "Dumbbell Step-Ups",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "seated_dumbbell_shoulder_press",
         "name": "Seated Dumbbell Shoulder Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "upright_rows",
         "name": "Upright Rows",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "elliptical_trainer",
         "name": "Elliptical Trainer",
         "sets": 1,
-        "time": "15min"
+        "time": "15min",
+        "weight": null
       }
     ]
   },
@@ -1607,37 +1793,43 @@
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_leg_curls",
         "name": "Seated Leg Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bicep_curls",
         "name": "Dumbbell Bicep Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hammer_curls",
         "name": "Hammer Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_tricep_pushdowns",
         "name": "Cable Tricep Pushdowns",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "overhead_tricep_extensions",
         "name": "Overhead Tricep Extensions",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -1659,37 +1851,43 @@
         "exercise_id": "conventional_deadlifts",
         "name": "Conventional Deadlifts",
         "sets": 5,
-        "reps": "5 reps"
+        "reps": "5 reps",
+        "weight": 0
       },
       {
         "exercise_id": "good_mornings",
         "name": "Good Mornings",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "t_bar_rows",
         "name": "T-Bar Rows",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns_close_grip",
         "name": "Lat Pulldowns (Close Grip)",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_pullovers",
         "name": "Dumbbell Pullovers",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "back_extensions",
         "name": "Back Extensions",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       }
     ]
   },
@@ -1711,31 +1909,36 @@
         "exercise_id": "dumbbell_romanian_deadlifts",
         "name": "Dumbbell Romanian Deadlifts",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lying_leg_curls",
         "name": "Lying Leg Curls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": null
       },
       {
         "exercise_id": "stairmaster",
         "name": "StairMaster",
         "sets": 1,
-        "time": "15min"
+        "time": "15min",
+        "weight": null
       }
     ]
   },
@@ -1757,30 +1960,35 @@
         "exercise_id": "kettlebell_swing",
         "name": "Kettlebell Swings (light)",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bodyweight_reverse_lunges",
         "name": "Bodyweight Reverse Lunges",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": null
       },
       {
         "name": "Seated Cable Rows",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "resistance_band_pull_aparts",
         "name": "Resistance Band Pull-Aparts",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "superman",
         "name": "Superman",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       }
     ]
   },
@@ -1802,37 +2010,43 @@
         "exercise_id": "barbell_hip_thrusts",
         "name": "Barbell Hip Thrusts",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_kickbacks",
         "name": "Cable Kickbacks",
         "sets": 3,
-        "reps": "15-20 per leg"
+        "reps": "15-20 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "single_leg_press",
         "name": "Single-Leg Press",
         "sets": 3,
-        "reps": "10-12 per leg"
+        "reps": "10-12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "chest_supported_rows",
         "name": "Chest-Supported Rows",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -1854,37 +2068,43 @@
         "exercise_id": "barbell_back_squats",
         "name": "Barbell Back Squats",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "barbell_bench_press",
         "name": "Barbell Bench Press",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_incline_press",
         "name": "Dumbbell Incline Press",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_fly",
         "name": "Cable Flys",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "calf_raises",
         "name": "Calf Raises",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -1906,31 +2126,36 @@
         "exercise_id": "dumbbell_goblet_squat",
         "name": "Dumbbell Goblet Squats",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "alternating_lunge",
         "name": "Alternating Lunges",
         "sets": 3,
-        "reps": "12 per leg"
+        "reps": "12 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_front_raises",
         "name": "Dumbbell Front Raises",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "rowing_machine",
         "name": "Rowing Machine",
         "sets": 1,
-        "time": "10min"
+        "time": "10min",
+        "weight": null
       }
     ]
   },
@@ -1953,37 +2178,43 @@
         "exercise_id": "romanian_deadlifts",
         "name": "Romanian Deadlifts",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_curls",
         "name": "Leg Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Rows",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bicep_curls",
         "name": "Dumbbell Bicep Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns_underhand_grip",
         "name": "Lat Pulldowns (Underhand Grip)",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hammer_curls",
         "name": "Hammer Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -2006,37 +2237,43 @@
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_dumbbell_shoulder_press",
         "name": "Seated Dumbbell Shoulder Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_flys",
         "name": "Incline Dumbbell Flys",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dips_assisted_or_bodyweight",
         "name": "Dips (Assisted or Bodyweight)",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": null
       },
       {
         "exercise_id": "cable_tricep_pushdowns",
         "name": "Cable Tricep Pushdowns",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   },
@@ -2058,31 +2295,36 @@
         "exercise_id": "bent_over_barbell_rows",
         "name": "Bent-Over Barbell Rows",
         "sets": 4,
-        "reps": "8-12 reps"
+        "reps": "8-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "barbell_bicep_curls",
         "name": "Barbell Bicep Curls",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_curls",
         "name": "Incline Dumbbell Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -2103,31 +2345,36 @@
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 4,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "walking_lunges",
         "name": "Walking Lunges",
         "sets": 3,
-        "reps": "15 per leg"
+        "reps": "15 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "leg_extensions",
         "name": "Leg Extensions",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_curls",
         "name": "Leg Curls",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "jump_rope",
         "name": "Jump Rope",
         "sets": 5,
-        "time": "60s on, 30s off"
+        "time": "60s on, 30s off",
+        "weight": null
       }
     ]
   },
@@ -2148,37 +2395,43 @@
         "exercise_id": "sumo_deadlifts",
         "name": "Sumo Deadlifts",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "barbell_hip_thrusts",
         "name": "Barbell Hip Thrusts",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "good_mornings",
         "name": "Good Mornings",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lying_leg_curls",
         "name": "Lying Leg Curls",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_kickbacks",
         "name": "Cable Kickbacks",
         "sets": 3,
-        "reps": "12-15 per leg"
+        "reps": "12-15 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "abductor_machine",
         "name": "Abductor Machine",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -2199,25 +2452,29 @@
         "exercise_id": "barbell_front_squats",
         "name": "Barbell Front Squats",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_extensions",
         "name": "Leg Extensions",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_step_ups",
         "name": "Dumbbell Step-Ups",
         "sets": 3,
-        "reps": "10 per leg"
+        "reps": "10 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "treadmill_sprints",
         "name": "Treadmill Sprints",
         "sets": 6,
-        "time": "30s on, 60s off"
+        "time": "30s on, 60s off",
+        "weight": null
       }
     ]
   },
@@ -2238,31 +2495,36 @@
         "exercise_id": "banded_fire_hydrants",
         "name": "Banded Fire Hydrants",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": null
       },
       {
         "exercise_id": "banded_glute_bridges",
         "name": "Banded Glute Bridges",
         "sets": 3,
-        "reps": "25 reps"
+        "reps": "25 reps",
+        "weight": null
       },
       {
         "exercise_id": "frog_pumps",
         "name": "Frog Pumps",
         "sets": 3,
-        "reps": "30 reps"
+        "reps": "30 reps",
+        "weight": null
       },
       {
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "side_lying_leg_raises",
         "name": "Side-Lying Leg Raises",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": 0
       }
     ]
   },
@@ -2284,31 +2546,36 @@
         "exercise_id": "goblet_squats",
         "name": "Goblet Squats",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Rows",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "romanian_deadlifts",
         "name": "Romanian Deadlifts",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_walk",
         "name": "Incline Walk",
         "sets": 1,
-        "time": "15min"
+        "time": "15min",
+        "weight": null
       }
     ]
   },
@@ -2330,37 +2597,43 @@
         "exercise_id": "barbell_bench_press",
         "name": "Barbell Bench Press",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "close_grip_bench_press",
         "name": "Close-Grip Bench Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dips",
         "name": "Dips",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": null
       },
       {
         "exercise_id": "skull_crushers",
         "name": "Skull Crushers",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_fly",
         "name": "Cable Flys",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "tricep_rope_pushdowns",
         "name": "Tricep Rope Pushdowns",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -2381,31 +2654,36 @@
         "exercise_id": "dumbbell_romanian_deadlifts",
         "name": "Dumbbell Romanian Deadlifts",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "glute_ham_raises",
         "name": "Glute-Ham Raises",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lying_leg_curls",
         "name": "Lying Leg Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_pull_throughs",
         "name": "Cable Pull Throughs",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hip_abduction_machine",
         "name": "Hip Abduction Machine",
         "sets": 3,
-        "reps": "20-25 reps"
+        "reps": "20-25 reps",
+        "weight": 0
       }
     ]
   },
@@ -2427,31 +2705,36 @@
         "exercise_id": "assisted_pull_up",
         "name": "Assisted Pull-Ups",
         "sets": 4,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": null
       },
       {
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 4,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bent_over_dumbbell_raises",
         "name": "Bent Over Dumbbell Raises",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "battle_ropes",
         "name": "Battle Ropes",
         "sets": 4,
-        "time": "30s on, 30s off"
+        "time": "30s on, 30s off",
+        "weight": null
       }
     ]
   },
@@ -2472,37 +2755,43 @@
         "exercise_id": "barbell_back_squats",
         "name": "Barbell Back Squats",
         "sets": 5,
-        "reps": "10 reps"
+        "reps": "10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "leg_press",
         "name": "Leg Press",
         "sets": 4,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bulgarian_split_squats",
         "name": "Bulgarian Split Squats",
         "sets": 3,
-        "reps": "10 per leg"
+        "reps": "10 per leg",
+        "weight": 0
       },
       {
         "exercise_id": "leg_extensions",
         "name": "Leg Extensions",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_leg_curls",
         "name": "Seated Leg Curls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "standing_calf_raises",
         "name": "Standing Calf Raises",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       }
     ]
   },
@@ -2524,31 +2813,36 @@
         "exercise_id": "dumbbell_overhead_press",
         "name": "Dumbbell Overhead Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_face_pull",
         "name": "Cable Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hanging_leg_raise",
         "name": "Hanging Leg Raises",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "cable_crunches",
         "name": "Cable Crunches",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       }
     ]
   },
@@ -2569,19 +2863,22 @@
         "exercise_id": "goblet_squats_superset_with_jump_rope",
         "name": "Goblet Squats (Superset with Jump Rope)",
         "sets": 4,
-        "reps": "15 squats, 60s jump"
+        "reps": "15 squats, 60s jump",
+        "weight": 0
       },
       {
         "exercise_id": "alternating_lunges_superset_with_high_knees",
         "name": "Alternating Lunges (Superset with High Knees)",
         "sets": 4,
-        "reps": "12 lunges/leg, 45s knees"
+        "reps": "12 lunges/leg, 45s knees",
+        "weight": 0
       },
       {
         "exercise_id": "glute_bridges_superset_with_mountain_climbers",
         "name": "Glute Bridges (Superset with Mountain Climbers)",
         "sets": 4,
-        "reps": "20 bridges, 45s climbers"
+        "reps": "20 bridges, 45s climbers",
+        "weight": 0
       }
     ]
   },
@@ -2603,31 +2900,36 @@
         "exercise_id": "bodyweight_squats",
         "name": "Bodyweight Squats",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "glute_bridges",
         "name": "Glute Bridges",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_push_ups",
         "name": "Incline Push-Ups",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_floor_press",
         "name": "Dumbbell Floor Press (light)",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "wall_push_ups",
         "name": "Wall Push-Ups",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       }
     ]
   },
@@ -2649,37 +2951,43 @@
         "exercise_id": "weighted_chin_ups",
         "name": "Weighted Chin-Ups",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "t_bar_row",
         "name": "T-Bar Row",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_pullovers",
         "name": "Dumbbell Pullovers",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "name": "Barbell Curls 21s",
         "sets": 3,
         "reps": "7-7-7",
-        "exercise_id": "barbell_curls_21s"
+        "exercise_id": "barbell_curls_21s",
+        "weight": 0
       },
       {
         "exercise_id": "preacher_curls",
         "name": "Preacher Curls",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "concentration_curls",
         "name": "Concentration Curls",
         "sets": 3,
-        "reps": "10-12 per arm"
+        "reps": "10-12 per arm",
+        "weight": 0
       }
     ]
   },
@@ -2701,31 +3009,36 @@
         "exercise_id": "resistance_band_pull_aparts",
         "name": "Resistance Band Pull-Aparts",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "bird_dog",
         "name": "Bird-Dog",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       },
       {
         "exercise_id": "dead_bug",
         "name": "Dead Bug",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": null
       },
       {
         "exercise_id": "plank",
         "name": "Plank",
         "sets": 3,
-        "time": "45s"
+        "time": "45s",
+        "weight": null
       },
       {
         "exercise_id": "hollow_body_hold",
         "name": "Hollow Body Hold",
         "sets": 3,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       }
     ]
   },
@@ -2747,31 +3060,36 @@
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Rows",
         "sets": 4,
-        "reps": "10-12"
+        "reps": "10-12",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_bicep_curls",
         "name": "Dumbbell Bicep Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hammer_curls",
         "name": "Hammer Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -2794,37 +3112,43 @@
         "exercise_id": "barbell_bench_press",
         "name": "Barbell Bench Press",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "name": "Overhead Press",
         "sets": 4,
         "reps": "6-8 reps",
-        "exercise_id": "overhead_press"
+        "exercise_id": "overhead_press",
+        "weight": 0
       },
       {
         "exercise_id": "dips_weighted_or_bodyweight",
         "name": "Dips (Weighted or Bodyweight)",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "skull_crushers",
         "name": "Skull Crushers",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Lateral Raises",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   },
@@ -2846,31 +3170,36 @@
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_fly",
         "name": "Cable Flys",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "upright_rows",
         "name": "Upright Rows",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "battle_ropes",
         "name": "Battle Ropes",
         "sets": 4,
-        "time": "30s on, 30s off"
+        "time": "30s on, 30s off",
+        "weight": null
       }
     ]
   },
@@ -2892,31 +3221,36 @@
         "exercise_id": "barbell_bicep_curls",
         "name": "Barbell Bicep Curls",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "tricep_rope_pushdowns",
         "name": "Tricep Rope Pushdowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_curls",
         "name": "Incline Dumbbell Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "overhead_dumbbell_tricep_extension",
         "name": "Overhead Dumbbell Tricep Extension",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "concentration_curls",
         "name": "Concentration Curls",
         "sets": 3,
-        "reps": "12-15 per arm"
+        "reps": "12-15 per arm",
+        "weight": 0
       }
     ]
   },
@@ -2938,31 +3272,36 @@
         "exercise_id": "pull_ups_assisted_or_bodyweight",
         "name": "Pull-Ups (Assisted or Bodyweight)",
         "sets": 4,
-        "reps": "5-8 reps"
+        "reps": "5-8 reps",
+        "weight": null
       },
       {
         "exercise_id": "t_bar_rows",
         "name": "T-Bar Rows",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hanging_leg_raise",
         "name": "Hanging Leg Raises",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": null
       },
       {
         "exercise_id": "dumbbell_pullovers",
         "name": "Dumbbell Pullovers",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "ab_rollouts",
         "name": "Ab Rollouts",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": null
       }
     ]
   },
@@ -2984,31 +3323,36 @@
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "inverted_rows",
         "name": "Inverted Rows",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_floor_press",
         "name": "Dumbbell Floor Press",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_dumbbell_rows",
         "name": "Single-Arm Dumbbell Rows",
         "sets": 3,
-        "reps": "15-20 per arm"
+        "reps": "15-20 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "ski_erg",
         "name": "Ski Erg",
         "sets": 1,
-        "time": "10 min"
+        "time": "10 min",
+        "weight": null
       }
     ]
   },
@@ -3030,31 +3374,36 @@
         "exercise_id": "incline_push_ups",
         "name": "Incline Push-Ups",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": null
       },
       {
         "exercise_id": "light_dumbbell_lateral_raises",
         "name": "Light Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "wall_push_ups",
         "name": "Wall Push-Ups",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": null
       },
       {
         "exercise_id": "banded_face_pulls",
         "name": "Banded Face Pulls",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "chest_stretch_in_doorway",
         "name": "Chest Stretch in Doorway",
         "sets": 2,
-        "time": "30s"
+        "time": "30s",
+        "weight": null
       }
     ]
   },
@@ -3076,31 +3425,36 @@
         "exercise_id": "dumbbell_bench_press",
         "name": "Dumbbell Bench Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bent_over_barbell_rows",
         "name": "Bent-Over Barbell Rows",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_flys",
         "name": "Incline Dumbbell Flys",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "chest_supported_rows",
         "name": "Chest-Supported Rows",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -3121,31 +3475,36 @@
         "exercise_id": "barbell_overhead_press",
         "name": "Barbell Overhead Press",
         "sets": 5,
-        "reps": "5-8 reps"
+        "reps": "5-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_arnold_press",
         "name": "Seated Arnold Press",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "heavy_dumbbell_lateral_raises",
         "name": "Heavy Dumbbell Lateral Raises",
         "sets": 4,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bent_over_dumbbell_raises",
         "name": "Bent Over Dumbbell Raises",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "barbell_shrugs",
         "name": "Barbell Shrugs",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   },
@@ -3168,31 +3527,36 @@
         "exercise_id": "dumbbell_bicep_curls",
         "name": "Dumbbell Bicep Curls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "tricep_dips_on_bench",
         "name": "Tricep Dips (on bench)",
         "sets": 3,
-        "reps": "15"
+        "reps": "15",
+        "weight": 0
       },
       {
         "exercise_id": "hammer_curls",
         "name": "Hammer Curls",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "russian_twists",
         "name": "Russian Twists",
         "sets": 3,
-        "reps": "20 per side"
+        "reps": "20 per side",
+        "weight": null
       },
       {
         "exercise_id": "plank_with_shoulder_taps",
         "name": "Plank with Shoulder Taps",
         "sets": 3,
-        "reps": "15 per side"
+        "reps": "15 per side",
+        "weight": null
       }
     ]
   },
@@ -3214,31 +3578,36 @@
         "exercise_id": "seated_dumbbell_shoulder_press",
         "name": "Seated Dumbbell Shoulder Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_tricep_pushdowns",
         "name": "Cable Tricep Pushdowns",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "skull_crushers",
         "name": "Skull Crushers",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -3260,31 +3629,36 @@
         "exercise_id": "weighted_chin_ups",
         "name": "Weighted Chin-Ups",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "pendlay_rows",
         "name": "Pendlay Rows",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "heavy_dumbbell_curls",
         "name": "Heavy Dumbbell Curls",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "single_arm_lat_pulldowns",
         "name": "Single-Arm Lat Pulldowns",
         "sets": 3,
-        "reps": "8-10 per arm"
+        "reps": "8-10 per arm",
+        "weight": 0
       },
       {
         "exercise_id": "preacher_curls",
         "name": "Preacher Curls",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   },
@@ -3306,31 +3680,36 @@
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Rows",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Dumbbell Lateral Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "bent_over_dumbbell_raises",
         "name": "Bent Over Dumbbell Raises",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       }
     ]
   },
@@ -3352,31 +3731,36 @@
         "exercise_id": "superman",
         "name": "Superman",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": null
       },
       {
         "exercise_id": "glute_bridges",
         "name": "Glute Bridges",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "banded_pull_apart",
         "name": "Banded Pull-Aparts",
         "sets": 3,
-        "reps": "20 reps"
+        "reps": "20 reps",
+        "weight": null
       },
       {
         "exercise_id": "pallof_press",
         "name": "Pallof Press",
         "sets": 3,
-        "reps": "12 per side"
+        "reps": "12 per side",
+        "weight": 0
       },
       {
         "exercise_id": "cat_cow_stretch",
         "name": "Cat-Cow Stretch",
         "sets": 2,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": null
       }
     ]
   },
@@ -3398,31 +3782,36 @@
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "barbell_bicep_curls",
         "name": "Barbell Bicep Curls",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_fly",
         "name": "Dumbbell Flys",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "hammer_curls",
         "name": "Hammer Curls",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "push_ups",
         "name": "Push-Ups",
         "sets": 3,
-        "reps": "To failure"
+        "reps": "To failure",
+        "weight": null
       }
     ]
   },
@@ -3445,25 +3834,29 @@
         "exercise_id": "medicine_ball_slams",
         "name": "Medicine Ball Slams",
         "sets": 4,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "renegade_rows",
         "name": "Renegade Rows",
         "sets": 4,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": 0
       },
       {
         "exercise_id": "kettlebell_halos",
         "name": "Kettlebell Halos",
         "sets": 4,
-        "reps": "10 per side"
+        "reps": "10 per side",
+        "weight": 0
       },
       {
         "exercise_id": "battle_ropes",
         "name": "Battle Ropes",
         "sets": 4,
-        "time": "40s"
+        "time": "40s",
+        "weight": null
       }
     ]
   },
@@ -3484,31 +3877,36 @@
       {
         "exercise_id": "assisted_pull_up",
         "sets": 4,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "tricep_dips_on_bench",
         "name": "Tricep Dips (on bench)",
         "sets": 4,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "face_pulls",
         "name": "Face Pulls",
         "sets": 3,
-        "reps": "15-20 reps"
+        "reps": "15-20 reps",
+        "weight": 0
       },
       {
         "exercise_id": "overhead_tricep_extensions",
         "name": "Overhead Tricep Extensions",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_pullovers",
         "name": "Dumbbell Pullovers",
         "sets": 3,
-        "reps": "12-15 reps"
+        "reps": "12-15 reps",
+        "weight": 0
       }
     ]
   },
@@ -3531,31 +3929,36 @@
         "exercise_id": "arnold_press",
         "name": "Arnold Press",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "seated_cable_row",
         "name": "Seated Cable Row",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 3,
-        "reps": "12 reps"
+        "reps": "12 reps",
+        "weight": 0
       },
       {
         "exercise_id": "dumbbell_lateral_raises",
         "name": "Lateral Raises",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       },
       {
         "exercise_id": "lat_pulldowns",
         "name": "Lat Pulldowns",
         "sets": 3,
-        "reps": "15 reps"
+        "reps": "15 reps",
+        "weight": 0
       }
     ]
   },
@@ -3577,31 +3980,36 @@
         "exercise_id": "barbell_bench_press",
         "name": "Barbell Bench Press",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "weighted_pull_ups",
         "name": "Weighted Pull-Ups",
         "sets": 4,
-        "reps": "6-8 reps"
+        "reps": "6-8 reps",
+        "weight": 0
       },
       {
         "exercise_id": "incline_dumbbell_press",
         "name": "Incline Dumbbell Press",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "t_bar_rows",
         "name": "T-Bar Rows",
         "sets": 3,
-        "reps": "8-10 reps"
+        "reps": "8-10 reps",
+        "weight": 0
       },
       {
         "exercise_id": "cable_crossovers",
         "name": "Cable Crossovers",
         "sets": 3,
-        "reps": "10-12 reps"
+        "reps": "10-12 reps",
+        "weight": 0
       }
     ]
   }

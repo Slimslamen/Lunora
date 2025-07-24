@@ -15,6 +15,7 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { Link, useRouter } from 'expo-router'
+import { ReturnButton } from '../../../components/Return'
 
 const { width, height } = Dimensions.get('window')
 const fact =
@@ -59,6 +60,9 @@ export default function MenstrualFactScreen() {
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}
       >
+        <TouchableOpacity style={{top:-260, left:-150}}>
+          <ReturnButton />
+        </TouchableOpacity>
         {/* Animated background circles */}
         {[...Array(5)].map((_, i) => {
           const size = 60 + Math.random() * 100

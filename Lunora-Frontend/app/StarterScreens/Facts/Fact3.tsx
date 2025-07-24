@@ -1,5 +1,5 @@
 // Fact3Screen.tsx
-import React, { useEffect, useRef, useContext } from 'react'
+import React, { useEffect, useRef, useContext } from "react";
 import {
   View,
   Text,
@@ -9,33 +9,34 @@ import {
   Animated,
   useColorScheme,
   TouchableOpacity,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { Link, useRouter } from 'expo-router'
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { Link, useRouter } from "expo-router";
+import { ReturnButton } from "../../../components/Return";
 
-const { width, height } = Dimensions.get('window')
+const { width, height } = Dimensions.get("window");
 const fact =
-  '💧 Fun Fact: Your water needs rise ~300ml per day during your period — stay hydrated for peak performance!'
+  "💧 Fun Fact: Your water needs rise ~300ml per day during your period — stay hydrated for peak performance!";
 
 export default function Fact3Screen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
-      
-    const handleContinue = () => {
-    router.push('../ProgramDescription')
-    }
+
+  const handleContinue = () => {
+    router.push("../ProgramDescription");
+  };
 
   // Ripple animation circles
-  const rippleAnim0 = useRef(new Animated.Value(0))
-  const rippleAnim1 = useRef(new Animated.Value(0))
-  const rippleAnim2 = useRef(new Animated.Value(0))
-  const rippleAnim3 = useRef(new Animated.Value(0))
-  const rippleAnims = [rippleAnim0.current, rippleAnim1.current, rippleAnim2.current, rippleAnim3.current]
+  const rippleAnim0 = useRef(new Animated.Value(0));
+  const rippleAnim1 = useRef(new Animated.Value(0));
+  const rippleAnim2 = useRef(new Animated.Value(0));
+  const rippleAnim3 = useRef(new Animated.Value(0));
+  const rippleAnims = [rippleAnim0.current, rippleAnim1.current, rippleAnim2.current, rippleAnim3.current];
 
   useEffect(() => {
     rippleAnims.forEach((anim, i) => {
@@ -53,19 +54,19 @@ export default function Fact3Screen() {
             useNativeDriver: true,
           }),
         ])
-      ).start()
-    })
-  }, [])
+      ).start();
+    });
+  }, []);
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <TouchableOpacity style={{ top: -255, left: -155 }}>
+          <ReturnButton />
+        </TouchableOpacity>
         {rippleAnims.map((anim, i) => {
-          const size = width * (0.3 + i * 0.1)
+          const size = width * (0.3 + i * 0.1);
           return (
             <Animated.View
               key={i}
@@ -81,13 +82,11 @@ export default function Fact3Screen() {
                 },
               ]}
             />
-          )
+          );
         })}
 
         <View style={styles.container}>
-          <Text style={[styles.factText, { color: colors.textPrimary }]}>
-            {fact}
-          </Text>
+          <Text style={[styles.factText, { color: colors.textPrimary }]}>{fact}</Text>
 
           <TouchableOpacity activeOpacity={0.8}>
             <Animated.View style={[styles.button, { backgroundColor: colors.accent, borderColor: colors.accent }]}>
@@ -99,14 +98,14 @@ export default function Fact3Screen() {
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-  safe: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  ripple: { position: 'absolute', borderWidth: 2 },
-  container: { paddingHorizontal: 24, zIndex: 1, alignItems: 'center' },
-  factText: { fontSize: 20, lineHeight: 28, fontWeight: '500', textAlign: 'center', marginBottom: 40 },
-  button: { width: '100%', marginTop: 24, borderRadius: 14, borderWidth: 1, paddingVertical: 14, alignItems: 'center' },
-  buttonText: { color: '#fff', fontSize: 16, fontWeight: '600', paddingHorizontal: 14 },
-})
+  safe: { flex: 1, justifyContent: "center", alignItems: "center" },
+  ripple: { position: "absolute", borderWidth: 2 },
+  container: { paddingHorizontal: 24, zIndex: 1, alignItems: "center" },
+  factText: { fontSize: 20, lineHeight: 28, fontWeight: "500", textAlign: "center", marginBottom: 40 },
+  button: { width: "100%", marginTop: 24, borderRadius: 14, borderWidth: 1, paddingVertical: 14, alignItems: "center" },
+  buttonText: { color: "#fff", fontSize: 16, fontWeight: "600", paddingHorizontal: 14 },
+});

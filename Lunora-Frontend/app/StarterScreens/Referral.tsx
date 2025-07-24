@@ -1,5 +1,5 @@
 // ReferralScreen.tsx
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -10,108 +10,90 @@ import {
   useColorScheme,
   KeyboardAvoidingView,
   Platform,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { Link, useRouter } from 'expo-router'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { Link, useRouter } from "expo-router";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
+import { ReturnButton } from '../../components/Return'
 
 export default function ReferralScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [referrerEmail, setReferrerEmail] = useState('')
+  const [referrerEmail, setReferrerEmail] = useState("");
 
   const router = useRouter();
 
-      const handleContinue = () => {
-        
-        router.push('./Finding')
-    }
+  const handleContinue = () => {
+    router.push("./Finding");
+  };
 
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
+        <View>
+          <ReturnButton />
+        </View>
         <View style={{ flex: 1 }}>
           <KeyboardAvoidingView
             style={{ flex: 1 }}
-            behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+            behavior={Platform.OS === "ios" ? "padding" : "height"}
             keyboardVerticalOffset={80}
           >
             <View style={styles.container}>
-              <Text style={[styles.title, { color: colors.textPrimary }]}>
-          Referred by a friend?
-              </Text>
+              <Text style={[styles.title, { color: colors.textPrimary }]}>Referred by a friend?</Text>
               <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-          Enter their email to apply your discount
+                Enter their email to apply your discount
               </Text>
 
-              <View
-          style={[
-            styles.card,
-            { backgroundColor: colors.cardBg, borderColor: colors.cardBorder },
-          ]}
-              >
-          <TextInput
-            style={[
-              styles.input,
-              { color: colors.textPrimary, borderColor: colors.cardBorder },
-            ]}
-            placeholder="friend@example.com"
-            placeholderTextColor={colors.textSecondary}
-            value={referrerEmail}
-            onChangeText={setReferrerEmail}
-            keyboardType="email-address"
-            autoCapitalize="none"
-          />
+              <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+                <TextInput
+                  style={[styles.input, { color: colors.textPrimary, borderColor: colors.cardBorder }]}
+                  placeholder="friend@example.com"
+                  placeholderTextColor={colors.textSecondary}
+                  value={referrerEmail}
+                  onChangeText={setReferrerEmail}
+                  keyboardType="email-address"
+                  autoCapitalize="none"
+                />
               </View>
 
               <TouchableOpacity
-          onPress={handleContinue}
-          style={[
-            styles.button,
-            {
-              backgroundColor:
-                referrerEmail.trim() ? colors.accent : colors.cardBg,
-              borderColor:
-                referrerEmail.trim() ? colors.accent : colors.cardBorder,
-            },
-            !referrerEmail.trim() && styles.buttonDisabled,
-          ]}
-          disabled={!referrerEmail.trim()}
+                onPress={handleContinue}
+                style={[
+                  styles.button,
+                  {
+                    backgroundColor: referrerEmail.trim() ? colors.accent : colors.cardBg,
+                    borderColor: referrerEmail.trim() ? colors.accent : colors.cardBorder,
+                  },
+                  !referrerEmail.trim() && styles.buttonDisabled,
+                ]}
+                disabled={!referrerEmail.trim()}
               >
-          <Text
-            style={[
-              styles.buttonText,
-              {
-                color: referrerEmail.trim()
-            ? colors.textPrimary
-            : colors.textSecondary,
-              },
-            ]}
-          >
-            Apply Referral
-          </Text>
+                <Text
+                  style={[
+                    styles.buttonText,
+                    {
+                      color: referrerEmail.trim() ? colors.textPrimary : colors.textSecondary,
+                    },
+                  ]}
+                >
+                  Apply Referral
+                </Text>
               </TouchableOpacity>
 
               <TouchableOpacity onPress={handleContinue}>
-          <Text style={[styles.skipText, { color: colors.textSecondary }]}>
-            I wasn’t referred
-          </Text>
+                <Text style={[styles.skipText, { color: colors.textSecondary }]}>I wasn’t referred</Text>
               </TouchableOpacity>
             </View>
           </KeyboardAvoidingView>
         </View>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -123,22 +105,22 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 80,
     paddingBottom: 80,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 22,
-    fontWeight: '700',
-    textAlign: 'center',
+    fontWeight: "700",
+    textAlign: "center",
     marginBottom: 8,
   },
   subtitle: {
     fontSize: 14,
-    textAlign: 'center',
+    textAlign: "center",
     marginBottom: 24,
   },
   card: {
-    width: '100%',
+    width: "100%",
     borderWidth: 1,
     borderRadius: 12,
     paddingHorizontal: 12,
@@ -150,23 +132,23 @@ const styles = StyleSheet.create({
     height: 40,
   },
   button: {
-    width: '100%',
+    width: "100%",
     borderRadius: 14,
     borderWidth: 1,
     paddingVertical: 14,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 16,
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
   buttonDisabled: {
     opacity: 0.6,
   },
   skipText: {
     fontSize: 14,
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
     marginTop: 8,
   },
-})
+});

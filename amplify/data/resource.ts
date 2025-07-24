@@ -68,6 +68,7 @@ const schema = a.schema({
 
   Exercise: a
     .model({
+      exercise_id: a.string(),
       name: a.string(),
       description: a.string(),
       createdAt: a.string(),

@@ -1,102 +1,1067 @@
 [
   {
-    "exercise_id": "goblet_squat",
-    "name": "Goblet Squat",
-    "description": "Hold a dumbbell at your chest, squat down keeping your chest up and core tight, then stand up."
+    "exercise_id": "cat_cow_stretch",
+    "name": "Cat-Cow Stretch",
+    "description": "On your hands and knees, alternate between arching your back up towards the ceiling (Cat) and dropping your belly towards the floor (Cow)."
   },
   {
-    "exercise_id": "trx_row",
-    "name": "TRX Row",
-    "description": "Hold TRX handles, lean back, pull chest toward hands while keeping your body in a straight line."
+    "exercise_id": "childs_pose",
+    "name": "Child's Pose",
+    "description": "Kneel on the floor, sit back on your heels, and fold forward, resting your forehead on the ground with your arms extended."
   },
   {
-    "exercise_id": "db_chest_press",
-    "name": "Dumbbell Chest Press",
-    "description": "Lie on a bench with dumbbells, lower to chest, press back up until arms are extended."
+    "exercise_id": "gentle_spinal_twists",
+    "name": "Gentle Spinal Twists",
+    "description": "Lie on your back, bring one knee to your chest, and then gently guide it across your body to create a twist in your spine."
   },
   {
-    "exercise_id": "barbell_back_squat",
-    "name": "Barbell Back Squat",
-    "description": "Barbell on upper back, squat down keeping chest up and knees out, drive through heels to stand."
+    "exercise_id": "hip_circles",
+    "name": "Hip Circles",
+    "description": "On your hands and knees, lift one knee and make large, controlled circles with it, first in one direction, then the other."
   },
   {
-    "exercise_id": "lat_pulldown",
-    "name": "Lat Pulldown",
-    "description": "Sit at pulldown station, grip bar wide, pull it to your chest keeping your torso upright."
+    "exercise_id": "deep_diaphragmatic_breathing",
+    "name": "Deep Diaphragmatic Breathing",
+    "description": "Lie down comfortably and focus on breathing deeply into your belly, allowing it to rise and fall with each breath."
+  },
+  {
+    "exercise_id": "foam_roll_glutes",
+    "name": "Foam Roll Glutes",
+    "description": "Sit on a foam roller, cross one ankle over the opposite knee, and gently roll back and forth over your glute muscles."
+  },
+  {
+    "exercise_id": "foam_roll_quads",
+    "name": "Foam Roll Quads",
+    "description": "Lie face down with a foam roller under your thighs and roll from the bottom of your hip to the top of your knee."
+  },
+  {
+    "exercise_id": "pigeon_pose",
+    "name": "Pigeon Pose",
+    "description": "Bring one knee forward towards your wrist and extend the other leg straight back to feel a deep stretch in your hip."
+  },
+  {
+    "exercise_id": "worlds_greatest_stretch",
+    "name": "World's Greatest Stretch",
+    "description": "From a lunge position, place one hand on the floor and rotate your upper body, reaching the other arm towards the ceiling."
+  },
+  {
+    "exercise_id": "standing_quad_stretch",
+    "name": "Standing Quad Stretch",
+    "description": "While standing, grab one ankle and gently pull your heel towards your glute to stretch the front of your thigh."
+  },
+  {
+    "exercise_id": "sun_salutation_a",
+    "name": "Sun Salutation A",
+    "description": "A classic yoga flow that links several poses together in a continuous, flowing movement synchronized with your breath."
+  },
+  {
+    "exercise_id": "downward_dog",
+    "name": "Downward Dog",
+    "description": "Form an inverted 'V' shape with your body by placing your hands and feet on the floor and lifting your hips up and back."
+  },
+  {
+    "exercise_id": "warrior_ii",
+    "name": "Warrior II",
+    "description": "Stand with your feet wide apart, bend your front knee, and extend your arms parallel to the floor, gazing over your front hand."
+  },
+  {
+    "exercise_id": "triangle_pose",
+    "name": "Triangle Pose",
+    "description": "With straight legs, hinge at your front hip, reaching one hand down towards your shin or the floor and the other arm up."
+  },
+  {
+    "exercise_id": "savasana",
+    "name": "Savasana",
+    "description": "Lie flat on your back with your arms and legs relaxed, allowing your body and mind to rest completely."
+  },
+  {
+    "exercise_id": "jumping_jacks",
+    "name": "Jumping Jacks",
+    "description": "Jump your feet out to the sides while simultaneously raising your arms overhead, then jump back to the starting position."
+  },
+  {
+    "exercise_id": "high_knees",
+    "name": "High Knees",
+    "description": "Run in place, driving your knees up towards your chest as high as you can."
+  },
+  {
+    "exercise_id": "butt_kicks",
+    "name": "Butt Kicks",
+    "description": "Run in place, trying to kick your heels up towards your glutes with each step."
+  },
+  {
+    "exercise_id": "arm_circles",
+    "name": "Arm Circles",
+    "description": "Stand with your arms extended out to the sides and make small, controlled circles, then reverse the direction."
+  },
+  {
+    "exercise_id": "leg_swings",
+    "name": "Leg Swings",
+    "description": "Hold onto a stable surface for support and swing one leg forward and backward, then side to side."
+  },
+  {
+    "exercise_id": "incline_walking",
+    "name": "Incline Walking",
+    "description": "Walk on a treadmill that is set at an upward angle to increase the intensity and target your leg muscles."
+  },
+  {
+    "exercise_id": "bird_dog",
+    "name": "Bird-Dog",
+    "description": "On your hands and knees, extend one arm straight forward and the opposite leg straight back, keeping your core tight."
+  },
+  {
+    "exercise_id": "dead_bug",
+    "name": "Dead Bug",
+    "description": "Lie on your back with your arms and knees in the air, and slowly lower one arm and the opposite leg towards the floor."
+  },
+  {
+    "exercise_id": "pelvic_tilts",
+    "name": "Pelvic Tilts",
+    "description": "Lie on your back with your knees bent and gently rock your pelvis to press your lower back flat against the floor."
+  },
+  {
+    "exercise_id": "foam_roll_calves",
+    "name": "Foam Roll Calves",
+    "description": "Sit on the floor with a foam roller under your calves and gently roll back and forth to release tension."
+  },
+  {
+    "exercise_id": "foam_roll_hamstrings",
+    "name": "Foam Roll Hamstrings",
+    "description": "Sit with a foam roller under the back of your thighs and roll from your knees to your glutes."
+  },
+  {
+    "exercise_id": "foam_roll_it_band",
+    "name": "Foam Roll IT Band",
+    "description": "Lie on your side with a foam roller under the outside of your thigh and roll along the length of your outer leg."
+  },
+  {
+    "exercise_id": "foam_roll_lats",
+    "name": "Foam Roll Lats",
+    "description": "Lie on your side with a foam roller under your armpit and gently roll along the side of your upper back."
+  },
+  {
+    "exercise_id": "foam_roll_thoracic_spine",
+    "name": "Foam Roll Thoracic Spine",
+    "description": "Lie on your back with a foam roller under your mid-back and gently roll up and down to mobilize your upper spine."
+  },
+  {
+    "exercise_id": "brisk_walking",
+    "name": "Brisk Walking",
+    "description": "Walk at a pace that is faster than a stroll but slower than a jog, enough to raise your heart rate."
+  },
+  {
+    "exercise_id": "hamstring_stretch",
+    "name": "Hamstring Stretch",
+    "description": "Sit on the floor with one leg extended straight and gently lean forward to feel a stretch in the back of your thigh."
+  },
+  {
+    "exercise_id": "quad_stretch",
+    "name": "Quad Stretch",
+    "description": "While standing or lying on your side, pull one heel towards your glute to stretch the front of your thigh."
+  },
+  {
+    "exercise_id": "glute_stretch_figure_four",
+    "name": "Glute Stretch (Figure-four)",
+    "description": "Lie on your back, cross one ankle over the opposite knee, and gently pull the knee towards your chest."
+  },
+  {
+    "exercise_id": "chest_stretch_in_doorway",
+    "name": "Chest Stretch in Doorway",
+    "description": "Stand in a doorway, place your forearms on the frame, and gently step forward to feel a stretch across your chest."
+  },
+  {
+    "exercise_id": "triceps_stretch",
+    "name": "Triceps Stretch",
+    "description": "Reach one arm overhead, bend your elbow to drop your hand down your back, and use your other hand to gently pull the elbow."
+  },
+  {
+    "exercise_id": "tai_chi_basic_stepping",
+    "name": "Tai Chi Basic Stepping",
+    "description": "Practice slow, deliberate, and flowing stepping movements characteristic of the martial art Tai Chi."
+  },
+  {
+    "exercise_id": "box_breathing",
+    "name": "Box Breathing",
+    "description": "A simple breathing technique: inhale for 4 seconds, hold for 4, exhale for 4, and hold for 4. Repeat."
+  },
+  {
+    "exercise_id": "body_scan_meditation",
+    "name": "Body Scan Meditation",
+    "description": "Lie down and bring mindful awareness to each part of your body sequentially, noticing any sensations without judgment."
+  },
+  {
+    "exercise_id": "neck_half_circles",
+    "name": "Neck Half-Circles",
+    "description": "Gently drop your chin to your chest and slowly roll your head from one shoulder to the other."
+  },
+  {
+    "exercise_id": "shoulder_rolls",
+    "name": "Shoulder Rolls",
+    "description": "Roll your shoulders up towards your ears, then back and down, in a smooth, circular motion."
+  },
+  {
+    "exercise_id": "seated_forward_bend",
+    "name": "Seated Forward Bend",
+    "description": "Sit on the floor with your legs straight out in front of you and gently fold your torso over your legs."
+  },
+  {
+    "exercise_id": "happy_baby_pose",
+    "name": "Happy Baby Pose",
+    "description": "Lie on your back, grab the outsides of your feet, and gently pull your knees towards your armpits."
+  },
+  {
+    "exercise_id": "legs_up_the_wall",
+    "name": "Legs Up The Wall",
+    "description": "Lie on your back with your sit-bones close to a wall and extend your legs straight up, resting them against the wall."
+  },
+  {
+    "exercise_id": "bodyweight_squats",
+    "name": "Bodyweight Squats",
+    "description": "Stand with your feet shoulder-width apart and lower your hips as if sitting in a chair, keeping your chest up and back straight."
+  },
+  {
+    "exercise_id": "incline_push_ups",
+    "name": "Incline Push-Ups",
+    "description": "Perform a push-up with your hands on an elevated surface like a bench or wall, which makes the exercise easier."
+  },
+  {
+    "exercise_id": "dumbbell_rows",
+    "name": "Dumbbell Rows",
+    "description": "Hinge at your hips with a flat back, and pull a dumbbell up towards your chest, squeezing your back muscles."
+  },
+  {
+    "exercise_id": "glute_bridges",
+    "name": "Glute Bridges",
+    "description": "Lie on your back with your knees bent, and lift your hips towards the ceiling by squeezing your glutes."
   },
   {
     "exercise_id": "plank",
     "name": "Plank",
-    "description": "Rest on forearms and toes, keep body straight and abs tight. Hold position for time."
+    "description": "Hold a push-up position with your body in a straight line from head to heels, engaging your core muscles."
   },
   {
-    "exercise_id": "seated_leg_curl",
-    "name": "Seated Leg Curl",
-    "description": "Sit in machine, bend your knees to pull pad toward glutes, then return to start."
+    "exercise_id": "goblet_squats",
+    "name": "Goblet Squats",
+    "description": "Hold a single dumbbell or kettlebell vertically against your chest with both hands and perform a squat."
   },
   {
-    "exercise_id": "hip_thrust",
-    "name": "Hip Thrust",
-    "description": "Upper back on bench, barbell over hips, thrust hips up by squeezing glutes, lower back down."
+    "exercise_id": "dumbbell_bench_press",
+    "name": "Dumbbell Bench Press",
+    "description": "Lie on a flat bench and press two dumbbells up from your chest until your arms are fully extended."
+  },
+  {
+    "exercise_id": "lat_pulldowns",
+    "name": "Lat Pulldowns",
+    "description": "Sit at a lat pulldown machine and pull the bar down to your upper chest, squeezing your back muscles."
+  },
+  {
+    "exercise_id": "dumbbell_lunges",
+    "name": "Dumbbell Lunges",
+    "description": "Step forward with one leg and lower your hips until both knees are bent at a 90-degree angle, while holding dumbbells."
+  },
+  {
+    "exercise_id": "seated_dumbbell_shoulder_press",
+    "name": "Seated Dumbbell Shoulder Press",
+    "description": "While seated on a bench, press two dumbbells from shoulder height to straight overhead."
+  },
+  {
+    "exercise_id": "hanging_knee_raises",
+    "name": "Hanging Knee Raises",
+    "description": "Hang from a pull-up bar and raise your knees towards your chest, engaging your lower abs."
+  },
+  {
+    "exercise_id": "barbell_back_squats",
+    "name": "Barbell Back Squats",
+    "description": "Perform a squat while supporting a barbell across your upper back and shoulders."
+  },
+  {
+    "exercise_id": "pull_ups_assisted_or_bodyweight",
+    "name": "Pull-Ups (Assisted or Bodyweight)",
+    "description": "Hang from a bar and pull your body up until your chin is over the bar. Use a band or machine for assistance if needed."
+  },
+  {
+    "exercise_id": "dumbbell_overhead_press",
+    "name": "Dumbbell Overhead Press",
+    "description": "While standing or seated, press two dumbbells from shoulder height to straight overhead."
+  },
+  {
+    "exercise_id": "romanian_deadlifts",
+    "name": "Romanian Deadlifts",
+    "description": "Hinge at your hips to lower a weight towards the floor, keeping your legs relatively straight and your back flat."
+  },
+  {
+    "exercise_id": "push_ups",
+    "name": "Push-Ups",
+    "description": "From a plank position, lower your body until your chest is close to the floor, then push back up to the start."
+  },
+  {
+    "exercise_id": "russian_twists",
+    "name": "Russian Twists",
+    "description": "Sit on the floor, lean back with your feet elevated, and twist your torso from side to side, often holding a weight."
+  },
+  {
+    "exercise_id": "kettlebell_swings",
+    "name": "Kettlebell Swings",
+    "description": "Swing a kettlebell from between your legs up to chest height using an explosive hip-hinge motion."
+  },
+  {
+    "exercise_id": "dumbbell_thrusters",
+    "name": "Dumbbell Thrusters",
+    "description": "Hold dumbbells at your shoulders, perform a squat, and as you stand up, explosively press the dumbbells overhead."
+  },
+  {
+    "exercise_id": "bent_over_rows",
+    "name": "Bent-Over Rows",
+    "description": "Hinge forward at your hips with a flat back and pull a barbell or dumbbells up towards your lower chest."
+  },
+  {
+    "exercise_id": "stationary_bike_sprints",
+    "name": "Stationary Bike Sprints",
+    "description": "On a stationary bike, pedal as fast as you possibly can for a short, intense interval."
+  },
+  {
+    "exercise_id": "mountain_climbers",
+    "name": "Mountain Climbers",
+    "description": "From a plank position, quickly alternate driving your knees towards your chest as if you are running."
+  },
+  {
+    "exercise_id": "burpees",
+    "name": "Burpees",
+    "description": "A full-body exercise that combines a squat, a push-up, and a jump in one fluid motion."
+  },
+  {
+    "exercise_id": "jump_squats",
+    "name": "Jump Squats",
+    "description": "Perform a regular squat, but explode upwards into a jump at the top of the movement."
+  },
+  {
+    "exercise_id": "push_up_to_renegade_row",
+    "name": "Push-Up to Renegade Row",
+    "description": "Perform a push-up, and at the top, lift one dumbbell off the floor in a rowing motion, then repeat on the other side."
+  },
+  {
+    "exercise_id": "plank_jacks",
+    "name": "Plank Jacks",
+    "description": "While holding a plank position, jump your feet out wide and then back together again, like a horizontal jumping jack."
   },
   {
     "exercise_id": "leg_press",
     "name": "Leg Press",
-    "description": "Sit in leg press machine, feet hip-width on platform, lower and press back up."
+    "description": "Sit in a leg press machine and push a weighted platform away from you with your feet."
   },
   {
-    "exercise_id": "seated_calf_raise",
-    "name": "Seated Calf Raise",
-    "description": "Sit, feet on platform, push through toes to lift heels as high as possible."
+    "exercise_id": "seated_cable_row",
+    "name": "Seated Cable Row",
+    "description": "Sit at a cable machine with your feet braced and pull a handle towards your abdomen, squeezing your back muscles."
   },
   {
-    "exercise_id": "adductor_machine",
-    "name": "Adductor Machine",
-    "description": "Sit, legs against pads, squeeze legs together and return with control."
+    "exercise_id": "dumbbell_lateral_raises",
+    "name": "Dumbbell Lateral Raises",
+    "description": "While standing, lift dumbbells out to your sides until they are at shoulder height, keeping a slight bend in your elbows."
   },
   {
-    "exercise_id": "incline_db_press",
+    "exercise_id": "crunches",
+    "name": "Crunches",
+    "description": "Lie on your back with your knees bent and lift your upper body towards your knees, focusing on contracting your abs."
+  },
+  {
+    "exercise_id": "resistance_band_pull_aparts",
+    "name": "Resistance Band Pull-Aparts",
+    "description": "Hold a resistance band with both hands in front of you and pull it apart by squeezing your shoulder blades together."
+  },
+  {
+    "exercise_id": "wall_sit",
+    "name": "Wall Sit",
+    "description": "Lean your back against a wall and slide down until your knees are bent at a 90-degree angle, holding the position."
+  },
+  {
+    "exercise_id": "dumbbell_bicep_curls",
+    "name": "Dumbbell Bicep Curls",
+    "description": "Stand or sit and curl dumbbells up towards your shoulders, keeping your elbows stationary at your sides."
+  },
+  {
+    "exercise_id": "bodyweight_calf_raises",
+    "name": "Bodyweight Calf Raises",
+    "description": "Stand on a flat surface and raise your heels off the ground, squeezing your calf muscles at the top."
+  },
+  {
+    "exercise_id": "kettlebell_goblet_squats",
+    "name": "Kettlebell Goblet Squats",
+    "description": "Hold a kettlebell by the horns against your chest and perform a squat."
+  },
+  {
+    "exercise_id": "battle_ropes",
+    "name": "Battle Ropes",
+    "description": "Hold the ends of two heavy ropes and create waves, slams, or other patterns for a high-intensity workout."
+  },
+  {
+    "exercise_id": "box_jumps",
+    "name": "Box Jumps",
+    "description": "Explosively jump from the floor onto the top of a sturdy box or platform."
+  },
+  {
+    "exercise_id": "medicine_ball_slams",
+    "name": "Medicine Ball Slams",
+    "description": "Lift a medicine ball overhead and powerfully slam it onto the ground in front of you."
+  },
+  {
+    "exercise_id": "rowing_machine_sprints",
+    "name": "Rowing Machine Sprints",
+    "description": "Row as fast and hard as you can on a rowing machine for a set distance or time."
+  },
+  {
+    "exercise_id": "dumbbell_step_ups",
+    "name": "Dumbbell Step-Ups",
+    "description": "Hold dumbbells and step onto a bench or platform with one foot, driving through the heel to lift your body up."
+  },
+  {
+    "exercise_id": "incline_dumbbell_press",
     "name": "Incline Dumbbell Press",
-    "description": "Lie on incline bench, press dumbbells overhead, lower under control."
+    "description": "Lie on a bench set to an incline and press two dumbbells up from your chest."
   },
   {
-    "exercise_id": "pullup",
-    "name": "Pull-Up/Assisted",
-    "description": "Hang from bar, pull chin over bar, lower with control. Use assistance if needed."
+  "exercise_id": "seated_cable_row",
+  "name": "Seated Cable Row",
+  "description": "Sit at a cable row station with your feet braced, grasp the handle, and pull it toward your torso while keeping your chest up and shoulder blades squeezed together."
   },
   {
-    "exercise_id": "db_lateral_raise",
-    "name": "Dumbbell Lateral Raise",
-    "description": "Dumbbells at sides, raise arms to shoulder height, lower under control."
+    "exercise_id": "single_arm_dumbbell_row",
+    "name": "Single-Arm Dumbbell Row",
+    "description": "Support your body with one hand and knee on a bench, and row a dumbbell up with the other arm."
   },
   {
-    "exercise_id": "cable_bicep_curl",
-    "name": "Cable Bicep Curl",
-    "description": "Grip cable bar, curl bar toward shoulders keeping elbows at your sides."
+    "exercise_id": "cable_tricep_pushdowns",
+    "name": "Cable Tricep Pushdowns",
+    "description": "At a cable machine, push a bar or rope attachment down until your arms are fully straight, targeting the triceps."
   },
   {
-    "exercise_id": "face_pull",
-    "name": "Face Pull",
-    "description": "Cable at upper chest, pull rope handles toward face, leading with elbows."
+    "exercise_id": "leg_raises",
+    "name": "Leg Raises",
+    "description": "Lie on your back and, keeping your legs straight, raise them towards the ceiling and slowly lower them back down."
+  },
+  {
+    "exercise_id": "dumbbell_romanian_deadlifts",
+    "name": "Dumbbell Romanian Deadlifts",
+    "description": "Hold dumbbells and hinge at your hips to lower them, keeping your legs relatively straight and back flat."
+  },
+  {
+    "exercise_id": "dumbbell_floor_press",
+    "name": "Dumbbell Floor Press",
+    "description": "Lie on the floor with your knees bent and press two dumbbells up from your chest."
+  },
+  {
+    "exercise_id": "renegade_rows",
+    "name": "Renegade Rows",
+    "description": "In a plank position holding dumbbells, row one dumbbell up towards your chest, then the other, keeping your core stable."
+  },
+  {
+    "exercise_id": "dumbbell_front_squats",
+    "name": "Dumbbell Front Squats",
+    "description": "Perform a squat while holding two dumbbells at the front of your shoulders."
+  },
+  {
+    "exercise_id": "push_ups_on_knees",
+    "name": "Push-Ups (on knees)",
+    "description": "A modified push-up performed with your knees on the ground to reduce the difficulty."
+  },
+  {
+    "exercise_id": "resistance_band_rows",
+    "name": "Resistance Band Rows",
+    "description": "Anchor a resistance band in front of you and pull the handles towards your body, squeezing your back."
+  },
+  {
+    "exercise_id": "walking_lunges",
+    "name": "Walking Lunges",
+    "description": "Perform a lunge by stepping forward, and then continue to 'walk' forward by alternating legs with each lunge."
+  },
+  {
+    "exercise_id": "hex_bar_deadlifts",
+    "name": "Hex Bar Deadlifts",
+    "description": "Perform a deadlift using a hexagonal-shaped barbell, which allows you to stand in the middle of it."
+  },
+  {
+    "exercise_id": "overhead_press",
+    "name": "Overhead Press",
+    "description": "Press a barbell or dumbbells from the front of your shoulders to a locked-out position overhead."
+  },
+  {
+    "exercise_id": "weighted_pull_ups",
+    "name": "Weighted Pull-Ups",
+    "description": "Perform pull-ups with additional weight attached to your body via a belt or vest."
+  },
+  {
+    "exercise_id": "hip_thrusts",
+    "name": "Hip Thrusts",
+    "description": "With your upper back on a bench, place a weight across your hips and thrust them upwards by squeezing your glutes."
+  },
+  {
+    "exercise_id": "face_pulls",
+    "name": "Face Pulls",
+    "description": "Using a cable machine with a rope, pull the handles towards your face, externally rotating your shoulders at the end."
+  },
+  {
+    "exercise_id": "toes_to_bar",
+    "name": "Toes-to-Bar",
+    "description": "While hanging from a bar, use your core to lift your legs and touch your toes to the bar."
+  },
+  {
+    "exercise_id": "stationary_bike",
+    "name": "Stationary Bike",
+    "description": "Ride a stationary exercise bike at a steady pace for cardiovascular exercise."
+  },
+  {
+    "exercise_id": "plank_with_shoulder_taps",
+    "name": "Plank with Shoulder Taps",
+    "description": "In a plank position, lift one hand to tap the opposite shoulder, alternating sides while keeping your hips stable."
+  },
+  {
+    "exercise_id": "bulgarian_split_squats",
+    "name": "Bulgarian Split Squats",
+    "description": "Perform a single-leg squat with your back foot elevated on a bench or platform."
+  },
+  {
+    "exercise_id": "single_arm_dumbbell_bench_press",
+    "name": "Single-Arm Dumbbell Bench Press",
+    "description": "Lie on a bench and press one dumbbell at a time, which challenges your core stability."
+  },
+  {
+    "exercise_id": "single_leg_rdls",
+    "name": "Single-Leg RDLs",
+    "description": "Perform a Romanian Deadlift while balancing on one leg, hinging at the hip."
+  },
+  {
+    "exercise_id": "arnold_press",
+    "name": "Arnold Press",
+    "description": "A shoulder press where you begin with palms facing you, then rotate your wrists as you press the dumbbells overhead."
+  },
+  {
+    "exercise_id": "side_plank",
+    "name": "Side Plank",
+    "description": "Support your body on one forearm and the side of your foot, keeping your body in a straight line."
+  },
+  {
+    "exercise_id": "banded_clamshells",
+    "name": "Banded Clamshells",
+    "description": "Lie on your side with a resistance band around your thighs and, keeping your feet together, open and close your top knee."
+  },
+  {
+    "exercise_id": "burpee_box_jump_overs",
+    "name": "Burpee Box Jump Overs",
+    "description": "Perform a burpee, then immediately jump onto and over a box to the other side."
+  },
+  {
+    "exercise_id": "assault_bike_sprints",
+    "name": "Assault Bike Sprints",
+    "description": "Sprint on an Assault AirBike, which uses both your arms and legs for a high-intensity cardio workout."
+  },
+  {
+    "exercise_id": "cable_crunches",
+    "name": "Cable Crunches",
+    "description": "Kneel in front of a high-pulley cable machine and crunch your torso downwards, pulling the rope attachment with you."
+  },
+  {
+    "exercise_id": "plank_to_push_up",
+    "name": "Plank to Push-Up",
+    "description": "Start in a forearm plank, then push up one arm at a time to a full plank position, and lower back down."
+  },
+  {
+    "exercise_id": "alternating_step_ups",
+    "name": "Alternating Step-Ups",
+    "description": "Step up onto a platform, alternating which leg you lead with for each repetition."
+  },
+  {
+    "exercise_id": "bicycle_crunches",
+    "name": "Bicycle Crunches",
+    "description": "Lie on your back and bring your opposite elbow to your opposite knee in a pedaling or 'bicycle' motion."
+  },
+  {
+    "exercise_id": "superman",
+    "name": "Superman",
+    "description": "Lie on your stomach and simultaneously lift your arms, chest, and legs off the floor, holding the position briefly."
+  },
+  {
+    "exercise_id": "reverse_lunges",
+    "name": "Reverse Lunges",
+    "description": "Step backward with one leg and lower your hips until both knees are bent at a 90-degree angle."
   },
   {
     "exercise_id": "glute_bridge",
     "name": "Glute Bridge",
-    "description": "Lie on your back, feet flat, drive through heels, lift hips and squeeze glutes."
+    "description": "Lie on your back with knees bent and lift your hips toward the ceiling by squeezing your glutes."
   },
   {
-    "exercise_id": "machine_row",
-    "name": "Machine Row",
-    "description": "Sit with chest against pad, grip handles, row back by pulling elbows to sides."
+    "exercise_id": "leg_extensions",
+    "name": "Leg Extensions",
+    "description": "Use a leg extension machine to straighten your legs against resistance, targeting the quadriceps muscles."
   },
   {
-    "exercise_id": "db_bench_press",
-    "name": "Dumbbell Bench Press",
-    "description": "Lie on bench, dumbbells in hand, lower to chest and press up until arms are straight."
+    "exercise_id": "seated_calf_raises",
+    "name": "Seated Calf Raises",
+    "description": "Use a machine to perform calf raises while in a seated position."
   },
   {
-    "exercise_id": "hiit_row_sprint",
-    "name": "HIIT Row Sprint",
-    "description": "Row at all-out effort for set time, rest, repeat for intervals."
+    "exercise_id": "barbell_hip_thrusts",
+    "name": "Barbell Hip Thrusts",
+    "description": "With your upper back on a bench, place a barbell across your hips and thrust them upwards by squeezing your glutes."
+  },
+  {
+    "exercise_id": "cable_kickbacks",
+    "name": "Cable Kickbacks",
+    "description": "At a low cable pulley, attach an ankle strap and kick your leg straight back against the resistance to target the glutes."
+  },
+  {
+    "exercise_id": "bent_over_barbell_rows",
+    "name": "Bent-Over Barbell Rows",
+    "description": "Hinge forward at your hips with a flat back and pull a barbell up towards your lower chest."
+  },
+  {
+    "exercise_id": "incline_cable_flys",
+    "name": "Incline Cable Flys",
+    "description": "Lie on an incline bench between two cable pulleys and perform a 'fly' motion, bringing your hands together over your chest."
+  },
+  {
+    "exercise_id": "treadmill_jog",
+    "name": "Treadmill Jog",
+    "description": "Jog at a steady, moderate pace on a treadmill."
+  },
+  {
+    "exercise_id": "banded_glute_bridges",
+    "name": "Banded Glute Bridges",
+    "description": "Perform a glute bridge with a resistance band placed around your thighs to increase glute activation."
+  },
+  {
+    "exercise_id": "lying_leg_curls",
+    "name": "Lying Leg Curls",
+    "description": "Lie face down on a leg curl machine and curl your lower legs towards your glutes against resistance."
+  },
+  {
+    "exercise_id": "single_arm_dumbbell_rows",
+    "name": "Single-Arm Dumbbell Rows",
+    "description": "Support your body with one hand and knee on a bench, and row a dumbbell up with the other arm."
+  },
+  {
+    "exercise_id": "hyperextensions",
+    "name": "Hyperextensions",
+    "description": "Use a hyperextension bench to hinge at the hips, strengthening your lower back, glutes, and hamstrings."
+  },
+  {
+  "exercise_id": "seated_cable_row",
+  "name": "Seated Cable Rows",
+  "description": "Sit at a cable row machine with your feet braced against the platform, grasp the handle with both hands, keep your chest tall and shoulders down, and pull the handle toward your torso by squeezing your shoulder blades together before returning under control."
+  },
+  {
+  "exercise_id": "banded_pull_apart",
+  "name": "Banded Pull-Aparts",
+  "description": "Stand tall holding a resistance band at shoulder height with both hands, arms extended in front of you. Keeping your elbows soft and shoulders down, pull the band apart by squeezing your shoulder blades together until your arms form a straight line, then return under control to the start."
+  },
+  {
+  "exercise_id": "dumbbell_fly",
+  "name": "Dumbbell Flys",
+  "description": "Lie on a flat bench holding two dumbbells above your chest with arms slightly bent, lower the weights in a wide arc until you feel a stretch across your chest, then bring them back together by squeezing your chest, maintaining the slight elbow bend throughout."
+  },
+  {
+  "exercise_id": "kettlebell_swing",
+  "name": "Kettlebell Swing",
+  "description": "Stand with feet hip-width apart, hinge at the hips to swing the kettlebell back between your legs, then explosively drive your hips forward to propel it to roughly shoulder height, keeping arms relaxed and core engaged."
+  },
+  {
+  "exercise_id": "barbell_bench_press",
+  "name": "Barbell Bench Press",
+  "description": "Lie on a flat bench with your feet planted firmly, grip the bar slightly wider than shoulder-width, lower it under control to mid-chest, then press it back up until your arms are fully extended while keeping your shoulders retracted and core tight."
+  },
+  {
+  "exercise_id": "dips",
+  "name": "Dips",
+  "description": "Support yourself on parallel bars with arms straight, lower your body by bending the elbows until your upper arms are about parallel to the floor, then press back up by extending the elbows, keeping your torso stable and shoulders down throughout."
+  },
+  {
+  "exercise_id": "cable_fly",
+  "name": "Cable Flys",
+  "description": "Stand between two cable stacks with the pulleys set slightly above shoulder height, grasp the handles with a slight bend in your elbows, and bring your arms together in a wide arc in front of your chest, squeezing at the peak before returning under control."
+  },
+  {
+  "exercise_id": "assisted_pull_up",
+  "name": "Assisted Pull-Ups",
+  "description": "Step onto the assisted pull-up machine's knee pad or loop a resistance band under your knees, grasp the bar with an overhand grip slightly wider than shoulder-width, engage your core and pull until your chin clears the bar, then lower yourself under control to full arm extension before repeating."
+  },
+  {
+  "exercise_id": "dumbbell_floor_press",
+  "name": "Dumbbell Floor Press",
+  "description": "Lie on your back on the floor with knees bent and feet flat, hold two dumbbells at chest level with elbows resting on the ground, then press the weights upward until your arms are fully extended before lowering under control until your upper arms touch the floor."
+  },
+  {
+  "exercise_id": "t_bar_row",
+  "name": "T-Bar Row",
+  "description": "Stand over the barbell mounted in a landmine or T-bar station, hinge at the hips with a flat back, grasp the handle close to the plates, and pull the weight toward your lower chest by driving your elbows back and squeezing your shoulder blades together before lowering it under control."
+  },
+  {
+  "exercise_id": "cable_face_pull",
+  "name": "Cable Face Pulls",
+  "description": "Attach a rope handle to a high pulley, grasp each end with thumbs pointing back, step away until your arms are extended, and pull the rope toward your face by driving your elbows outward and squeezing your upper back and rear delts before slowly returning to the start."
+  },
+  {
+  "exercise_id": "hanging_leg_raise",
+  "name": "Hanging Leg Raises",
+  "description": "Hang from a pull-up bar with an overhand grip and arms fully extended, brace your core, then raise your legs (or knees) together until they're parallel with the floor (or higher), keeping the motion controlled and avoiding any swing as you lower back to the start."
+  },
+  {
+  "exercise_id": "dumbbell_goblet_squat",
+  "name": "Dumbbell Goblet Squat",
+  "description": "Hold a dumbbell vertically against your chest with both hands, stand with feet shoulder-width apart, lower into a squat by pushing your hips back and keeping your chest up, then drive through your heels to return to standing."
+  },
+  {
+  "exercise_id": "barbell_overhead_press",
+  "name": "Barbell Overhead Press",
+  "description": "Stand with feet about shoulder-width apart, grip the barbell slightly wider than shoulder-width, unrack it at shoulder level, brace your core, and press the bar straight overhead until your arms are fully extended, then lower it under control back to the starting position."
+  },
+  {
+  "exercise_id": "seated_arnold_press",
+  "name": "Seated Arnold Press",
+  "description": "Sit upright on a bench with back support, hold two dumbbells in front of your shoulders with palms facing you, then press the weights overhead while simultaneously rotating your palms outward until they face forward at full extension; reverse the motion and rotation as you lower back to the start."
+  },
+  {
+  "exercise_id": "alternating_lunge",
+  "name": "Alternating Lunge",
+  "description": "Stand upright, step forward with one leg and lower until both knees form 90-degree angles, push back to the starting position, then repeat with the opposite leg, alternating sides each repetition."
+  },
+  {
+  "exercise_id": "cable_fly",
+  "name": "Cable Fly",
+  "description": "Stand between two cable stacks with the pulleys set at chest height, grasp the handles, and bring your arms together in a wide arc in front of your body, squeezing your chest at the peak before returning under control."
+  },
+  {
+  "exercise_id": "elliptical_trainer",
+  "name": "Elliptical Trainer",
+  "description": "Step onto the machine, grasp the handles, and stride in a smooth, continuous motion to work both the upper and lower body with low-impact cardiovascular exercise."
+  },
+  {
+    "exercise_id": "cable_pull_throughs",
+    "name": "Cable Pull Throughs",
+    "description": "Stand facing away from a low cable pulley and pull the rope attachment through your legs by thrusting your hips forward."
+  },
+  {
+    "exercise_id": "upright_rows",
+    "name": "Upright Rows",
+    "description": "Lift a barbell or dumbbells straight up towards your chin, keeping the weight close to your body."
+  },
+  {
+    "exercise_id": "seated_leg_curls",
+    "name": "Seated Leg Curls",
+    "description": "Use a machine to perform leg curls while in a seated position."
+  },
+  {
+    "exercise_id": "hammer_curls",
+    "name": "Hammer Curls",
+    "description": "Perform a bicep curl with a neutral grip, where your palms face each other, like holding a hammer."
+  },
+  {
+    "exercise_id": "overhead_tricep_extensions",
+    "name": "Overhead Tricep Extensions",
+    "description": "Lift a weight overhead and lower it behind your head by bending your elbows, targeting the triceps."
+  },
+  {
+    "exercise_id": "conventional_deadlifts",
+    "name": "Conventional Deadlifts",
+    "description": "Lift a loaded barbell off the floor from a hinged, squatted position until you are standing upright."
+  },
+  {
+    "exercise_id": "good_mornings",
+    "name": "Good Mornings",
+    "description": "With a barbell on your back, hinge at your hips and lower your torso until it is nearly parallel to the floor."
+  },
+  {
+    "exercise_id": "t_bar_rows",
+    "name": "T-Bar Rows",
+    "description": "Use a T-bar row machine or a barbell wedged into a corner to perform rows, pulling the weight towards your chest."
+  },
+  {
+    "exercise_id": "lat_pulldowns_close_grip",
+    "name": "Lat Pulldowns (Close Grip)",
+    "description": "Perform a lat pulldown with your hands positioned close together on the bar."
+  },
+  {
+    "exercise_id": "dumbbell_pullovers",
+    "name": "Dumbbell Pullovers",
+    "description": "Lie on a bench and, holding one dumbbell with both hands, lower it in an arc behind your head."
+  },
+  {
+    "exercise_id": "back_extensions",
+    "name": "Back Extensions",
+    "description": "Use a back extension or hyperextension bench to hinge at the hips, strengthening your lower back."
+  },
+  {
+    "exercise_id": "stairmaster",
+    "name": "StairMaster",
+    "description": "Use a StairMaster machine, which simulates climbing stairs, for a challenging cardio workout."
+  },
+  {
+    "exercise_id": "bodyweight_reverse_lunges",
+    "name": "Bodyweight Reverse Lunges",
+    "description": "Step backward with one leg into a lunge without holding any additional weight."
+  },
+  {
+    "exercise_id": "single_leg_press",
+    "name": "Single-Leg Press",
+    "description": "Perform a leg press using only one leg at a time to isolate the muscle and correct imbalances."
+  },
+  {
+    "exercise_id": "chest_supported_rows",
+    "name": "Chest-Supported Rows",
+    "description": "Perform a rowing motion while lying face down on an incline bench, which supports your chest and isolates the back."
+  },
+  {
+    "exercise_id": "dumbbell_incline_press",
+    "name": "Dumbbell Incline Press",
+    "description": "Lie on a bench set to an incline and press two dumbbells up from your chest."
+  },
+  {
+    "exercise_id": "calf_raises",
+    "name": "Calf Raises",
+    "description": "Raise your heels off the ground to contract your calf muscles. Can be done with bodyweight or added weight."
+  },
+  {
+    "exercise_id": "dumbbell_front_raises",
+    "name": "Dumbbell Front Raises",
+    "description": "Lift dumbbells straight out in front of you up to shoulder height, targeting the front of your shoulders."
+  },
+  {
+    "exercise_id": "rowing_machine",
+    "name": "Rowing Machine",
+    "description": "Use an indoor rower for a full-body workout that combines cardio with strength."
+  },
+  {
+    "exercise_id": "leg_curls",
+    "name": "Leg Curls",
+    "description": "Use a machine to curl your lower legs towards your glutes, targeting the hamstring muscles."
+  },
+  {
+    "exercise_id": "lat_pulldowns_underhand_grip",
+    "name": "Lat Pulldowns (Underhand Grip)",
+    "description": "Perform a lat pulldown with your palms facing towards you (an underhand grip) to engage the biceps more."
+  },
+  {
+    "exercise_id": "incline_dumbbell_flys",
+    "name": "Incline Dumbbell Flys",
+    "description": "Lie on an incline bench and perform a 'fly' motion with dumbbells, bringing them together over your chest."
+  },
+  {
+    "exercise_id": "dips_assisted_or_bodyweight",
+    "name": "Dips (Assisted or Bodyweight)",
+    "description": "Lower your body between two parallel bars and push back up. Use a machine or band for assistance if needed."
+  },
+  {
+    "exercise_id": "barbell_bicep_curls",
+    "name": "Barbell Bicep Curls",
+    "description": "Stand and curl a barbell up towards your shoulders, keeping your elbows at your sides."
+  },
+  {
+    "exercise_id": "incline_dumbbell_curls",
+    "name": "Incline Dumbbell Curls",
+    "description": "Perform bicep curls while sitting on an incline bench to increase the stretch on the bicep."
+  },
+  {
+    "exercise_id": "jump_rope",
+    "name": "Jump Rope",
+    "description": "Jump over a spinning rope for a high-intensity cardiovascular exercise."
+  },
+  {
+    "exercise_id": "sumo_deadlifts",
+    "name": "Sumo Deadlifts",
+    "description": "Perform a deadlift with a very wide stance and your hands gripping the bar inside your legs."
+  },
+  {
+    "exercise_id": "abductor_machine",
+    "name": "Abductor Machine",
+    "description": "Use a machine to push your legs apart against resistance, targeting the outer thigh and glute muscles."
+  },
+  {
+    "exercise_id": "barbell_front_squats",
+    "name": "Barbell Front Squats",
+    "description": "Perform a squat with a barbell resting across the front of your shoulders."
+  },
+  {
+    "exercise_id": "treadmill_sprints",
+    "name": "Treadmill Sprints",
+    "description": "Run at your maximum speed on a treadmill for short, intense intervals."
+  },
+  {
+    "exercise_id": "banded_fire_hydrants",
+    "name": "Banded Fire Hydrants",
+    "description": "On your hands and knees with a band around your thighs, lift one knee out to the side like a dog at a fire hydrant."
+  },
+  {
+    "exercise_id": "frog_pumps",
+    "name": "Frog Pumps",
+    "description": "Lie on your back with the soles of your feet together and knees out wide; lift your hips up and down."
+  },
+  {
+    "exercise_id": "side_lying_leg_raises",
+    "name": "Side-Lying Leg Raises",
+    "description": "Lie on your side and slowly raise your top leg towards the ceiling, keeping it straight."
+  },
+  {
+    "exercise_id": "incline_walk",
+    "name": "Incline Walk",
+    "description": "Walk on a treadmill set to an incline for a low-impact cardio workout."
+  },
+  {
+    "exercise_id": "close_grip_bench_press",
+    "name": "Close-Grip Bench Press",
+    "description": "Perform a bench press with your hands closer together on the bar to place more emphasis on the triceps."
+  },
+  {
+    "exercise_id": "skull_crushers",
+    "name": "Skull Crushers",
+    "description": "Lie on a bench and lower a barbell or dumbbells towards your forehead by bending your elbows."
+  },
+  {
+    "exercise_id": "tricep_rope_pushdowns",
+    "name": "Tricep Rope Pushdowns",
+    "description": "Perform a tricep pushdown using a rope attachment, pulling the ends apart at the bottom of the movement."
+  },
+  {
+    "exercise_id": "glute_ham_raises",
+    "name": "Glute-Ham Raises",
+    "description": "Use a glute-ham raise (GHR) machine to lower your torso and pull yourself back up using your hamstrings and glutes."
+  },
+  {
+    "exercise_id": "hip_abduction_machine",
+    "name": "Hip Abduction Machine",
+    "description": "Use a machine to push your legs apart against resistance, targeting the outer thighs and glutes."
+  },
+  {
+    "exercise_id": "bent_over_dumbbell_raises",
+    "name": "Bent Over Dumbbell Raises",
+    "description": "Hinge at the hips with a flat back and raise dumbbells out to the side to work the rear deltoids."
+  },
+  {
+    "exercise_id": "ski_erg",
+    "name": "Ski Erg",
+    "description": "Use a SkiErg machine that mimics the motion of poling in cross-country skiing for a full-body workout."
+  },
+  {
+    "exercise_id": "standing_calf_raises",
+    "name": "Standing Calf Raises",
+    "description": "Stand and raise your heels off the ground to contract your calves. Can be done with or without weight."
+  },
+  {
+    "exercise_id": "goblet_squats_superset_with_jump_rope",
+    "name": "Goblet Squats (Superset with Jump Rope)",
+    "description": "Perform a set of goblet squats immediately followed by a set of jump rope with no rest in between."
+  },
+  {
+    "exercise_id": "alternating_lunges_superset_with_high_knees",
+    "name": "Alternating Lunges (Superset with High Knees)",
+    "description": "Perform a set of alternating lunges immediately followed by a set of high knees with no rest in between."
+  },
+  {
+    "exercise_id": "glute_bridges_superset_with_mountain_climbers",
+    "name": "Glute Bridges (Superset with Mountain Climbers)",
+    "description": "Perform a set of glute bridges immediately followed by a set of mountain climbers with no rest in between."
+  },
+  {
+    "exercise_id": "wall_push_ups",
+    "name": "Wall Push-Ups",
+    "description": "A modified push-up performed by standing and pushing against a wall, ideal for beginners."
+  },
+  {
+    "exercise_id": "weighted_chin_ups",
+    "name": "Weighted Chin-Ups",
+    "description": "Perform chin-ups (with an underhand grip) while having additional weight attached to your body."
+  },
+  {
+    "exercise_id": "barbell_curls_21s",
+    "name": "Barbell Curls 21s",
+    "description": "A bicep curl variation: 7 reps from the bottom to halfway, 7 from halfway to the top, and 7 full reps, totaling 21."
+  },
+  {
+    "exercise_id": "preacher_curls",
+    "name": "Preacher Curls",
+    "description": "Perform bicep curls with your upper arms resting on a sloped 'preacher' bench to isolate the bicep."
+  },
+  {
+    "exercise_id": "concentration_curls",
+    "name": "Concentration Curls",
+    "description": "While seated, brace your elbow against your inner thigh and curl a dumbbell up to isolate the bicep peak."
+  },
+  {
+    "exercise_id": "hollow_body_hold",
+    "name": "Hollow Body Hold",
+    "description": "Lie on your back and lift your shoulders and legs off the floor, creating a 'hollow' or banana shape with your body."
+  },
+  {
+    "exercise_id": "dips_weighted_or_bodyweight",
+    "name": "Dips (Weighted or Bodyweight)",
+    "description": "Lower your body between parallel bars and push back up. Add weight for an extra challenge."
+  },
+  {
+    "exercise_id": "overhead_dumbbell_tricep_extension",
+    "name": "Overhead Dumbbell Tricep Extension",
+    "description": "Lift a dumbbell overhead and lower it behind your head by bending your elbows."
+  },
+  {
+    "exercise_id": "ab_rollouts",
+    "name": "Ab Rollouts",
+    "description": "Kneel on the floor and roll a specialized wheel or barbell forward, extending your body without arching your back."
+  },
+  {
+    "exercise_id": "inverted_rows",
+    "name": "Inverted Rows",
+    "description": "Lie under a fixed horizontal bar, grab it, and pull your chest up towards the bar."
+  },
+  {
+    "exercise_id": "light_dumbbell_lateral_raises",
+    "name": "Light Dumbbell Lateral Raises",
+    "description": "Perform lateral raises with light weights, focusing on controlled movement and muscle contraction."
+  },
+  {
+    "exercise_id": "banded_face_pulls",
+    "name": "Banded Face Pulls",
+    "description": "Use a resistance band to pull towards your face, squeezing your shoulder blades together to improve posture."
+  },
+  {
+    "exercise_id": "pallof_press",
+    "name": "Pallof Press",
+    "description": "Stand sideways to a cable machine or anchored band and press the handle straight out from your chest, resisting the urge to rotate."
+  },
+  {
+    "exercise_id": "cable_crossovers",
+    "name": "Cable Crossovers",
+    "description": "Stand between two high cable pulleys and bring the handles down and across your body in a hugging motion."
+  },
+  {
+    "exercise_id": "kettlebell_halos",
+    "name": "Kettlebell Halos",
+    "description": "Hold a kettlebell by the horns and circle it around your head, working on shoulder mobility and core stability."
+  },
+  {
+    "exercise_id": "tricep_dips_on_bench",
+    "name": "Tricep Dips (on bench)",
+    "description": "Place your hands on a bench behind you, with your feet on the floor, and lower your body by bending your elbows."
+  },
+  {
+    "exercise_id": "pendlay_rows",
+    "name": "Pendlay Rows",
+    "description": "A strict barbell row where the weight starts from and returns to the floor for each repetition."
+  },
+  {
+    "exercise_id": "heavy_dumbbell_curls",
+    "name": "Heavy Dumbbell Curls",
+    "description": "Perform bicep curls with heavy dumbbells for lower repetitions to build strength."
+  },
+  {
+    "exercise_id": "single_arm_lat_pulldowns",
+    "name": "Single-Arm Lat Pulldowns",
+    "description": "Perform a lat pulldown using one arm at a time to focus on each side of your back individually."
+  },
+  {
+    "exercise_id": "heavy_dumbbell_lateral_raises",
+    "name": "Heavy Dumbbell Lateral Raises",
+    "description": "Perform lateral raises with heavy dumbbells for lower repetitions to build shoulder strength."
+  },
+  {
+    "exercise_id": "barbell_shrugs",
+    "name": "Barbell Shrugs",
+    "description": "Hold a heavy barbell and shrug your shoulders straight up towards your ears to target the trapezius muscles."
   }
 ]

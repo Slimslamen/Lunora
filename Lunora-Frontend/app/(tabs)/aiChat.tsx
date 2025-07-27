@@ -13,7 +13,6 @@ import {
   useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { IconSymbol } from '@/components/ui/IconSymbol'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
@@ -99,9 +98,6 @@ export default function AIChatScreen() {
               onSubmitEditing={sendMessage}
               returnKeyType="send"
             />
-            <TouchableOpacity onPress={sendMessage} style={styles.sendButton}>
-              <IconSymbol name="send" size={20} color={colors.textPrimary} />
-            </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
       </LinearGradient>

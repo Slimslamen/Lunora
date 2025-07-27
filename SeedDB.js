@@ -10,10 +10,10 @@ const client = new DynamoDBClient({ region: "eu-north-1" }); // adjust region
 const docClient = DynamoDBDocumentClient.from(client);
 
 // 2️⃣ Load your JSON file
-const TABLE_NAME = "Challenge-cp4byjbyjfannj5c7exticnz2m-NONE";
+const TABLE_NAME = "PeriodFacts-7ocohz3ifzazzafod6nvdzypai-NONE";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname  = dirname(__filename);
-const filePath = join(__dirname, "JSON/challenges.json");
+const filePath = join(__dirname, "JSON/period_facts.json");
 const items = JSON.parse(readFileSync(filePath, "utf8"));
 
 // 3️⃣ Stamp each item with createdAt/updatedAt timestamps

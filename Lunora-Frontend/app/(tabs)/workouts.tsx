@@ -11,7 +11,9 @@ import {
   useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
-import { IconSymbol } from '@/components/ui/IconSymbol'
+import { Ionicons } from "@expo/vector-icons";
+import Feather from '@expo/vector-icons/Feather';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { Schema } from '../../../amplify/data/resource'
@@ -59,7 +61,6 @@ export default function WorkoutsScreen() {
         }
       };
       fetchWorkout();
-      alert("test: " + JSON.stringify(workouts))
     }, []);
 
   return (
@@ -76,7 +77,7 @@ export default function WorkoutsScreen() {
 
         {/* Search */}
         <View style={[styles.searchBox, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>  
-          <IconSymbol name="search" size={20} color={colors.textSecondary} />
+         <Feather name="search" size={18} color={colors.textSecondary}/>
           <TextInput
             style={[styles.searchInput, { color: colors.textPrimary }]}
             placeholder="Search workouts..."
@@ -122,9 +123,9 @@ export default function WorkoutsScreen() {
                   <View style={{ flex: 1, marginLeft: 12 }}>
                     <Text style={[styles.itemTitle, { color: colors.textPrimary }]}>{w.name}</Text>
                     <View style={styles.itemMeta}>
-                      <IconSymbol name="time" size={14} color={colors.textSecondary} />
+                       <Ionicons name="time-outline" size={16} color={colors.textSecondary} />
                       <Text style={[styles.metaText, { color: colors.textSecondary }]}>{w.duration}</Text>
-                      <IconSymbol name="bolt" size={14} color={colors.textSecondary} />
+                    <MaterialIcons name="bolt" size={20} color={colors.accent} />
                       <Text style={[styles.metaText, { color: colors.textSecondary }]}>{w.calories}</Text>
                       <Text style={[styles.levelText, { color: levelColor }]}>{w.level}</Text>
                     </View>

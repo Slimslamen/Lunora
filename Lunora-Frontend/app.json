@@ -17,7 +17,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "/assets/images/Lunora_logo",
+        "foregroundImage": "./assets/images/Lunora_logo",
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true

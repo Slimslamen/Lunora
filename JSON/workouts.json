@@ -2,7 +2,7 @@
   {
     "id": "workout_001",
     "name": "Menstrual Phase Gentle Flow",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 20,
     "calories": "80-120",
@@ -49,7 +49,7 @@
   {
     "id": "workout_002",
     "name": "Luteal Phase Mobility & Stretch",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 25,
     "calories": "100-150",
@@ -96,7 +96,7 @@
   {
     "id": "workout_003",
     "name": "Follicular Unwind Yoga",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Follicular",
     "duration": 25,
     "calories": "110-160",
@@ -143,7 +143,7 @@
   {
     "id": "workout_004",
     "name": "Ovulatory Dynamic Warm-up",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 15,
     "calories": "70-110",
@@ -190,7 +190,7 @@
   {
     "id": "workout_005",
     "name": "Light Cardio & Core",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Menstrual",
     "duration": 25,
     "calories": "150-220",
@@ -230,7 +230,7 @@
   {
     "id": "workout_006",
     "name": "Full Body Foam Rolling",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 20,
     "calories": "60-90",
@@ -277,7 +277,7 @@
   {
     "id": "workout_007",
     "name": "Active Recovery Walk",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Any",
     "duration": 25,
     "calories": "120-180",
@@ -296,7 +296,7 @@
   {
     "id": "workout_008",
     "name": "Post-Workout Static Stretching",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Any",
     "duration": 15,
     "calories": "50-70",
@@ -343,7 +343,7 @@
   {
     "id": "workout_009",
     "name": "Mindful Movement & Breath",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 20,
     "calories": "70-100",
@@ -376,7 +376,7 @@
   {
     "id": "workout_010",
     "name": "Luteal De-stress Flow",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 22,
     "calories": "90-140",
@@ -423,7 +423,7 @@
   {
     "id": "workout_011",
     "name": "Menstrual Phase Foundation",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 35,
     "calories": "180-250",
@@ -470,7 +470,7 @@
   {
     "id": "workout_012",
     "name": "Follicular Phase Power Build",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 55,
     "calories": "300-400",
@@ -524,7 +524,7 @@
   {
     "id": "workout_013",
     "name": "Ovulatory Peak Performance",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "350-450",
@@ -578,7 +578,7 @@
   {
     "id": "workout_014",
     "name": "Luteal Phase Metabolic Burn",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "300-410",
@@ -625,7 +625,7 @@
   {
     "id": "workout_015",
     "name": "Follicular HIIT Challenge",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Follicular",
     "duration": 30,
     "calories": "280-380",
@@ -672,7 +672,7 @@
   {
     "id": "workout_016",
     "name": "Luteal Steady State & Strength",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 50,
     "calories": "320-420",
@@ -719,7 +719,7 @@
   {
     "id": "workout_017",
     "name": "Menstrual Low-Impact Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Menstrual",
     "duration": 40,
     "calories": "200-280",
@@ -773,7 +773,7 @@
   {
     "id": "workout_018",
     "name": "Ovulatory Power Circuit",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Ovulatory",
     "duration": 40,
     "calories": "350-460",
@@ -820,7 +820,7 @@
   {
     "id": "workout_019",
     "name": "Follicular Phase Sculpt",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Follicular",
     "duration": 50,
     "calories": "280-360",
@@ -867,7 +867,7 @@
   {
     "id": "workout_020",
     "name": "Full Body Dumbbell Burner",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "290-390",
@@ -914,7 +914,7 @@
   {
     "id": "workout_021",
     "name": "Beginner Full Body",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Any",
     "duration": 40,
     "calories": "200-290",
@@ -961,7 +961,7 @@
   {
     "id": "workout_022",
     "name": "Ovulatory Strength & Power",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "330-430",
@@ -1015,7 +1015,7 @@
   {
     "id": "workout_023",
     "name": "Follicular Endurance Circuit",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Follicular",
     "duration": 40,
     "calories": "310-400",
@@ -1062,7 +1062,7 @@
   {
     "id": "workout_024",
     "name": "Luteal Unilateral Focus",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Luteal",
     "duration": 55,
     "calories": "280-370",
@@ -1116,7 +1116,7 @@
   {
     "id": "workout_025",
     "name": "Menstrual Core & Light Tone",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 30,
     "calories": "150-210",
@@ -1163,7 +1163,7 @@
   {
     "id": "workout_026",
     "name": "Advanced Full Body Burn",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Ovulatory",
     "duration": 45,
     "calories": "400-500",
@@ -1203,7 +1203,7 @@
   {
     "id": "workout_027",
     "name": "Follicular Hypertrophy",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 60,
     "calories": "310-410",
@@ -1257,7 +1257,7 @@
   {
     "id": "workout_028",
     "name": "Luteal Cardio & Condition",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 35,
     "calories": "280-380",
@@ -1304,7 +1304,7 @@
   {
     "id": "workout_029",
     "name": "Quick Full Body Blast",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Follicular",
     "duration": 25,
     "calories": "250-330",
@@ -1344,7 +1344,7 @@
   {
     "id": "workout_030",
     "name": "At-Home Full Body Tone",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Any",
     "duration": 35,
     "calories": "190-260",
@@ -1391,7 +1391,7 @@
   {
     "id": "workout_031",
     "name": "Follicular Leg & Shoulder Sculpt",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "290-380",
@@ -1449,7 +1449,7 @@
   {
     "id": "workout_032",
     "name": "Ovulatory Glutes & Back Power",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "340-440",
@@ -1507,7 +1507,7 @@
   {
     "id": "workout_033",
     "name": "Luteal Legs & Chest Burn",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "300-400",
@@ -1558,7 +1558,7 @@
   {
     "id": "workout_034",
     "name": "Menstrual Glutes & Core Focus",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 40,
     "calories": "210-290",
@@ -1609,7 +1609,7 @@
   {
     "id": "workout_035",
     "name": "Follicular Quads, Hamstrings & Back",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 55,
     "calories": "310-410",
@@ -1667,7 +1667,7 @@
   {
     "id": "workout_036",
     "name": "Ovulatory Legs, Chest & Shoulders",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 65,
     "calories": "380-490",
@@ -1726,7 +1726,7 @@
   {
     "id": "workout_037",
     "name": "Luteal Glute & Shoulder Definition",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 50,
     "calories": "280-370",
@@ -1777,7 +1777,7 @@
   {
     "id": "workout_038",
     "name": "Follicular Leg & Arm Pump",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 55,
     "calories": "300-390",
@@ -1836,7 +1836,7 @@
   {
     "id": "workout_039",
     "name": "Ovulatory Deadlifts & Back Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "350-460",
@@ -1894,7 +1894,7 @@
   {
     "id": "workout_040",
     "name": "Luteal Hamstring & Chest Tone",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "290-380",
@@ -1945,7 +1945,7 @@
   {
     "id": "workout_041",
     "name": "Menstrual Lower Body & Back",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 45,
     "calories": "230-310",
@@ -1995,7 +1995,7 @@
   {
     "id": "workout_042",
     "name": "Follicular Glute & Back Hypertrophy",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 60,
     "calories": "320-420",
@@ -2053,7 +2053,7 @@
   {
     "id": "workout_043",
     "name": "Ovulatory Leg & Chest Power",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "360-470",
@@ -2111,7 +2111,7 @@
   {
     "id": "workout_044",
     "name": "Luteal Leg & Shoulder Circuit",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "310-410",
@@ -2162,7 +2162,7 @@
   {
     "id": "workout_045",
     "name": "Follicular Legs, Back & Biceps",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 60,
     "calories": "330-430",
@@ -2221,7 +2221,7 @@
   {
     "id": "workout_046",
     "name": "Push Day: Chest, Shoulders, Triceps",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 55,
     "calories": "300-400",
@@ -2280,7 +2280,7 @@
   {
     "id": "workout_047",
     "name": "Pull Day: Back & Biceps",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "280-370",
@@ -2331,7 +2331,7 @@
   {
     "id": "workout_048",
     "name": "Luteal Leg Day Finisher",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "320-420",
@@ -2381,7 +2381,7 @@
   {
     "id": "workout_049",
     "name": "Ovulatory Glute & Hamstring Power",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "340-450",
@@ -2438,7 +2438,7 @@
   {
     "id": "workout_050",
     "name": "Follicular Quad Focus & Cardio",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Follicular",
     "duration": 50,
     "calories": "350-450",
@@ -2481,7 +2481,7 @@
   {
     "id": "workout_051",
     "name": "Menstrual Glute Activation",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 35,
     "calories": "180-250",
@@ -2531,7 +2531,7 @@
   {
     "id": "workout_052",
     "name": "Luteal Legs & Back Endurance",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 50,
     "calories": "290-390",
@@ -2582,7 +2582,7 @@
   {
     "id": "workout_053",
     "name": "Ovulatory Chest & Triceps Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 55,
     "calories": "310-410",
@@ -2640,7 +2640,7 @@
   {
     "id": "workout_054",
     "name": "Follicular Hamstrings & Glutes",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "280-370",
@@ -2690,7 +2690,7 @@
   {
     "id": "workout_055",
     "name": "Luteal Upper Body Conditioning",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 40,
     "calories": "270-360",
@@ -2741,7 +2741,7 @@
   {
     "id": "workout_056",
     "name": "Ovulatory Leg Day Volume",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 65,
     "calories": "390-500",
@@ -2798,7 +2798,7 @@
   {
     "id": "workout_057",
     "name": "Follicular Shoulders & Abs",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Follicular",
     "duration": 45,
     "calories": "250-340",
@@ -2849,7 +2849,7 @@
   {
     "id": "workout_058",
     "name": "Luteal Legs & Cardio Superset",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 40,
     "calories": "330-430",
@@ -2885,7 +2885,7 @@
   {
     "id": "workout_059",
     "name": "Menstrual Light Leg & Chest",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 40,
     "calories": "200-280",
@@ -2936,7 +2936,7 @@
   {
     "id": "workout_060",
     "name": "Ovulatory Back & Biceps Peak",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 55,
     "calories": "320-420",
@@ -2994,7 +2994,7 @@
   {
     "id": "workout_061",
     "name": "Menstrual Upper Body & Core Stability",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 35,
     "calories": "170-240",
@@ -3045,7 +3045,7 @@
   {
     "id": "workout_062",
     "name": "Follicular Back & Biceps Hypertrophy",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "270-360",
@@ -3096,7 +3096,7 @@
   {
     "id": "workout_063",
     "name": "Ovulatory Push Power Day",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "330-430",
@@ -3155,7 +3155,7 @@
   {
     "id": "workout_064",
     "name": "Luteal Chest & Shoulder Burn",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "290-380",
@@ -3206,7 +3206,7 @@
   {
     "id": "workout_065",
     "name": "Follicular Arm Focus",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 45,
     "calories": "240-320",
@@ -3257,7 +3257,7 @@
   {
     "id": "workout_066",
     "name": "Ovulatory Back & Core Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 55,
     "calories": "310-400",
@@ -3308,7 +3308,7 @@
   {
     "id": "workout_067",
     "name": "Luteal Upper Body Endurance",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 40,
     "calories": "260-350",
@@ -3359,7 +3359,7 @@
   {
     "id": "workout_068",
     "name": "Menstrual Gentle Push",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 30,
     "calories": "150-220",
@@ -3410,7 +3410,7 @@
   {
     "id": "workout_069",
     "name": "Follicular Chest & Back Volume",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 55,
     "calories": "300-390",
@@ -3461,7 +3461,7 @@
   {
     "id": "workout_070",
     "name": "Ovulatory Shoulder Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 50,
     "calories": "280-370",
@@ -3511,7 +3511,7 @@
   {
     "id": "workout_071",
     "name": "Luteal Arm & Core Conditioning",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Luteal",
     "duration": 40,
     "calories": "280-370",
@@ -3563,7 +3563,7 @@
   {
     "id": "workout_072",
     "name": "Follicular Shoulders & Triceps",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "260-350",
@@ -3614,7 +3614,7 @@
   {
     "id": "workout_073",
     "name": "Ovulatory Pull Power",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 55,
     "calories": "320-410",
@@ -3665,7 +3665,7 @@
   {
     "id": "workout_074",
     "name": "Luteal Back & Shoulder Definition",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 50,
     "calories": "280-370",
@@ -3716,7 +3716,7 @@
   {
     "id": "workout_075",
     "name": "Menstrual Core & Posture",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Menstrual",
     "duration": 30,
     "calories": "140-200",
@@ -3767,7 +3767,7 @@
   {
     "id": "workout_076",
     "name": "Follicular Chest & Biceps",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Follicular",
     "duration": 50,
     "calories": "270-360",
@@ -3818,7 +3818,7 @@
   {
     "id": "workout_077",
     "name": "Ovulatory Upper Body Power Circuit",
-    "goal": "LoseWeight",
+    "goal": "Lose Weight",
     "phase": "Ovulatory",
     "duration": 40,
     "calories": "350-450",
@@ -3863,7 +3863,7 @@
   {
     "id": "workout_078",
     "name": "Luteal Back & Triceps Tone",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Luteal",
     "duration": 45,
     "calories": "250-330",
@@ -3913,7 +3913,7 @@
   {
     "id": "workout_079",
     "name": "Follicular Upper Body Sculpt",
-    "goal": "MaintainWeight",
+    "goal": "Maintain Weight",
     "phase": "Follicular",
     "duration": 50,
     "calories": "280-370",
@@ -3965,7 +3965,7 @@
   {
     "id": "workout_080",
     "name": "Ovulatory Chest & Back Strength",
-    "goal": "GainMuscle",
+    "goal": "Gain Muscle",
     "phase": "Ovulatory",
     "duration": 60,
     "calories": "340-440",

@@ -26,7 +26,7 @@ export default function ProgressOverviewScreen() {
   
   const router = useRouter();
   const navigateToWorkout = () => {
-    router.push("./workouts");
+    router.push("./DetailedWorkout");
   };
   const navigateToWorkouts = () => {
     router.push("./workouts");
@@ -35,7 +35,7 @@ export default function ProgressOverviewScreen() {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const { data: Users, errors } = await client.models.User.list({});
+      const { data: Users, errors } = await client.models.Users.list({});
       if (errors) {
         console.error(errors);
         return;

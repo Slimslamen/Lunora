@@ -1,7 +1,7 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 
 const schema = a.schema({
-  User: a
+  Users: a
     .model({
       name: a.string(),
       birth: a.string(),
@@ -15,13 +15,69 @@ const schema = a.schema({
       workoutFrequency: a.integer(),
       referral: a.string(),
       howFound: a.string(),
-      firstTime: a.boolean(),
+      userWorkoutExercises: a.hasMany("UserWorkoutExercises", "user_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
-  Challenge: a
+  UserWorkoutExercises: a
+    .model({
+      user_id: a.string().required(),
+      user: a.belongsTo("Users", "user_id"),
+      workoutExercise_id: a.string().required(),
+      workoutExercise: a.belongsTo("WorkoutExercises", "workoutExercise_id"),
+      weight: a.integer(),    
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  WorkoutExercises: a
+    .model({
+      workout_id: a.string().required(),
+      workouts: a.belongsTo("Workouts", "workout_id"),
+      exercise_id: a.string().required(),
+      exercise: a.belongsTo("Exercises", "exercise_id"),
+      sets: a.integer(),
+      reps: a.string(),
+      phase: a.string(),
+      time: a.string(),
+      userWorkoutExercises: a.hasMany("UserWorkoutExercises", "workoutExercise_id"),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  Exercises: a
+    .model({
+      exercise_id: a.string(),
+      name: a.string(),
+      description: a.string(),
+      workoutExercises: a.hasMany("WorkoutExercises", "exercise_id"),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  Workouts: a
+    .model({
+      id: a.string().required(),
+      name: a.string(),
+      goal: a.string(),
+      phase: a.string(),
+      duration: a.integer(),
+      calories: a.string(),
+      intensity: a.string(),
+      type: a.string(),
+      muscles: a.string().array(),
+      exercises: a.hasMany("WorkoutExercises", "workout_id"),
+      weight: a.integer(),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+  Challenges: a
     .model({
       name: a.string(),
       description: a.string(),
@@ -30,13 +86,13 @@ const schema = a.schema({
       progress: a.integer(),
       rewardIcon: a.string(),
       rewardSet: a.string(),
+      active: a.boolean(),
       createdAt: a.string(),
       updatedAt: a.string(),
-      active: a.boolean()
     })
     .authorization((allow) => [allow.guest()]),
 
-  CompletedChallenge: a
+  CompletedChallenges: a
     .model({
       name: a.string(),
       description: a.string(),
@@ -60,43 +116,17 @@ const schema = a.schema({
       progress: a.integer(),
       rewardIcon: a.string(),
       rewardSet: a.string(),
-      createdAt: a.string(),
-      updatedAt: a.string(),
-      active: a.boolean()
-    })
-    .authorization((allow) => [allow.guest()]),
-
-  Exercise: a
-    .model({
-      exercise_id: a.string(),
-      name: a.string(),
-      description: a.string(),
-      weight: a.integer(),
+      active: a.boolean(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
-  PeriodFact: a
+  PeriodFacts: a
     .model({
+      id: a.string().required(),
       fact: a.string(),
       phase: a.string(),
-      createdAt: a.string(),
-      updatedAt: a.string(),
-    })
-    .authorization((allow) => [allow.guest()]),
-
-  Workout: a
-    .model({
-      name: a.string(),
-      goal: a.string(),
-      phase: a.string(),
-      duration: a.integer(),
-      calories: a.string(),
-      intensity: a.string(),
-      type: a.string(),
-      muscles: a.string().array(),
-      exercises: a.string().array(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -111,32 +141,3 @@ export const data = defineData({
     defaultAuthorizationMode: "identityPool",
   },
 });
-
-/*== STEP 2 ===============================================================
-Go to your frontend source code. From your client-side code, generate a
-Data client to make CRUDL requests to your table. (THIS SNIPPET WILL ONLY
-WORK IN THE FRONTEND CODE FILE.)
-
-Using JavaScript or Next.js React Server Components, Middleware, Server 
-Actions or Pages Router? Review how to generate Data clients for those use
-cases: https://docs.amplify.aws/gen2/build-a-backend/data/connect-to-API/
-=========================================================================*/
-
-/*
-"use client"
-import { generateClient } from "aws-amplify/data";
-import type { Schema } from "@/amplify/data/resource";
-
-const client = generateClient<Schema>() // use this Data client for CRUDL requests
-*/
-
-/*== STEP 3 ===============================================================
-Fetch records from the database and use them in your frontend component.
-(THIS SNIPPET WILL ONLY WORK IN THE FRONTEND CODE FILE.)
-=========================================================================*/
-
-/* For example, in a React component, you can use this snippet in your
-  function's RETURN statement */
-// const { data: todos } = await client.models.Todo.list()
-
-// return <ul>{todos.map(todo => <li key={todo.id}>{todo.content}</li>)}</ul>

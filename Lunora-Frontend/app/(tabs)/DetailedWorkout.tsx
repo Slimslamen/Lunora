@@ -22,12 +22,16 @@ import outputs from "../../assets/amplify_outputs.json";
 import { generateClient } from "aws-amplify/api";
 import { IExercise, IWorkout, IWorkoutExercises } from "@/General-Interfaces/IWorkout";
 import { UserContext } from "@/Context/User/UserContext";
+import { useLocalSearchParams } from "expo-router";
 
 const client = generateClient<Schema>();
 
 Amplify.configure(outputs);
 
 export default function WorkoutDetailScreen() {
+
+   const { specific_id } = useLocalSearchParams();
+   const workoutId = Array.isArray(specific_id) ? specific_id[0] : specific_id;
   const TContext = useContext(UserContext);
   const { userProgress } = TContext;
 
@@ -50,12 +54,12 @@ export default function WorkoutDetailScreen() {
     const exDesc = performedExercises?.find(e => e.exercise_id === ex.exercise_id)
     if(exDesc)
     setexerciseDescription(exDesc.description)
-    console.log(exDesc)
+    
   };
 
   useEffect(() => {
     const fetchWorkout = async () => {
-      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: "workout_055" });
+      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: workoutId });
       if (errors) {
         console.error(errors);
         return;
@@ -93,7 +97,7 @@ export default function WorkoutDetailScreen() {
     };
 
     fetchWorkout();
-  }, []);
+  }, [workoutId]);
 
   useEffect(() => {
     if (!selectedWorkout) return;
@@ -114,7 +118,7 @@ export default function WorkoutDetailScreen() {
     };
 
     fetchExercises();
-  }, [selectedWorkout]);
+  }, [selectedWorkout, specificWorkoutExercise]);
 
   useEffect(() => {
     if (!selectedWorkout) return;
@@ -168,11 +172,11 @@ export default function WorkoutDetailScreen() {
             <View style={styles.infoRow}>
               <View style={styles.infoItem}>
                 <Ionicons name="time-outline" size={16} color={colors.textSecondary} />
-                <Text style={[styles.infoText, { color: colors.textSecondary }]}>{selectedWorkout?.duration} min</Text>
+                <Text style={[styles.infoText, { color: colors.textSecondary, width: 50 }]}>{selectedWorkout?.duration} min</Text>
               </View>
               <View style={styles.infoItem}>
                 <Ionicons name="flash-outline" size={16} color={colors.textSecondary} />
-                <Text style={[styles.infoText, { color: colors.textSecondary }]}>{selectedWorkout?.calories} cal</Text>
+                <Text style={[styles.infoText, { color: colors.textSecondary, width: 90 }]}>{selectedWorkout?.calories} cal</Text>
               </View>
               <Text
                 style={[
@@ -184,6 +188,8 @@ export default function WorkoutDetailScreen() {
                         : selectedWorkout?.intensity === "Low"
                           ? "#ffb300ff"
                           : "#e03131ff",
+                      width: 80,
+                      textAlign:'center'
                   },
                 ]}
               >

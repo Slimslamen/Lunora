@@ -20,7 +20,7 @@
   {
     "workout_id": "workout_001",
     "phase": "Menstrual",
-    "exercise_id": "gentssle_spinal_twists",
+    "exercise_id": "gentle_spinal_twists",
     "name": "Gentle Spinal Twists",
     "sets": 2,
     "reps": "8 per side",
@@ -42,7 +42,7 @@
     "name": "Deep Diaphragmatic Breathing",
     "sets": 1,
     "reps": null,
-    "time": "5min"
+    "time": "5 min"
   },
   {
     "workout_id": "workout_002",
@@ -132,7 +132,7 @@
     "name": "Savasana",
     "sets": 1,
     "reps": null,
-    "time": "5min"
+    "time": "5 min"
   },
   {
     "workout_id": "workout_004",
@@ -186,7 +186,7 @@
     "name": "Incline Walking",
     "sets": 1,
     "reps": null,
-    "time": "15min"
+    "time": "15 min"
   },
   {
     "workout_id": "workout_005",
@@ -267,7 +267,7 @@
     "name": "Brisk Walking",
     "sets": 1,
     "reps": null,
-    "time": "25min"
+    "time": "25 min"
   },
   {
     "workout_id": "workout_008",
@@ -321,7 +321,7 @@
     "name": "Tai Chi Basic Stepping",
     "sets": 1,
     "reps": null,
-    "time": "10min"
+    "time": "10 min"
   },
   {
     "workout_id": "workout_009",
@@ -330,7 +330,7 @@
     "name": "Box Breathing",
     "sets": 1,
     "reps": null,
-    "time": "5min"
+    "time": "5 min"
   },
   {
     "workout_id": "workout_009",
@@ -339,7 +339,7 @@
     "name": "Body Scan Meditation",
     "sets": 1,
     "reps": null,
-    "time": "5min"
+    "time": "5 min"
   },
   {
     "workout_id": "workout_010",
@@ -384,7 +384,7 @@
     "name": "Legs Up The Wall",
     "sets": 1,
     "reps": null,
-    "time": "5min"
+    "time": "5 min"
   },
   {
     "workout_id": "workout_011",
@@ -636,7 +636,7 @@
     "name": "Incline Walking",
     "sets": 1,
     "reps": null,
-    "time": "25min"
+    "time": "25 min"
   },
   {
     "workout_id": "workout_016",
@@ -969,7 +969,7 @@
     "name": "Stationary Bike",
     "sets": 1,
     "reps": null,
-    "time": "10min warm-up"
+    "time": "10 min warm-up"
   },
   {
     "workout_id": "workout_023",
@@ -1473,7 +1473,7 @@
     "name": "Treadmill Jog",
     "sets": 1,
     "reps": null,
-    "time": "15min"
+    "time": "15 min"
   },
   {
     "workout_id": "workout_034",
@@ -1671,7 +1671,7 @@
     "name": "Elliptical Trainer",
     "sets": 1,
     "reps": null,
-    "time": "15min"
+    "time": "15 min"
   },
   {
     "workout_id": "workout_038",
@@ -1824,7 +1824,7 @@
     "name": "StairMaster",
     "sets": 1,
     "reps": null,
-    "time": "15min"
+    "time": "15 min"
   },
   {
     "workout_id": "workout_041",
@@ -2021,7 +2021,7 @@
     "name": "Rowing Machine",
     "sets": 1,
     "reps": null,
-    "time": "10min"
+    "time": "10 min"
   },
   {
     "workout_id": "workout_045",
@@ -2399,7 +2399,7 @@
     "name": "Incline Walk",
     "sets": 1,
     "reps": null,
-    "time": "15min"
+    "time": "15 min"
   },
   {
     "workout_id": "workout_053",

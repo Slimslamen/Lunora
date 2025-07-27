@@ -103,7 +103,7 @@ export default function TabLayout() {
             <View style={styles.modalMeta}>
               <View style={styles.modalContainer}>
                 <Text style={[styles.modalTitle, { color: colors.textPrimary, textAlign: 'center', marginBottom: 5 }]}>{cycleFacts?.phase}</Text>
-                <Text style={[styles.modalText, { color: "black", textAlign: 'center' }]}>{cycleFacts?.fact}</Text>
+                <Text style={[styles.modalText, { color: colors.textPrimary, textAlign: 'center' }]}>{cycleFacts?.fact}</Text>
               </View>
             </View>
           </LinearGradient>

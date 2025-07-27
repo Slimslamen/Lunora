@@ -7,7 +7,7 @@
     "duration": 20,
     "calories": "80-120",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "cat_cow_stretch",
@@ -24,7 +24,7 @@
         "weight": null
       },
       {
-        "exercise_id": "gentssle_spinal_twists",
+        "exercise_id": "gentle_spinal_twists",
         "name": "Gentle Spinal Twists",
         "sets": 2,
         "reps": "8 per side",
@@ -54,7 +54,7 @@
     "duration": 25,
     "calories": "100-150",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "foam_roll_glutes",
@@ -101,7 +101,7 @@
     "duration": 25,
     "calories": "110-160",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "sun_salutation_a",
@@ -148,7 +148,7 @@
     "duration": 15,
     "calories": "70-110",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "jumping_jacks",
@@ -195,7 +195,7 @@
     "duration": 25,
     "calories": "150-220",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "incline_walking",
@@ -235,7 +235,7 @@
     "duration": 20,
     "calories": "60-90",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "foam_roll_calves",
@@ -282,7 +282,7 @@
     "duration": 25,
     "calories": "120-180",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "brisk_walking",
@@ -301,7 +301,7 @@
     "duration": 15,
     "calories": "50-70",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "hamstring_stretch",
@@ -348,7 +348,7 @@
     "duration": 20,
     "calories": "70-100",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "tai_chi_basic_stepping",
@@ -381,7 +381,7 @@
     "duration": 22,
     "calories": "90-140",
     "intensity": "Low",
-    "type": "ActiveRest",
+    "type": "Active Rest",
     "exercises": [
       {
         "exercise_id": "neck_half_circles",
@@ -428,7 +428,7 @@
     "duration": 35,
     "calories": "180-250",
     "intensity": "Low",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "bodyweight_squats",
@@ -475,7 +475,7 @@
     "duration": 55,
     "calories": "300-400",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "goblet_squats",
@@ -529,7 +529,7 @@
     "duration": 60,
     "calories": "350-450",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "barbell_back_squats",
@@ -583,7 +583,7 @@
     "duration": 45,
     "calories": "300-410",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "kettlebell_swings",
@@ -630,7 +630,7 @@
     "duration": 30,
     "calories": "280-380",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "burpees",
@@ -677,7 +677,7 @@
     "duration": 50,
     "calories": "320-420",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "incline_walking",
@@ -724,7 +724,7 @@
     "duration": 40,
     "calories": "200-280",
     "intensity": "Low",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "glute_bridges",
@@ -778,7 +778,7 @@
     "duration": 40,
     "calories": "350-460",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "kettlebell_goblet_squats",
@@ -825,7 +825,7 @@
     "duration": 50,
     "calories": "280-360",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "dumbbell_step_ups",
@@ -872,7 +872,7 @@
     "duration": 45,
     "calories": "290-390",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "dumbbell_romanian_deadlifts",
@@ -919,7 +919,7 @@
     "duration": 40,
     "calories": "200-290",
     "intensity": "Low",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "bodyweight_squats",
@@ -966,7 +966,7 @@
     "duration": 60,
     "calories": "330-430",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "hex_bar_deadlifts",
@@ -1020,7 +1020,7 @@
     "duration": 40,
     "calories": "310-400",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "stationary_bike",
@@ -1067,7 +1067,7 @@
     "duration": 55,
     "calories": "280-370",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "bulgarian_split_squats",
@@ -1121,7 +1121,7 @@
     "duration": 30,
     "calories": "150-210",
     "intensity": "Low",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "glute_bridges",
@@ -1168,7 +1168,7 @@
     "duration": 45,
     "calories": "400-500",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "dumbbell_thrusters",
@@ -1208,7 +1208,7 @@
     "duration": 60,
     "calories": "310-410",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "leg_press",
@@ -1262,7 +1262,7 @@
     "duration": 35,
     "calories": "280-380",
     "intensity": "Moderate",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "rowing_machine_sprints",
@@ -1309,7 +1309,7 @@
     "duration": 25,
     "calories": "250-330",
     "intensity": "High",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "jump_squats",
@@ -1349,7 +1349,7 @@
     "duration": 35,
     "calories": "190-260",
     "intensity": "Low",
-    "type": "FullBody",
+    "type": "Full Body",
     "exercises": [
       {
         "exercise_id": "glute_bridge",

@@ -7,6 +7,10 @@
     progress: number;
     rewardIcon: string;
     rewardSet: string;
+    active: boolean;
+    completed: boolean;
+    coming: boolean;
+    exp: number;
     createdAt: string;
     updatedAt: string;
   }

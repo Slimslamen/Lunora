@@ -1,4 +1,5 @@
 export interface IUser {
+  email: string;
   name: string;
   birth: string;
   height: number;
@@ -11,6 +12,7 @@ export interface IUser {
   workoutFrequency: number;
   referral: string;
   howFound: string;
+  paidPlan: string;
   createdAt: string;
   updatedAt: string;
 }

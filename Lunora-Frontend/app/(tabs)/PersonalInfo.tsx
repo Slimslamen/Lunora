@@ -1,5 +1,5 @@
 // PersonalInfoScreen.tsx
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext } from "react";
 import {
   View,
   Text,
@@ -9,130 +9,77 @@ import {
   ScrollView,
   StatusBar,
   useColorScheme,
-} from 'react-native'
-import { LinearGradient } from 'expo-linear-gradient'
-import { ThemeContext } from '@/Context/Theme/ThemeContext'
-import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
+} from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+import { ThemeContext } from "@/Context/Theme/ThemeContext";
+import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 
 export default function PersonalInfoScreen() {
-  const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
-  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
+  const { darkMode } = useContext(ThemeContext);
+  const scheme = useColorScheme();
+  const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [fullName, setFullName] = useState('')
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
+  const [fullName, setFullName] = useState("");
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSave = () => {
     // TODO: save updated info
-  }
+  };
 
   const handleRestorePassword = () => {
     // TODO: trigger password reset flow
-  }
+  };
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-        style={styles.safe}
-      >
+      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <ScrollView contentContainerStyle={styles.container}>
-            <Text style={[styles.title, { color: colors.textPrimary }]}>Personal Information</Text>
-            <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Update your account details</Text>
-          {/* Full Name */}
-          <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Full Name
-            </Text>
-            <TextInput
-              style={[
-                styles.input,
-                { 
-                  color: colors.textPrimary, 
-                  borderColor: colors.cardBorder, 
-                  backgroundColor: colors.cardBg 
-                }
-              ]}
-              placeholder="Enter your full name"
-              placeholderTextColor={colors.textSecondary}
-              value={fullName}
-              onChangeText={setFullName}
-            />
-          </View>
-
-          {/* Username */}
-          <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Username
-            </Text>
-            <TextInput
-              style={[
-                styles.input,
-                { 
-                  color: colors.textPrimary, 
-                  borderColor: colors.cardBorder, 
-                  backgroundColor: colors.cardBg 
-                }
-              ]}
-              placeholder="Choose a username"
-              placeholderTextColor={colors.textSecondary}
-              value={username}
-              onChangeText={setUsername}
-            />
-          </View>
-
+          <Text style={[styles.title, { color: colors.textPrimary }]}>Personal Information</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Update your account details</Text>
           {/* Email */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Email
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Email</Text>
+            <Text
+              style={{
+                color: colors.textPrimary,
+              }}
+            >
+              test@test.com
             </Text>
-            <TextInput
-              style={[
-                styles.input,
-                { 
-                  color: colors.textPrimary, 
-                  borderColor: colors.cardBorder, 
-                  backgroundColor: colors.cardBg 
-                }
-              ]}
-              placeholder="you@example.com"
-              placeholderTextColor={colors.textSecondary}
-              value={email}
-              onChangeText={setEmail}
-              keyboardType="email-address"
-            />
+          </View>
+          {/* Full Name */}
+          <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Full Name</Text>
+            <Text
+              style={{
+                color: colors.textPrimary,
+              }}
+            >
+              Jimmy Lopez
+            </Text>
           </View>
 
           {/* Save Changes */}
-          <TouchableOpacity
-            style={[styles.button, { backgroundColor: colors.accent }]}
-            onPress={handleSave}
-          >
+          <TouchableOpacity style={[styles.button, { backgroundColor: colors.accent }]} onPress={handleSave}>
             <Text style={styles.buttonText}>Save Changes</Text>
           </TouchableOpacity>
 
           {/* Restore Password */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>
-              Password
-            </Text>
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Password</Text>
             <TouchableOpacity
               style={[styles.restoreButton, { borderColor: colors.accent }]}
               onPress={handleRestorePassword}
             >
-              <Text style={[styles.restoreText, { color: colors.accent }]}>
-                Restore Password
-              </Text>
+              <Text style={[styles.restoreText, { color: colors.accent }]}>Restore Password</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
       </LinearGradient>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
@@ -144,8 +91,8 @@ const styles = StyleSheet.create({
     paddingTop: 60,
     paddingBottom: 80, // leave space for tab bar
   },
-    title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
-    subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 24 },
+  title: { fontSize: 22, fontWeight: "700", textAlign: "center" },
+  subtitle: { fontSize: 14, textAlign: "center", marginBottom: 24 },
   card: {
     borderRadius: 12,
     padding: 16,
@@ -154,7 +101,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
     marginBottom: 8,
   },
   input: {
@@ -167,22 +114,22 @@ const styles = StyleSheet.create({
   button: {
     paddingVertical: 14,
     borderRadius: 14,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 24,
   },
   buttonText: {
-    color: '#fff',
-    fontWeight: '600',
+    color: "#fff",
+    fontWeight: "600",
     fontSize: 16,
   },
   restoreButton: {
     borderWidth: 1,
     borderRadius: 8,
     paddingVertical: 10,
-    alignItems: 'center',
+    alignItems: "center",
   },
   restoreText: {
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: "600",
   },
-})
+});

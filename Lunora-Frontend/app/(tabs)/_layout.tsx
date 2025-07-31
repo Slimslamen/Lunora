@@ -92,7 +92,7 @@ export default function TabLayout() {
         </TouchableOpacity>
       </View>
 
-      <Modal visible={!!showFactBox} transparent animationType="slide" onRequestClose={() => setShowFactBox(false)}>
+      <Modal visible={!!showFactBox} transparent animationType="fade" onRequestClose={() => setShowFactBox(false)}>
         <View style={styles.modalOverlay}>
           <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.modalContent}>
             <View style={styles.modalHeader}>

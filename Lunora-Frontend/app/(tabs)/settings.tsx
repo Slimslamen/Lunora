@@ -16,11 +16,15 @@ import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { Link, useRouter } from 'expo-router'
+import { UserContext } from '@/Context/User/UserContext'
 
 
 export default function SettingsDetailedScreen() {
   const TContext = useContext(ThemeContext)
   const { darkMode, toggleTheme } = TContext
+
+   const UContext = useContext(UserContext);
+    const { activeUser } = UContext;
   
   const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
@@ -70,12 +74,12 @@ export default function SettingsDetailedScreen() {
               </View>
               <View style={styles.profileText}>
                 <Text style={[styles.profileName, { color: colors.textPrimary }]}>
-                  Alex Johnson
+                  {activeUser?.name}
                 </Text>
                 <Text
                   style={[styles.profileSubtitle, { color: colors.textSecondary }]}
                 >
-                  Premium Member
+                  {activeUser?.paidPlan}
                 </Text>
               </View>
             </View>
@@ -96,7 +100,6 @@ export default function SettingsDetailedScreen() {
             </Text>
             {[
               { icon: 'person-outline', label: 'Personal Information' },
-              { icon: 'bullseye', label: 'Fitness Goals' },
             ].map((item, i) => (
               <Link href={i === 0 ? './PersonalInfo' : './FitnessGoals'} key={i} asChild>
               <TouchableOpacity  style={styles.rowItem} activeOpacity={0.7}>

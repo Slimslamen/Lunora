@@ -30,7 +30,7 @@ Amplify.configure(outputs);
 
 export default function WorkoutDetailScreen() {
 
-   const { specific_id } = useLocalSearchParams();
+   const { specific_id, viewWorkout } = useLocalSearchParams();
    const workoutId = Array.isArray(specific_id) ? specific_id[0] : specific_id;
   const TContext = useContext(UserContext);
   const { userProgress } = TContext;
@@ -59,7 +59,7 @@ export default function WorkoutDetailScreen() {
 
   useEffect(() => {
     const fetchWorkout = async () => {
-      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: workoutId });
+      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: "workout_001" });
       if (errors) {
         console.error(errors);
         return;
@@ -234,19 +234,29 @@ export default function WorkoutDetailScreen() {
 
           {/* Spacer for button */}
           <View />
-          <View style={{ marginTop: 20 }}>
-            <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
-              <Ionicons name="play" size={20} color={colors.textPrimary} />
-              <Text style={[styles.startText, { color: colors.textPrimary }]}>Start Workout</Text>
-            </TouchableOpacity>
-          </View>
+          {viewWorkout === "False" ? (
+              <View style={{ marginTop: 20 }}>
+              <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
+                <Ionicons name="play" size={20} color={colors.textPrimary} />
+                <Text style={[styles.startText, { color: colors.textPrimary }]}>Add To Weekly Program</Text>
+              </TouchableOpacity>
+            </View>
+          ) : (
+            <View style={{ marginTop: 20 }}>
+              <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
+                <Ionicons name="play" size={20} color={colors.textPrimary} />
+                <Text style={[styles.startText, { color: colors.textPrimary }]}>Start Workout</Text>
+              </TouchableOpacity>
+            </View>
+          )
+          }
         </ScrollView>
 
         {/* Exercise Detail Modal */}
         <Modal
           visible={!!specificWorkoutExercise}
           transparent
-          animationType="slide"
+          animationType="fade"
           onRequestClose={() => setspecificWorkoutExercise(null)}
         >
           <View style={styles.modalOverlay}>

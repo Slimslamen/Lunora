@@ -1,5 +1,19 @@
 [
   {
+    "id": "challenge_0",
+    "name": "Become A Lunora Member",
+    "description": "Create an account and start your journey!",
+    "icon": "fire",
+    "iconSet": "FontAwesome5",
+    "progress": 20,
+    "rewardIcon": "arm-flex",
+    "rewardSet": "MaterialCommunityIcons",
+    "active": true,
+    "completed": true,
+    "coming": false,
+    "exp": 500
+  },
+  {
     "id": "challenge_1",
     "name": "7-Day Core Burn",
     "description": "A focused challenge to build core strength over a month.",
@@ -8,7 +22,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_2",
@@ -19,7 +36,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_3",
@@ -30,7 +50,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_4",
@@ -41,7 +64,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_5",
@@ -52,7 +78,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_6",
@@ -63,7 +92,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_7",
@@ -74,7 +106,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_8",
@@ -85,7 +120,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_9",
@@ -96,7 +134,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_10",
@@ -107,7 +148,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_11",
@@ -118,7 +162,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_12",
@@ -129,7 +176,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_13",
@@ -140,7 +190,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_14",
@@ -151,7 +204,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_15",
@@ -162,7 +218,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_16",
@@ -173,7 +232,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_17",
@@ -184,18 +246,24 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_18",
-    "name": "Endurance Explosion",
+    "name": "Endurance explosion",
     "description": "Increase stamina with long-format workouts once a week.",
     "icon": "battery-charging",
     "iconSet": "MaterialCommunityIcons",
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_19",
@@ -206,7 +274,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_20",
@@ -217,7 +288,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_21",
@@ -228,7 +302,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_22",
@@ -239,7 +316,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_23",
@@ -250,7 +330,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_24",
@@ -261,7 +344,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_25",
@@ -272,7 +358,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_26",
@@ -283,7 +372,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_27",
@@ -294,7 +386,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_28",
@@ -305,7 +400,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_29",
@@ -316,7 +414,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_30",
@@ -327,7 +428,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_31",
@@ -338,7 +442,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_32",
@@ -349,7 +456,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_33",
@@ -360,7 +470,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_34",
@@ -371,7 +484,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_35",
@@ -382,7 +498,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_36",
@@ -393,7 +512,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_37",
@@ -404,7 +526,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_38",
@@ -415,7 +540,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_39",
@@ -426,7 +554,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_40",
@@ -437,7 +568,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_41",
@@ -448,7 +582,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_42",
@@ -459,7 +596,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_43",
@@ -470,7 +610,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   },
   {
     "id": "challenge_44",
@@ -481,7 +624,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 250
   },
   {
     "id": "challenge_45",
@@ -492,7 +638,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 300
   },
   {
     "id": "challenge_46",
@@ -503,7 +652,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 200
   },
   {
     "id": "challenge_47",
@@ -514,7 +666,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 400
   },
   {
     "id": "challenge_48",
@@ -525,7 +680,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 450
   },
   {
     "id": "challenge_49",
@@ -536,7 +694,10 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 500
   },
   {
     "id": "challenge_50",
@@ -547,6 +708,9 @@
     "progress": 0,
     "rewardIcon": "star",
     "rewardSet": "Ionicons",
-    "active": false
+    "active": true,
+    "completed": false,
+    "coming": false,
+    "exp": 350
   }
 ]

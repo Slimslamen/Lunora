@@ -3,6 +3,7 @@ import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
 const schema = a.schema({
   Users: a
     .model({
+      email: a.string(),
       name: a.string(),
       birth: a.string(),
       height: a.float(),
@@ -15,6 +16,7 @@ const schema = a.schema({
       workoutFrequency: a.integer(),
       referral: a.string(),
       howFound: a.string(),
+      paidPlan: a.string(),
       userWorkoutExercises: a.hasMany("UserWorkoutExercises", "user_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
@@ -79,6 +81,7 @@ const schema = a.schema({
     .authorization((allow) => [allow.guest()]),
   Challenges: a
     .model({
+      id: a.string().required(),
       name: a.string(),
       description: a.string(),
       icon: a.string(),
@@ -86,37 +89,10 @@ const schema = a.schema({
       progress: a.integer(),
       rewardIcon: a.string(),
       rewardSet: a.string(),
+      exp: a.integer(),
       active: a.boolean(),
-      createdAt: a.string(),
-      updatedAt: a.string(),
-    })
-    .authorization((allow) => [allow.guest()]),
-
-  CompletedChallenges: a
-    .model({
-      name: a.string(),
-      description: a.string(),
-      icon: a.string(),
-      iconSet: a.string(),
-      progress: a.integer(),
-      rewardIcon: a.string(),
-      rewardSet: a.string(),
       completed: a.boolean(),
-      createdAt: a.string(),
-      updatedAt: a.string(),
-    })
-    .authorization((allow) => [allow.guest()]),
-
-  ComingChallenges: a
-    .model({
-      name: a.string(),
-      description: a.string(),
-      icon: a.string(),
-      iconSet: a.string(),
-      progress: a.integer(),
-      rewardIcon: a.string(),
-      rewardSet: a.string(),
-      active: a.boolean(),
+      coming: a.boolean(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })

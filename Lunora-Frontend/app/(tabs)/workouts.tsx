@@ -30,7 +30,6 @@ export default function WorkoutsScreen() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
 
-  const router = useRouter()
   const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
@@ -38,11 +37,6 @@ export default function WorkoutsScreen() {
   const [activeTag, setActiveTag] = useState("All");
 
   const [workouts, setworkouts] = useState<IWorkout[]>();
-
-  const navToWorkout = () => {
-      router.push("./DetailedWorkout")
-  }
-
   
   useEffect(() => {
     const fetchWorkout = async () => {
@@ -175,7 +169,7 @@ export default function WorkoutsScreen() {
                           >
                             <Text style={[styles.tagLabelText, { color: colors.textPrimary }]}>{w.phase}</Text>
                           </View>
-                          <Link href={{ pathname: "./DetailedWorkout", params: { specific_id: w.id }}} asChild>
+                          <Link href={{ pathname: "./DetailedWorkout", params: { specific_id: w.id, viewWorkout: "False" }}} asChild>
                             <TouchableOpacity style={styles.startButton}>
                               <Text style={styles.startText}>Start Workout</Text>
                             </TouchableOpacity>

@@ -61,7 +61,7 @@ export default function FitnessGoalsScreen() {
             <View key={goal.id} style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>  
               <View style={styles.rowItem}>
                 <View style={styles.iconWrapper}>
-                  {React.cloneElement(goal.icon, { color: colors.checks })}
+                  {React.cloneElement(goal.icon, { color: colors.accent })}
                 </View>
                 <Text style={[styles.rowLabel, { color: colors.textSecondary, textDecorationLine: 'line-through' }]}>{goal.title}</Text>
                 <Ionicons name="checkmark-circle" size={20} color={colors.checks} />

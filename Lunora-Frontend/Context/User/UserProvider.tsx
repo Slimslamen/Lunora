@@ -11,6 +11,7 @@ const client = generateClient<Schema>();
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [loadedUser, setLoadedUser] = useState(false);
+  const [activeUser, setactiveUser] = useState<IUser>()
   const [userProgress, setuserProgress] = useState<IUserProgress>({
     user_id: "",
     weight: 0,
@@ -24,15 +25,11 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       const [
         { data: Users, errors: userErrors },
         { data: Challenges, errors: challengeErrors },
-        { data: ComingChallenges, errors: comingChallengeErrors },
-        { data: CompletedChallenges, errors: completedChallengeErrors },
         { data: Workouts, errors: workoutsErrors },
         { data: PeriodFacts, errors: periodFactsErrors },
       ] = await Promise.all([
         client.models.Users.list({}),
         client.models.Challenges.list({}),
-        client.models.ComingChallenges.list({}),
-        client.models.CompletedChallenges.list({}),
         client.models.Workouts.list({}),
         client.models.PeriodFacts.list({}),
       ]);
@@ -44,6 +41,10 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       }
       if (Users) {
         setLoadedUser(true);
+        const U = Users.filter(u => u.name === "Jimmy")
+        if (U) {
+          setactiveUser(U[0] as IUser)
+        }
       }
     };
     fetchUser();
@@ -66,5 +67,5 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 
     fetchUserWorkoutSpecifics();
   }, []);
-  return <UserContext.Provider value={{ loadedUser, userProgress }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ loadedUser, userProgress, activeUser }}>{children}</UserContext.Provider>;
 };

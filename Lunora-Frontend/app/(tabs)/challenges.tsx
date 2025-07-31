@@ -8,7 +8,7 @@ import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { generateClient } from "aws-amplify/data";
 import { Schema } from "../../../amplify/data/resource"; // Adjust the relative path as needed
-import { Challenge } from "@/General-Interfaces/IChallenge";
+import { IChallenge } from "@/General-Interfaces/IChallenge";
 
 const client = generateClient<Schema>();
 
@@ -99,10 +99,14 @@ export default function ChallengesScreen() {
 
   const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
- 
-  const [fetchedChallenge, setfetchedChallenge] = useState<Challenge[]>();
-  const [showChallenges, setshowChallenges] = useState(false)
-  const [loaded, setloaded] = useState(false)
+
+  const [fetchedChallenge, setfetchedChallenge] = useState<IChallenge[]>();
+  const [showChallenges, setshowChallenges] = useState(false);
+  const [showCompleted, setshowCompleted] = useState(false);
+
+  const activeChallenges = fetchedChallenge?.filter((f) => f.active);
+  const completedChallenges = fetchedChallenge?.filter((f) => f.completed);
+  const comingChallenges = fetchedChallenge?.filter((f) => f.coming);
 
   const ChallengeIcon = ({
     iconSet,
@@ -115,33 +119,33 @@ export default function ChallengesScreen() {
   }) => {
     const IconComponent = iconMap[iconSet];
     if (!IconComponent) return null;
-    return <IconComponent name={icon} size={icon === "star" || icon === "trophy" ? 18 : 24} {...props} />;
+    return <IconComponent name={icon} size={icon === "star" || icon === "trophy" || icon === "crown" ? 18 : 30} {...props} />;
   };
 
   useEffect(() => {
     const fetchChallenges = async () => {
-      const { data: challenges, errors } = await client.models.Challenge.list({});
+      const { data: challenges, errors } = await client.models.Challenges.list({});
       if (errors) {
         console.error(errors);
         return;
       }
       if (Array.isArray(challenges)) {
-        setfetchedChallenge(challenges as Challenge[]);
+        setfetchedChallenge(challenges as IChallenge[]);
       }
     };
     fetchChallenges();
   }, []);
 
-  const showAllChallenges = () => {
-    setshowChallenges(!showChallenges)
-  }
-
+  const showActiveChallenges = () => {
+    setshowChallenges(!showChallenges);
+  };
+  const showCompletedChallenges = () => {
+    setshowCompleted(!showCompleted);
+  };
   return (
     <View style={{ flex: 1 }}>
       <StatusBar barStyle={scheme === "light" ? "light-content" : "dark-content"} />
-      <LinearGradient
-        colors={[colors.gradientStart, colors.gradientEnd]}
-      >
+      <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]}>
         <ScrollView contentContainerStyle={styles.container}>
           {/* Title */}
           <Text style={[styles.title, { color: colors.textPrimary }]}>Challenges</Text>
@@ -160,11 +164,11 @@ export default function ChallengesScreen() {
             <Text style={[styles.statItem, { color: colors.textPrimary }]}>Your Progress</Text>
             <View style={styles.statsRow}>
               <View style={styles.statItem}>
-                <Text style={[styles.statNumber, { color: colors.textPrimary }]}>3</Text>
+                <Text style={[styles.statNumber, { color: colors.textPrimary }]}>{activeChallenges?.length}</Text>
                 <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Active</Text>
               </View>
               <View style={styles.statItem}>
-                <Text style={[styles.statNumber, { color: colors.textPrimary }]}>5</Text>
+                <Text style={[styles.statNumber, { color: colors.textPrimary }]}>{completedChallenges?.length}</Text>
                 <Text style={[styles.statLabel, { color: colors.textSecondary }]}>Completed</Text>
               </View>
               <View style={styles.statItem}>
@@ -177,8 +181,8 @@ export default function ChallengesScreen() {
 
           {/* Active Challenges */}
           <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Active Challenges</Text>
-          {fetchedChallenge != null &&
-            fetchedChallenge.slice(0, showChallenges ? fetchedChallenge.length : 3 ).map((ch) => (
+          {activeChallenges != null &&
+            activeChallenges.slice(0, showChallenges ? activeChallenges.length : 3).map((ch) => (
               <View
                 key={ch.id}
                 style={[
@@ -223,34 +227,54 @@ export default function ChallengesScreen() {
                 </View>
               </View>
             ))}
-          <TouchableOpacity onPress={showAllChallenges} style={[styles.quickButton]} >
-            <Text style={[styles.quickText, { color: colors.textPrimary }]}>{showChallenges ? 'View Fewer Challenges' : 'View all Challenges'}</Text>
+          <TouchableOpacity onPress={showActiveChallenges} style={[styles.quickButton]}>
+            <Text style={[styles.quickText, { color: colors.textPrimary }]}>
+              {showChallenges ? "View Fewer Challenges" : "View all Challenges"}
+            </Text>
           </TouchableOpacity>
 
           {/* Completed */}
           <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Completed</Text>
-          {completed.map((c) => (
-            <View
-              key={c.id}
-              style={[
-                styles.card,
-                {
-                  backgroundColor: colors.cardBg,
-                  borderColor: colors.cardBorder,
-                },
-              ]}
-            >
-              <View style={styles.row}>
-                <View style={styles.iconWrapper}>{React.cloneElement(c.icon, { color: colors.textPrimary })}</View>
-                <View style={styles.challengeContent}>
-                  <Text style={[styles.challengeTitle, { color: colors.textPrimary }]}>{c.title}</Text>
-                  <Text style={[styles.challengeSubtitle, { color: colors.textPrimary }]}>{c.subtitle}</Text>
+          {completedChallenges &&
+            completedChallenges.slice(0, showChallenges ? completedChallenges.length : 3).map((ch) => (
+              <View
+                key={ch.id}
+                style={[
+                  styles.completedCard,
+                  {
+                    backgroundColor: colors.cardBg,
+                    borderColor: colors.cardBorder,
+                  },
+                ]}
+              >
+                <View style={styles.iconWrapper}>
+                  <ChallengeIcon iconSet={ch.iconSet as IconSet} icon={ch.icon} color={colors.textSecondary} />
                 </View>
-                <Text style={[styles.daysLeft, { color: colors.textPrimary }]}>{c.timeAgo}</Text>
-                <View style={styles.iconWrapper}>{React.cloneElement(c.trophy, { color: colors.accent })}</View>
+                <View style={styles.column}>
+                  <View style={styles.challengeContent}>
+                    <Text style={[styles.challengeTitle, { color: colors.textPrimary, textAlign: "center" }]}>
+                      {ch.name}
+                    </Text>
+                    <Text style={[styles.challengeSubtitle, { color: colors.textPrimary, textAlign: "center" }]}>
+                      {ch.description}
+                    </Text>
+                  </View>
+                  <Text style={[styles.progressText, { color: colors.textPrimary, textAlign:'center', fontWeight: 'bold', marginTop: 10, marginLeft: -20 }]}>
+                    {(ch.progress / 20) * 100}% completed
+                  </Text>
+                </View>
+                <View style={styles.rowFooter}>
+                  <View style={styles.reward}>
+                    <ChallengeIcon iconSet={ch.rewardSet as IconSet} icon={ch.rewardIcon} color={colors.accent} />
+                  </View>
+                </View>
               </View>
-            </View>
-          ))}
+            ))}
+          <TouchableOpacity onPress={showCompletedChallenges} style={[styles.quickButton]}>
+            <Text style={[styles.quickText, { color: colors.textPrimary }]}>
+              {showCompleted ? "View Fewer Completed Challenges" : "View All Completed Challenges"}
+            </Text>
+          </TouchableOpacity>
 
           {/* Coming Soon */}
           <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Coming Soon</Text>
@@ -278,6 +302,35 @@ export default function ChallengesScreen() {
               </View>
             </View>
           ))}
+           {comingChallenges?.map((ch) => (
+              <View
+                key={ch.id}
+                style={[
+                  styles.card,
+                  {
+                    backgroundColor: colors.cardBg,
+                    borderColor: colors.cardBorder,
+                  },
+                ]}
+              >
+                <View style={styles.row}>
+                <View style={styles.iconWrapper}>
+                  <ChallengeIcon iconSet={ch.iconSet as IconSet} icon={ch.icon} color={colors.textSecondary} />
+                </View>
+                  <View style={styles.challengeContent}>
+                    <Text style={[styles.challengeTitle, { color: colors.textPrimary, opacity: 0.8 }]}>
+                      {ch.name}
+                    </Text>
+                    <Text style={[styles.challengeSubtitle, { color: colors.textPrimary, opacity: 0.8 }]}>
+                      {ch.description}
+                    </Text>
+                  </View>
+                  <View style={styles.reward}>
+                    <ChallengeIcon iconSet={ch.rewardSet as IconSet} icon={ch.rewardIcon} color={colors.accent} />
+                  </View>
+                </View>
+              </View>
+            ))}
         </ScrollView>
       </LinearGradient>
     </View>
@@ -293,7 +346,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     borderRadius: 14,
     alignItems: "center",
-    marginBottom: 20
+    marginBottom: 20,
   },
   quickText: { fontSize: 14, fontWeight: "600" },
   container: { padding: 16, paddingTop: 60, paddingBottom: 90 },
@@ -305,12 +358,21 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: 1,
   },
-  statsRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
-  statItem: { alignItems: "center", flex: 1 },
+  completedCard: {
+     borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    borderWidth: 1,
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  statsRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10 },
+  statItem: { alignItems: "center", flex: 1, textAlign: 'center' },
   statNumber: { fontSize: 20, fontWeight: "700" },
   statLabel: { fontSize: 12 },
   sectionHeader: { fontSize: 16, fontWeight: "600", marginVertical: 8 },
   row: { flexDirection: "row", alignItems: "center" },
+  column: { flexDirection: "column", alignItems: "center" },
   iconWrapper: { width: 30, alignItems: "center", marginRight: 12, marginLeft: 8 },
   challengeContent: { flex: 1, paddingRight: 20 },
   challengeTitle: { fontSize: 15, fontWeight: "600" },

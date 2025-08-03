@@ -13,6 +13,7 @@ export const UserContext = createContext<UserContextType>({
         user_id: "",
         weight: 0,
         workoutExercise_id: "",
+        exercise_id: "",
         createdAt: "",
         updatedAt: ""
     },
@@ -31,6 +32,11 @@ export const UserContext = createContext<UserContextType>({
         referral: "",
         howFound: "",
         paidPlan: "",
+        userLevel:"",
+        experience: 0,
+        daysActive: 0,
+        daysStreak: 0,
+        lastWorkoutDate: "",
         createdAt: "",
         updatedAt: "",
     }

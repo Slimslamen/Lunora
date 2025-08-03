@@ -18,6 +18,14 @@ const schema = a.schema({
       howFound: a.string(),
       paidPlan: a.string(),
       userWorkoutExercises: a.hasMany("UserWorkoutExercises", "user_id"),
+      userWorkoutLogs: a.hasMany("UserWorkoutLog", "user_id"),
+      userWeeklyWorkouts: a.hasMany("WeeklyUserWorkouts", "user_id"),
+      userChallenges: a.hasMany("UserChallenges", "user_id"),
+      userLevel: a.string(),
+      experience: a.integer(),
+      daysActive: a.integer(),
+      daysStreak: a.integer(),
+      lastWorkoutDate: a.string(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -27,9 +35,51 @@ const schema = a.schema({
     .model({
       user_id: a.string().required(),
       user: a.belongsTo("Users", "user_id"),
-      workoutExercise_id: a.string().required(),
-      workoutExercise: a.belongsTo("WorkoutExercises", "workoutExercise_id"),
-      weight: a.integer(),    
+      workout_id: a.string().required(),
+      workout: a.belongsTo("Workouts", "workout_id"),
+      exercise_id: a.string().required(),
+      exercise: a.belongsTo("Exercises", "exercise_id"),
+      weight: a.integer(),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  UserWorkoutLog: a
+    .model({
+      user_id: a.string().required(),
+      user: a.belongsTo("Users", "user_id"),
+      workout_id: a.string().required(),
+      workout: a.belongsTo("Workouts", "workout_id"),
+      date: a.string(),
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  WeeklyUserWorkouts: a
+    .model({
+      user_id: a.string().required(),
+      user: a.belongsTo("Users", "user_id"),
+      workout_id: a.string().required(),
+      workout: a.belongsTo("Workouts", "workout_id"),
+      week: a.integer(),
+      year: a.integer(),
+      dayOfWeek: a.integer(), // 1-7 (Monday=1, Sunday=7)
+      scheduledDate: a.string(), // YYYY-MM-DD format for specific date
+      createdAt: a.string(),
+      updatedAt: a.string(),
+    })
+    .authorization((allow) => [allow.guest()]),
+
+  UserChallenges: a
+    .model({
+      user_id: a.string().required(),
+      user: a.belongsTo("Users", "user_id"),
+      challenge_id: a.string().required(),
+      challenge: a.belongsTo("Challenges", "challenge_id"),
+      completed: a.boolean(),
+      completedAt: a.string(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -45,7 +95,6 @@ const schema = a.schema({
       reps: a.string(),
       phase: a.string(),
       time: a.string(),
-      userWorkoutExercises: a.hasMany("UserWorkoutExercises", "workoutExercise_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -57,6 +106,7 @@ const schema = a.schema({
       name: a.string(),
       description: a.string(),
       workoutExercises: a.hasMany("WorkoutExercises", "exercise_id"),
+      userWorkoutExercises: a.hasMany("UserWorkoutExercises", "exercise_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -74,11 +124,14 @@ const schema = a.schema({
       type: a.string(),
       muscles: a.string().array(),
       exercises: a.hasMany("WorkoutExercises", "workout_id"),
-      weight: a.integer(),
+      userWorkoutExercises: a.hasMany("UserWorkoutExercises", "workout_id"),
+      userWorkoutLogs: a.hasMany("UserWorkoutLog", "workout_id"),
+      weeklyUserWorkouts: a.hasMany("WeeklyUserWorkouts", "workout_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
+
   Challenges: a
     .model({
       id: a.string().required(),
@@ -91,8 +144,8 @@ const schema = a.schema({
       rewardSet: a.string(),
       exp: a.integer(),
       active: a.boolean(),
-      completed: a.boolean(),
       coming: a.boolean(),
+      userChallenges: a.hasMany("UserChallenges", "challenge_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })

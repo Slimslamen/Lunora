@@ -35,7 +35,13 @@ export default function Progress() {
           {/* Week Overview */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
             <View style={styles.overviewHeader}>
-              <Text style={[styles.overviewTitle, { color: colors.textPrimary, textAlign: "center" }]}>This Week</Text>
+              <TouchableOpacity>
+                <Ionicons name="chevron-back" size={20} color={colors.textSecondary} />
+              </TouchableOpacity>
+              <Text style={[styles.overviewTitle, { color: colors.textPrimary }]}>This Week</Text>
+              <TouchableOpacity>
+                <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
+              </TouchableOpacity>
             </View>
             <View style={styles.overviewStats}>
               <View style={styles.overviewStat}>
@@ -147,9 +153,9 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   overviewHeader: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+  flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 12,
   },
   overviewTitle: {

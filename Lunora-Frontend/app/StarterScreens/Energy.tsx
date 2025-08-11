@@ -1,8 +1,8 @@
 // EnergyLevelScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
@@ -28,7 +28,7 @@ const levels = [
 
 export default function EnergyLevelScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
+
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [selected, setSelected] = useState<string | null>(null);
@@ -40,7 +40,6 @@ export default function EnergyLevelScreen() {
   };
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

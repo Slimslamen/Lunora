@@ -76,7 +76,7 @@ export default function AIChatScreen() {
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.container}
       >
-        <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Chat with AI</Text>
+        <Text style={[styles.headerTitle, { color: colors.textPrimary }]}>Chat with LunorAI</Text>
         <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Ask anything about your workouts</Text>
 
         <FlatList
@@ -107,8 +107,8 @@ export default function AIChatScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, paddingTop: 60, paddingHorizontal: 16, paddingBottom: 70 },
-  headerTitle: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
-  headerSubtitle: { fontSize: 14, textAlign: 'center', marginBottom: 12 },
+  headerTitle: { fontSize: 24, fontWeight: '700', textAlign: 'center' },
+  headerSubtitle: { fontSize: 16, textAlign: 'center', marginBottom: 12 },
   messagesContainer: { flexGrow: 1, paddingVertical: 8 },
   bubble: {
     maxWidth: '80%',

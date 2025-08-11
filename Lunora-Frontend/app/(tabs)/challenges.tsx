@@ -1,6 +1,6 @@
 // ChallengesScreen.tsx
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, StyleSheet, ScrollView, StatusBar, useColorScheme, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ScrollView, StatusBar, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
 import Feather from "@expo/vector-icons/Feather";
@@ -67,37 +67,19 @@ const completed = [
   },
 ];
 
-const comingSoon = [
-  {
-    id: "monthly",
-    icon: <MaterialCommunityIcons name="calendar-star" size={18} />,
-    title: "Monthly Warrior",
-    subtitle: "Complete 20 workouts in one month",
-    startsIn: "Starts in 3 days",
-    crown: <FontAwesome5 name="crown" size={16} />,
-  },
-  {
-    id: "strength",
-    icon: <MaterialCommunityIcons name="dumbbell" size={18} />,
-    title: "Strength Builder",
-    subtitle: "Complete 15 strength workouts",
-    startsIn: "Starts in 1 week",
-    crown: <FontAwesome5 name="crown" size={16} />,
-  },
-];
-
 const iconMap = {
   FontAwesome5,
   MaterialCommunityIcons,
   Ionicons,
   Feather,
 };
+
 type IconSet = keyof typeof iconMap;
 export default function ChallengesScreen() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
 
-  const scheme = useColorScheme();
+
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   const [fetchedChallenge, setfetchedChallenge] = useState<IChallenge[]>();
@@ -144,7 +126,6 @@ export default function ChallengesScreen() {
   };
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === "light" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]}>
         <ScrollView contentContainerStyle={styles.container}>
           {/* Title */}
@@ -278,30 +259,6 @@ export default function ChallengesScreen() {
 
           {/* Coming Soon */}
           <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Coming Soon</Text>
-          {comingSoon.map((c) => (
-            <View
-              key={c.id}
-              style={[
-                styles.card,
-                {
-                  backgroundColor: colors.cardBg,
-                  borderColor: colors.cardBorder,
-                },
-              ]}
-            >
-              <View style={styles.row}>
-                <View style={styles.iconWrapper}>{React.cloneElement(c.icon, { color: colors.textSecondary })}</View>
-                <View style={styles.challengeContent}>
-                  <Text style={[styles.challengeTitle, { color: colors.textSecondary }]}>{c.title}</Text>
-                  <Text style={[styles.challengeSubtitle, { color: colors.textSecondary, opacity: 0.8 }]}>
-                    {c.subtitle}
-                  </Text>
-                </View>
-                <Text style={[styles.daysLeft, { color: colors.textSecondary }]}>{c.startsIn}</Text>
-                <View style={styles.iconWrapper}>{React.cloneElement(c.crown, { color: colors.accent })}</View>
-              </View>
-            </View>
-          ))}
            {comingChallenges?.map((ch) => (
               <View
                 key={ch.id}
@@ -348,10 +305,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
   },
-  quickText: { fontSize: 14, fontWeight: "600" },
+  quickText: { fontSize: 16, fontWeight: "600" },
   container: { padding: 16, paddingTop: 60, paddingBottom: 90 },
-  title: { fontSize: 22, fontWeight: "700", textAlign: "center" },
-  subtitle: { fontSize: 14, textAlign: "center", marginBottom: 24 },
+  title: { fontSize: 24, fontWeight: "700", textAlign: "center" },
+  subtitle: { fontSize: 16, textAlign: "center", marginBottom: 24 },
   card: {
     borderRadius: 12,
     padding: 16,
@@ -359,7 +316,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   completedCard: {
-     borderRadius: 12,
+    borderRadius: 12,
     padding: 16,
     marginBottom: 16,
     borderWidth: 1,
@@ -367,17 +324,17 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   statsRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10 },
-  statItem: { alignItems: "center", flex: 1, textAlign: 'center' },
-  statNumber: { fontSize: 20, fontWeight: "700" },
-  statLabel: { fontSize: 12 },
-  sectionHeader: { fontSize: 16, fontWeight: "600", marginVertical: 8 },
+  statItem: { alignItems: "center", flex: 1, textAlign: 'center',  fontSize: 18, fontWeight: "600" },
+  statNumber: { fontSize: 22, fontWeight: "700" },
+  statLabel: { fontSize: 15 },
+  sectionHeader: { fontSize: 18, fontWeight: "600", marginVertical: 8 },
   row: { flexDirection: "row", alignItems: "center" },
   column: { flexDirection: "column", alignItems: "center" },
   iconWrapper: { width: 30, alignItems: "center", marginRight: 12, marginLeft: 8 },
-  challengeContent: { flex: 1, paddingRight: 20 },
-  challengeTitle: { fontSize: 15, fontWeight: "600" },
-  challengeSubtitle: { fontSize: 12, marginTop: 2 },
-  daysLeft: { fontSize: 12, marginLeft: 8 },
+  challengeContent: { flex: 1, addingRight: 20 },
+  challengeTitle: { fontSize: 18, fontWeight: "600" },
+  challengeSubtitle: { fontSize: 15, marginTop: 2, opacity: 0.8, width: 240 },
+  daysLeft: { fontSize: 14, marginLeft: 8 },
   progressBarBg: {
     backgroundColor: "rgba(255,255,255,0.3)",
     height: 6,
@@ -387,7 +344,7 @@ const styles = StyleSheet.create({
   },
   progressFill: { height: "100%" },
   rowFooter: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  progressText: { fontSize: 12 },
+  progressText: { fontSize: 15 },
   reward: { flexDirection: "row", alignItems: "center" },
-  rewardText: { fontSize: 12, marginLeft: 4 },
+  rewardText: { fontSize: 14, marginLeft: 4 },
 });

@@ -1,23 +1,24 @@
-import { IUser, IUserProgress } from "@/General-Interfaces/IUser";
+import { IUser, IUserWorkoutExercises } from "@/General-Interfaces/IUser";
 import { createContext } from "react";
 
 interface UserContextType {
     loadedUser: boolean
-    userProgress: IUserProgress,
+    userWorkoutExercises: IUserWorkoutExercises,
     activeUser: IUser | undefined
 }
 
 export const UserContext = createContext<UserContextType>({
     loadedUser: false,
-    userProgress: {
+    userWorkoutExercises: {
         user_id: "",
         weight: 0,
-        workoutExercise_id: "",
+        workout_id: "",
         exercise_id: "",
         createdAt: "",
         updatedAt: ""
     },
     activeUser: {
+        id: "",
         email: "",
         name: "",
         birth: "",

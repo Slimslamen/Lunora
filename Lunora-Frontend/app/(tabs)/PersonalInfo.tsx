@@ -3,20 +3,17 @@ import React, { useState, useContext } from "react";
 import {
   View,
   Text,
-  TextInput,
   TouchableOpacity,
   StyleSheet,
   ScrollView,
   StatusBar,
-  useColorScheme,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 
 export default function PersonalInfoScreen() {
-  const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
+  const { darkMode } = useContext(ThemeContext);  
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [fullName, setFullName] = useState("");
@@ -33,7 +30,6 @@ export default function PersonalInfoScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <ScrollView contentContainerStyle={styles.container}>
           <Text style={[styles.title, { color: colors.textPrimary }]}>Personal Information</Text>

@@ -9,6 +9,7 @@ const schema = a.schema({
       height: a.float(),
       weight: a.float(),
       obstacle: a.string(),
+      trainingMethod: a.string(),
       goal: a.string(),
       period: a.string(),
       birthControl: a.string(),
@@ -52,6 +53,7 @@ const schema = a.schema({
       workout_id: a.string().required(),
       workout: a.belongsTo("Workouts", "workout_id"),
       date: a.string(),
+      completed: a.boolean(),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
@@ -65,7 +67,6 @@ const schema = a.schema({
       workout: a.belongsTo("Workouts", "workout_id"),
       week: a.integer(),
       year: a.integer(),
-      dayOfWeek: a.integer(), // 1-7 (Monday=1, Sunday=7)
       scheduledDate: a.string(), // YYYY-MM-DD format for specific date
       createdAt: a.string(),
       updatedAt: a.string(),

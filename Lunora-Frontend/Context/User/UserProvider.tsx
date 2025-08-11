@@ -2,7 +2,7 @@ import React, { useState, ReactNode, useEffect } from "react";
 import { UserContext } from "./UserContext";
 import { Schema } from "../../../amplify/data/resource";
 import { generateClient } from "aws-amplify/api";
-import { IUser, IUserProgress } from "@/General-Interfaces/IUser";
+import { IUser, IUserWorkoutExercises } from "@/General-Interfaces/IUser";
 
 interface UserProviderProps {
   children: ReactNode;
@@ -12,10 +12,11 @@ const client = generateClient<Schema>();
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [loadedUser, setLoadedUser] = useState(false);
   const [activeUser, setactiveUser] = useState<IUser>()
-  const [userProgress, setuserProgress] = useState<IUserProgress>({
+  const [userWorkoutExercises, setUserWorkoutExercises] = useState<IUserWorkoutExercises>({
     user_id: "",
     weight: 0,
-    workoutExercise_id: "",
+    workout_id: "",
+    exercise_id: "", 
     createdAt: "",
     updatedAt: ""
   })
@@ -60,12 +61,12 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       if (fetchedUserWorkout) {
         const selectedUserWorkout = fetchedUserWorkout.find(u => u.user_id === "user_1")
         if (selectedUserWorkout) {
-          setuserProgress(selectedUserWorkout as IUserProgress)
+          setUserWorkoutExercises(selectedUserWorkout as IUserWorkoutExercises)
         }
       }
     };
 
     fetchUserWorkoutSpecifics();
   }, []);
-  return <UserContext.Provider value={{ loadedUser, userProgress, activeUser }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ loadedUser, userWorkoutExercises, activeUser }}>{children}</UserContext.Provider>;
 };

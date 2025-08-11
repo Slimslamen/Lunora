@@ -15,7 +15,7 @@
   },
   {
     "id": "challenge_1",
-    "name": "7-Day Core Burn",
+    "name": "Core Burn",
     "description": "A focused challenge to build core strength over a month.",
     "icon": "fire",
     "iconSet": "FontAwesome5",
@@ -30,7 +30,7 @@
   {
     "id": "challenge_2",
     "name": "Morning Yoga Challenge",
-    "description": "Start every day with 15 minutes of yoga to energize and align.",
+    "description": "Start every workout with 15 minutes of yoga to energize and align.",
     "icon": "sunrise",
     "iconSet": "Feather",
     "progress": 0,
@@ -40,34 +40,6 @@
     "completed": false,
     "coming": false,
     "exp": 250
-  },
-  {
-    "id": "challenge_3",
-    "name": "Legs of Steel",
-    "description": "Target and strengthen your legs with daily lower body workouts.",
-    "icon": "dumbbell",
-    "iconSet": "MaterialCommunityIcons",
-    "progress": 0,
-    "rewardIcon": "star",
-    "rewardSet": "Ionicons",
-    "active": true,
-    "completed": false,
-    "coming": false,
-    "exp": 300
-  },
-  {
-    "id": "challenge_4",
-    "name": "HIIT Week Blitz",
-    "description": "A high-intensity challenge to push your limits once a week.",
-    "icon": "bolt",
-    "iconSet": "FontAwesome5",
-    "progress": 0,
-    "rewardIcon": "star",
-    "rewardSet": "Ionicons",
-    "active": true,
-    "completed": false,
-    "coming": false,
-    "exp": 200
   },
   {
     "id": "challenge_5",
@@ -84,20 +56,6 @@
     "exp": 400
   },
   {
-    "id": "challenge_6",
-    "name": "10k Steps a Day",
-    "description": "Hit 10,000 steps daily to improve cardiovascular health and energy.",
-    "icon": "walk",
-    "iconSet": "Ionicons",
-    "progress": 0,
-    "rewardIcon": "star",
-    "rewardSet": "Ionicons",
-    "active": true,
-    "completed": false,
-    "coming": false,
-    "exp": 450
-  },
-  {
     "id": "challenge_7",
     "name": "21-Day Tone Up",
     "description": "8 weeks of toning workouts to sculpt and strengthen.",
@@ -109,12 +67,12 @@
     "active": true,
     "completed": false,
     "coming": false,
-    "exp": 500
+    "exp": 1000
   },
   {
     "id": "challenge_8",
     "name": "Flexibility Boost",
-    "description": "Stretch deeper and improve your range of motion every day.",
+    "description": "Stretch deeper and improve your range of motion every workout for a week.",
     "icon": "yoga",
     "iconSet": "MaterialCommunityIcons",
     "progress": 0,
@@ -128,7 +86,7 @@
   {
     "id": "challenge_9",
     "name": "Mindful Movement",
-    "description": "Connect body and mind through daily mindful movement.",
+    "description": "Connect body and mind through mindful movement.",
     "icon": "brain",
     "iconSet": "FontAwesome5",
     "progress": 0,
@@ -143,6 +101,7 @@
     "id": "challenge_10",
     "name": "Upper Body Shred",
     "description": "Sculpt your arms, chest, and back with targeted routines.",
+    "long-description": "Do a split workout that is focused on upperbody",
     "icon": "arm-flex",
     "iconSet": "MaterialCommunityIcons",
     "progress": 0,
@@ -152,20 +111,6 @@
     "completed": false,
     "coming": false,
     "exp": 300
-  },
-  {
-    "id": "challenge_11",
-    "name": "Cardio Kickstart",
-    "description": "Jumpstart your cardio routine with fast-paced daily workouts.",
-    "icon": "heart",
-    "iconSet": "Ionicons",
-    "progress": 0,
-    "rewardIcon": "star",
-    "rewardSet": "Ionicons",
-    "active": true,
-    "completed": false,
-    "coming": false,
-    "exp": 200
   },
   {
     "id": "challenge_12",
@@ -184,7 +129,7 @@
   {
     "id": "challenge_13",
     "name": "Strength Starter",
-    "description": "Foundational strength-building for beginners.",
+    "description": "First workout completed",
     "icon": "dumbbell",
     "iconSet": "MaterialCommunityIcons",
     "progress": 0,

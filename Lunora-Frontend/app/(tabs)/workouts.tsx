@@ -8,7 +8,6 @@ import {
   ScrollView,
   TouchableOpacity,
   StatusBar,
-  useColorScheme,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
@@ -20,17 +19,22 @@ import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { Schema } from "../../../amplify/data/resource";
 import { generateClient } from "aws-amplify/api";
 import { IWorkout } from "@/General-Interfaces/IWorkout";
-import { Link, useRouter } from "expo-router";
+import { Link } from "expo-router";
 
 const client = generateClient<Schema>();
 
-const TAGS = ["All", "Active Rest", "Full Body", "Split", "High", "Moderate", "Low", "Menstrual", "Luteal", "Ovulatory", "Follicular"];
+const TAGS = ["All", "Menstrual", "Follicular", "Ovulatory", "Luteal"];
+
+const PHASE_DESCRIPTIONS: Record<string, string> = {
+  Menstrual: "The Menstrual phase is when your period starts. Focus on gentle movement and recovery.",
+  Luteal: "The Luteal phase is after ovulation. Energy may decrease, so listen to your body.",
+  Ovulatory: "The Ovulatory phase is when energy peaks. Great time for intense workouts.",
+  Follicular: "The Follicular phase is after your period. Energy rises, ideal for building strength.",
+};
 
 export default function WorkoutsScreen() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
-
-  const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   const [search, setSearch] = useState("");
@@ -87,7 +91,6 @@ export default function WorkoutsScreen() {
   const filteredWorkouts = activeTag === "All" ? workouts : filtered
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === "light" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.gradient}>
         <ScrollView contentContainerStyle={styles.container}>
           {/* Header */}
@@ -124,6 +127,15 @@ export default function WorkoutsScreen() {
               </TouchableOpacity>
             ))}
           </ScrollView>
+
+            {/* Phase Description Box */}
+          {activeTag !== "All" && PHASE_DESCRIPTIONS[activeTag] && (
+            <View style={[styles.phaseBox, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+              <Text style={[styles.phaseText, { color: colors.textPrimary }]}>
+                {PHASE_DESCRIPTIONS[activeTag]}
+              </Text>
+            </View>
+          )}
 
           {/* Workout List */}
           <ScrollView style={styles.list}>
@@ -190,8 +202,8 @@ export default function WorkoutsScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, paddingTop: 60, paddingHorizontal: 16, paddingBottom: 20 },
   gradient: { flex: 1 },
-  headerTitle: { fontSize: 22, fontWeight: "700", textAlign: "center" },
-  headerSubtitle: { fontSize: 14, textAlign: "center", marginBottom: 16 },
+  headerTitle: { fontSize: 24, fontWeight: "700", textAlign: "center" },
+  headerSubtitle: { fontSize: 16, textAlign: "center", marginBottom: 16 },
   searchBox: {
     flexDirection: "row",
     alignItems: "center",
@@ -210,8 +222,18 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginRight: 8,
   },
-  tagText: { fontSize: 12 },
-
+  tagText: { fontSize: 16 },
+  phaseBox: {
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 12,
+    marginTop: 4,
+  },
+  phaseText: {
+    fontSize: 18,
+    textAlign: "center",
+  },
   list: { flex: 1, marginBottom: 60 },
   card: {
     borderWidth: 1,
@@ -220,11 +242,11 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   itemRow: { flexDirection: 'row', alignItems: 'center' },
-  itemTitle: { fontSize: 17, fontWeight: '600', marginBottom: 10 },
+  itemTitle: { fontSize: 18, fontWeight: '600', marginBottom: 10 },
   itemMeta: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingRight: 30 }, 
   item: { flexDirection:'row', alignItems: 'center' },
-  metaText: { fontSize: 13, marginHorizontal: 4 },
-  levelText: { fontSize: 14, fontWeight: "600", marginLeft: 4, textAlign:'center' },
+  metaText: { fontSize: 15, marginHorizontal: 4 },
+  levelText: { fontSize: 15, fontWeight: "600", marginLeft: 4, textAlign:'center' },
   tagLabel: {
     alignSelf: "flex-start",
     borderWidth: 1,
@@ -239,7 +261,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 10,
   },
-  tagLabelText: { fontSize: 12 },
+  tagLabelText: { fontSize: 14 },
   startButton: {
     backgroundColor: "#fff",
     paddingVertical: 6,

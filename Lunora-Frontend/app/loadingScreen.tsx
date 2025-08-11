@@ -6,7 +6,6 @@ import {
   StyleSheet,
   StatusBar,
   Animated,
-  useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
@@ -21,7 +20,6 @@ export default function LoadingScreen() {
   const UContext = useContext(UserContext);
   const { loadedUser } = UContext;
 
-  const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
@@ -63,9 +61,6 @@ export default function LoadingScreen() {
   
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}

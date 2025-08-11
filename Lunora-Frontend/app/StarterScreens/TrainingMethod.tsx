@@ -1,37 +1,32 @@
-// GoalBarrierScreen.tsx
+// EnergyLevelScreen.tsx
 import React, { useState, useContext } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
-import { ReturnButton } from '../../../components/Return'
+import { ReturnButton } from '../../components/Return'
 
-const reasons = [
-  {
-    key: "insufficient_knowledge",
-    label: "Insufficient knowledge",
-    icon: (props: any) => <Ionicons name="book-outline" {...props} />,
-  },
-  {
-    key: "lack_of_time",
-    label: "Lack of time",
-    icon: (props: any) => <Ionicons name="time-outline" {...props} />,
-  },
-  {
-    key: "inconsistent_motivation",
-    label: "Inconsistent motivation",
-    icon: (props: any) => <Ionicons name="trending-down-outline" {...props} />,
-  },
-  {
-    key: "physical_constraints",
-    label: "Physical constraints",
-    icon: (props: any) => <Ionicons name="bandage-outline" {...props} />,
-  },
+const levels = [
+    {
+        key: "Home",
+        label: "Home Workout",
+        icon: (props: any) => <Ionicons name="home-outline" {...props} />,
+    },
+    {
+        key: "Gym",
+        label: "Gym Workout",
+        icon: (props: any) => <Ionicons name="barbell-outline" {...props} />,
+    },
+    {
+        key: "Combination",
+        label: "I train both at home and at the gym",
+        icon: (props: any) => <Ionicons name="swap-horizontal-outline" {...props} />,
+    },
 ];
 
-export default function GoalBarrierScreen() {
+export default function TrainingMethodScreen() {
   const { darkMode } = useContext(ThemeContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
@@ -40,9 +35,8 @@ export default function GoalBarrierScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    router.push("../TrainingMethod");
+    router.push("./UserFacts/Goal");
   };
-
   return (
     <View style={styles.safe}>
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
@@ -50,32 +44,32 @@ export default function GoalBarrierScreen() {
           <ReturnButton />
         </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>What’s been holding you back?</Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select the primary reason</Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>How do you like to train?</Text>
+          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select the training method that fits you best</Text>
 
-          {reasons.map(({ key, label, icon: Icon }) => {
-            const isSelected = selected === key;
+          {levels.map(({ key, label, icon: Icon }) => {
+            const isActive = selected === key;
             return (
               <TouchableOpacity
                 key={key}
                 style={[
                   styles.card,
                   {
-                    backgroundColor: isSelected ? colors.accent : colors.cardBg,
-                    borderColor: isSelected ? colors.accent : colors.cardBorder,
+                    backgroundColor: isActive ? colors.accent : colors.cardBg,
+                    borderColor: isActive ? colors.accent : colors.cardBorder,
                   },
                 ]}
                 onPress={() => setSelected(key)}
                 activeOpacity={0.8}
               >
                 <View style={styles.iconWrapper}>
-                  <Icon size={24} color={isSelected ? colors.textPrimary : colors.textSecondary} />
+                  <Icon size={24} color={isActive ? colors.textPrimary : colors.textSecondary} />
                 </View>
                 <Text
                   style={[
                     styles.cardText,
                     {
-                      color: isSelected ? colors.textPrimary : colors.textSecondary,
+                      color: isActive ? colors.textPrimary : colors.textSecondary,
                     },
                   ]}
                 >
@@ -84,8 +78,8 @@ export default function GoalBarrierScreen() {
               </TouchableOpacity>
             );
           })}
-
           <TouchableOpacity
+            onPress={handleContinue}
             style={[
               styles.button,
               {
@@ -94,17 +88,9 @@ export default function GoalBarrierScreen() {
               },
               !selected && styles.buttonDisabled,
             ]}
-            onPress={handleContinue}
             disabled={!selected}
           >
-            <Text
-              style={[
-                styles.buttonText,
-                {
-                  color: selected ? colors.textPrimary : colors.textSecondary,
-                },
-              ]}
-            >
+            <Text style={[styles.buttonText, { color: selected ? colors.textPrimary : colors.textSecondary }]}>
               Continue
             </Text>
           </TouchableOpacity>

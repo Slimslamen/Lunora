@@ -1,8 +1,8 @@
 // WorkoutFrequencyScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ReturnButton } from '../../components/Return'
@@ -27,7 +27,7 @@ const options = [
 
 export default function WorkoutFrequencyScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
+
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [selected, setSelected] = useState<string | null>(null);
@@ -40,7 +40,6 @@ export default function WorkoutFrequencyScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

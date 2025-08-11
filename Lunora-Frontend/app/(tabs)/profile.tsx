@@ -6,8 +6,6 @@ import {
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  StatusBar,
-  useColorScheme,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
@@ -15,26 +13,6 @@ import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { UserContext } from "@/Context/User/UserContext";
 
-const metrics = [
-  {
-    key: "workouts",
-    icon: <Ionicons name="bar-chart" size={24} />,
-    value: "47",
-    label: "Workouts Completed",
-  },
-  {
-    key: "days",
-    icon: <Ionicons name="calendar-outline" size={24} />,
-    value: "23",
-    label: "Days As A Member",
-  },
-  {
-    key: "streak",
-    icon: <FontAwesome5 name="fire" size={24} />,
-    value: "7",
-    label: "Current Streak",
-  },
-];
 
 const achievements = [
   {
@@ -105,12 +83,10 @@ export default function ProfileDetailedScreen() {
   const UContext = useContext(UserContext);
   const { activeUser } = UContext;
 
-  const scheme = useColorScheme();
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "light" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.gradient}>
         <ScrollView style={{ marginBottom: 20 }} contentContainerStyle={styles.container}>
           {/* Header */}
@@ -132,20 +108,6 @@ export default function ProfileDetailedScreen() {
                 </TouchableOpacity>
               </View>
             </View>
-          </View>
-
-          {/* Metrics */}
-          <View style={[styles.metricsRow, styles.row]}>
-            {metrics.map((m) => (
-              <View
-                key={m.key}
-                style={[styles.metricCard, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}
-              >
-                {React.cloneElement(m.icon, { color: colors.textPrimary })}
-                <Text style={[styles.metricValue, { color: colors.textPrimary }]}>{m.value}</Text>
-                <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>{m.label}</Text>
-              </View>
-            ))}
           </View>
 
           {/* Achievements */}
@@ -183,7 +145,7 @@ export default function ProfileDetailedScreen() {
 
           {/* This Week's Activity */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
-            <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>This Weeks Activity</Text>
+            <Text style={[styles.sectionHeader, { color: colors.textPrimary, textAlign: 'center' }]}>This Weeks Activity</Text>
             <Text style={[styles.keepGoing, { color: colors.textSecondary }]}>Keep up the great work! 🎉</Text>
             <View style={[styles.row, { justifyContent: "space-between" }]}>
               {daysOfWeek.map((d) => (
@@ -203,12 +165,12 @@ const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
   container: { padding: 16, paddingTop: 60, paddingBottom: 60 },
-  title: { fontSize: 22, fontWeight: "700", textAlign: "center" },
-  headerSubtitle: { fontSize: 14, textAlign: "center", marginBottom: 20 },
+  title: { fontSize: 24, fontWeight: "700", textAlign: "center" },
+  headerSubtitle: { fontSize: 16, textAlign: "center", marginBottom: 20 },
   card: {
     borderRadius: 12,
     borderWidth: 1,
-    padding: 30,
+    padding: 15,
     marginBottom: 16,
   },
   center: { alignItems: "center" },
@@ -229,8 +191,8 @@ const styles = StyleSheet.create({
     padding: 4,
     borderRadius: 12,
   },
-  name: { fontSize: 20, fontWeight: "600" },
-  subtitle: { fontSize: 14, marginBottom: 12 },
+  name: { fontSize: 24, fontWeight: "600" },
+  subtitle: { fontSize: 16, marginBottom: 12 },
   buttonRow: { flexDirection: "row", gap: 12 },
   button: {
     borderWidth: 1,
@@ -238,9 +200,8 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 12,
   },
-  buttonText: { fontSize: 14, fontWeight: "500" },
-  row: { flexDirection: "row", alignItems: "center" },
-  metricsRow: { justifyContent: "space-between", marginBottom: 16 },
+  buttonText: { fontSize: 16, fontWeight: "500" },
+  row: { flexDirection: "row", alignItems: "center" },  
   metricCard: {
     flex: 1,
     alignItems: "center",
@@ -251,9 +212,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
     borderWidth: 1,
   },
-  metricValue: { fontSize: 20, fontWeight: "700", marginTop: 6 },
-  metricLabel: { fontSize: 12, marginTop: 2, textAlign: "center", width: 70 },
-  sectionHeader: { fontSize: 16, fontWeight: "600", marginBottom: 12 },
+  sectionHeader: { fontSize: 20, fontWeight: "600", marginBottom: 12 },
   achCol: { width: "33%", alignItems: "center", marginBottom: 16 },
   achCircle: {
     width: 56,
@@ -263,7 +222,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: 6,
   },
-  achText: { fontSize: 12, textAlign: "center" },
+  achText: { fontSize: 14, textAlign: "center" },
   recordRow: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -271,9 +230,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "rgba(255,255,255,0.3)",
   },
-  recordTitle: { fontSize: 14, fontWeight: "600" },
-  recordSubtitle: { fontSize: 12, marginTop: 2 },
-  recordValue: { fontSize: 14, fontWeight: "600" },
-  keepGoing: { textAlign: "center", fontSize: 12, marginBottom: 12 },
-  dayLabel: { fontSize: 14 },
+  recordTitle: { fontSize: 16, fontWeight: "600" },
+  recordSubtitle: { fontSize: 14, marginTop: 2 },
+  recordValue: { fontSize: 16, fontWeight: "600" },
+  keepGoing: { textAlign: "center", fontSize: 14, marginBottom: 12 },
+  dayLabel: { fontSize: 16 },
 });

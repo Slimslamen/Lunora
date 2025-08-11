@@ -1,38 +1,51 @@
-// ProgressOverviewScreen.tsx
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, StyleSheet, ScrollView, StatusBar, useColorScheme, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ScrollView, StatusBar, TouchableOpacity, Alert } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import Feather from "@expo/vector-icons/Feather";
 import { Schema } from "../../../amplify/data/resource";
 import { generateClient } from "aws-amplify/api";
-import { IUser } from "@/General-Interfaces/IUser";
+import { IUser, IWeeklyUserWorkouts } from "@/General-Interfaces/IUser";
+import { IWorkout } from "@/General-Interfaces/IWorkout";
+import { isSameDay, parseISO } from "date-fns";
+import { UserContext } from "@/Context/User/UserContext";
 
 const client = generateClient<Schema>();
+
+const metrics = [
+  {
+    key: "workouts",
+    icon: <Ionicons name="bar-chart" size={24} />,
+    value: "47",
+    label: "Workouts Completed",
+  },
+  {
+    key: "days",
+    icon: <Ionicons name="calendar-outline" size={24} />,
+    value: "23",
+    label: "Days As A Member",
+  },
+];
 
 export default function ProgressOverviewScreen() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
 
-  const scheme = useColorScheme();
+  const UContext = useContext(UserContext);
+  const { activeUser } = UContext;
+
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
-  const [appUser, setappUsers] = useState<IUser>()
-  const [loaded, setloaded] = useState(false)
+  const [appUser, setappUsers] = useState<IUser>();
+  const [weeklyWorkouts, setWeeklyWorkouts] = useState<IWeeklyUserWorkouts[]>();
+  const [workouts, setWorkouts] = useState<IWorkout[]>([]);
 
-  
   const router = useRouter();
-  const navigateToWorkout = () => {
-    router.push("./DetailedWorkout");
-  };
-  const navigateToWorkouts = () => {
-    router.push("./workouts");
-  };
 
-
+  // Fetch user
   useEffect(() => {
     const fetchUser = async () => {
       const { data: Users, errors } = await client.models.Users.list({});
@@ -41,7 +54,7 @@ export default function ProgressOverviewScreen() {
         return;
       }
       if (Array.isArray(Users)) {
-        const jimmyUser = Users.find(u => u.name === 'Jimmy');
+        const jimmyUser = Users.find((u) => u.name === "Jimmy");
         if (jimmyUser) {
           setappUsers(jimmyUser as IUser);
         }
@@ -49,6 +62,72 @@ export default function ProgressOverviewScreen() {
     };
     fetchUser();
   }, []);
+
+  // Fetch weekly workouts for the user
+  useEffect(() => {
+    const fetchWeeklyWorkouts = async () => {
+      if (!appUser) return;
+      const { data, errors } = await client.models.WeeklyUserWorkouts.list({
+        filter: {
+          user_id: { eq: activeUser?.id || "user_1" },
+        },
+      });
+      if (errors) {
+        console.error(errors);
+        return;
+      }
+      if (data) {
+        setWeeklyWorkouts(data as IWeeklyUserWorkouts[]);
+      }
+    };
+    fetchWeeklyWorkouts();
+  }, [appUser]);
+
+  // Fetch all workouts
+  useEffect(() => {
+    const fetchWorkouts = async () => {
+      const { data, errors } = await client.models.Workouts.list({});
+      if (errors) {
+        console.error(errors);
+        return;
+      }
+      if (data) {
+        setWorkouts(data as unknown as IWorkout[]);
+      }
+    };
+    fetchWorkouts();
+  }, []);
+
+  // Find today's workout for the user
+const getTodaysWorkoutId = () => {
+  if (!weeklyWorkouts) return null;
+  const today = new Date();
+  
+  // Find workout that matches today's date
+  const todayWorkout = weeklyWorkouts.find((w) => {
+    // Assuming your workout has a 'date' field
+    const workoutDate = typeof w.scheduledDate === 'string' ? parseISO(w.scheduledDate) : new Date(w.scheduledDate);
+    return isSameDay(workoutDate, today);
+  });
+  
+  return todayWorkout?.workout_id || null;
+};
+
+  const navigateToWorkout = () => {
+    const workoutId = getTodaysWorkoutId();
+    if (workoutId) {
+      router.push({
+        pathname: "./DetailedWorkout",
+        params: { viewWorkout: "True", specific_id: workoutId },
+      });
+    } else {
+      Alert.alert("No workout scheduled for today!");
+    }
+  };
+
+  const navigateToWorkouts = () => {
+    router.push("./workouts");
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -84,37 +163,18 @@ export default function ProgressOverviewScreen() {
             </View>
           </View>
 
-          {/* Streak & This Month */}
-          <View style={[styles.row, styles.metricRow]}>
-            <View
-              style={[
-                styles.metricCard,
-                {
-                  backgroundColor: colors.cardBg,
-                  borderColor: colors.cardBorder,
-                },
-              ]}
-            >
-              <Ionicons name="flame" size={18} color={colors.textSecondary} />
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>Streak</Text>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>7</Text>
-            </View>
-
-            <View
-              style={[
-                styles.metricCard,
-                {
-                  backgroundColor: colors.cardBg,
-                  borderColor: colors.cardBorder,
-                },
-              ]}
-            >
-              <Ionicons name="calendar" size={18} color={colors.textSecondary} />
-              <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>This Month</Text>
-              <Text style={[styles.metricValue, { color: colors.textPrimary }]}>12</Text>
-            </View>
+          <View style={[styles.metricsRow, styles.row]}>
+            {metrics.map((m) => (
+              <View
+                key={m.key}
+                style={[styles.metricCard, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}
+              >
+                {React.cloneElement(m.icon, { color: colors.textPrimary })}
+                <Text style={[styles.metricValue, { color: colors.textPrimary }]}>{m.value}</Text>
+                <Text style={[styles.metricLabel, { color: colors.textSecondary }]}>{m.label}</Text>
+              </View>
+            ))}
           </View>
-
           {/* Recent Activity */}
           <View
             style={[
@@ -157,7 +217,7 @@ export default function ProgressOverviewScreen() {
           >
             <Text style={[styles.cardTitle, { color: colors.textPrimary }]}>Quick Start</Text>
             <View>
-              <View style={[styles.row, styles.quickRow, { paddingVertical: 10 }]}>
+              <View style={[styles.row, styles.quickRow]}>
                 <TouchableOpacity onPress={navigateToWorkout} style={styles.quickButton}>
                   <Text style={[styles.quickText, { color: colors.textPrimary }]}>Start Todays Workout</Text>
                 </TouchableOpacity>
@@ -176,8 +236,8 @@ export default function ProgressOverviewScreen() {
 const styles = StyleSheet.create({
   safe: { flex: 1 },
   container: { padding: 16, paddingTop: 60 },
-  title: { fontSize: 22, fontWeight: "700", textAlign: "center" },
-  subtitle: { fontSize: 14, textAlign: "center", marginBottom: 20 },
+  title: { fontSize: 24, fontWeight: "700", textAlign: "center" },
+  subtitle: { fontSize: 16, textAlign: "center", marginBottom: 20 },
   card: {
     borderRadius: 12,
     padding: 16,
@@ -190,7 +250,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 12,
   },
-  cardTitle: { fontSize: 16, fontWeight: "600" },
+  cardTitle: { fontSize: 20, fontWeight: "600" },
 
   progressBarBg: {
     backgroundColor: "rgba(255,255,255,0.3)",
@@ -200,8 +260,9 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   progressBarFill: { height: "100%", width: "60%" },
+  metricsRow: { justifyContent: "space-between", marginBottom: 16 },
   row: { flexDirection: "row", justifyContent: "space-between" },
-  subtext: { fontSize: 12 },
+  subtext: { fontSize: 14 },
   metricRow: { marginBottom: 16 },
   metricCard: {
     flex: 1,
@@ -211,7 +272,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginRight: 8,
   },
-  metricLabel: { fontSize: 13, marginTop: 4 },
+  metricLabel: { fontSize: 15, marginTop: 4 },
   metricValue: { fontSize: 20, fontWeight: "700", marginTop: 2 },
 
   activityItem: {
@@ -221,17 +282,17 @@ const styles = StyleSheet.create({
     borderBottomColor: "rgba(255,255,255,0.3)",
     borderBottomWidth: 1,
   },
-  activityName: { fontSize: 15, fontWeight: "600" },
-  activityWhen: { fontSize: 12, marginTop: 2 },
-  activityDuration: { fontSize: 13, fontWeight: "600" },
+  activityName: { fontSize: 16, fontWeight: "600" },
+  activityWhen: { fontSize: 14, marginTop: 2 },
+  activityDuration: { fontSize: 14, fontWeight: "600" },
   quickRow: { marginTop: 12 },
   quickButton: {
     borderColor: "#f5e6e6",
     borderWidth: 2,
     paddingVertical: 14,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
     borderRadius: 14,
     alignItems: "center",
   },
-  quickText: { fontSize: 14, fontWeight: "600" },
+  quickText: { fontSize: 15, fontWeight: "600" },
 });

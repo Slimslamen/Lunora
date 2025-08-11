@@ -7,19 +7,18 @@ import {
   TouchableOpacity,
   StyleSheet,
   StatusBar,
-  useColorScheme,
   KeyboardAvoidingView,
   Platform,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ReturnButton } from '../../components/Return'
 
 export default function ReferralScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
+
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [referrerEmail, setReferrerEmail] = useState("");
@@ -32,7 +31,6 @@ export default function ReferralScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

@@ -9,7 +9,6 @@ import {
   Modal,
   Pressable,
   StatusBar,
-  useColorScheme,
   TextInput,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
@@ -22,20 +21,21 @@ import outputs from "../../assets/amplify_outputs.json";
 import { generateClient } from "aws-amplify/api";
 import { IExercise, IWorkout, IWorkoutExercises } from "@/General-Interfaces/IWorkout";
 import { UserContext } from "@/Context/User/UserContext";
-import { useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 
 const client = generateClient<Schema>();
 
 Amplify.configure(outputs);
 
 export default function WorkoutDetailScreen() {
-
-   const { specific_id, viewWorkout } = useLocalSearchParams();
-   const workoutId = Array.isArray(specific_id) ? specific_id[0] : specific_id;
+  const { specific_id, viewWorkout, paramWorkoutId } = useLocalSearchParams();
+const workoutId =
+    Array.isArray(paramWorkoutId) ? paramWorkoutId[0] :
+    Array.isArray(specific_id) ? specific_id[0] :
+    paramWorkoutId || specific_id;
   const TContext = useContext(UserContext);
-  const { userProgress } = TContext;
+  const { userWorkoutExercises } = TContext;
 
-  const scheme = useColorScheme();
   const { darkMode } = useContext(ThemeContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
@@ -44,22 +44,20 @@ export default function WorkoutDetailScreen() {
   const [selectedWorkout, setselectedWorkout] = useState<IWorkout>();
 
   const [performedExercises, setperformedExercises] = useState<IExercise[]>();
-  const [exerciseDescription, setexerciseDescription] = useState<string>("")
+  const [exerciseDescription, setexerciseDescription] = useState<string>("");
 
   const [specificWorkoutExercise, setspecificWorkoutExercise] = useState<IWorkoutExercises | null>();
   const [selectedExercises, setselectedExercises] = useState<IWorkoutExercises[] | null>();
 
   const openModal = (ex: IWorkoutExercises) => {
     setspecificWorkoutExercise(ex);
-    const exDesc = performedExercises?.find(e => e.exercise_id === ex.exercise_id)
-    if(exDesc)
-    setexerciseDescription(exDesc.description)
-    
+    const exDesc = performedExercises?.find((e) => e.exercise_id === ex.exercise_id);
+    if (exDesc) setexerciseDescription(exDesc.description);
   };
 
   useEffect(() => {
     const fetchWorkout = async () => {
-      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: "workout_001" });
+      const { data: fetchedWorkouts, errors } = await client.models.Workouts.get({ id: workoutId });
       if (errors) {
         console.error(errors);
         return;
@@ -158,7 +156,6 @@ export default function WorkoutDetailScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         {/* Header */}
 
@@ -172,11 +169,15 @@ export default function WorkoutDetailScreen() {
             <View style={styles.infoRow}>
               <View style={styles.infoItem}>
                 <Ionicons name="time-outline" size={16} color={colors.textSecondary} />
-                <Text style={[styles.infoText, { color: colors.textSecondary, width: 50 }]}>{selectedWorkout?.duration} min</Text>
+                <Text style={[styles.infoText, { color: colors.textSecondary, width: 50 }]}>
+                  {selectedWorkout?.duration} min
+                </Text>
               </View>
               <View style={styles.infoItem}>
                 <Ionicons name="flash-outline" size={16} color={colors.textSecondary} />
-                <Text style={[styles.infoText, { color: colors.textSecondary, width: 90 }]}>{selectedWorkout?.calories} cal</Text>
+                <Text style={[styles.infoText, { color: colors.textSecondary, width: 90 }]}>
+                  {selectedWorkout?.calories} cal
+                </Text>
               </View>
               <Text
                 style={[
@@ -188,8 +189,8 @@ export default function WorkoutDetailScreen() {
                         : selectedWorkout?.intensity === "Low"
                           ? "#ffb300ff"
                           : "#e03131ff",
-                      width: 80,
-                      textAlign:'center'
+                    width: 80,
+                    textAlign: "center",
                   },
                 ]}
               >
@@ -224,7 +225,10 @@ export default function WorkoutDetailScreen() {
                         {" "}
                         {ex.reps === "undefined" ? ex.time : ex.reps}
                       </Text>
-                      <Text style={[styles.metaText, { color: colors.textPrimary }]}> {userProgress.weight} kg</Text>
+                      <Text style={[styles.metaText, { color: colors.textPrimary }]}>
+                        {" "}
+                        {userWorkoutExercises.weight} kg
+                      </Text>
                     </View>
                   </View>
                   <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
@@ -235,21 +239,22 @@ export default function WorkoutDetailScreen() {
           {/* Spacer for button */}
           <View />
           {viewWorkout === "False" ? (
-              <View style={{ marginTop: 20 }}>
+            <View style={{ marginTop: 20 }}>
               <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
                 <Ionicons name="play" size={20} color={colors.textPrimary} />
                 <Text style={[styles.startText, { color: colors.textPrimary }]}>Add To Weekly Program</Text>
               </TouchableOpacity>
             </View>
           ) : (
-            <View style={{ marginTop: 20 }}>
-              <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
-                <Ionicons name="play" size={20} color={colors.textPrimary} />
-                <Text style={[styles.startText, { color: colors.textPrimary }]}>Start Workout</Text>
-              </TouchableOpacity>
-            </View>
-          )
-          }
+            <Link asChild href={"./progress"}>
+              <View style={{ marginTop: 20 }}>
+                <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
+                  <Ionicons name="play" size={20} color={colors.textPrimary} />
+                  <Text style={[styles.startText, { color: colors.textPrimary }]}>Finish Workout</Text>
+                </TouchableOpacity>
+              </View>
+            </Link>
+          )}
         </ScrollView>
 
         {/* Exercise Detail Modal */}
@@ -274,13 +279,17 @@ export default function WorkoutDetailScreen() {
                       {specificWorkoutExercise?.sets} sets
                     </Text>
                     <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>
-                     {specificWorkoutExercise?.reps === "undefined" ? specificWorkoutExercise.time : specificWorkoutExercise?.reps}
+                      {specificWorkoutExercise?.reps === "undefined"
+                        ? specificWorkoutExercise.time
+                        : specificWorkoutExercise?.reps}
                     </Text>
                   </View>
-                  {userProgress?.weight != null && (
+                  {userWorkoutExercises?.weight != null && (
                     <View style={styles.weightDetail}>
                       <TouchableOpacity>
-                        <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>{userProgress?.weight} kg</Text>
+                        <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>
+                          {userWorkoutExercises?.weight} kg
+                        </Text>
                       </TouchableOpacity>
                       {isEditingWeight ? (
                         <View style={styles.weightRow}>

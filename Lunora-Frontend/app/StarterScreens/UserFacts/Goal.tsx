@@ -1,6 +1,6 @@
 // GoalSelectionScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
@@ -33,7 +33,6 @@ const goals = [
 
 export default function GoalSelectionScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
@@ -46,7 +45,6 @@ export default function GoalSelectionScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

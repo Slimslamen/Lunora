@@ -1,4 +1,5 @@
 export interface IUser {
+  id: string;
   email: string;
   name: string;
   birth: string;
@@ -22,10 +23,10 @@ export interface IUser {
   updatedAt: string;
 }
 
-export interface IUserProgress {
+export interface IUserWorkoutExercises {
   user_id: string;
   weight?: number;
-  workoutExercise_id: string;
+  workout_id: string;
   exercise_id: string;
   createdAt: string;
   updatedAt: string;
@@ -35,6 +36,7 @@ export interface IUserWorkoutLog {
   user_id: string;
   workout_id: string;
   date: string;
+  completed: boolean;
   createdAt: string;
   updatedAt: string;
 }
@@ -44,7 +46,6 @@ export interface IWeeklyUserWorkouts {
   workout_id: string;
   week: number;
   year: number;
-  dayOfWeek: number;
   scheduledDate: string;
   createdAt: string;
   updatedAt: string;

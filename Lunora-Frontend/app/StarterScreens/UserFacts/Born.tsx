@@ -1,6 +1,6 @@
 // AskBirthdayScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, useColorScheme, Platform } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, StatusBar, Platform } from "react-native";
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
@@ -10,7 +10,6 @@ import { ReturnButton } from '../../../components/Return'
 
 export default function AskBirthdayScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
@@ -30,7 +29,6 @@ export default function AskBirthdayScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

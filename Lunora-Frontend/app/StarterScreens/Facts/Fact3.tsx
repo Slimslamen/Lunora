@@ -7,22 +7,20 @@ import {
   StatusBar,
   Dimensions,
   Animated,
-  useColorScheme,
   TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
-import { Link, useRouter } from "expo-router";
+import { useRouter } from "expo-router";
 import { ReturnButton } from "../../../components/Return";
 
-const { width, height } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 const fact =
   "💧 Fun Fact: Your water needs rise ~300ml per day during your period — stay hydrated for peak performance!";
 
 export default function Fact3Screen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
@@ -60,7 +58,6 @@ export default function Fact3Screen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <TouchableOpacity style={{ top: -255, left: -155 }}>
           <ReturnButton />

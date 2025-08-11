@@ -174,23 +174,6 @@ export default function SettingsDetailedScreen() {
                 thumbColor={darkMode ? colors.accent : colors.textPrimary}
               />
             </View>
-            {/* <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
-              <Ionicons name="language-outline" size={18} color={colors.textSecondary} />
-              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
-                Language
-              </Text>
-              <Text style={[styles.rowValue, { color: colors.textSecondary }]}>
-                English
-              </Text>
-              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-            </TouchableOpacity> */}
-            {/* <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
-              <Ionicons name="options-outline" size={18} color={colors.textSecondary} />
-              <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
-                App Preferences
-              </Text>
-              <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
-            </TouchableOpacity> */}
           </View>
 
           {/* Support Section */}
@@ -279,8 +262,8 @@ const styles = StyleSheet.create({
   safe: { flex: 1 },
   gradient: { flex: 1 },
   container: { padding: 16, paddingTop: 60, paddingBottom: 80 },
-  title: { fontSize: 22, fontWeight: '700', textAlign: 'center' },
-  subtitle: { fontSize: 14, textAlign: 'center', marginBottom: 20 },
+  title: { fontSize: 24, fontWeight: '700', textAlign: 'center' },
+  subtitle: { fontSize: 16, textAlign: 'center', marginBottom: 20 },
   card: {
     borderRadius: 12,
     padding: 12,
@@ -306,19 +289,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   profileText: { flex: 1, marginLeft: 12 },
-  profileName: { fontSize: 16, fontWeight: '600' },
-  profileSubtitle: { fontSize: 12, marginTop: 2 },
-  sectionHeader: { fontSize: 14, fontWeight: '600', marginBottom: 12 },
+  profileName: { fontSize: 20, fontWeight: '600' },
+  profileSubtitle: { fontSize: 14, marginTop: 2 },
+  sectionHeader: { fontSize: 18, fontWeight: '600', marginBottom: 12 },
   rowItem: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 10,
   },
   iconWrapper: { width: 24, alignItems: 'center' },
-  rowLabel: { flex: 1, marginLeft: 12, fontSize: 15 },
-  rowValue: { fontSize: 13, marginRight: 6 },
+  rowLabel: { flex: 1, marginLeft: 12, fontSize: 17 },
   aboutBlock: { alignItems: 'center', marginVertical: 12 },
-  aboutTitle: { fontSize: 16, fontWeight: '600' },
-  aboutVersion: { fontSize: 12, marginVertical: 4 },
-  aboutText: { fontSize: 12, textAlign: 'center', lineHeight: 18 },
+  aboutTitle: { fontSize: 20, fontWeight: '600' },
+  aboutVersion: { fontSize: 14, marginVertical: 4 },
+  aboutText: { fontSize: 14, textAlign: 'center', lineHeight: 18 },
 })

@@ -1,6 +1,6 @@
 // FeaturesScreen.tsx
 import React, { useContext } from "react";
-import { View, Text, StyleSheet, ScrollView, StatusBar, useColorScheme, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
@@ -18,7 +18,6 @@ const features = [
 
 export default function FeaturesScreen() {
   const { darkMode } = useContext(ThemeContext);
-  const scheme = useColorScheme();
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
@@ -29,7 +28,6 @@ export default function FeaturesScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === "dark" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <View>
           <ReturnButton />

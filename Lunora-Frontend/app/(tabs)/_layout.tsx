@@ -22,46 +22,15 @@ export default function TabLayout() {
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
   const router = useRouter();
 
-  const [showFactBox, setShowFactBox] = useState(false);
-  const [cycleFacts, setcycleFacts] = useState<ICycleFact>()
-
   const ToSettings = () => {
     router.push("./settings");
   };
   const ToProfile = () => {
     router.push("./profile");
   };
-  const showFacts = () => {
-    setShowFactBox(true);
+  const ToAiChat = () => {
+    router.push("./aiChat");
   };
-
-  useEffect(() => {
-    const fetchCycleFacts = async () => {
-      const { data: fetchedCycleFacts, errors } = await client.models.PeriodFacts.list();
-      if (errors) {
-        console.error(errors);
-        return;
-      }
-
-      if (Array.isArray(fetchedCycleFacts)) {
-        const randomIndex = Math.floor(Math.random() * fetchedCycleFacts.length);
-        const randomFact = fetchedCycleFacts[randomIndex];
-
-        // Convert nullable properties to required strings for ICycleFact
-        const cycleFact: ICycleFact = {
-          ...randomFact,
-          fact: randomFact.fact || '',
-          phase: randomFact.phase || '',
-          createdAt: randomFact.createdAt || '',
-          updatedAt: randomFact.updatedAt || ''
-        };
-
-        setcycleFacts(cycleFact)
-      }
-    };
-
-    fetchCycleFacts();
-  }, [showFactBox]);
 
   return (
     <View style={{ flex: 1 }}>
@@ -85,30 +54,12 @@ export default function TabLayout() {
 
       <View style={[styles.Thirdoverlay, { backgroundColor: colors.textPrimary }]}>
         <TouchableOpacity
-          onPress={showFacts}
-          style={{ alignItems: "center", justifyContent: "center", display: "flex" }}
+          onPress={ToAiChat}
+          style={{ alignItems: "center", justifyContent: "center", display: "flex", textAlign: "center" }}
         >
-          <FontAwesome6 name="lightbulb" size={24} color={colors.accent} />
+          <Ionicons name="moon-sharp" size={22} color={colors.accent} />
         </TouchableOpacity>
       </View>
-
-      <Modal visible={!!showFactBox} transparent animationType="fade" onRequestClose={() => setShowFactBox(false)}>
-        <View style={styles.modalOverlay}>
-          <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.modalContent}>
-            <View style={styles.modalHeader}>
-              <Pressable onPress={() => setShowFactBox(false)}>
-                <Ionicons name="close" size={24} color={colors.textSecondary} />
-              </Pressable>
-            </View>
-            <View style={styles.modalMeta}>
-              <View style={styles.modalContainer}>
-                <Text style={[styles.modalTitle, { color: colors.textPrimary, textAlign: 'center', marginBottom: 5 }]}>{cycleFacts?.phase}</Text>
-                <Text style={[styles.modalText, { color: colors.textPrimary, textAlign: 'center' }]}>{cycleFacts?.fact}</Text>
-              </View>
-            </View>
-          </LinearGradient>
-        </View>
-      </Modal>
 
       {/* Tab navigator */}
       <Tabs
@@ -149,14 +100,6 @@ export default function TabLayout() {
         />
 
         <Tabs.Screen
-          name="aiChat"
-          options={{
-            title: "LunorAI",
-            tabBarIcon: ({ color }) => <Ionicons name="moon-sharp" size={22} color={color} />,
-          }}
-        />
-
-        <Tabs.Screen
           name="workouts"
           options={{
             title: "Workouts",
@@ -169,6 +112,15 @@ export default function TabLayout() {
           options={{
             title: "Challenges",
             tabBarIcon: ({ color }) => <FontAwesome6 name="trophy" size={22} color={color} />,
+          }}
+        />
+
+        <Tabs.Screen
+          name="aiChat"
+          options={{
+            href: null,
+            // title: "LunorAI",
+            // tabBarIcon: ({ color }) => <Ionicons name="moon-sharp" size={22} color={color} />,
           }}
         />
 
@@ -264,11 +216,11 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: "40%",
     paddingVertical: 10,
-    paddingHorizontal: 5,
-    right: 0,
+    paddingHorizontal: 10,
+    left: 0,
     zIndex: 100,
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
+    borderTopRightRadius: 10,
+    borderBottomRightRadius: 10,
   },
   modalOverlay: {
     flex: 1,
@@ -281,7 +233,7 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   modalHeader: {
-    position: 'absolute',
+    position: "absolute",
     top: 8,
     right: 8,
   },

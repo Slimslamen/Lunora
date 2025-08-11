@@ -5,12 +5,9 @@ import {
   Text,
   TextInput,
   FlatList,
-  TouchableOpacity,
   KeyboardAvoidingView,
   Platform,
   StyleSheet,
-  StatusBar,
-  useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
@@ -20,7 +17,6 @@ export default function AIChatScreen() {
   const TContext = useContext(ThemeContext)
   const { darkMode } = TContext
   
-  const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   const [messages, setMessages] = useState<Array<{ id: string; text: string; sender: 'user' | 'ai' }>>([])
@@ -71,7 +67,6 @@ export default function AIChatScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.container}

@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, StyleSheet, useColorScheme, StatusBar } from 'react-native'
+import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { LinearGradient } from 'expo-linear-gradient'
 import { LIGHT_COLORS, DARK_COLORS } from '@/constants/Colors'
@@ -6,14 +6,12 @@ import React, { useContext } from 'react'
 
 export default function PrivacyPolicyScreen() {
   const TContext = useContext(ThemeContext)
-  const { darkMode, toggleTheme } = TContext
+  const { darkMode } = TContext
 
-  const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

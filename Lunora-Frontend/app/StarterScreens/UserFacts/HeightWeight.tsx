@@ -1,6 +1,6 @@
 // AskBodyMetricsScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, Platform } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Picker } from "@react-native-picker/picker";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";

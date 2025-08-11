@@ -4,15 +4,13 @@ import {
   View,
   Text,
   StyleSheet,
-  StatusBar,
-  useColorScheme,
   TouchableOpacity,
   Animated,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { Link, useRouter } from 'expo-router'
+import { useRouter } from 'expo-router'
 import { Ionicons } from '@expo/vector-icons'
 
 const preparingItems = [
@@ -28,7 +26,6 @@ const ICON_SIZE = 18
 
 export default function PreparingScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
   const [percent, setPercent] = useState(0)
@@ -83,7 +80,6 @@ export default function PreparingScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}

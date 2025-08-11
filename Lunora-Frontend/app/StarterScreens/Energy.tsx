@@ -1,6 +1,6 @@
 // EnergyLevelScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";

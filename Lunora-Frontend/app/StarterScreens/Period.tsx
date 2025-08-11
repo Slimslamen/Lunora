@@ -1,6 +1,6 @@
 // LastPeriodScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, StyleSheet, StatusBar, Platform, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Platform, TouchableOpacity } from "react-native";
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";

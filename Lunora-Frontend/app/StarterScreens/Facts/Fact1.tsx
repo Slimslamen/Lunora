@@ -4,17 +4,15 @@ import {
   View,
   Text,
   StyleSheet,
-  StatusBar,
   Dimensions,
   Animated,
-  useColorScheme,
   TouchableWithoutFeedback,
   TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
-import { Link, useRouter } from 'expo-router'
+import { useRouter } from 'expo-router'
 import { ReturnButton } from '../../../components/Return'
 
 const { width, height } = Dimensions.get('window')
@@ -23,7 +21,6 @@ const fact =
 
 export default function MenstrualFactScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
     const router = useRouter();
@@ -53,9 +50,6 @@ export default function MenstrualFactScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}

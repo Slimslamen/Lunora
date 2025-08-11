@@ -6,7 +6,6 @@ import {
   TouchableOpacity,
   StyleSheet,
   ScrollView,
-  StatusBar,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";

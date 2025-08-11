@@ -4,7 +4,6 @@ import {
   View,
   Text,
   StyleSheet,
-  StatusBar,
   Animated,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'

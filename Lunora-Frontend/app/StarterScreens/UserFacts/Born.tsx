@@ -1,6 +1,6 @@
 // AskBirthdayScreen.tsx
 import React, { useState, useContext } from "react";
-import { View, Text, TouchableOpacity, StyleSheet, StatusBar, Platform } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Platform } from "react-native";
 import DateTimePicker, { DateTimePickerEvent } from "@react-native-community/datetimepicker";
 import { LinearGradient } from "expo-linear-gradient";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";

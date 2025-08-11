@@ -1051,7 +1051,7 @@
         "weight": 0
       },
       {
-        "exercise_id": "plank_with_shoulder_taps",
+        "exercise_id": "plank_shoulder_taps",
         "name": "Plank with Shoulder Taps",
         "sets": 3,
         "reps": "12 per side",
@@ -1397,10 +1397,7 @@
     "calories": "290-380",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Shoulders"
-    ],
+    "muscles": ["Legs", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "goblet_squats",
@@ -1455,10 +1452,7 @@
     "calories": "340-440",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "barbell_hip_thrusts",
@@ -1513,10 +1507,7 @@
     "calories": "300-400",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Chest"
-    ],
+    "muscles": ["Legs", "Chest"],
     "exercises": [
       {
         "exercise_id": "leg_press",
@@ -1564,10 +1555,7 @@
     "calories": "210-290",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Core"
-    ],
+    "muscles": ["Legs", "Core"],
     "exercises": [
       {
         "exercise_id": "banded_glute_bridges",
@@ -1615,10 +1603,7 @@
     "calories": "310-410",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "barbell_back_squats",
@@ -1673,11 +1658,7 @@
     "calories": "380-490",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Chest",
-      "Shoulders"
-    ],
+    "muscles": ["Legs", "Chest", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "bulgarian_split_squats",
@@ -1732,10 +1713,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Shoulders"
-    ],
+    "muscles": ["Legs", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "cable_pull_throughs",
@@ -1783,11 +1761,7 @@
     "calories": "300-390",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Biceps",
-      "Triceps"
-    ],
+    "muscles": ["Legs", "Biceps", "Triceps"],
     "exercises": [
       {
         "exercise_id": "leg_press",
@@ -1842,10 +1816,7 @@
     "calories": "350-460",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "conventional_deadlifts",
@@ -1900,10 +1871,7 @@
     "calories": "290-380",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Chest"
-    ],
+    "muscles": ["Legs", "Chest"],
     "exercises": [
       {
         "exercise_id": "dumbbell_romanian_deadlifts",
@@ -1951,10 +1919,7 @@
     "calories": "230-310",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "kettlebell_swing",
@@ -2001,10 +1966,7 @@
     "calories": "320-420",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "barbell_hip_thrusts",
@@ -2059,10 +2021,7 @@
     "calories": "360-470",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Chest"
-    ],
+    "muscles": ["Legs", "Chest"],
     "exercises": [
       {
         "exercise_id": "barbell_back_squats",
@@ -2117,10 +2076,7 @@
     "calories": "310-410",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Shoulders"
-    ],
+    "muscles": ["Legs", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "dumbbell_goblet_squat",
@@ -2168,11 +2124,7 @@
     "calories": "330-430",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back",
-      "Biceps"
-    ],
+    "muscles": ["Legs", "Back", "Biceps"],
     "exercises": [
       {
         "exercise_id": "romanian_deadlifts",
@@ -2227,11 +2179,7 @@
     "calories": "300-400",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Shoulders",
-      "Triceps"
-    ],
+    "muscles": ["Chest", "Shoulders", "Triceps"],
     "exercises": [
       {
         "exercise_id": "dumbbell_bench_press",
@@ -2286,10 +2234,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Biceps"
-    ],
+    "muscles": ["Back", "Biceps"],
     "exercises": [
       {
         "exercise_id": "bent_over_barbell_rows",
@@ -2337,9 +2282,7 @@
     "calories": "320-420",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "leg_press",
@@ -2387,9 +2330,7 @@
     "calories": "340-450",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "sumo_deadlifts",
@@ -2444,9 +2385,7 @@
     "calories": "350-450",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "barbell_front_squats",
@@ -2487,9 +2426,7 @@
     "calories": "180-250",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "banded_fire_hydrants",
@@ -2537,10 +2474,7 @@
     "calories": "290-390",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Back"
-    ],
+    "muscles": ["Legs", "Back"],
     "exercises": [
       {
         "exercise_id": "goblet_squats",
@@ -2588,10 +2522,7 @@
     "calories": "310-410",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Triceps"
-    ],
+    "muscles": ["Chest", "Triceps"],
     "exercises": [
       {
         "exercise_id": "barbell_bench_press",
@@ -2646,9 +2577,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "dumbbell_romanian_deadlifts",
@@ -2696,10 +2625,7 @@
     "calories": "270-360",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Shoulders"
-    ],
+    "muscles": ["Back", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "assisted_pull_up",
@@ -2747,9 +2673,7 @@
     "calories": "390-500",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "barbell_back_squats",
@@ -2804,10 +2728,7 @@
     "calories": "250-340",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Shoulders",
-      "Core"
-    ],
+    "muscles": ["Shoulders", "Core"],
     "exercises": [
       {
         "exercise_id": "dumbbell_overhead_press",
@@ -2855,9 +2776,7 @@
     "calories": "330-430",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Legs"
-    ],
+    "muscles": ["Legs"],
     "exercises": [
       {
         "exercise_id": "goblet_squats_superset_with_jump_rope",
@@ -2891,10 +2810,7 @@
     "calories": "200-280",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Legs",
-      "Chest"
-    ],
+    "muscles": ["Legs", "Chest"],
     "exercises": [
       {
         "exercise_id": "bodyweight_squats",
@@ -2942,10 +2858,7 @@
     "calories": "320-420",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Biceps"
-    ],
+    "muscles": ["Back", "Biceps"],
     "exercises": [
       {
         "exercise_id": "weighted_chin_ups",
@@ -3000,10 +2913,7 @@
     "calories": "170-240",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Core"
-    ],
+    "muscles": ["Back", "Core"],
     "exercises": [
       {
         "exercise_id": "resistance_band_pull_aparts",
@@ -3051,10 +2961,7 @@
     "calories": "270-360",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Biceps"
-    ],
+    "muscles": ["Back", "Biceps"],
     "exercises": [
       {
         "exercise_id": "lat_pulldowns",
@@ -3102,11 +3009,7 @@
     "calories": "330-430",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Shoulders",
-      "Triceps"
-    ],
+    "muscles": ["Chest", "Shoulders", "Triceps"],
     "exercises": [
       {
         "exercise_id": "barbell_bench_press",
@@ -3161,10 +3064,7 @@
     "calories": "290-380",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Shoulders"
-    ],
+    "muscles": ["Chest", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "dumbbell_bench_press",
@@ -3212,10 +3112,7 @@
     "calories": "240-320",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Biceps",
-      "Triceps"
-    ],
+    "muscles": ["Biceps", "Triceps"],
     "exercises": [
       {
         "exercise_id": "barbell_bicep_curls",
@@ -3263,10 +3160,7 @@
     "calories": "310-400",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Core"
-    ],
+    "muscles": ["Back", "Core"],
     "exercises": [
       {
         "exercise_id": "pull_ups_assisted_or_bodyweight",
@@ -3314,10 +3208,7 @@
     "calories": "260-350",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Back"
-    ],
+    "muscles": ["Chest", "Back"],
     "exercises": [
       {
         "exercise_id": "push_ups",
@@ -3365,10 +3256,7 @@
     "calories": "150-220",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Shoulders"
-    ],
+    "muscles": ["Chest", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "incline_push_ups",
@@ -3416,10 +3304,7 @@
     "calories": "300-390",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Back"
-    ],
+    "muscles": ["Chest", "Back"],
     "exercises": [
       {
         "exercise_id": "dumbbell_bench_press",
@@ -3467,9 +3352,7 @@
     "calories": "280-370",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Shoulders"
-    ],
+    "muscles": ["Shoulders"],
     "exercises": [
       {
         "exercise_id": "barbell_overhead_press",
@@ -3517,11 +3400,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Biceps",
-      "Triceps",
-      "Core"
-    ],
+    "muscles": ["Biceps", "Triceps", "Core"],
     "exercises": [
       {
         "exercise_id": "dumbbell_bicep_curls",
@@ -3569,10 +3448,7 @@
     "calories": "260-350",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Shoulders",
-      "Triceps"
-    ],
+    "muscles": ["Shoulders", "Triceps"],
     "exercises": [
       {
         "exercise_id": "seated_dumbbell_shoulder_press",
@@ -3620,10 +3496,7 @@
     "calories": "320-410",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Biceps"
-    ],
+    "muscles": ["Back", "Biceps"],
     "exercises": [
       {
         "exercise_id": "weighted_chin_ups",
@@ -3671,10 +3544,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Shoulders"
-    ],
+    "muscles": ["Back", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "lat_pulldowns",
@@ -3722,10 +3592,7 @@
     "calories": "140-200",
     "intensity": "Low",
     "type": "Split",
-    "muscles": [
-      "Core",
-      "Back"
-    ],
+    "muscles": ["Core", "Back"],
     "exercises": [
       {
         "exercise_id": "superman",
@@ -3773,10 +3640,7 @@
     "calories": "270-360",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Biceps"
-    ],
+    "muscles": ["Chest", "Biceps"],
     "exercises": [
       {
         "exercise_id": "incline_dumbbell_press",
@@ -3824,11 +3688,7 @@
     "calories": "350-450",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Back",
-      "Shoulders"
-    ],
+    "muscles": ["Chest", "Back", "Shoulders"],
     "exercises": [
       {
         "exercise_id": "medicine_ball_slams",
@@ -3869,10 +3729,7 @@
     "calories": "250-330",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Back",
-      "Triceps"
-    ],
+    "muscles": ["Back", "Triceps"],
     "exercises": [
       {
         "exercise_id": "assisted_pull_up",
@@ -3919,11 +3776,7 @@
     "calories": "280-370",
     "intensity": "Moderate",
     "type": "Split",
-    "muscles": [
-      "Shoulders",
-      "Back",
-      "Chest"
-    ],
+    "muscles": ["Shoulders", "Back", "Chest"],
     "exercises": [
       {
         "exercise_id": "arnold_press",
@@ -3971,10 +3824,7 @@
     "calories": "340-440",
     "intensity": "High",
     "type": "Split",
-    "muscles": [
-      "Chest",
-      "Back"
-    ],
+    "muscles": ["Chest", "Back"],
     "exercises": [
       {
         "exercise_id": "barbell_bench_press",
@@ -4010,6 +3860,1886 @@
         "sets": 3,
         "reps": "10-12 reps",
         "weight": 0
+      }
+    ]
+  },
+  {
+    "id": "workout_081",
+    "name": "Menstrual Low-Impact Burn",
+    "goal": "Lose Weight",
+    "phase": "Menstrual",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_082",
+    "name": "Menstrual Flow Cardio & Core",
+    "goal": "Lose Weight",
+    "phase": "Menstrual",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Mobility & Core",
+    "exercises": [
+      {
+        "exercise_id": "cat_cow",
+        "name": "Cat-Cow Stretch",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "gentle_spinal_twists",
+        "name": "Gentle Spinal Twists",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_lying_clamshells",
+        "name": "Side-Lying Clamshells",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "thoracic_openers",
+        "name": "Thoracic Openers",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_083",
+    "name": "Menstrual Reset Full Body",
+    "goal": "Lose Weight",
+    "phase": "Menstrual",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Cardio & Core",
+    "exercises": [
+      {
+        "exercise_id": "russian_twists",
+        "name": "Russian Twists",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "jumping_jacks",
+        "name": "Jumping Jacks",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "mountain_climbers",
+        "name": "Mountain Climbers",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "burpees",
+        "name": "Burpees",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_084",
+    "name": "Menstrual Low-Impact Burn",
+    "goal": "Lose Weight",
+    "phase": "Menstrual",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_085",
+    "name": "Menstrual Mobility & Core",
+    "goal": "Maintain Weight",
+    "phase": "Menstrual",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_086",
+    "name": "Menstrual Gentle Strength",
+    "goal": "Maintain Weight",
+    "phase": "Menstrual",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_087",
+    "name": "Menstrual Balanced Full Body",
+    "goal": "Maintain Weight",
+    "phase": "Menstrual",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Mobility & Core",
+    "exercises": [
+      {
+        "exercise_id": "cat_cow",
+        "name": "Cat-Cow Stretch",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "gentle_spinal_twists",
+        "name": "Gentle Spinal Twists",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_lying_clamshells",
+        "name": "Side-Lying Clamshells",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "thoracic_openers",
+        "name": "Thoracic Openers",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_088",
+    "name": "Menstrual Mobility & Core",
+    "goal": "Maintain Weight",
+    "phase": "Menstrual",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_089",
+    "name": "Menstrual Strength Fundamentals",
+    "goal": "Gain Muscle",
+    "phase": "Menstrual",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_090",
+    "name": "Menstrual Upper & Core Stability",
+    "goal": "Gain Muscle",
+    "phase": "Menstrual",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_091",
+    "name": "Follicular Fat-Burn Circuit",
+    "goal": "Lose Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_092",
+    "name": "Follicular Cardio-Core Builder",
+    "goal": "Lose Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Cardio & Core",
+    "exercises": [
+      {
+        "exercise_id": "russian_twists",
+        "name": "Russian Twists",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "jumping_jacks",
+        "name": "Jumping Jacks",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "mountain_climbers",
+        "name": "Mountain Climbers",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "burpees",
+        "name": "Burpees",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_093",
+    "name": "Follicular Tempo Sweat",
+    "goal": "Lose Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_094",
+    "name": "Follicular Balanced Strength",
+    "goal": "Maintain Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_095",
+    "name": "Follicular Full Body Builder",
+    "goal": "Maintain Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_096",
+    "name": "Follicular Upper & Core",
+    "goal": "Maintain Weight",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_097",
+    "name": "Follicular Lower-Body Strength",
+    "goal": "Gain Muscle",
+    "phase": "Follicular",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_098",
+    "name": "Follicular Push-Pull Strength",
+    "goal": "Gain Muscle",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_099",
+    "name": "Follicular Power Full Body",
+    "goal": "Gain Muscle",
+    "phase": "Follicular",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Lower Body",
+    "exercises": [
+      {
+        "exercise_id": "lateral_lunges",
+        "name": "Lateral Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "curtsy_lunges",
+        "name": "Curtsy Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_glute_bridge",
+        "name": "Single-Leg Glute Bridge",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "bulgarian_split_squats",
+        "name": "Bulgarian Split Squats (Chair)",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_romanian_deadlift",
+        "name": "Single-Leg Romanian Deadlift",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_100",
+    "name": "Follicular Lower-Body Strength",
+    "goal": "Gain Muscle",
+    "phase": "Follicular",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_101",
+    "name": "Ovulatory HIIT Blast",
+    "goal": "Lose Weight",
+    "phase": "Ovulatory",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_102",
+    "name": "Ovulatory Sweat & Core",
+    "goal": "Lose Weight",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Cardio & Core",
+    "exercises": [
+      {
+        "exercise_id": "russian_twists",
+        "name": "Russian Twists",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "jumping_jacks",
+        "name": "Jumping Jacks",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "mountain_climbers",
+        "name": "Mountain Climbers",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "burpees",
+        "name": "Burpees",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_103",
+    "name": "Ovulatory Power Circuit",
+    "goal": "Lose Weight",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 4,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 4,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_104",
+    "name": "Ovulatory Balanced Builder",
+    "goal": "Maintain Weight",
+    "phase": "Ovulatory",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_105",
+    "name": "Ovulatory Upper & Core",
+    "goal": "Maintain Weight",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 4,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 4,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_106",
+    "name": "Ovulatory Power Strength",
+    "goal": "Gain Muscle",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_107",
+    "name": "Ovulatory Legs & Glutes",
+    "goal": "Gain Muscle",
+    "phase": "Ovulatory",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_108",
+    "name": "Ovulatory Push-Pull Power",
+    "goal": "Gain Muscle",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Lower Body",
+    "exercises": [
+      {
+        "exercise_id": "lateral_lunges",
+        "name": "Lateral Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "curtsy_lunges",
+        "name": "Curtsy Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_glute_bridge",
+        "name": "Single-Leg Glute Bridge",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "bulgarian_split_squats",
+        "name": "Bulgarian Split Squats (Chair)",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_romanian_deadlift",
+        "name": "Single-Leg Romanian Deadlift",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_109",
+    "name": "Ovulatory Power Strength",
+    "goal": "Gain Muscle",
+    "phase": "Ovulatory",
+    "duration": 35,
+    "calories": "315-420",
+    "intensity": "High",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 4,
+        "reps": "30s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 4,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_110",
+    "name": "Ovulatory Legs & Glutes",
+    "goal": "Gain Muscle",
+    "phase": "Ovulatory",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_111",
+    "name": "Luteal Low-Impact Burn",
+    "goal": "Lose Weight",
+    "phase": "Luteal",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_112",
+    "name": "Luteal Cardio & Core",
+    "goal": "Lose Weight",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Cardio & Core",
+    "exercises": [
+      {
+        "exercise_id": "russian_twists",
+        "name": "Russian Twists",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "jumping_jacks",
+        "name": "Jumping Jacks",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "mountain_climbers",
+        "name": "Mountain Climbers",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "burpees",
+        "name": "Burpees",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "hollow_body_hold",
+        "name": "Hollow Body Hold",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_113",
+    "name": "Luteal Flow Circuit",
+    "goal": "Lose Weight",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "12-20 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_114",
+    "name": "Luteal Balanced Strength",
+    "goal": "Maintain Weight",
+    "phase": "Luteal",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_115",
+    "name": "Luteal Full Body Control",
+    "goal": "Maintain Weight",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_116",
+    "name": "Luteal Upper & Core Stability",
+    "goal": "Maintain Weight",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_117",
+    "name": "Luteal Balanced Strength",
+    "goal": "Maintain Weight",
+    "phase": "Luteal",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "45s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_118",
+    "name": "Luteal Strength Builder",
+    "goal": "Gain Muscle",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Full Body",
+    "exercises": [
+      {
+        "exercise_id": "plank",
+        "name": "Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "bear_crawl",
+        "name": "Bear Crawl",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "side_plank",
+        "name": "Side Plank",
+        "sets": 3,
+        "reps": "40s",
+        "weight": null
+      },
+      {
+        "exercise_id": "push_ups",
+        "name": "Push-Ups",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_lunges",
+        "name": "Reverse Lunges",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_119",
+    "name": "Luteal Glutes & Legs",
+    "goal": "Gain Muscle",
+    "phase": "Luteal",
+    "duration": 40,
+    "calories": "280-360",
+    "intensity": "Moderate",
+    "type": "Upper Body & Core",
+    "exercises": [
+      {
+        "exercise_id": "chair_dips",
+        "name": "Chair Dips",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "resistance_band_rows",
+        "name": "Resistance Band Rows",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "dead_bug",
+        "name": "Dead Bug",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "reverse_snow_angels",
+        "name": "Reverse Snow Angels",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "incline_push_ups",
+        "name": "Incline Push-Ups (Chair)",
+        "sets": 3,
+        "reps": "10-15 reps",
+        "weight": null
+      }
+    ]
+  },
+  {
+    "id": "workout_120",
+    "name": "Luteal Push-Pull Strength",
+    "goal": "Gain Muscle",
+    "phase": "Luteal",
+    "duration": 35,
+    "calories": "175-245",
+    "intensity": "Low",
+    "type": "Lower Body",
+    "exercises": [
+      {
+        "exercise_id": "lateral_lunges",
+        "name": "Lateral Lunges",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "curtsy_lunges",
+        "name": "Curtsy Lunges",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_glute_bridge",
+        "name": "Single-Leg Glute Bridge",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "bulgarian_split_squats",
+        "name": "Bulgarian Split Squats (Chair)",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
+      },
+      {
+        "exercise_id": "single_leg_romanian_deadlift",
+        "name": "Single-Leg Romanian Deadlift",
+        "sets": 3,
+        "reps": "8-12 reps",
+        "weight": null
       }
     ]
   }

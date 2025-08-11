@@ -5,8 +5,6 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  StatusBar,
-  useColorScheme,
   TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -39,7 +37,7 @@ const FAQS = [
 
 export default function FaqScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
+
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
   const [openId, setOpenId] = useState<string | null>(null)
 
@@ -49,7 +47,6 @@ export default function FaqScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

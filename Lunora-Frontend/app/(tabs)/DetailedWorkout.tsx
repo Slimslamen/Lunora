@@ -8,7 +8,6 @@ import {
   TouchableOpacity,
   Modal,
   Pressable,
-  StatusBar,
   TextInput,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
@@ -279,7 +278,7 @@ const workoutId =
                       {specificWorkoutExercise?.sets} sets
                     </Text>
                     <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>
-                      {specificWorkoutExercise?.reps === "undefined"
+                      {specificWorkoutExercise?.reps.toString() === "null"
                         ? specificWorkoutExercise.time
                         : specificWorkoutExercise?.reps}
                     </Text>

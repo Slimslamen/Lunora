@@ -1,18 +1,16 @@
 // TermsOfServiceScreen.tsx
 import React, { useContext } from 'react'
-import { View, Text, ScrollView, StyleSheet, useColorScheme, StatusBar } from 'react-native'
+import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { ThemeContext } from '@/Context/Theme/ThemeContext'
 
 export default function TermsOfServiceScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

@@ -5,8 +5,6 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  StatusBar,
-  useColorScheme,
   TouchableOpacity,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
@@ -19,12 +17,10 @@ export default function ContactSupportScreen() {
   const TContext = useContext(ThemeContext)
   const { darkMode } = TContext
 
-  const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

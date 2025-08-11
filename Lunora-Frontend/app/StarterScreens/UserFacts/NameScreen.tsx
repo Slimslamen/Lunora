@@ -6,8 +6,6 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  StatusBar,
-  useColorScheme,
   KeyboardAvoidingView,
   Platform,
 } from 'react-native'
@@ -19,7 +17,6 @@ import { ReturnButton } from '../../../components/Return'
 
 export default function AskNameScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
   const [name, setName] = useState('')
@@ -31,9 +28,6 @@ export default function AskNameScreen() {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar
-        barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'}
-      />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.safe}

@@ -5,8 +5,6 @@ import {
   Text,
   StyleSheet,
   ScrollView,
-  StatusBar,
-  useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
@@ -24,7 +22,6 @@ const goals = [
 
 export default function FitnessGoalsScreen() {
   const { darkMode } = useContext(ThemeContext)
-  const scheme = useColorScheme()
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
   // Separate into pending and completed
@@ -33,7 +30,6 @@ export default function FitnessGoalsScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'dark' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

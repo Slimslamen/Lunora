@@ -3,11 +3,9 @@ import React, { useContext, useEffect, useState } from "react";
 import {
   View,
   Text,
-  TextInput,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  StatusBar,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
@@ -98,7 +96,7 @@ export default function WorkoutsScreen() {
           <Text style={[styles.headerSubtitle, { color: colors.textSecondary }]}>Choose your perfect workout</Text>
 
           {/* Search */}
-          <View style={[styles.searchBox, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+          {/* <View style={[styles.searchBox, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
             <Feather name="search" size={18} color={colors.textSecondary} />
             <TextInput
               style={[styles.searchInput, { color: colors.textPrimary }]}
@@ -107,7 +105,7 @@ export default function WorkoutsScreen() {
               value={search}
               onChangeText={setSearch}
             />
-          </View>
+          </View> */}
 
           {/* Tags */}
           <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.tagsContainer}>
@@ -183,7 +181,7 @@ export default function WorkoutsScreen() {
                           </View>
                           <Link href={{ pathname: "./DetailedWorkout", params: { specific_id: w.id, viewWorkout: "False" }}} asChild>
                             <TouchableOpacity style={styles.startButton}>
-                              <Text style={styles.startText}>Start Workout</Text>
+                              <Text style={styles.startText}><View></View>View Workout</Text>
                             </TouchableOpacity>
                           </Link>
                         </View>

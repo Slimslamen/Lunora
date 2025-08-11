@@ -7,9 +7,6 @@ import {
   ScrollView,
   TouchableOpacity,
   Switch,
-  StatusBar,
-  SafeAreaView,
-  useColorScheme,
 } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons, FontAwesome5 } from '@expo/vector-icons'
@@ -26,7 +23,6 @@ export default function SettingsDetailedScreen() {
    const UContext = useContext(UserContext);
     const { activeUser } = UContext;
   
-  const scheme = useColorScheme()
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS 
 
   const [notifications, setNotifications] = useState(true)
@@ -39,7 +35,6 @@ export default function SettingsDetailedScreen() {
 
   return (
     <View style={styles.safe}>
-      <StatusBar barStyle={scheme === 'light' ? 'light-content' : 'dark-content'} />
       <LinearGradient
         colors={[colors.gradientStart, colors.gradientEnd]}
         style={styles.gradient}

@@ -1,6 +1,6 @@
 // ChallengesScreen.tsx
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, StyleSheet, ScrollView, StatusBar, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
 import Feather from "@expo/vector-icons/Feather";
@@ -12,41 +12,6 @@ import { IChallenge } from "@/General-Interfaces/IChallenge";
 
 const client = generateClient<Schema>();
 
-const activeChallenges = [
-  {
-    id: "streak",
-    icon: <FontAwesome5 name="fire" size={18} />,
-    title: "7-Day Streak Master",
-    subtitle: "Complete 7 workouts in a row",
-    progress: 3 / 10,
-    progressText: "3/7 completed",
-    daysLeft: "4d left",
-    reward: "Streak Badge",
-    rewardIcon: <Ionicons name="star" size={16} />,
-  },
-  {
-    id: "cardio",
-    icon: <Ionicons name="heart" size={18} />,
-    title: "Cardio Champion",
-    subtitle: "Complete 10 cardio workouts this month",
-    progress: 6 / 10,
-    progressText: "6/10 completed",
-    daysLeft: "12d left",
-    reward: "Cardio Badge + 500 XP",
-    rewardIcon: <Ionicons name="star" size={16} />,
-  },
-  {
-    id: "early",
-    icon: <Feather name="sunrise" size={18} />,
-    title: "Early Bird",
-    subtitle: "Complete 5 morning workouts",
-    progress: 2 / 10,
-    progressText: "2/5 completed",
-    daysLeft: "10d left",
-    reward: "Morning Badge",
-    rewardIcon: <Ionicons name="star" size={16} />,
-  },
-];
 
 const completed = [
   {
@@ -331,7 +296,7 @@ const styles = StyleSheet.create({
   row: { flexDirection: "row", alignItems: "center" },
   column: { flexDirection: "column", alignItems: "center" },
   iconWrapper: { width: 30, alignItems: "center", marginRight: 12, marginLeft: 8 },
-  challengeContent: { flex: 1, addingRight: 20 },
+  challengeContent: { flex: 1 },
   challengeTitle: { fontSize: 18, fontWeight: "600" },
   challengeSubtitle: { fontSize: 15, marginTop: 2, opacity: 0.8, width: 240 },
   daysLeft: { fontSize: 14, marginLeft: 8 },

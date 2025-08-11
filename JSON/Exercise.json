@@ -420,9 +420,9 @@
     "description": "Lie on a bench set to an incline and press two dumbbells up from your chest."
   },
   {
-  "exercise_id": "seated_cable_row",
-  "name": "Seated Cable Row",
-  "description": "Sit at a cable row station with your feet braced, grasp the handle, and pull it toward your torso while keeping your chest up and shoulder blades squeezed together."
+    "exercise_id": "seated_cable_row",
+    "name": "Seated Cable Row",
+    "description": "Sit at a cable row station with your feet braced, grasp the handle, and pull it toward your torso while keeping your chest up and shoulder blades squeezed together."
   },
   {
     "exercise_id": "single_arm_dumbbell_row",
@@ -508,11 +508,6 @@
     "exercise_id": "stationary_bike",
     "name": "Stationary Bike",
     "description": "Ride a stationary exercise bike at a steady pace for cardiovascular exercise."
-  },
-  {
-    "exercise_id": "plank_with_shoulder_taps",
-    "name": "Plank with Shoulder Taps",
-    "description": "In a plank position, lift one hand to tap the opposite shoulder, alternating sides while keeping your hips stable."
   },
   {
     "exercise_id": "bulgarian_split_squats",
@@ -645,89 +640,89 @@
     "description": "Use a hyperextension bench to hinge at the hips, strengthening your lower back, glutes, and hamstrings."
   },
   {
-  "exercise_id": "seated_cable_row",
-  "name": "Seated Cable Rows",
-  "description": "Sit at a cable row machine with your feet braced against the platform, grasp the handle with both hands, keep your chest tall and shoulders down, and pull the handle toward your torso by squeezing your shoulder blades together before returning under control."
+    "exercise_id": "seated_cable_row",
+    "name": "Seated Cable Rows",
+    "description": "Sit at a cable row machine with your feet braced against the platform, grasp the handle with both hands, keep your chest tall and shoulders down, and pull the handle toward your torso by squeezing your shoulder blades together before returning under control."
   },
   {
-  "exercise_id": "banded_pull_apart",
-  "name": "Banded Pull-Aparts",
-  "description": "Stand tall holding a resistance band at shoulder height with both hands, arms extended in front of you. Keeping your elbows soft and shoulders down, pull the band apart by squeezing your shoulder blades together until your arms form a straight line, then return under control to the start."
+    "exercise_id": "banded_pull_apart",
+    "name": "Banded Pull-Aparts",
+    "description": "Stand tall holding a resistance band at shoulder height with both hands, arms extended in front of you. Keeping your elbows soft and shoulders down, pull the band apart by squeezing your shoulder blades together until your arms form a straight line, then return under control to the start."
   },
   {
-  "exercise_id": "dumbbell_fly",
-  "name": "Dumbbell Flys",
-  "description": "Lie on a flat bench holding two dumbbells above your chest with arms slightly bent, lower the weights in a wide arc until you feel a stretch across your chest, then bring them back together by squeezing your chest, maintaining the slight elbow bend throughout."
+    "exercise_id": "dumbbell_fly",
+    "name": "Dumbbell Flys",
+    "description": "Lie on a flat bench holding two dumbbells above your chest with arms slightly bent, lower the weights in a wide arc until you feel a stretch across your chest, then bring them back together by squeezing your chest, maintaining the slight elbow bend throughout."
   },
   {
-  "exercise_id": "kettlebell_swing",
-  "name": "Kettlebell Swing",
-  "description": "Stand with feet hip-width apart, hinge at the hips to swing the kettlebell back between your legs, then explosively drive your hips forward to propel it to roughly shoulder height, keeping arms relaxed and core engaged."
+    "exercise_id": "kettlebell_swing",
+    "name": "Kettlebell Swing",
+    "description": "Stand with feet hip-width apart, hinge at the hips to swing the kettlebell back between your legs, then explosively drive your hips forward to propel it to roughly shoulder height, keeping arms relaxed and core engaged."
   },
   {
-  "exercise_id": "barbell_bench_press",
-  "name": "Barbell Bench Press",
-  "description": "Lie on a flat bench with your feet planted firmly, grip the bar slightly wider than shoulder-width, lower it under control to mid-chest, then press it back up until your arms are fully extended while keeping your shoulders retracted and core tight."
+    "exercise_id": "barbell_bench_press",
+    "name": "Barbell Bench Press",
+    "description": "Lie on a flat bench with your feet planted firmly, grip the bar slightly wider than shoulder-width, lower it under control to mid-chest, then press it back up until your arms are fully extended while keeping your shoulders retracted and core tight."
   },
   {
-  "exercise_id": "dips",
-  "name": "Dips",
-  "description": "Support yourself on parallel bars with arms straight, lower your body by bending the elbows until your upper arms are about parallel to the floor, then press back up by extending the elbows, keeping your torso stable and shoulders down throughout."
+    "exercise_id": "dips",
+    "name": "Dips",
+    "description": "Support yourself on parallel bars with arms straight, lower your body by bending the elbows until your upper arms are about parallel to the floor, then press back up by extending the elbows, keeping your torso stable and shoulders down throughout."
   },
   {
-  "exercise_id": "cable_fly",
-  "name": "Cable Flys",
-  "description": "Stand between two cable stacks with the pulleys set slightly above shoulder height, grasp the handles with a slight bend in your elbows, and bring your arms together in a wide arc in front of your chest, squeezing at the peak before returning under control."
+    "exercise_id": "cable_fly",
+    "name": "Cable Flys",
+    "description": "Stand between two cable stacks with the pulleys set slightly above shoulder height, grasp the handles with a slight bend in your elbows, and bring your arms together in a wide arc in front of your chest, squeezing at the peak before returning under control."
   },
   {
-  "exercise_id": "assisted_pull_up",
-  "name": "Assisted Pull-Ups",
-  "description": "Step onto the assisted pull-up machine's knee pad or loop a resistance band under your knees, grasp the bar with an overhand grip slightly wider than shoulder-width, engage your core and pull until your chin clears the bar, then lower yourself under control to full arm extension before repeating."
+    "exercise_id": "assisted_pull_up",
+    "name": "Assisted Pull-Ups",
+    "description": "Step onto the assisted pull-up machine's knee pad or loop a resistance band under your knees, grasp the bar with an overhand grip slightly wider than shoulder-width, engage your core and pull until your chin clears the bar, then lower yourself under control to full arm extension before repeating."
   },
   {
-  "exercise_id": "dumbbell_floor_press",
-  "name": "Dumbbell Floor Press",
-  "description": "Lie on your back on the floor with knees bent and feet flat, hold two dumbbells at chest level with elbows resting on the ground, then press the weights upward until your arms are fully extended before lowering under control until your upper arms touch the floor."
+    "exercise_id": "dumbbell_floor_press",
+    "name": "Dumbbell Floor Press",
+    "description": "Lie on your back on the floor with knees bent and feet flat, hold two dumbbells at chest level with elbows resting on the ground, then press the weights upward until your arms are fully extended before lowering under control until your upper arms touch the floor."
   },
   {
-  "exercise_id": "t_bar_row",
-  "name": "T-Bar Row",
-  "description": "Stand over the barbell mounted in a landmine or T-bar station, hinge at the hips with a flat back, grasp the handle close to the plates, and pull the weight toward your lower chest by driving your elbows back and squeezing your shoulder blades together before lowering it under control."
+    "exercise_id": "t_bar_row",
+    "name": "T-Bar Row",
+    "description": "Stand over the barbell mounted in a landmine or T-bar station, hinge at the hips with a flat back, grasp the handle close to the plates, and pull the weight toward your lower chest by driving your elbows back and squeezing your shoulder blades together before lowering it under control."
   },
   {
-  "exercise_id": "cable_face_pull",
-  "name": "Cable Face Pulls",
-  "description": "Attach a rope handle to a high pulley, grasp each end with thumbs pointing back, step away until your arms are extended, and pull the rope toward your face by driving your elbows outward and squeezing your upper back and rear delts before slowly returning to the start."
+    "exercise_id": "cable_face_pull",
+    "name": "Cable Face Pulls",
+    "description": "Attach a rope handle to a high pulley, grasp each end with thumbs pointing back, step away until your arms are extended, and pull the rope toward your face by driving your elbows outward and squeezing your upper back and rear delts before slowly returning to the start."
   },
   {
-  "exercise_id": "dumbbell_goblet_squat",
-  "name": "Dumbbell Goblet Squat",
-  "description": "Hold a dumbbell vertically against your chest with both hands, stand with feet shoulder-width apart, lower into a squat by pushing your hips back and keeping your chest up, then drive through your heels to return to standing."
+    "exercise_id": "dumbbell_goblet_squat",
+    "name": "Dumbbell Goblet Squat",
+    "description": "Hold a dumbbell vertically against your chest with both hands, stand with feet shoulder-width apart, lower into a squat by pushing your hips back and keeping your chest up, then drive through your heels to return to standing."
   },
   {
-  "exercise_id": "barbell_overhead_press",
-  "name": "Barbell Overhead Press",
-  "description": "Stand with feet about shoulder-width apart, grip the barbell slightly wider than shoulder-width, unrack it at shoulder level, brace your core, and press the bar straight overhead until your arms are fully extended, then lower it under control back to the starting position."
+    "exercise_id": "barbell_overhead_press",
+    "name": "Barbell Overhead Press",
+    "description": "Stand with feet about shoulder-width apart, grip the barbell slightly wider than shoulder-width, unrack it at shoulder level, brace your core, and press the bar straight overhead until your arms are fully extended, then lower it under control back to the starting position."
   },
   {
-  "exercise_id": "seated_arnold_press",
-  "name": "Seated Arnold Press",
-  "description": "Sit upright on a bench with back support, hold two dumbbells in front of your shoulders with palms facing you, then press the weights overhead while simultaneously rotating your palms outward until they face forward at full extension; reverse the motion and rotation as you lower back to the start."
+    "exercise_id": "seated_arnold_press",
+    "name": "Seated Arnold Press",
+    "description": "Sit upright on a bench with back support, hold two dumbbells in front of your shoulders with palms facing you, then press the weights overhead while simultaneously rotating your palms outward until they face forward at full extension; reverse the motion and rotation as you lower back to the start."
   },
   {
-  "exercise_id": "alternating_lunge",
-  "name": "Alternating Lunge",
-  "description": "Stand upright, step forward with one leg and lower until both knees form 90-degree angles, push back to the starting position, then repeat with the opposite leg, alternating sides each repetition."
+    "exercise_id": "alternating_lunge",
+    "name": "Alternating Lunge",
+    "description": "Stand upright, step forward with one leg and lower until both knees form 90-degree angles, push back to the starting position, then repeat with the opposite leg, alternating sides each repetition."
   },
   {
-  "exercise_id": "cable_fly",
-  "name": "Cable Fly",
-  "description": "Stand between two cable stacks with the pulleys set at chest height, grasp the handles, and bring your arms together in a wide arc in front of your body, squeezing your chest at the peak before returning under control."
+    "exercise_id": "cable_fly",
+    "name": "Cable Fly",
+    "description": "Stand between two cable stacks with the pulleys set at chest height, grasp the handles, and bring your arms together in a wide arc in front of your body, squeezing your chest at the peak before returning under control."
   },
   {
-  "exercise_id": "elliptical_trainer",
-  "name": "Elliptical Trainer",
-  "description": "Step onto the machine, grasp the handles, and stride in a smooth, continuous motion to work both the upper and lower body with low-impact cardiovascular exercise."
+    "exercise_id": "elliptical_trainer",
+    "name": "Elliptical Trainer",
+    "description": "Step onto the machine, grasp the handles, and stride in a smooth, continuous motion to work both the upper and lower body with low-impact cardiovascular exercise."
   },
   {
     "exercise_id": "cable_pull_throughs",
@@ -1058,5 +1053,80 @@
     "exercise_id": "barbell_shrugs",
     "name": "Barbell Shrugs",
     "description": "Hold a heavy barbell and shrug your shoulders straight up towards your ears to target the trapezius muscles."
+  },
+  {
+    "exercise_id": "bear_crawl",
+    "name": "Bear Crawl",
+    "description": "On hands and feet with hips low, crawl forward or backward moving opposite hand and foot together while keeping your core braced."
+  },
+  {
+    "exercise_id": "superman_raises",
+    "name": "Superman Raises",
+    "description": "Lie face down with arms overhead, lift chest and legs slightly off the floor by squeezing glutes and upper back, then lower with control."
+  },
+  {
+    "exercise_id": "single_leg_romanian_deadlift",
+    "name": "Single-Leg Romanian Deadlift",
+    "description": "Stand on one leg, hinge at the hips with a flat back as the free leg extends behind you, then drive the hip forward to return tall."
+  },
+  {
+    "exercise_id": "lateral_lunges",
+    "name": "Lateral Lunges",
+    "description": "Step out to the side and sit back into the stepping hip while the other leg stays straight; push through the heel to return."
+  },
+  {
+    "exercise_id": "sumo_squats",
+    "name": "Sumo Squats",
+    "description": "Stand wide with toes turned out; sit hips down and back keeping knees tracking over toes, then stand tall."
+  },
+  {
+    "exercise_id": "curtsy_lunges",
+    "name": "Curtsy Lunges",
+    "description": "Step one leg diagonally behind the other and lower until the front thigh is near parallel; drive through the front heel to stand."
+  },
+  {
+    "exercise_id": "single_leg_glute_bridge",
+    "name": "Single-Leg Glute Bridge",
+    "description": "Lie on your back, one foot planted and the other leg extended; press through the planted heel to lift hips, squeezing the glutes."
+  },
+  {
+    "exercise_id": "pike_push_ups",
+    "name": "Pike Push-Ups",
+    "description": "From a pike (hips high) position, bend elbows to lower the head toward the floor and press back up, emphasizing shoulders."
+  },
+  {
+    "exercise_id": "chair_dips",
+    "name": "Chair Dips",
+    "description": "Place hands on the edge of a sturdy chair behind you, feet on the floor; bend elbows to lower hips, then press back up."
+  },
+  {
+    "exercise_id": "plank_shoulder_taps",
+    "name": "Plank Shoulder Taps",
+    "description": "In a high plank, tap the opposite shoulder with one hand while keeping hips steady; alternate sides without rocking."
+  },
+  {
+    "exercise_id": "reverse_snow_angels",
+    "name": "Reverse Snow Angels",
+    "description": "Lie face down and sweep straight arms in a wide arc from hips to overhead, lifting slightly off the floor and squeezing upper back."
+  },
+  {
+    "exercise_id": "skaters",
+    "name": "Skaters",
+    "description": "Hop laterally from one foot to the other, letting the free leg sweep behind you and using your arms for balance."
+  },
+  {
+    "exercise_id": "side_lying_clamshells",
+    "name": "Side-Lying Clamshells",
+    "description": "Lie on your side with knees bent and feet together; open the top knee without rolling hips, then close with control."
+  },
+  {
+    "exercise_id": "thoracic_openers",
+    "name": "Thoracic Openers",
+    "description": "Side-lying with knees stacked, reach the top arm across your chest and rotate it open toward the floor behind you, then return."
+  },
+  {
+    "exercise_id": "90_90_hip_switches",
+    "name": "90/90 Hip Switches",
+    "description": "Sit with both knees bent at 90°; rotate both legs to the other side without lifting your feet, switching which hip is internally/externally rotated."
   }
 ]

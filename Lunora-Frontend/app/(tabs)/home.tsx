@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, StyleSheet, ScrollView, StatusBar, TouchableOpacity, Alert } from "react-native";
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
@@ -131,7 +131,6 @@ const getTodaysWorkoutId = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar barStyle={scheme === "light" ? "light-content" : "dark-content"} />
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.safe}>
         <ScrollView contentContainerStyle={styles.container}>
           {/* Header */}

@@ -55,7 +55,7 @@ export default function TabLayout() {
       <View style={[styles.Thirdoverlay, { backgroundColor: colors.textPrimary }]}>
         <TouchableOpacity
           onPress={ToAiChat}
-          style={{ alignItems: "center", justifyContent: "center", display: "flex", textAlign: "center" }}
+          style={{ alignItems: "center", justifyContent: "center", display: "flex"}}
         >
           <Ionicons name="moon-sharp" size={22} color={colors.accent} />
         </TouchableOpacity>
@@ -119,12 +119,17 @@ export default function TabLayout() {
           name="aiChat"
           options={{
             href: null,
-            // title: "LunorAI",
-            // tabBarIcon: ({ color }) => <Ionicons name="moon-sharp" size={22} color={color} />,
           }}
         />
 
         <Tabs.Screen
+          name="EditProfile"
+          options={{
+            href: null,
+          }}
+        />
+
+          <Tabs.Screen
           name="profile"
           options={{
             href: null,

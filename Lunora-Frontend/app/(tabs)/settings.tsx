@@ -95,26 +95,19 @@ export default function SettingsDetailedScreen() {
             </Text>
             {[
               { icon: 'person-outline', label: 'Personal Information' },
+              { icon: 'card-outline', label: 'Paid Plan' },
             ].map((item, i) => (
-              <Link href={i === 0 ? './PersonalInfo' : './FitnessGoals'} key={i} asChild>
-              <TouchableOpacity  style={styles.rowItem} activeOpacity={0.7}>
+              <Link href={i === 0 ? './PersonalInfo' : './EditProfile'} key={i} asChild>
+              <TouchableOpacity style={styles.rowItem} activeOpacity={0.7}>
                 <View style={styles.iconWrapper}>
-                  {item.icon === 'bullseye' ? (
-                    <FontAwesome5
-                      name="bullseye"
-                      size={18}
-                      color={colors.textSecondary}
-                    />
-                  ) : (
-                    <Ionicons
-                      name={item.icon as any}
-                      size={18}
-                      color={colors.textSecondary}
-                    />
-                  )}
+                <Ionicons
+                  name={item.icon as any}
+                  size={18}
+                  color={colors.textSecondary}
+                />
                 </View>
                 <Text style={[styles.rowLabel, { color: colors.textPrimary }]}>
-                  {item.label}
+                {item.label}
                 </Text>
                 <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
               </TouchableOpacity>

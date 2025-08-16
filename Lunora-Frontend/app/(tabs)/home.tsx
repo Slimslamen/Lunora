@@ -8,27 +8,12 @@ import { useRouter } from "expo-router";
 import Feather from "@expo/vector-icons/Feather";
 import { Schema } from "../../../amplify/data/resource";
 import { generateClient } from "aws-amplify/api";
-import { IUser, IWeeklyUserWorkouts } from "@/General-Interfaces/IUser";
+import { IUser, IWeeklyUserWorkouts, IUserWorkoutLog } from "@/General-Interfaces/IUser";
 import { IWorkout } from "@/General-Interfaces/IWorkout";
-import { isSameDay, parseISO } from "date-fns";
+import { isSameDay, parseISO, getWeek } from "date-fns";
 import { UserContext } from "@/Context/User/UserContext";
 
 const client = generateClient<Schema>();
-
-const metrics = [
-  {
-    key: "workouts",
-    icon: <Ionicons name="bar-chart" size={24} />,
-    value: "47",
-    label: "Workouts Completed",
-  },
-  {
-    key: "days",
-    icon: <Ionicons name="calendar-outline" size={24} />,
-    value: "23",
-    label: "Days As A Member",
-  },
-];
 
 export default function ProgressOverviewScreen() {
   const TContext = useContext(ThemeContext);
@@ -41,9 +26,54 @@ export default function ProgressOverviewScreen() {
 
   const [appUser, setappUsers] = useState<IUser>();
   const [weeklyWorkouts, setWeeklyWorkouts] = useState<IWeeklyUserWorkouts[]>();
+  const [userWorkoutLog, setUserWorkoutLog] = useState<IUserWorkoutLog[]>();
   const [workouts, setWorkouts] = useState<IWorkout[]>([]);
+  const [currentWeek, setCurrentWeek] = useState(getWeek(new Date()));
+  const [allUserWorkoutLogs, setAllUserWorkoutLogs] = useState<IUserWorkoutLog[]>();
 
   const router = useRouter();
+
+  // Function to get weekly stats for progress bar
+  const getWeekStats = () => {
+    const scheduledWorkouts = weeklyWorkouts?.filter((w) => w.week === currentWeek) || [];
+    const completedWorkouts = userWorkoutLog?.filter((log) => log.completed === true) || [];
+
+    const scheduledButNotCompleted = scheduledWorkouts.filter((scheduled) => {
+      const hasCompletedLog = completedWorkouts.some(
+        (log) => log.workout_id === scheduled.workout_id && log.date === scheduled.scheduledDate
+      );
+      return !hasCompletedLog;
+    });
+
+    const totalScheduled = scheduledWorkouts.length;
+    const completed = completedWorkouts.length;
+    const remaining = scheduledButNotCompleted.length;
+    const percentage = totalScheduled > 0 ? Math.round((completed / totalScheduled) * 100) : 0;
+
+    return { completed, remaining, totalScheduled, percentage };
+  };
+
+  const { completed, remaining, totalScheduled, percentage } = getWeekStats();
+
+  // Calculate total completed workouts and days as member
+  const totalCompletedWorkouts = allUserWorkoutLogs?.filter(log => log.completed === true).length || 0;
+  const memberSince = appUser?.createdAt ? new Date(appUser.createdAt) : new Date();
+  const daysAsMember = Math.floor((new Date().getTime() - memberSince.getTime()) / (1000 * 60 * 60 * 24));
+
+  const metrics = [
+    {
+      key: "workouts",
+      icon: <Ionicons name="bar-chart" size={24} />,
+      value: totalCompletedWorkouts.toString(),
+      label: "Workouts Completed",
+    },
+    {
+      key: "days",
+      icon: <Ionicons name="calendar-outline" size={24} />,
+      value: daysAsMember.toString(),
+      label: "Days As A Member",
+    },
+  ];
 
   // Fetch user
   useEffect(() => {
@@ -81,7 +111,36 @@ export default function ProgressOverviewScreen() {
       }
     };
     fetchWeeklyWorkouts();
-  }, [appUser]);
+  }, [appUser, activeUser?.id]);
+
+  // Fetch user workout log for the current week
+  useEffect(() => {
+    const fetchUserWorkoutLog = async () => {
+      const { data: workoutlog, errors } = await client.models.UserWorkoutLog.list({
+        filter: {
+          user_id: { eq: activeUser?.id || "user_1" },
+        },
+      });
+      if (errors) {
+        console.error(errors);
+        return;
+      }
+      if (workoutlog) {
+        // Store all logs for metrics calculation
+        setAllUserWorkoutLogs(workoutlog as IUserWorkoutLog[]);
+        
+        // Filter for current week
+        let currentUserWeeklyLog = workoutlog.filter((workouts) => {
+          if (workouts.date) {
+            return getWeek(workouts.date) === currentWeek;
+          }
+          return false;
+        });
+        setUserWorkoutLog(currentUserWeeklyLog as IUserWorkoutLog[]);
+      }
+    };
+    fetchUserWorkoutLog();
+  }, [currentWeek, activeUser?.id]);
 
   // Fetch all workouts
   useEffect(() => {
@@ -153,12 +212,24 @@ const getTodaysWorkoutId = () => {
             </View>
 
             <View style={styles.progressBarBg}>
-              <View style={[styles.progressBarFill, { backgroundColor: colors.textPrimary }]} />
+              <View 
+                style={[
+                  styles.progressBarFill, 
+                  { 
+                    backgroundColor: colors.textPrimary,
+                    width: `${percentage}%`
+                  }
+                ]} 
+              />
             </View>
 
             <View style={styles.row}>
-              <Text style={[styles.subtext, { color: colors.textSecondary }]}>3/5 workouts</Text>
-              <Text style={[styles.subtext, { color: colors.textSecondary }]}>60%</Text>
+              <Text style={[styles.subtext, { color: colors.textSecondary }]}>
+                {completed}/{totalScheduled} workouts
+              </Text>
+              <Text style={[styles.subtext, { color: colors.textSecondary }]}>
+                {percentage}%
+              </Text>
             </View>
           </View>
 
@@ -258,7 +329,11 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     marginBottom: 8,
   },
-  progressBarFill: { height: "100%", width: "60%" },
+  progressBarFill: { 
+    height: "100%", 
+    minWidth: "2%", // Minimum width to show some progress
+    borderRadius: 4 
+  },
   metricsRow: { justifyContent: "space-between", marginBottom: 16 },
   row: { flexDirection: "row", justifyContent: "space-between" },
   subtext: { fontSize: 14 },

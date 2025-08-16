@@ -6,6 +6,7 @@ export interface IUser {
   height: number;
   weight: number;
   obstacle: string;
+  trainingMethod: string;
   goal: string;
   period: string;
   birthControl: string;

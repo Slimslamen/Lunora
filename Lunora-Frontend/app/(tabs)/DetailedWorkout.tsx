@@ -1,15 +1,6 @@
 // WorkoutDetailScreen.tsx
 import React, { useState, useContext, useEffect } from "react";
-import {
-  View,
-  Text,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  Modal,
-  Pressable,
-  TextInput,
-} from "react-native";
+import { View, Text, ScrollView, StyleSheet, TouchableOpacity, Modal, Pressable, TextInput } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
@@ -28,10 +19,11 @@ Amplify.configure(outputs);
 
 export default function WorkoutDetailScreen() {
   const { specific_id, viewWorkout, paramWorkoutId } = useLocalSearchParams();
-const workoutId =
-    Array.isArray(paramWorkoutId) ? paramWorkoutId[0] :
-    Array.isArray(specific_id) ? specific_id[0] :
-    paramWorkoutId || specific_id;
+  const workoutId = Array.isArray(paramWorkoutId)
+    ? paramWorkoutId[0]
+    : Array.isArray(specific_id)
+      ? specific_id[0]
+      : paramWorkoutId || specific_id;
   const TContext = useContext(UserContext);
   const { userWorkoutExercises } = TContext;
 
@@ -222,12 +214,20 @@ const workoutId =
                       <Text style={[styles.metaText, { color: colors.textPrimary }]}> {ex.sets} sets</Text>
                       <Text style={[styles.metaText, { color: colors.textPrimary }]}>
                         {" "}
-                        {ex.reps === "undefined" ? ex.time : ex.reps}
+                        {ex.reps === "undefined" || !ex.reps ? ex.time : ex.reps}
                       </Text>
-                      <Text style={[styles.metaText, { color: colors.textPrimary }]}>
-                        {" "}
-                        {userWorkoutExercises.weight} kg
-                      </Text>
+                      {/* Only show weight for rep-based exercises */}
+                      {ex.reps !== "undefined" &&
+                        ex.reps &&
+                        ex.reps !== null &&
+                        selectedWorkout?.type?.toLowerCase() !== "active rest" &&
+                        userWorkoutExercises &&
+                        userWorkoutExercises.weight != null && (
+                          <Text style={[styles.metaText, { color: colors.textPrimary }]}>
+                            {" "}
+                            {userWorkoutExercises.weight} kg
+                          </Text>
+                        )}
                     </View>
                   </View>
                   <Ionicons name="chevron-forward" size={20} color={colors.textSecondary} />
@@ -238,12 +238,13 @@ const workoutId =
           {/* Spacer for button */}
           <View />
           {viewWorkout === "False" ? (
-            <View style={{ marginTop: 20 }}>
-              <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
-                <Ionicons name="play" size={20} color={colors.textPrimary} />
-                <Text style={[styles.startText, { color: colors.textPrimary }]}>Add To Weekly Program</Text>
-              </TouchableOpacity>
-            </View>
+            // <View style={{ marginTop: 20 }}>
+            //   <TouchableOpacity style={[styles.startBtn, { backgroundColor: colors.accent }]} activeOpacity={0.8}>
+            //     <Ionicons name="play" size={20} color={colors.textPrimary} />
+            //     <Text style={[styles.startText, { color: colors.textPrimary }]}>Add To Weekly Program</Text>
+            //   </TouchableOpacity>
+            // </View>
+            <View></View>
           ) : (
             <Link asChild href={"./progress"}>
               <View style={{ marginTop: 20 }}>
@@ -278,12 +279,12 @@ const workoutId =
                       {specificWorkoutExercise?.sets} sets
                     </Text>
                     <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>
-                      {specificWorkoutExercise?.reps.toString() === "null"
+                      {specificWorkoutExercise?.reps === "undefined"
                         ? specificWorkoutExercise.time
                         : specificWorkoutExercise?.reps}
                     </Text>
                   </View>
-                  {userWorkoutExercises?.weight != null && (
+                  {specificWorkoutExercise?.reps !== "undefined" && specificWorkoutExercise?.reps && (
                     <View style={styles.weightDetail}>
                       <TouchableOpacity>
                         <Text style={[styles.metaBadge, { color: colors.textPrimary }]}>
@@ -377,8 +378,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
-  title: { fontSize: 24, fontWeight: "700", textAlign: "center" },
-  category: { fontSize: 14 },
+  title: { fontSize: 22, fontWeight: "700", textAlign: "center" },
+  category: { fontSize: 16 },
   container: { padding: 16, paddingTop: 60 },
   infoCard: {
     borderRadius: 12,
@@ -393,10 +394,10 @@ const styles = StyleSheet.create({
     marginVertical: "auto",
   },
   infoItem: { flexDirection: "row", alignItems: "center" },
-  infoText: { marginLeft: 4, fontSize: 14 },
-  difficulty: { fontSize: 14, fontWeight: "600" },
-  description: { fontSize: 14, lineHeight: 20 },
-  sectionTitle: { fontSize: 18, fontWeight: "600", marginBottom: 12 },
+  infoText: { marginLeft: 4, fontSize: 16 },
+  difficulty: { fontSize: 16, fontWeight: "600" },
+  description: { fontSize: 16, lineHeight: 20 },
+  sectionTitle: { fontSize: 20, fontWeight: "600", marginBottom: 12 },
   exerciseCard: {
     borderRadius: 12,
     borderWidth: 1,
@@ -416,8 +417,8 @@ const styles = StyleSheet.create({
   indexText: { fontSize: 16, fontWeight: "600" },
   exerciseInfo: { flex: 1 },
   exerciseName: { fontSize: 16, fontWeight: "600", marginBottom: 4 },
-  metaRow: { flexDirection: "row", justifyContent: "space-between" },
-  metaText: { marginRight: 12, fontSize: 12 },
+  metaRow: { flexDirection: "row", justifyContent: "space-between", marginTop: 5 },
+  metaText: { marginRight: 12, fontSize: 14 },
   startBtn: {
     flexDirection: "row",
     alignItems: "center",
@@ -425,7 +426,7 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     borderRadius: 14,
   },
-  startText: { fontSize: 16, fontWeight: "600", marginLeft: 8 },
+  startText: { fontSize: 18, fontWeight: "600", marginLeft: 8 },
   modalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.4)",
@@ -442,7 +443,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 12,
   },
-  modalTitle: { fontSize: 18, fontWeight: "700", textAlign: "center" },
+  modalTitle: { fontSize: 20, fontWeight: "700", textAlign: "left", width: 280 },
   modalMeta: {
     flexDirection: "column",
     marginBottom: 12,
@@ -453,11 +454,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 4,
-    fontSize: 12,
+    fontSize: 14,
     textAlign: "center",
   },
   metaBadge: {
-    fontSize: 12,
+    fontSize: 14,
     borderWidth: 0.2,
     borderRadius: 8,
     paddingHorizontal: 8,
@@ -465,11 +466,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   metaSubmit: {
-    fontSize: 12,
+    fontSize: 14,
     borderWidth: 0.2,
     borderRadius: 8,
     paddingHorizontal: 8,
     paddingVertical: 4,
   },
-  modalText: { fontSize: 14, lineHeight: 20, marginBottom: 8 },
+  modalText: { fontSize: 16, lineHeight: 20, marginBottom: 8 },
 });

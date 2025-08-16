@@ -15,19 +15,14 @@ const reasons = [
     icon: (props: any) => <Ionicons name="book-outline" {...props} />,
   },
   {
-    key: "lack_of_time",
-    label: "Lack of time",
+    key: "time_managment",
+    label: "Time management",
     icon: (props: any) => <Ionicons name="time-outline" {...props} />,
   },
   {
     key: "inconsistent_motivation",
     label: "Inconsistent motivation",
     icon: (props: any) => <Ionicons name="trending-down-outline" {...props} />,
-  },
-  {
-    key: "physical_constraints",
-    label: "Physical constraints",
-    icon: (props: any) => <Ionicons name="bandage-outline" {...props} />,
   },
 ];
 

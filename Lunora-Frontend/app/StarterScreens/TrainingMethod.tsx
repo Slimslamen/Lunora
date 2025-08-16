@@ -16,11 +16,11 @@ const levels = [
     },
     {
         key: "Gym",
-        label: "Gym Workout",
+        label: "Gym-based",
         icon: (props: any) => <Ionicons name="barbell-outline" {...props} />,
     },
     {
-        key: "Combination",
+        key: "Hybrid",
         label: "I train both at home and at the gym",
         icon: (props: any) => <Ionicons name="swap-horizontal-outline" {...props} />,
     },

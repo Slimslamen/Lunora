@@ -25,8 +25,8 @@ const goals = [
     icon: (props: any) => <Ionicons name="pulse" {...props} />,
   },
   {
-    key: "improve_flexibility",
-    label: "Improve Flexibility",
+    key: "general_wellness",
+    label: "General wellness",
     icon: (props: any) => <MaterialCommunityIcons name="yoga" {...props} />,
   },
 ];

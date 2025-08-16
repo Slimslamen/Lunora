@@ -12,6 +12,7 @@ import { Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-ico
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { UserContext } from "@/Context/User/UserContext";
+import { router } from "expo-router";
 
 
 const achievements = [
@@ -85,6 +86,10 @@ export default function ProfileDetailedScreen() {
 
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
+  const navToEditProfile = () => {
+    router.push("./EditProfile")
+  }
+
   return (
     <View style={styles.safe}>
       <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.gradient}>
@@ -100,7 +105,7 @@ export default function ProfileDetailedScreen() {
               <Text style={[styles.name, { color: colors.textPrimary }]}>{activeUser?.name}</Text>
               <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Fitness Enthusiast</Text>
               <View style={styles.buttonRow}>
-                <TouchableOpacity style={[styles.button, { borderColor: colors.cardBorder }]}>
+                <TouchableOpacity onPress={navToEditProfile} style={[styles.button, { borderColor: colors.cardBorder }]}>
                   <Text style={[styles.buttonText, { color: colors.textPrimary }]}>Edit Profile</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, { borderColor: colors.cardBorder }]}>

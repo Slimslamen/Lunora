@@ -213,7 +213,7 @@ export default function EditProfileScreen() {
           <View style={{ height: 40 }} />
         </ScrollView>
 
-        {/* Picker Modal */}
+        {/* Modal */}
         <Modal transparent visible={!!picker} animationType="fade" onRequestClose={() => setPicker(null)}>
           <View style={styles.modalOverlay}>
             <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.modalContent}>
@@ -330,7 +330,6 @@ const styles = StyleSheet.create({
   rowValueWrap: { flexDirection: "row", alignItems: "center" },
   rowValue: { fontSize: 16, marginRight: 6, maxWidth: 180 },
   divider: { borderBottomWidth: 1, marginVertical: 8 },
-
   saveBtn: {
     borderRadius: 14,
     borderWidth: 1,

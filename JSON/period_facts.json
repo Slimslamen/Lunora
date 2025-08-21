@@ -41,13 +41,13 @@
   },
   {
     "id": "fact_9",
-    "fact": "Avoid overly intense workouts; your energy may be lower during menstruation.",
+    "fact": "Avoid overly intense workouts, your energy may be lower during menstruation.",
     "phase": "Menstrual"
   },
   {
     "id": "fact_10",
-    "fact": "Use this time for self-care and emotional grounding.",
-    "phase": "Menstrual"
+    "phase": "Menstrual",
+    "fact": "Protein intake aids recovery when energy is lower, include lean protein with meals and consider adding vitamin C to improve iron absorption."
   },
   {
     "id": "fact_11",
@@ -61,8 +61,8 @@
   },
   {
     "id": "fact_13",
-    "fact": "Creativity and problem-solving skills peak in this phase.",
-    "phase": "Follicular"
+    "phase": "Follicular",
+    "fact": "Follicular phase is good for building strength — progressively overload with compound lifts and fuel workouts with complex carbs (oats, sweet potato)."
   },
   {
     "id": "fact_14",
@@ -86,8 +86,8 @@
   },
   {
     "id": "fact_18",
-    "fact": "Social interaction and collaboration tend to feel easier in this phase.",
-    "phase": "Follicular"
+    "phase": "Follicular",
+    "fact": "Higher energy in this phase supports higher intensity and volume, aim for balanced meals with carbs and protein 1–2 hours before training."
   },
   {
     "id": "fact_19",
@@ -106,8 +106,8 @@
   },
   {
     "id": "fact_22",
-    "fact": "Confidence and libido are naturally higher during ovulation.",
-    "phase": "Ovulation"
+    "phase": "Ovulation",
+    "fact": "Strength and power often peak around ovulation — schedule heavy lifts or max-effort sessions and ensure adequate carbohydrate availability."
   },
   {
     "id": "fact_23",
@@ -131,8 +131,8 @@
   },
   {
     "id": "fact_27",
-    "fact": "Skin may glow more due to peak estrogen levels.",
-    "phase": "Ovulation"
+    "phase": "Ovulation",
+    "fact": "Good pre-workout fueling (carbs + small protein) supports high-intensity performance, prioritize sleep and recovery to maximize gains."
   },
   {
     "id": "fact_28",
@@ -144,10 +144,10 @@
     "fact": "Ovulation is a great time to aim for personal bests in strength or endurance.",
     "phase": "Ovulation"
   },
-  {
+   {
     "id": "fact_30",
-    "fact": "Egg-white cervical mucus increases, this is your most fertile time.",
-    "phase": "Ovulation"
+    "phase": "Luteal",
+    "fact": "Appetite and cravings can increase — prioritize protein and fiber-rich foods (beans, greek yogurt, vegetables) to support satiety and recovery."
   },
   {
     "id": "fact_31",

@@ -21,7 +21,7 @@ export default function Progress() {
 
   const [weeklyWorkouts, setWeeklyWorkouts] = useState<IWeeklyUserWorkouts[]>();
   const [UserWorkoutLog, setUserWorkoutLog] = useState<IUserWorkoutLog[]>();
-  const [currentWeek, setcurrentWeek] = useState(getWeek(new Date()));
+  const [currentWeek, setcurrentWeek] = useState(getWeek(new Date(), { weekStartsOn: 1 }));
   const [workouts, setWorkouts] = useState<IWorkout[]>([]);
 
   const getWeekStats = () => {

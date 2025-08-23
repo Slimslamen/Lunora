@@ -3,10 +3,11 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Modal, Pressable 
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons, FontAwesome5, MaterialCommunityIcons } from "@expo/vector-icons";
 import Feather from "@expo/vector-icons/Feather";
+import { useRouter } from "expo-router";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { generateClient } from "aws-amplify/data";
-import { Schema } from "../../../amplify/data/resource"; // Adjust the relative path as needed
+import { Schema } from "../../../amplify/data/resource";
 import { IChallenge } from "@/General-Interfaces/IChallenge";
 import { UserContext } from "@/Context/User/UserContext";
 import { IUserChallenges } from "@/General-Interfaces/IUser";
@@ -21,7 +22,9 @@ const iconMap = {
 };
 
 type IconSet = keyof typeof iconMap;
+
 export default function ChallengesScreen() {
+  const router = useRouter();
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
 
@@ -31,30 +34,27 @@ export default function ChallengesScreen() {
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   const [fetchedChallenge, setfetchedChallenge] = useState<IChallenge[]>();
-  const [showChallenges, setshowChallenges] = useState(false);
-  const [showCompleted, setshowCompleted] = useState(false);
   const [specificChallenge, setspecificChallenge] = useState<IChallenge | undefined>(undefined);
-
-  // user-specific challenges records (from UserChallenges model)
   const [userChallenges, setUserChallenges] = useState<IUserChallenges[] | undefined>(undefined);
 
   const activeChallenges = fetchedChallenge?.filter((f) => f.active);
-  const comingChallenges = fetchedChallenge?.filter((f) => f.coming);
 
   const ChallengeIcon = ({
     iconSet,
     icon,
+    size = 30,
+    color = "#fff",
     ...props
   }: {
     iconSet: keyof typeof iconMap;
     icon?: string;
+    size?: number;
+    color?: string;
     [key: string]: any;
   }) => {
     const IconComponent = iconMap[iconSet];
     if (!IconComponent || !icon) return null;
-    return (
-      <IconComponent name={icon} size={icon === "star" || icon === "trophy" || icon === "crown" ? 18 : 30} {...props} />
-    );
+    return <IconComponent name={icon} size={size} color={color} {...props} />;
   };
 
   useEffect(() => {
@@ -71,7 +71,6 @@ export default function ChallengesScreen() {
     fetchChallenges();
   }, []);
 
-  // fetch UserChallenges for the active user
   useEffect(() => {
     const fetchUserChallenges = async () => {
       if (!activeUser?.id) {
@@ -98,7 +97,6 @@ export default function ChallengesScreen() {
             createdAt: d.createdAt,
             updatedAt: d.updatedAt,
           }));
-          console.log("Test: " + sanitized)
           setUserChallenges(sanitized);
         } else {
           setUserChallenges([]);
@@ -112,19 +110,6 @@ export default function ChallengesScreen() {
     fetchUserChallenges();
   }, []);
 
-  const showActiveChallenges = () => {
-    setshowChallenges(!showChallenges);
-  };
-  const showCompletedChallenges = () => {
-    setshowCompleted(!showCompleted);
-    console.log("Test: " + userChallenges)
-  };
-
-  const getChallengeLongDesc = (ch?: IChallenge) =>
-    ch?.longDescription ?? ch?.longDescription ?? ch?.description ?? ch?.description ?? "No additional details available.";
-
-  // derive set of challenge ids the user has completed
-  // Memoized set of completed challenge ids for the active user
   const completedIds = useMemo(() => {
     if (!userChallenges || !Array.isArray(userChallenges)) return new Set<string>();
     return new Set(
@@ -134,7 +119,6 @@ export default function ChallengesScreen() {
     );
   }, [userChallenges]);
 
-  // Challenges the active user has completed (by matching IDs)
   const userCompletedChallenges = useMemo(
     () =>
       (fetchedChallenge || []).filter(
@@ -143,6 +127,12 @@ export default function ChallengesScreen() {
     [fetchedChallenge, completedIds]
   );
 
+  // Get the most recent completed challenge to feature
+  const featuredCompletedChallenge = userCompletedChallenges?.[0];
+
+  const navigateToChallengesGallery = () => {
+    router.push("/(tabs)/ChallengesGallery");
+  };
 
   return (
     <View style={{ flex: 1 }}>
@@ -180,184 +170,104 @@ export default function ChallengesScreen() {
             </View>
           </View>
 
-          {/* Active Challenges */}
-          <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Active Challenges</Text>
-          {activeChallenges != null &&
-            activeChallenges.slice(0, showChallenges ? activeChallenges.length : 3).map((ch) => (
-              <TouchableOpacity
-                key={ch.id}
-                onPress={() => setspecificChallenge(ch)}
-                style={[
-                  styles.card,
-                  {
-                    backgroundColor: colors.cardBg,
-                    borderColor: colors.cardBorder,
-                  },
-                ]}
-              >
-                <View style={styles.row}>
-                  <View style={styles.iconWrapper}>
-                    <ChallengeIcon iconSet={ch.iconSet as IconSet} icon={ch.icon} color={colors.textSecondary} />
-                  </View>
-                  <View style={styles.challengeContent}>
-                    <Text style={[styles.challengeTitle, { color: colors.textPrimary }]}>{ch.name}</Text>
-                    <Text style={[styles.challengeSubtitle, { color: colors.textPrimary }]} numberOfLines={2}>
-                      {ch.description}
-                    </Text>
-                  </View>
-                </View>
-                <View style={styles.progressBarBg}>
-                  <View
-                    style={[
-                      styles.progressFill,
-                      {
-                        width: `${(ch.progress / 20) * 100}%`,
-                        backgroundColor: colors.textPrimary,
-                      },
-                    ]}
-                  />
-                </View>
-                <View style={styles.rowFooter}>
-                  <Text style={[styles.progressText, { color: colors.textPrimary }]}>
-                    {(ch.progress / 20) * 100}% completed
-                  </Text>
-                  <Text style={[styles.reward, { color: colors.textPrimary, textAlign: "center" }]}>
-                    + {ch.exp} exp
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-          <TouchableOpacity onPress={showActiveChallenges} style={[styles.quickButton]}>
-            <Text style={[styles.quickText, { color: colors.textPrimary }]}>
-              {showChallenges ? "View Fewer Challenges" : "View all Challenges"}
-            </Text>
-          </TouchableOpacity>
-
-          {/* Completed */}
-          <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Completed</Text>
-            {userCompletedChallenges &&
-            userCompletedChallenges.slice(0, 1).map((ch) => (
-              <TouchableOpacity
-              key={ch.id}
-              onPress={() => setspecificChallenge(ch)}
+          {/* Featured Challenge */}
+          <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Featured Challenge</Text>
+          {featuredCompletedChallenge ? (
+            <View
               style={[
-                styles.completedCard,
-                {
-                backgroundColor: colors.cardBg,
-                borderColor: colors.cardBorder,
-                },
-              ]}
-              >
-              <View style={styles.iconWrapper}>
-                <ChallengeIcon iconSet={ch.iconSet as IconSet} icon={ch.icon} color={colors.textSecondary} />
-              </View>
-              <View style={styles.column}>
-                <View style={styles.challengeContent}>
-                <Text style={[styles.challengeTitle, { color: colors.textPrimary, textAlign: "center" }]}>
-                  {ch.name}
-                </Text>
-                <Text
-                  style={[styles.challengeSubtitle, { color: colors.textPrimary, textAlign: "center" }]}
-                  numberOfLines={2}
-                >
-                  {ch.description}
-                </Text>
-                </View>
-                <Text
-                style={[
-                  styles.progressText,
-                  {
-                  color: colors.textPrimary,
-                  textAlign: "center",
-                  fontWeight: "bold",
-                  marginTop: 10,
-                  marginLeft: -20,
-                  },
-                ]}
-                >
-                {(ch.progress / 20) * 100}% completed
-                </Text>
-              </View>
-              <View style={styles.rowFooter}>
-                <View style={styles.reward}>
-                <ChallengeIcon iconSet={ch.rewardSet as IconSet} icon={ch.rewardIcon} color={colors.accent} />
-                </View>
-              </View>
-              </TouchableOpacity>
-            ))}
-          <TouchableOpacity onPress={showCompletedChallenges} style={[styles.quickButton]}>
-            <Text style={[styles.quickText, { color: colors.textPrimary }]}>
-              {showCompleted ? "View Fewer Completed Challenges" : "View All Completed Challenges"}
-            </Text>
-          </TouchableOpacity>
-
-          {/* Coming Soon */}
-          <Text style={[styles.sectionHeader, { color: colors.textPrimary }]}>Coming Soon</Text>
-          {comingChallenges?.map((ch) => (
-            <TouchableOpacity
-              key={ch.id}
-              onPress={() => setspecificChallenge(ch)}
-              style={[
-                styles.card,
+                styles.featuredCard,
                 {
                   backgroundColor: colors.cardBg,
                   borderColor: colors.cardBorder,
                 },
               ]}
             >
-              <View style={styles.row}>
-                <View style={styles.iconWrapper}>
-                  <ChallengeIcon iconSet={ch.iconSet as IconSet} icon={ch.icon} color={colors.textSecondary} />
-                </View>
-                <View style={styles.challengeContent}>
-                  <Text style={[styles.challengeTitle, { color: colors.textPrimary, opacity: 0.8 }]}>{ch.name}</Text>
-                  <Text style={[styles.challengeSubtitle, { color: colors.textPrimary, opacity: 0.8 }]}>
-                    {ch.description}
-                  </Text>
-                </View>
-                <View style={styles.reward}>
-                  <ChallengeIcon iconSet={ch.rewardSet as IconSet} icon={ch.rewardIcon} color={colors.accent} />
-                </View>
-              </View>
-            </TouchableOpacity>
-          ))}
-
-          {/* Challenge Detail Modal */}
-          <Modal
-            visible={!!specificChallenge}
-            transparent
-            animationType="fade"
-            onRequestClose={() => setspecificChallenge(undefined)}
-          >
-            <View style={styles.modalOverlay}>
-              <LinearGradient colors={[colors.gradientStart, colors.gradientEnd]} style={styles.modalContent}>
-                <View style={styles.modalHeader}>
-                  <View style={{ flexDirection: "row", alignItems: "center" }}>
-                    <View style={styles.iconWrapper}>
-                      <ChallengeIcon
-                        iconSet={specificChallenge?.iconSet as IconSet}
-                        icon={specificChallenge?.icon}
-                        color={colors.textSecondary}
+              <View style={styles.featuredMedalWrap}>
+                <LinearGradient
+                  colors={[colors.gradientStart, colors.gradientEnd]}
+                  start={{ x: 0.2, y: 0 }}
+                  end={{ x: 0.9, y: 1 }}
+                  style={[styles.featuredMedalOuter, { borderColor: colors.cardBg }]}
+                >
+                  <LinearGradient
+                    colors={[colors.gradientStart, colors.gradientEnd]}
+                    start={{ x: 0.2, y: 0 }}
+                    end={{ x: 0.9, y: 1 }}
+                    style={styles.featuredMedalInner}
+                  >
+                    <View style={styles.featuredIconBox}>
+                      <ChallengeIcon 
+                        iconSet={featuredCompletedChallenge.iconSet as IconSet} 
+                        icon={featuredCompletedChallenge.icon} 
+                        size={40}
                       />
                     </View>
-                    <Text style={[styles.modalTitle, { color: colors.textPrimary }]}>{specificChallenge?.name}</Text>
-                  </View>
-                  <Pressable onPress={() => setspecificChallenge(undefined)}>
-                    <Ionicons name="close" size={24} color={colors.textSecondary} />
-                  </Pressable>
+                  </LinearGradient>
+                </LinearGradient>
+              </View>
+              
+              <View style={styles.featuredContent}>
+                <Text style={[styles.featuredTitle, { color: colors.textPrimary }]}>
+                  {featuredCompletedChallenge.name}
+                </Text>
+                <Text style={[styles.featuredSubtitle, { color: colors.textSecondary }]} numberOfLines={2}>
+                  {featuredCompletedChallenge.description}
+                </Text>
+                <View style={styles.featuredCompletedChip}>
+                  <Ionicons name="checkmark" size={16} color={colors.textPrimary} />
+                  <Text style={styles.featuredCompletedText}>Completed</Text>
                 </View>
-                <View style={styles.modalMeta}>
-                  <View style={[styles.modalContainer, { borderWidth: 1, borderColor: colors.textPrimary, borderRadius: 10 }]}>
-                    <ScrollView style={{ maxHeight: 360 }}>
-                      <Text style={[styles.modalText, { color: colors.textSecondary }]}>
-                        {getChallengeLongDesc(specificChallenge)}
-                      </Text>
-                    </ScrollView>
-                  </View>
-                </View>
-              </LinearGradient>
+              </View>
             </View>
-          </Modal>
+          ) : (
+            <View
+              style={[
+                styles.featuredCard,
+                {
+                  backgroundColor: colors.cardBg,
+                  borderColor: colors.cardBorder,
+                  opacity: 0.6,
+                },
+              ]}
+            >
+              <View style={[styles.featuredMedalWrap, { opacity: 0.5 }]}>
+                <LinearGradient
+                  colors={[colors.gradientStart, colors.gradientEnd]}
+                  start={{ x: 0.2, y: 0 }}
+                  end={{ x: 0.9, y: 1 }}
+                  style={[styles.featuredMedalOuter, { borderColor: colors.cardBorder }]}
+                >
+                  <LinearGradient
+                    colors={[colors.gradientStart, colors.gradientEnd]}
+                    start={{ x: 0.2, y: 0 }}
+                    end={{ x: 0.9, y: 1 }}
+                    style={styles.featuredMedalInner}
+                  >
+                    <View style={styles.featuredIconBox}>
+                      <Ionicons name="trophy" size={40} color={colors.textPrimary} />
+                    </View>
+                  </LinearGradient>
+                </LinearGradient>
+              </View>
+              
+              <View style={styles.featuredContent}>
+                <Text style={[styles.featuredTitle, { color: colors.textPrimary }]}>
+                  Complete Your First Challenge
+                </Text>
+                <Text style={[styles.featuredSubtitle, { color: colors.textSecondary }]}>
+                  Start your journey by completing any challenge to see it featured here!
+                </Text>
+              </View>
+            </View>
+          )}
+
+          {/* View All Challenges Button */}
+          <TouchableOpacity onPress={navigateToChallengesGallery} style={[styles.viewAllButton, { color: "#FFFF"}]}>
+            <Text style={[styles.viewAllText, { color: "#FFFF" }]}>
+              View All Challenges
+            </Text>
+            <Ionicons name="chevron-forward" size={20} color={colors.textPrimary} />
+          </TouchableOpacity>
         </ScrollView>
       </LinearGradient>
     </View>
@@ -366,17 +276,7 @@ export default function ChallengesScreen() {
 
 const styles = StyleSheet.create({
   safe: { flex: 1 },
-  quickButton: {
-    borderColor: "#f5e6e6",
-    borderWidth: 2,
-    paddingVertical: 14,
-    paddingHorizontal: 10,
-    borderRadius: 14,
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  quickText: { fontSize: 16, fontWeight: "600" },
-  container: { padding: 16, paddingTop: 60, paddingBottom: 90 },
+  container: { padding: 16, paddingTop: 60, paddingBottom: 200 },
   title: { fontSize: 24, fontWeight: "700", textAlign: "center" },
   subtitle: { fontSize: 16, textAlign: "center", marginBottom: 24 },
   card: {
@@ -385,40 +285,95 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: 1,
   },
-  completedCard: {
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 16,
-    borderWidth: 1,
-    flexDirection: "row",
-    alignItems: "center",
-  },
   statsRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 10 },
   statItem: { alignItems: "center", flex: 1, textAlign: "center", fontSize: 18, fontWeight: "600" },
   statNumber: { fontSize: 22, fontWeight: "700" },
   statLabel: { fontSize: 15 },
   sectionHeader: { fontSize: 18, fontWeight: "600", marginVertical: 8 },
-  row: { flexDirection: "row", alignItems: "center" },
-  column: { flexDirection: "column", alignItems: "center" },
-  iconWrapper: { width: 30, alignItems: "center", marginRight: 12, marginLeft: 8 },
-  challengeContent: { flex: 1 },
-  challengeTitle: { fontSize: 18, fontWeight: "600" },
-  challengeSubtitle: { fontSize: 15, marginTop: 2, opacity: 0.8, width: 240 },
-  daysLeft: { fontSize: 14, marginLeft: 8 },
-  progressBarBg: {
-    backgroundColor: "rgba(255,255,255,0.3)",
-    height: 6,
-    borderRadius: 3,
-    overflow: "hidden",
-    marginVertical: 8,
+  
+  // Featured Challenge Styles
+  featuredCard: {
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 20,
+    borderWidth: 1,
+    alignItems: "center",
+    minHeight: 200,
   },
-  progressFill: { height: "100%" },
-  rowFooter: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
-  progressText: { fontSize: 15 },
-  reward: { flexDirection: "row", alignItems: "center" },
-  rewardText: { fontSize: 14, marginLeft: 4 },
+  featuredMedalWrap: { 
+    alignItems: "center", 
+    justifyContent: "center",
+    marginBottom: 16,
+  },
+  featuredMedalOuter: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 8,
+  },
+  featuredMedalInner: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  featuredIconBox: { 
+    transform: [{ translateY: 1 }] 
+  },
+  featuredContent: {
+    alignItems: "center",
+    width: "100%",
+  },
+  featuredTitle: {
+    fontSize: 20,
+    fontWeight: "700",
+    textAlign: "center",
+    marginBottom: 8,
+  },
+  featuredSubtitle: {
+    fontSize: 16,
+    textAlign: "center",
+    marginBottom: 12,
+    opacity: 0.8,
+  },
+  featuredCompletedChip: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    backgroundColor: "#4CAF50",
+    borderRadius: 12,
+    gap: 4,
+  },
+  featuredCompletedText: {
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "600",
+  },
 
-  /* Modal styles */
+  // View All Button
+  viewAllButton: {
+    borderColor: "#f5e6e6",
+    borderWidth: 2,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    borderRadius: 14,
+    alignItems: "center",
+    marginBottom: 20,
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 8,
+  },
+  viewAllText: { 
+    fontSize: 16, 
+    fontWeight: "600",
+  },
+
+  // Existing modal and icon styles
+  iconWrapper: { width: 30, alignItems: "center", marginRight: 12, marginLeft: 8 },
   modalOverlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.5)", justifyContent: "center", padding: 20 },
   modalContent: { borderRadius: 12, padding: 18 },
   modalHeader: {

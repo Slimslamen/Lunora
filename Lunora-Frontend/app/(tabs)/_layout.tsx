@@ -55,7 +55,7 @@ export default function TabLayout() {
       <View style={[styles.Thirdoverlay, { backgroundColor: colors.textPrimary }]}>
         <TouchableOpacity
           onPress={ToAiChat}
-          style={{ alignItems: "center", justifyContent: "center", display: "flex"}}
+          style={{ alignItems: "center", justifyContent: "center", display: "flex" }}
         >
           <Ionicons name="moon-sharp" size={22} color={colors.accent} />
         </TouchableOpacity>
@@ -123,13 +123,20 @@ export default function TabLayout() {
         />
 
         <Tabs.Screen
+          name="ChallengesGallery"
+          options={{
+            href: null,
+          }}
+        />
+
+        <Tabs.Screen
           name="EditProfile"
           options={{
             href: null,
           }}
         />
 
-          <Tabs.Screen
+        <Tabs.Screen
           name="profile"
           options={{
             href: null,

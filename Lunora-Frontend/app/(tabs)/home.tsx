@@ -169,7 +169,7 @@ export default function ProgressOverviewScreen() {
   // Fetch cycle facts
   useEffect(() => {
     const fetchCycleFacts = async () => {
-      const { data, errors } = await client.models.PeriodFacts.list({});
+      const { data, errors } = await client.models.CycleFacts.list({});
       if (errors) {
         console.error("Error fetching cycle facts:", errors);
         return;

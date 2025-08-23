@@ -23,7 +23,7 @@ export default function WelcomeScreen() {
               </TouchableOpacity>
             </Link>
 
-            <Link href={loadedUser ? './(tabs)/home' : './loadingScreen'} asChild>
+            <Link href={'./(tabs)/home'} asChild>
               <TouchableOpacity style={styles.loginBtn}>
               <Text style={styles.loginText}>I already have an account</Text>
               </TouchableOpacity>

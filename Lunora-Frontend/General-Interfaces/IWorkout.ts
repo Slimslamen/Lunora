@@ -7,7 +7,6 @@ export interface IWorkout {
   calories: string;
   intensity: string;
   type: string;
-  muscles: string[];
   exercises: IWorkoutExercises[];
   createdAt: string;
   updatedAt: string;

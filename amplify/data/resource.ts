@@ -123,7 +123,6 @@ const schema = a.schema({
       calories: a.string(),
       intensity: a.string(),
       type: a.string(),
-      muscles: a.string().array(),
       exercises: a.hasMany("WorkoutExercises", "workout_id"),
       userWorkoutExercises: a.hasMany("UserWorkoutExercises", "workout_id"),
       userWorkoutLogs: a.hasMany("UserWorkoutLog", "workout_id"),
@@ -138,6 +137,7 @@ const schema = a.schema({
       id: a.string().required(),
       name: a.string(),
       description: a.string(),
+      longDescription: a.string(),
       icon: a.string(),
       iconSet: a.string(),
       progress: a.integer(),
@@ -146,13 +146,15 @@ const schema = a.schema({
       exp: a.integer(),
       active: a.boolean(),
       coming: a.boolean(),
+      type: a.string(),
+      location: a.string(),
       userChallenges: a.hasMany("UserChallenges", "challenge_id"),
       createdAt: a.string(),
       updatedAt: a.string(),
     })
     .authorization((allow) => [allow.guest()]),
 
-  PeriodFacts: a
+  CycleFacts: a
     .model({
       id: a.string().required(),
       fact: a.string(),

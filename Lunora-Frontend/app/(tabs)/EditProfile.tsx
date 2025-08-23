@@ -55,12 +55,6 @@ export default function EditProfileScreen() {
     key: keyof Profile;
     options: string[];
   }>(null);
-  //   const [showDate, setShowDate] = useState(Platform.OS === "ios");
-
-  //   const onChangeNum = (key: "height" | "weight" | "workoutFrequency", val: string) => {
-  //     const num = Number(val.replace(/[^0-9.]/g, ""));
-  //     setForm((prev) => ({ ...prev, [key]: isNaN(num) ? 0 : num }));
-  //   };
 
   const openSelect = (key: keyof Profile, options: string[]) => setPicker({ key, options });
   const selectValue = (value: string) => {
@@ -68,12 +62,6 @@ export default function EditProfileScreen() {
     setForm((prev) => ({ ...prev, [picker.key]: value }) as Profile);
     setPicker(null);
   };
-
-  //   const onChangePeriod = (_: DateTimePickerEvent, d?: Date) => {
-  //     if (!d) return;
-  //     setForm((prev) => ({ ...prev, period: d.toISOString().slice(0, 10) }));
-  //     if (Platform.OS !== "ios") setShowDate(false);
-  //   };
 
   const onSave = () => {
     let frequencyValue;

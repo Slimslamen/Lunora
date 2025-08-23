@@ -2,6 +2,7 @@
     id: string;
     name: string;
     description: string;
+    longDescription: string;
     icon: string;
     iconSet: string;
     progress: number;
@@ -10,7 +11,10 @@
     active: boolean;
     coming: boolean;
     exp: number;
+    type?: string;
+    location?: string;
     createdAt: string;
     updatedAt: string;
   }
   
+

@@ -1,5 +1,5 @@
 // ProfileDetailedScreen.tsx
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -13,7 +13,10 @@ import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { UserContext } from "@/Context/User/UserContext";
 import { router } from "expo-router";
+import { Schema } from "../../../amplify/data/resource";
+import { generateClient } from "aws-amplify/api";
 
+const client = generateClient<Schema>();
 
 const achievements = [
   {
@@ -54,6 +57,19 @@ const achievements = [
   },
 ];
 
+const userLevel = [
+  { id: "level_1", title: "Aspiring Athlete", minExp: 0 },
+  { id: "level_2", title: "Fitness Enthusiast", minExp: 2000 },
+  { id: "level_3", title: "Dedicated Mover", minExp: 5000 },
+  { id: "level_4", title: "Consistent Trainer", minExp: 10000 },
+  { id: "level_5", title: "Seasoned Performer", minExp: 20000 },
+  { id: "level_6", title: "Strength Specialist", minExp: 40000 },
+  { id: "level_7", title: "Endurance Pro", minExp: 75000 },
+  { id: "level_8", title: "Elite Competitor", minExp: 120000 },
+  { id: "level_9", title: "Master Athlete", minExp: 200000 },
+  { id: "level_10", title: "Legendary Athlete", minExp: 350000 },
+];
+
 const records = [
   {
     key: "longest",
@@ -86,9 +102,53 @@ export default function ProfileDetailedScreen() {
 
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
+  const [levelTitle, setLevelTitle] = useState<string>("Aspiring Athlete");
+  const [userExp, setUserExp] = useState<number>(0);
+
   const navToEditProfile = () => {
-    router.push("./EditProfile")
-  }
+    router.push("./EditProfile");
+  };
+
+  // fetch completed user challenges and sum exp
+  useEffect(() => {
+    const fetchCompletedChallengesExp = async () => {
+      if (!activeUser?.id) return;
+
+      try {
+        const { data, errors } = await client.models.UserChallenges.list({
+          filter: {
+            user_id: { eq: activeUser.id },
+            completed: { eq: true },
+          },
+        });
+
+        if (errors) {
+          console.error("Error fetching user challenges:", errors);
+          return;
+        }
+
+        const total = (Array.isArray(data) ? data : []).reduce((sum: number, ch: any) => {
+          const expVal = Number(ch?.exp ?? 0);
+          return sum + (isNaN(expVal) ? 0 : expVal);
+        }, 0);
+
+        setUserExp(total);
+
+        // determine level: highest minExp <= total
+        const sorted = [...userLevel].sort((a, b) => a.minExp - b.minExp);
+        let current = sorted[0].title;
+        for (const lvl of sorted) {
+          if (total >= lvl.minExp) current = lvl.title;
+          else break;
+        }
+        setLevelTitle(current);
+      } catch (err) {
+        console.error("Failed to load user challenges exp:", err);
+      }
+    };
+
+    fetchCompletedChallengesExp();
+  }, [activeUser?.id]);
 
   return (
     <View style={styles.safe}>
@@ -103,7 +163,7 @@ export default function ProfileDetailedScreen() {
                 <Ionicons name="person" size={40} color={colors.textPrimary} />
               </View>
               <Text style={[styles.name, { color: colors.textPrimary }]}>{activeUser?.name}</Text>
-              <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Fitness Enthusiast</Text>
+              <Text style={[styles.subtitle, { color: colors.textSecondary }]}>{levelTitle}</Text>
               <View style={styles.buttonRow}>
                 <TouchableOpacity onPress={navToEditProfile} style={[styles.button, { borderColor: colors.cardBorder }]}>
                   <Text style={[styles.buttonText, { color: colors.textPrimary }]}>Edit Profile</Text>

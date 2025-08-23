@@ -32,7 +32,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
         client.models.Users.list({}),
         client.models.Challenges.list({}),
         client.models.Workouts.list({}),
-        client.models.PeriodFacts.list({}),
+        client.models.CycleFacts.list({}),
       ]);
       const errors = userErrors;
       setLoadedUser(false);

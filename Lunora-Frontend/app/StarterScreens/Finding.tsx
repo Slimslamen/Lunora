@@ -7,6 +7,7 @@ import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { ReturnButton } from '../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 const sources = [
   {
@@ -33,13 +34,15 @@ const sources = [
 
 export default function DiscoverySourceScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string>("");
 
   const router = useRouter();
 
   const handleContinue = () => {
+    activeUser!.howFound = selected
     router.push("./Facts/Fact3");
   };
 

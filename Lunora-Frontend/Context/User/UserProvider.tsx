@@ -46,6 +46,9 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
         if (U) {
           setactiveUser(U[0] as IUser)
         }
+      } else {
+        console.log("No user logged in")
+        return;
       }
     };
     fetchUser();

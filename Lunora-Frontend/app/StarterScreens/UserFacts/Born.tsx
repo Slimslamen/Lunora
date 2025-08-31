@@ -7,9 +7,11 @@ import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { useRouter } from "expo-router";
 import { ReturnButton } from '../../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 export default function AskBirthdayScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
@@ -18,12 +20,15 @@ export default function AskBirthdayScreen() {
   const [showPicker, setShowPicker] = useState(true);
 
   const onChange = (event: DateTimePickerEvent, selected?: Date) => {
-    if (selected) setDate(selected);
+    if (selected) 
+      setDate(selected);
     // On Android dismiss picker after selection
     if (Platform.OS !== "ios") setShowPicker(false);
   };
 
   const handleContinue = () => {
+    const convertedDate = date.toLocaleDateString()
+    activeUser!.birth = convertedDate;
     router.push("./HeightWeight");
   };
 

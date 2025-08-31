@@ -89,7 +89,7 @@ export default function ProgressOverviewScreen() {
         return;
       }
       if (Array.isArray(Users)) {
-        const jimmyUser = Users.find((u) => u.name === "Jimmy");
+        const jimmyUser = Users.find((u) => u.name === activeUser!.name);
         if (jimmyUser) {
           setappUsers(jimmyUser as IUser);
         }
@@ -112,10 +112,6 @@ export default function ProgressOverviewScreen() {
         return;
       }
       if (data) {
-        console.log("All weekly workouts:", data);
-        console.log("Current week is:", currentWeek);
-        console.log("Workouts for current week:", data.filter(w => w.week === currentWeek));
-        console.log("All workout weeks:", [...new Set(data.map(w => w.week))].sort());
         setWeeklyWorkouts(data as IWeeklyUserWorkouts[]);
       }
     };
@@ -191,9 +187,6 @@ export default function ProgressOverviewScreen() {
         
         // Get last shown date from storage
         const lastShownDate = await AsyncStorage.getItem('lastCycleFactDate');
-        
-        console.log("Today:", today);
-        console.log("Last shown date:", lastShownDate);
         
         // If cycle fact hasn't been shown today
         if (lastShownDate !== today) {

@@ -7,9 +7,11 @@ import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ReturnButton } from '../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 export default function LastPeriodScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const [date, setDate] = useState(new Date());
@@ -23,6 +25,8 @@ export default function LastPeriodScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
+    const convertedDate = date.toLocaleDateString()
+    activeUser!.period = convertedDate;
     router.push("./Facts/Fact2");
   };
 

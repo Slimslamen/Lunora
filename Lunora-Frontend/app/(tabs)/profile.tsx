@@ -110,45 +110,64 @@ export default function ProfileDetailedScreen() {
   };
 
   // fetch completed user challenges and sum exp
-  useEffect(() => {
-    const fetchCompletedChallengesExp = async () => {
-      if (!activeUser?.id) return;
+ useEffect(() => {
+  const fetchCompletedChallengesExp = async () => {
+    if (!activeUser?.id) return;
 
-      try {
-        const { data, errors } = await client.models.UserChallenges.list({
-          filter: {
-            user_id: { eq: activeUser.id },
-            completed: { eq: true },
-          },
-        });
+    try {
+      // Fetch completed user challenges
+      const { data, errors } = await client.models.UserChallenges.list({
+        filter: {
+          user_id: { eq: activeUser.id },
+          completed: { eq: true },
+        },
+      });
 
-        if (errors) {
-          console.error("Error fetching user challenges:", errors);
-          return;
-        }
-
-        const total = (Array.isArray(data) ? data : []).reduce((sum: number, ch: any) => {
-          const expVal = Number(ch?.exp ?? 0);
-          return sum + (isNaN(expVal) ? 0 : expVal);
-        }, 0);
-
-        setUserExp(total);
-
-        // determine level: highest minExp <= total
-        const sorted = [...userLevel].sort((a, b) => a.minExp - b.minExp);
-        let current = sorted[0].title;
-        for (const lvl of sorted) {
-          if (total >= lvl.minExp) current = lvl.title;
-          else break;
-        }
-        setLevelTitle(current);
-      } catch (err) {
-        console.error("Failed to load user challenges exp:", err);
+      if (errors) {
+        console.error("Error fetching user challenges:", errors);
+        return;
       }
-    };
 
-    fetchCompletedChallengesExp();
-  }, [activeUser?.id]);
+      const completedChallenges = Array.isArray(data) ? data : [];
+
+      // Fetch all challenges to get exp values
+      const { data: allChallenges, errors: challengeErrors } = await client.models.Challenges.list({});
+      if (challengeErrors) {
+        console.error("Error fetching challenges:", challengeErrors);
+        return;
+      }
+      const challengesArr = Array.isArray(allChallenges) ? allChallenges : [];
+
+      // Create a map for quick lookup
+      const expMap = new Map<string, number>();
+      challengesArr.forEach((c: any) => {
+        if (c.id && typeof c.exp === "number") expMap.set(String(c.id), c.exp);
+      });
+
+      // Sum exp for completed challenges
+      const total = completedChallenges.reduce((sum: number, uc: any) => {
+        const challengeId = String(uc.challenge_id);
+        const expVal = expMap.get(challengeId) ?? 0;
+        return sum + expVal;
+      }, 0);
+
+      setUserExp(total);
+
+      // determine level: highest minExp <= total
+      const sorted = [...userLevel].sort((a, b) => a.minExp - b.minExp);
+      let current = sorted[0].title;
+      for (const lvl of sorted) {
+        if (total >= lvl.minExp) current = lvl.title;
+        else break;
+      }
+      setLevelTitle(current);
+    } catch (err) {
+      console.error("Failed to load user challenges exp:", err);
+    }
+  };
+
+  fetchCompletedChallengesExp();
+}, [activeUser?.id]);
 
   return (
     <View style={styles.safe}>

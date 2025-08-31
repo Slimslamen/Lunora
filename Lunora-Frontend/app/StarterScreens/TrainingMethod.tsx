@@ -7,6 +7,7 @@ import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { ReturnButton } from '../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 const levels = [
     {
@@ -28,13 +29,15 @@ const levels = [
 
 export default function TrainingMethodScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string>("");
 
   const router = useRouter();
 
   const handleContinue = () => {
+    activeUser!.trainingMethod = selected;
     router.push("./UserFacts/Goal");
   };
   return (

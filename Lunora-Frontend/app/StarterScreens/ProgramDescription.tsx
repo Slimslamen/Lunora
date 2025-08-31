@@ -1,12 +1,17 @@
 // FeaturesScreen.tsx
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { useRouter } from "expo-router";
-import { ReturnButton } from '../../components/Return'
+import { ReturnButton } from "../../components/Return";
+import { Schema } from "../../../amplify/data/resource";
+import { generateClient } from "aws-amplify/api";
+import { UserContext } from "@/Context/User/UserContext";
+
+const client = generateClient<Schema>();
 
 const features = [
   "Specialized weekly schemes based on your menstrual phase",
@@ -18,9 +23,35 @@ const features = [
 
 export default function FeaturesScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
+
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
   const router = useRouter();
+  let todaysDate = new Date().toLocaleDateString()
+
+  useEffect(() => {
+    const creatingUser = async () => {
+        const { errors, data: newUser } = await client.models.Users.create({
+          name: activeUser!.name,
+          birth: activeUser!.birth,
+          height: activeUser!.height,
+          weight: activeUser!.weight,
+          obstacle: activeUser!.obstacle,
+          trainingMethod: activeUser!.trainingMethod,
+          goal: activeUser!.goal,
+          period: activeUser!.period,
+          birthControl: activeUser!.birthControl,
+          energy: activeUser!.energy,
+          workoutFrequency: activeUser!.workoutFrequency,
+          referral: activeUser!.referral,
+          howFound: activeUser!.howFound,
+          createdAt: todaysDate
+        });
+    }
+
+    creatingUser()
+  }, []);
 
   const handleContinue = () => {
     router.push("./Preparing");

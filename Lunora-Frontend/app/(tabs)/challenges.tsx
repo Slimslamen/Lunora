@@ -34,7 +34,6 @@ export default function ChallengesScreen() {
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
   const [fetchedChallenge, setfetchedChallenge] = useState<IChallenge[]>();
-  const [specificChallenge, setspecificChallenge] = useState<IChallenge | undefined>(undefined);
   const [userChallenges, setUserChallenges] = useState<IUserChallenges[] | undefined>(undefined);
 
   const activeChallenges = fetchedChallenge?.filter((f) => f.active);
@@ -80,7 +79,7 @@ export default function ChallengesScreen() {
       try {
         const { data, errors } = await client.models.UserChallenges.list({
           filter: {
-            user_id: { eq: activeUser?.id || "user_1" },
+            user_id: { eq: activeUser?.id },
           },
         });
         if (errors) {
@@ -262,7 +261,7 @@ export default function ChallengesScreen() {
           )}
 
           {/* View All Challenges Button */}
-          <TouchableOpacity onPress={navigateToChallengesGallery} style={[styles.viewAllButton, { color: "#FFFF"}]}>
+          <TouchableOpacity onPress={navigateToChallengesGallery} style={[styles.viewAllButton]}>
             <Text style={[styles.viewAllText, { color: "#FFFF" }]}>
               View All Challenges
             </Text>

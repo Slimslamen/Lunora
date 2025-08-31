@@ -14,9 +14,11 @@ import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ReturnButton } from '../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 export default function ReferralScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
 
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
@@ -24,7 +26,11 @@ export default function ReferralScreen() {
 
   const router = useRouter();
 
-  const handleContinue = () => {
+  const handleContinue = (ref : string) => {
+    if(ref === "no-referral")
+      activeUser!.referral = "";
+    else
+      activeUser!.referral = referrerEmail;
     router.push("./Finding");
   };
 
@@ -59,7 +65,7 @@ export default function ReferralScreen() {
               </View>
 
               <TouchableOpacity
-                onPress={handleContinue}
+                onPress={() => handleContinue("")}
                 style={[
                   styles.button,
                   {
@@ -82,7 +88,7 @@ export default function ReferralScreen() {
                 </Text>
               </TouchableOpacity>
 
-              <TouchableOpacity onPress={handleContinue}>
+              <TouchableOpacity onPress={() => handleContinue("no-referral")}>
                 <Text style={[styles.skipText, { color: colors.textSecondary }]}>I wasn’t referred</Text>
               </TouchableOpacity>
             </View>

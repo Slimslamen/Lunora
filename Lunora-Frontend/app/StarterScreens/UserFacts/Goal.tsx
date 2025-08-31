@@ -7,6 +7,7 @@ import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { Ionicons, MaterialCommunityIcons, FontAwesome5 } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { ReturnButton } from '../../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 const goals = [
   {
@@ -33,13 +34,15 @@ const goals = [
 
 export default function GoalSelectionScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
+  const [selectedGoal, setSelectedGoal] = useState<string>("");
 
   const router = useRouter();
 
   const handleContinue = () => {
+    activeUser!.goal = selectedGoal;    
     router.push("../Energy");
   };
 

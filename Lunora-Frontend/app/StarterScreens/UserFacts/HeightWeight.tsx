@@ -7,9 +7,11 @@ import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { useRouter } from "expo-router";
 import { ReturnButton } from '../../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 export default function AskBodyMetricsScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
 
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
@@ -21,6 +23,8 @@ export default function AskBodyMetricsScreen() {
   const [weight, setWeight] = useState<number>(70);
 
   const handleContinue = () => {
+    activeUser!.height = height;
+    activeUser!.weight = weight;
     router.push("../Facts/Fact1");
   };
 

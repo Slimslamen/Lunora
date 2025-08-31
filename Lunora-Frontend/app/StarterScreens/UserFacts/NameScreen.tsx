@@ -14,15 +14,18 @@ import { ThemeContext } from '@/Context/Theme/ThemeContext'
 import { DARK_COLORS, LIGHT_COLORS } from '@/constants/Colors'
 import { useRouter } from 'expo-router'
 import { ReturnButton } from '../../../components/Return'
+import { UserContext } from '@/Context/User/UserContext'
 
 export default function AskNameScreen() {
   const { darkMode } = useContext(ThemeContext)
+  const { activeUser } = useContext(UserContext)
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
   const [name, setName] = useState('')
   const router = useRouter();
 
   const handleContinue = () => {
+    activeUser!.name = name
     router.push('./Born')
   }
 

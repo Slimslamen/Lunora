@@ -6,20 +6,21 @@ import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
 import { ReturnButton } from '../../components/Return'
+import { UserContext } from "@/Context/User/UserContext";
 
 const options = [
   {
-    key: "2_3",
+    key: 3,
     label: "2–3 times/week",
     iconName: "2-circle-outline",
   },
   {
-    key: "4_5",
+    key: 5,
     label: "4–5 times/week",
     iconName: "5-circle-outline",
   },
   {
-    key: "more",
+    key: 6,
     label: "6+ times/week",
     iconName: "infinite-outline",
   },
@@ -27,14 +28,19 @@ const options = [
 
 export default function WorkoutFrequencyScreen() {
   const { darkMode } = useContext(ThemeContext);
+  const { activeUser } = useContext(UserContext);
 
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<number>();
 
   const router = useRouter();
 
   const handleContinue = () => {
+    if(selected)
+      activeUser!.workoutFrequency = selected;
+    else
+      activeUser!.workoutFrequency = 5;
     router.push("./Referral");
   };
 

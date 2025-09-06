@@ -21,14 +21,14 @@ export default function AskNameScreen() {
   const { activeUser } = useContext(UserContext)
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS
 
-  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const router = useRouter();
 
   const handleContinue = () => {
     if (activeUser) {
-      activeUser.name = name
+      activeUser.email = email;
     }
-    router.push('./Born')
+    router.push('./NameScreen')
   }
 
   return (
@@ -48,12 +48,8 @@ export default function AskNameScreen() {
         <View style={styles.container}>
           {/* Prompt */}
           <Text style={[styles.title, { color: colors.textPrimary }]}>
-            What’s your name?
+            What’s your email?
           </Text>
-          <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-            Tell us how to address you
-          </Text>
-
           {/* Input Card */}
           <View
             style={[
@@ -72,10 +68,10 @@ export default function AskNameScreen() {
                   borderColor: colors.cardBorder,
                 },
               ]}
-              placeholder="Your name"
+              placeholder="Your email"
               placeholderTextColor={colors.textSecondary}
-              value={name}
-              onChangeText={setName}
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
 
@@ -85,10 +81,10 @@ export default function AskNameScreen() {
             style={[
               styles.button,
               { backgroundColor: colors.accent },
-              !name.trim() && styles.buttonDisabled,
+              !email.trim() && styles.buttonDisabled,
             ]}
             onPress={handleContinue}
-            disabled={!name.trim()}
+            disabled={!email.trim()}
           >
             <Text style={styles.buttonText}>Continue</Text>
           </TouchableOpacity>

@@ -37,7 +37,9 @@ export default function GoalBarrierScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    activeUser!.obstacle = selected;    
+    if (activeUser) {
+      activeUser.obstacle = selected;
+    }
     router.push("../TrainingMethod");
   };
 

@@ -10,12 +10,16 @@ import { generateClient } from "aws-amplify/api";
 import { IUserWorkoutLog, IWeeklyUserWorkouts } from "@/General-Interfaces/IUser";
 import { getDate, getWeek, startOfWeek, addDays, getDay, parseISO } from "date-fns";
 import { IWorkout } from "@/General-Interfaces/IWorkout";
+import { UserContext } from "@/Context/User/UserContext";
 
 const client = generateClient<Schema>();
 
 export default function Progress() {
   const TContext = useContext(ThemeContext);
   const { darkMode } = TContext;
+
+  const UContext = useContext(UserContext);
+  const { activeUser } = UContext;
 
   const colors = darkMode === true ? DARK_COLORS : LIGHT_COLORS;
 
@@ -65,7 +69,7 @@ export default function Progress() {
     const fetchWeeklyWorkouts = async () => {
       const { data: weeklyWorkouts, errors } = await client.models.WeeklyUserWorkouts.list({
         filter: {
-          user_id: { eq: "user_1" },
+          user_id: { eq: activeUser?.id },
         },
       });
       if (errors) {

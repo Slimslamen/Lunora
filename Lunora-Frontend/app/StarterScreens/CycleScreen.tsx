@@ -6,10 +6,10 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { ThemeContext } from "@/Context/Theme/ThemeContext";
 import { DARK_COLORS, LIGHT_COLORS } from "@/constants/Colors";
-import { ReturnButton } from '../../components/Return'
+import { ReturnButton } from "../../components/Return";
 import { UserContext } from "@/Context/User/UserContext";
 
-export default function LastPeriodScreen() {
+export default function CycleScreen() {
   const { darkMode } = useContext(ThemeContext);
   const { activeUser } = useContext(UserContext);
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
@@ -24,9 +24,14 @@ export default function LastPeriodScreen() {
 
   const router = useRouter();
 
-  const handleContinue = () => {
-    const convertedDate = date.toLocaleDateString()
-    activeUser!.period = convertedDate;
+   const handleContinue = (ref : string) => {
+    if (activeUser) {
+      if (ref === "no-cycle") {
+        activeUser.cycle = "";
+      } else {
+        activeUser.cycle = date.toLocaleDateString();
+      }
+    }
     router.push("./Facts/Fact2");
   };
 
@@ -37,7 +42,7 @@ export default function LastPeriodScreen() {
           <ReturnButton />
         </View>
         <View style={styles.container}>
-          <Text style={[styles.title, { color: colors.textPrimary }]}>When was your last period?</Text>
+          <Text style={[styles.title, { color: colors.textPrimary }]}>When was your last menstrual cycle?</Text>
           <Text style={[styles.subtitle, { color: colors.textSecondary }]}>Select the date of your last cycle</Text>
 
           {showPicker && (
@@ -70,8 +75,11 @@ export default function LastPeriodScreen() {
               <Text style={[styles.showText, { color: colors.accent }]}>Choose Date</Text>
             </TouchableOpacity>
           )}
-          <TouchableOpacity onPress={handleContinue} style={[styles.button, { backgroundColor: colors.accent }]}>
+          <TouchableOpacity onPress={() => handleContinue("")} style={[styles.button, { backgroundColor: colors.accent }]}>
             <Text style={styles.buttonText}>Continue</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => handleContinue("no-cycle")}>
+            <Text style={[styles.skipText, { color: colors.textSecondary }]}>I do not have period</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>
@@ -130,5 +138,10 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 16,
     fontWeight: "600",
+  },
+  skipText: {
+    fontSize: 14,
+    textDecorationLine: "underline",
+    marginTop: 8,
   },
 });

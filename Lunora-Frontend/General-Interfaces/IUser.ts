@@ -8,7 +8,7 @@ export interface IUser {
   obstacle: string;
   trainingMethod: string;
   goal: string;
-  period: string;
+  cycle: string;
   birthControl: string;
   energy: string;
   workoutFrequency: number;

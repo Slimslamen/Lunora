@@ -1,3 +1,4 @@
+// ...existing code...
 import React, { useContext, useState, useEffect, useMemo } from "react";
 import {
   View,
@@ -107,6 +108,8 @@ export default function ChallengesGalleryScreen() {
             completedAt: d.completedAt ?? "",
             createdAt: d.createdAt,
             updatedAt: d.updatedAt,
+            // keep optional progress if present
+            ...(d.progress !== undefined ? { progress: d.progress } : {}),
           }));
           setUserChallenges(sanitized);
         }
@@ -147,6 +150,21 @@ export default function ChallengesGalleryScreen() {
     setModalVisible(false);
     setSelectedChallenge(null);
   };
+
+  // Compute progress percent for the selected challenge (0-100)
+  const selectedProgress = useMemo(() => {
+    if (!selectedChallenge) return 0;
+    const uc = userChallenges.find((u) => u.challenge_id === selectedChallenge.id);
+    if (!uc) return 0;
+    // If progress property exists, support 0-1 or 0-100 ranges
+    const p: any = (uc as any).progress;
+    if (typeof p === "number") {
+      if (p <= 1) return Math.round(p * 100);
+      return Math.min(100, Math.round(p));
+    }
+    // fallback to completed boolean
+    return uc.completed ? 100 : 0;
+  }, [selectedChallenge, userChallenges]);
 
   const renderChallenge = ({ item }: { item: IChallenge }) => {
     const isCompleted = completedChallengeIds.has(item.id);
@@ -238,6 +256,23 @@ export default function ChallengesGalleryScreen() {
               </View>
 
               <ScrollView style={styles.modalBody} showsVerticalScrollIndicator={false}>
+
+                {/* Progress section (added) */}
+                <View style={[styles.modalSection, { borderColor: colors.cardBorder }]}>
+                  <Text style={[styles.modalSectionTitle, { color: colors.textPrimary }]}>Progress</Text>
+                  <View style={styles.progressRow}>
+                    <View style={[styles.progressBarContainer, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>
+                      <View
+                        style={[
+                          styles.progressBarFill,
+                          { width: `${selectedProgress}%`, backgroundColor: colors.textPrimary },
+                        ]}
+                      />
+                    </View>
+                    <Text style={[styles.progressPercent, { color: colors.textSecondary }]}>{selectedProgress}%</Text>
+                  </View>
+                </View>
+
                 <View style={[styles.modalSection, { borderColor: colors.cardBorder }]}>
                   <Text style={[styles.modalSectionTitle, { color: colors.textPrimary }]}>Description</Text>
                   <Text style={[styles.modalText, { color: colors.textSecondary }]}>
@@ -419,4 +454,25 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+
+  // Progress bar styles (added)
+  progressRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  progressBarContainer: {
+    flex: 1,
+    height: 12,
+    borderRadius: 8,
+    borderWidth: 1,
+    overflow: "hidden",
+  },
+  progressBarFill: {
+    height: "100%",
+    borderRadius: 8,
+  },
+  progressPercent: {
+    minWidth: 36,
+  }
 });

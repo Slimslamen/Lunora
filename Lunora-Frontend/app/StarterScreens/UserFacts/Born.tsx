@@ -28,7 +28,9 @@ export default function AskBirthdayScreen() {
 
   const handleContinue = () => {
     const convertedDate = date.toLocaleDateString()
-    activeUser!.birth = convertedDate;
+    if (activeUser) {
+      activeUser.birth = convertedDate;
+    }
     router.push("./HeightWeight");
   };
 

@@ -23,8 +23,10 @@ export default function AskBodyMetricsScreen() {
   const [weight, setWeight] = useState<number>(70);
 
   const handleContinue = () => {
-    activeUser!.height = height;
-    activeUser!.weight = weight;
+    if (activeUser) {
+      activeUser.height = height;
+      activeUser.weight = weight;
+    }
     router.push("../Facts/Fact1");
   };
 

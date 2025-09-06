@@ -38,8 +38,10 @@ export default function EnergyLevelScreen() {
   const router = useRouter();
 
   const handleContinue = () => {    
-    activeUser!.energy = selected;    
-    router.push("./Period");
+    if (activeUser) {
+      activeUser.energy = selected;
+    }
+    router.push("./CycleScreen");
   };
   return (
     <View style={styles.safe}>

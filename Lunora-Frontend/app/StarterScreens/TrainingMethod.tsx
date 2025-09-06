@@ -37,7 +37,9 @@ export default function TrainingMethodScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    activeUser!.trainingMethod = selected;
+    if (activeUser) {
+      activeUser.trainingMethod = selected;
+    }
     router.push("./UserFacts/Goal");
   };
   return (

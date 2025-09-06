@@ -27,7 +27,7 @@ export const UserContext = createContext<UserContextType>({
         obstacle: "",
         trainingMethod: "",
         goal: "",
-        period: "",
+        cycle: "",
         birthControl: "",
         energy: "",
         workoutFrequency: 0,

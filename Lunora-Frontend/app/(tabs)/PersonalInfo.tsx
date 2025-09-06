@@ -15,9 +15,6 @@ export default function PersonalInfoScreen() {
   const { darkMode } = useContext(ThemeContext);  
   const colors = darkMode ? DARK_COLORS : LIGHT_COLORS;
 
-  const [fullName, setFullName] = useState("");
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
 
   const handleSave = () => {
     // TODO: save updated info
@@ -57,9 +54,9 @@ export default function PersonalInfoScreen() {
           </View>
 
           {/* Save Changes */}
-          <TouchableOpacity style={[styles.button, { backgroundColor: colors.accent }]} onPress={handleSave}>
+          {/* <TouchableOpacity style={[styles.button, { backgroundColor: colors.accent }]} onPress={handleSave}>
             <Text style={styles.buttonText}>Save Changes</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
 
           {/* Restore Password */}
           <View style={[styles.card, { backgroundColor: colors.cardBg, borderColor: colors.cardBorder }]}>

@@ -40,7 +40,7 @@ export default function FeaturesScreen() {
           obstacle: activeUser!.obstacle,
           trainingMethod: activeUser!.trainingMethod,
           goal: activeUser!.goal,
-          period: activeUser!.period,
+          Cycle: activeUser!.cycle,
           birthControl: activeUser!.birthControl,
           energy: activeUser!.energy,
           workoutFrequency: activeUser!.workoutFrequency,

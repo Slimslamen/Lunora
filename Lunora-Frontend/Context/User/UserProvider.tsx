@@ -27,7 +27,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
         { data: Users, errors: userErrors },
         { data: Challenges, errors: challengeErrors },
         { data: Workouts, errors: workoutsErrors },
-        { data: PeriodFacts, errors: periodFactsErrors },
+        { data: cycleFacts, errors: cycleFactsErrors },
       ] = await Promise.all([
         client.models.Users.list({}),
         client.models.Challenges.list({}),

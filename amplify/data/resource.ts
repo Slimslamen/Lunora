@@ -11,7 +11,7 @@ const schema = a.schema({
       obstacle: a.string(),
       trainingMethod: a.string(),
       goal: a.string(),
-      period: a.string(),
+      cycle: a.string(),
       birthControl: a.string(),
       energy: a.string(),
       workoutFrequency: a.integer(),

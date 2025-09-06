@@ -327,8 +327,8 @@ export default function WorkoutDetailScreen() {
                     </View>
                   )}
                 </View>
-                <Text style={[styles.modalText, { color: "black" }]}>Exercise Description:</Text>
-                <Text style={[styles.modalText, { color: "black" }]}>{exerciseDescription}</Text>
+                <Text style={[styles.modalText, { color: colors.textPrimary }]}>Exercise Description:</Text>
+                <Text style={[styles.modalText, { color: colors.textPrimary }]}>{exerciseDescription}</Text>
               </View>
             </LinearGradient>
           </View>

@@ -41,7 +41,7 @@ export default function EditProfileScreen() {
       obstacle: "Insufficient knowledge",
       trainingMethod: "Home workouts",
       goal: "Performance",
-      period: new Date().toISOString().slice(0, 10),
+      cycle: new Date().toISOString().slice(0, 10),
       birthControl: "None",
       energy: "Moderate",
       workoutFrequency: "2-3 times/week",

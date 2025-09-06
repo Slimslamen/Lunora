@@ -42,7 +42,9 @@ export default function GoalSelectionScreen() {
   const router = useRouter();
 
   const handleContinue = () => {
-    activeUser!.goal = selectedGoal;    
+    if (activeUser) {
+      activeUser.goal = selectedGoal;
+    }
     router.push("../Energy");
   };
 
